@@ -1,0 +1,365 @@
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                              MULTILINGUAL ORAL DISEASE DIAGNOSIS SYSTEM                 │
+│                         with Retrieval-Augmented Visual Grounding                       │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                    TRAINING PIPELINE                                         │
+└─────────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  DATA PREPARATION (Week 1-2)                                                         │
+├──────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                      │
+│  Thai Oral Images (500-1000)          Claude API                                   │
+│  + Segmentation Masks        ────────►  Caption Generation                         │
+│  + Disease Labels                      (Thai + English)                            │
+│                                              │                                      │
+│                                              ▼                                      │
+│                                     Complex Instructions                           │
+│                                     Generator (Claude)                             │
+│                                              │                                      │
+│                                              ▼                                      │
+│  ┌──────────────────────────────────────────────────────────────────────┐        │
+│  │  5 Types of Complex Instructions (Thai + English)                    │        │
+│  ├──────────────────────────────────────────────────────────────────────┤        │
+│  │  1. Multi-granular:    "lesion" → "white patch" → "OLK on buccal"   │        │
+│  │  2. Multi-object:      "Segment all erosive areas"                   │        │
+│  │  3. Hallucination:     "Segment melanoma" → Model rejects            │        │
+│  │  4. Reasoning:         "Which lesions need biopsy?"                  │        │
+│  │  5. Part-level:        "Segment erythematous borders"                │        │
+│  └──────────────────────────────────────────────────────────────────────┘        │
+│                                              │                                      │
+│                                              ▼                                      │
+│                                   Training Dataset Ready                           │
+│                                   (~10K instruction pairs)                         │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+                                              │
+                                              ▼
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  STAGE 1: CLASSIFICATION TRAINING (Week 3)                                          │
+├──────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                      │
+│  Input Image ───────►  Vision Encoder  ──────┐                                     │
+│  (Thai/Eng)           (CLIP-ViT)             │                                     │
+│                                               │                                     │
+│                                               ├─────► Aligner ───► LLM ───► Output │
+│  Simple Prompt ─────► Tokenizer &            │       Module      (Qwen)    Binary  │
+│  "Is this OLK?"       Embedding ─────────────┘                             (Yes/No)│
+│                                                                                      │
+│  Training: 10 epochs, Binary Classification                                        │
+│  Weights: Frozen Vision Encoder + LoRA on LLM                                     │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+                                              │
+                                    Weights Copied
+                                              ▼
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  STAGE 2: COMPLEX GROUNDING TRAINING (Week 3-4)                                    │
+├──────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                      │
+│  Input Image ───────►  Vision Encoder  ──────┐                                     │
+│  (Thai/Eng)           (from Stage 1)         │                                     │
+│                                               │                                     │
+│                                               ├─────► Aligner ───► LLM             │
+│  Complex Prompt ───► Tokenizer &             │       Module      (from Stage 1)   │
+│  "Segment erosive     Embedding ─────────────┘                        │            │
+│   areas with high                                                     │            │
+│   malignancy risk"                                                    ▼            │
+│                                                               Segmentation Token   │
+│                                                                  <seg1>, <seg2>    │
+│                                                                        │            │
+│                                                                        ▼            │
+│                                                                  SAM Decoder        │
+│                                                                        │            │
+│                                                                        ▼            │
+│                                                               Segmentation Masks    │
+│                                                               (Polygon Coords)      │
+│                                                                                      │
+│  Training: 5 epochs, Ground-V style 5 challenges                                   │
+│  Loss: IoU Loss + Cross-Entropy                                                    │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+                                              │
+                                    Weights Copied
+                                              ▼
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  STAGE 3: CAPTIONING TRAINING (Week 4)                                             │
+├──────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                      │
+│  Input Image ───────►  Vision Encoder  ──────┐                                     │
+│  (Thai/Eng)           (from Stage 2)         │                                     │
+│                                               │                                     │
+│                                               ├─────► Aligner ───► LLM             │
+│  Caption Prompt ───► Tokenizer &             │       Module      (from Stage 2)   │
+│  "Please describe     Embedding ─────────────┘                        │            │
+│   the symptoms                                                        ▼            │
+│   shown in image"                                                LLM Decoder       │
+│                                                                        │            │
+│                                                                        ▼            │
+│                                                               Clinical Caption      │
+│                                                               (Thai/English text)   │
+│                                                                                      │
+│  Training: 5 epochs, Caption generation                                            │
+│  Loss: Cross-Entropy (next token prediction)                                       │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+                                              │
+                                              ▼
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                            REGROUNDING MODULE DEVELOPMENT                                │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  BUILDING KNOWLEDGE BASE (Week 4)                                                   │
+├──────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                      │
+│  Training Cases ──────► Vision Encoder ────────► Image Features                    │
+│  (Images + Masks)      (CLIP/DINOv2)                  │                            │
+│                                                        │                            │
+│                                                        ├────► Vector Database       │
+│  Segmentation ───────► Mask Encoder ──────────► Mask Features  (FAISS Index)      │
+│  Masks                                                 │                            │
+│                                                        │                            │
+│  Clinical Text ──────► Text Encoder ──────────► Text Features                     │
+│  (Captions +           (BioBERT)                       │                            │
+│   Guidelines)                                          │                            │
+│                                                        │                            │
+│  Treatment ───────────────────────────────────────────┴────► Metadata             │
+│  Outcomes                                                     (Disease, Outcome,    │
+│                                                                Treatment, etc.)     │
+│                                                                                      │
+│  Result: Knowledge Base with ~1000+ indexed cases                                  │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                                  INFERENCE PIPELINE                                      │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  USER INPUT (via Web or LINE API)                                                  │
+├──────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                      │
+│  Patient Image ────────┐                                                            │
+│  (Oral Photo)          │                                                            │
+│                        ├──────────────────────────────────────────────┐            │
+│  User Instruction ─────┤                                              │            │
+│  (Thai or English)     │                                              │            │
+│  e.g., "Segment areas  │                                              │            │
+│   requiring treatment" │                                              │            │
+└─────────────────────────┴──────────────────────────────────────────────┼────────────┘
+                                                                         │
+                                                                         ▼
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  STEP 1: INITIAL PREDICTION (Trained Model from Stage 1-3)                         │
+├──────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                      │
+│  Image + Instruction ────► OralGPT Model ─────► Initial Results                    │
+│                            (Stage 1-2-3)              │                             │
+│                                                       ├──► Disease Classification    │
+│                                                       ├──► Segmentation Masks        │
+│                                                       ├──► Clinical Caption          │
+│                                                       └──► Uncertainty Score         │
+│                                                              │                       │
+└──────────────────────────────────────────────────────────────┼───────────────────────┘
+                                                               │
+                                                               ▼
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  STEP 2: UNCERTAINTY ESTIMATION (Monte Carlo Dropout)                              │
+├──────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                      │
+│  Multiple Forward Passes ────► Statistical Analysis ────► Uncertainty Score        │
+│  (with dropout enabled)         (variance calculation)         │                   │
+│                                                                 │                   │
+│                                                                 ▼                   │
+│                                                    ┌────────────────────────┐      │
+│                                                    │ If Uncertainty > 0.7   │      │
+│                                                    │ → Retrieve more cases  │      │
+│                                                    │    (k=10)              │      │
+│                                                    │ Else                   │      │
+│                                                    │ → Retrieve fewer (k=3) │      │
+│                                                    └────────────────────────┘      │
+│                                                                 │                   │
+└─────────────────────────────────────────────────────────────────┼───────────────────┘
+                                                                  │
+                                                                  ▼
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  STEP 3: VISUAL-SEMANTIC RETRIEVAL (ReGrounding)                                   │
+├──────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                      │
+│  Query Encoding:                                                                    │
+│  ┌─────────────────────────────────────────────────────────────────┐              │
+│  │  Patient Image ────► Vision Encoder ────► Image Features        │              │
+│  │                                                  │                │              │
+│  │  Predicted Masks ──► Mask Encoder ──────► Mask Features         │              │
+│  │                                                  │                │              │
+│  │  Instruction ──────► Text Encoder ──────► Text Features          │              │
+│  │                                                  │                │              │
+│  │                                                  ▼                │              │
+│  │                                        Combined Query Vector      │              │
+│  └─────────────────────────────────────────────────────────────────┘              │
+│                                                  │                                  │
+│                                                  ▼                                  │
+│  Similarity Search:                                                                │
+│  ┌─────────────────────────────────────────────────────────────────┐              │
+│  │  Query Vector ──────► Vector Database (FAISS) ──► Top-k Cases  │              │
+│  │                                                           │       │              │
+│  │                                                           ▼       │              │
+│  │                              Retrieved Cases with:                │              │
+│  │                              • Similar images                     │              │
+│  │                              • Segmentation masks                 │              │
+│  │                              • Disease diagnosis                  │              │
+│  │                              • Treatment used                     │              │
+│  │                              • Clinical outcomes                  │              │
+│  │                              • Follow-up duration                 │              │
+│  └─────────────────────────────────────────────────────────────────┘              │
+│                                                  │                                  │
+│                                                  ▼                                  │
+│  Cross-Modal Re-ranking:                                                           │
+│  ┌─────────────────────────────────────────────────────────────────┐              │
+│  │  For each retrieved case:                                        │              │
+│  │    Score = α × Visual_Similarity                                 │              │
+│  │          + (1-α) × Semantic_Similarity                           │              │
+│  │          + 0.2 × Language_Match_Bonus                            │              │
+│  │                                                                   │              │
+│  │  α = 0.7 if uncertainty > 0.5, else 0.3 (adaptive weighting)    │              │
+│  │                                                                   │              │
+│  │  Sort by final score ──────────────► Top-k Ranked Cases         │              │
+│  └─────────────────────────────────────────────────────────────────┘              │
+│                                                  │                                  │
+└──────────────────────────────────────────────────┼──────────────────────────────────┘
+                                                   │
+                                                   ▼
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  STEP 4: EVIDENCE-BASED SUGGESTION GENERATION                                      │
+├──────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                      │
+│  Build Context from Retrieved Cases:                                               │
+│  ┌─────────────────────────────────────────────────────────────────┐              │
+│  │  For each retrieved case i:                                      │              │
+│  │    • Image_i + Segmentation_i (visual template)                  │              │
+│  │    • Description_i (clinical narrative)                          │              │
+│  │    • Treatment_i (what was done)                                 │              │
+│  │    • Outcome_i (result: improved/stable/worsened)                │              │
+│  │    • Similarity_Score_i                                          │              │
+│  └─────────────────────────────────────────────────────────────────┘              │
+│                          │                                                          │
+│                          ▼                                                          │
+│  Aggregate Evidence:                                                               │
+│  ┌─────────────────────────────────────────────────────────────────┐              │
+│  │  • Successful treatments: 12/15 cases improved with Treatment X  │              │
+│  │  • Average follow-up: 6 months                                   │              │
+│  │  • Complication rate: 2/15 cases                                 │              │
+│  │  • Evidence strength: 12/15 = 80%                                │              │
+│  └─────────────────────────────────────────────────────────────────┘              │
+│                          │                                                          │
+│                          ▼                                                          │
+│  Generate Clinical Suggestion:                                                     │
+│  ┌─────────────────────────────────────────────────────────────────┐              │
+│  │  LLM Input:                                                      │              │
+│  │    • Current case: [Image + Segmentation + Classification]       │              │
+│  │    • Retrieved evidence: [Top-k cases + outcomes]                │              │
+│  │    • Uncertainty score: 0.65                                     │              │
+│  │    • Language: Thai/English                                      │              │
+│  │                                                                   │              │
+│  │  Prompt Template:                                                │              │
+│  │    "Based on {k} similar cases with {evidence_strength}          │              │
+│  │     success rate:                                                │              │
+│  │     • Diagnosis: [Disease Name]                                  │              │
+│  │     • Segmentation: [Areas marked]                               │              │
+│  │     • Recommended treatment: [Treatment X]                       │              │
+│  │     • Expected outcome: [Predicted based on evidence]            │              │
+│  │     • Monitoring plan: [Based on similar cases]                  │              │
+│  │     • Confidence: {1 - uncertainty}                              │              │
+│  │     • Evidence: {similar_case_summaries}                         │              │
+│  │     {IF uncertainty > 0.7:                                       │              │
+│  │        Recommendation: Consult specialist}"                      │              │
+│  │                                                                   │              │
+│  │  Temperature: 0.3 if uncertain, 0.7 if confident                │              │
+│  └─────────────────────────────────────────────────────────────────┘              │
+│                          │                                                          │
+└──────────────────────────┼──────────────────────────────────────────────────────────┘
+                           │
+                           ▼
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  FINAL OUTPUT                                                                       │
+├──────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                      │
+│  ┌────────────────────────────────────────────────────────────────┐                │
+│  │  1. Disease Classification:                                     │                │
+│  │     • Primary: Oral Lichen Planus (OLP)                         │                │
+│  │     • Confidence: 85%                                            │                │
+│  │                                                                  │                │
+│  │  2. Segmentation Masks:                                         │                │
+│  │     • Erosive Area 1: [Polygon coordinates] <seg1>             │                │
+│  │     • Erosive Area 2: [Polygon coordinates] <seg2>             │                │
+│  │     • White Striae: [Polygon coordinates] <seg3>               │                │
+│  │                                                                  │                │
+│  │  3. Clinical Description:                                       │                │
+│  │     "Clinical examination reveals bilateral reticular           │                │
+│  │      white striae on buccal mucosa with erosive areas..."       │                │
+│  │                                                                  │                │
+│  │  4. Evidence-Based Recommendation:                              │                │
+│  │     "Based on 12 similar cases (80% success rate):              │                │
+│  │      • Treatment: Topical corticosteroids                       │                │
+│  │      • Expected improvement: 4-6 weeks                          │                │
+│  │      • Monitor erosive areas <seg1>, <seg2> monthly             │                │
+│  │      • Biopsy if no improvement in 8 weeks                      │                │
+│  │      Evidence: 12/15 similar cases showed improvement"          │                │
+│  │                                                                  │                │
+│  │  5. Similar Cases References:                                   │                │
+│  │     • Case #234: 85% similarity, Improved after 6 weeks         │                │
+│  │     • Case #567: 82% similarity, Complete healing               │                │
+│  │     • Case #891: 78% similarity, Partial improvement            │                │
+│  │                                                                  │                │
+│  │  6. Uncertainty & Safety:                                       │                │
+│  │     • Uncertainty Score: 0.35 (Low)                             │                │
+│  │     • Recommendation: Suitable for monitoring                   │                │
+│  │     [If high uncertainty: "Consult specialist recommended"]     │                │
+│  └────────────────────────────────────────────────────────────────┘                │
+│                                                                                      │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                              USER INTERFACE DELIVERY                                     │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌────────────────────────────────┐         ┌──────────────────────────────────┐
+│     WEB INTERFACE              │         │      LINE API                    │
+├────────────────────────────────┤         ├──────────────────────────────────┤
+│                                │         │                                  │
+│ • Upload image                 │         │ • Send image via LINE chat       │
+│ • Enter instruction            │         │ • Receive results in chat        │
+│   (Thai or English)            │         │ • Interactive Q&A                │
+│ • View segmentation overlay    │         │ • Share with healthcare provider │
+│ • Read detailed report         │         │ • Simple interface for public    │
+│ • Access similar cases         │         │ • Quick screening               │
+│ • Medical professional use     │         │ • Accessibility for all         │
+│                                │         │                                  │
+└────────────────────────────────┘         └──────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                                  KEY INNOVATIONS                                         │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                          │
+│  1. Multilingual Support (Thai-English)                                                 │
+│     • Same model handles both languages                                                 │
+│     • Zero-shot cross-lingual transfer capability                                       │
+│                                                                                          │
+│  2. Complex Instruction Understanding (Ground-V adapted)                                │
+│     • Multi-granular, Multi-object, Reasoning, Part-level, Hallucination mitigation    │
+│                                                                                          │
+│  3. Retrieval-Augmented Grounding (ReGrounding) - NOVEL!                               │
+│     • Retrieve visual exemplars + segmentations (not just text)                        │
+│     • Use clinical outcomes as evidence                                                 │
+│     • Adaptive retrieval based on uncertainty                                           │
+│                                                                                          │
+│  4. Uncertainty-Aware System                                                            │
+│     • Model knows when to abstain                                                       │
+│     • Recommends specialist consultation when uncertain                                 │
+│                                                                                          │
+│  5. Evidence-Based Recommendations                                                      │
+│     • "12/15 similar cases improved with treatment X"                                   │
+│     • Backed by real clinical outcomes                                                  │
+│                                                                                          │
+└─────────────────────────────────────────────────────────────────────────────────────────┘

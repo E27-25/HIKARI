@@ -42,8 +42,8 @@
 |:---:|:---|
 | **H** | **H**ealthcare-oriented |
 | **I** | **I**ntelligent |
-| **K** | **K**nowledge-Augmented |
-| **A** | |
+| **K** | **K**nowledge- |
+| **A** | **A**ugmented |
 | **R** | **R**etrieval and |
 | **I** | **I**nference system |
 

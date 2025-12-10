@@ -501,50 +501,15 @@
 
 ## 🌸 Key Innovations 🌸
 
-</div>
+| | |
+|:---:|:---|
+| 🌸 | **Multilingual Support** — Thai & English |
+| ✿ | **Visual Grounding** — Complex instruction understanding |
+| 🌸 | **ReGrounding (Novel)** — Retrieval-augmented visual grounding |
+| ✿ | **Uncertainty-Aware** — Knows when to consult specialists |
+| 🌸 | **Evidence-Based** — Recommendations backed by clinical outcomes |
 
-<table align="center">
-<tr>
-<td align="center">🌸</td>
-<td><strong>Multilingual Support (Thai-English)</strong></td>
-</tr>
-<tr>
-<td></td>
-<td>Same model handles both languages with zero-shot cross-lingual transfer capability</td>
-</tr>
-<tr>
-<td align="center">✿</td>
-<td><strong>Complex Instruction Understanding (Ground-V adapted)</strong></td>
-</tr>
-<tr>
-<td></td>
-<td>Multi-granular, Multi-object, Reasoning, Part-level, Hallucination mitigation</td>
-</tr>
-<tr>
-<td align="center">🌸</td>
-<td><strong>Retrieval-Augmented Grounding (ReGrounding) - NOVEL!</strong></td>
-</tr>
-<tr>
-<td></td>
-<td>Retrieve visual exemplars + segmentations (not just text), use clinical outcomes as evidence, adaptive retrieval based on uncertainty</td>
-</tr>
-<tr>
-<td align="center">✿</td>
-<td><strong>Uncertainty-Aware System</strong></td>
-</tr>
-<tr>
-<td></td>
-<td>Model knows when to abstain, recommends specialist consultation when uncertain</td>
-</tr>
-<tr>
-<td align="center">🌸</td>
-<td><strong>Evidence-Based Recommendations</strong></td>
-</tr>
-<tr>
-<td></td>
-<td>"12/15 similar cases improved with treatment X" - backed by real clinical outcomes</td>
-</tr>
-</table>
+</div>
 
 <br/>
 

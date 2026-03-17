@@ -1,15 +1,14 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=32&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=700&lines=HIKARI+%F0%9F%8C%9F;Skin+Disease+Diagnosis+AI;RAG-in-Training+%C3%97+VLM;85.86%25+Classification+Accuracy" alt="HIKARI Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=32&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=700&lines=HIKARI+%F0%9F%8C%9F;RAG-in-Training+%C3%97+VLM;3-Stage+Training+Pipeline;Hybrid+Retrieval-Augmented+Generation" alt="HIKARI Typing SVG" />
 
 <br/>
 
-[![Accuracy](https://img.shields.io/badge/Accuracy-85.86%25-brightgreen?style=for-the-badge&logo=checkmarx&logoColor=white)](.)
-[![Model](https://img.shields.io/badge/Backbone-Qwen3--VL--8B--Thinking-blue?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/Qwen/Qwen3-VL-8B-Thinking)
-[![Dataset](https://img.shields.io/badge/Dataset-SkinCAP-orange?style=for-the-badge&logo=databricks&logoColor=white)](https://huggingface.co/datasets/joshuachou/SkinCAP)
+[![Model](https://img.shields.io/badge/Backbone-Qwen3--VL--8B--Thinking-4B9EFF?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/Qwen/Qwen3-VL-8B-Thinking)
+[![Dataset](https://img.shields.io/badge/Dataset-SkinCAP_4K-FF8C00?style=for-the-badge&logo=databricks&logoColor=white)](https://huggingface.co/datasets/joshuachou/SkinCAP)
 [![GPU](https://img.shields.io/badge/GPU-RTX_5070_Ti-76B900?style=for-the-badge&logo=nvidia&logoColor=white)](.)
-[![Conference](https://img.shields.io/badge/Paper-ITC--CSCC_2025-red?style=for-the-badge&logo=arxiv&logoColor=white)](./Conference_Paper.tex)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](.)
+[![Framework](https://img.shields.io/badge/Framework-Unsloth+LoRA-A855F7?style=for-the-badge&logo=pytorch&logoColor=white)](https://github.com/unslothai/unsloth)
 
 <br/>
 
@@ -17,39 +16,6 @@
 > using Qwen3-VL-8B-Thinking × SkinCAP × Hybrid Retrieval-Augmented Generation
 
 </div>
-
----
-
-## ✨ Highlights
-
-<table>
-<tr>
-<td width="50%">
-
-### 🏆 Key Results
-| Model | Acc |
-|-------|-----|
-| 🥇 **HIKARI (RAG-in-Training)** | **85.86%** |
-| 🥈 Cascaded FT + Inference RAG | 79.80% |
-| 🥉 Single-Image Fine-Tune | 74.00% |
-| Zero-Shot Frontier (best) | 50.51% |
-| Base Qwen3-VL-8B (no FT) | 33.33% |
-
-</td>
-<td width="50%">
-
-### 🔬 5 Diseases at 100% Sensitivity
-```
-✅ Psoriasis          100% (13/13)
-✅ Melanocytic Nevi   100% (12/12)
-✅ SCCIS              100% (12/12)
-✅ Basal Cell Ca.     100% (13/13)
-✅ Acne Vulgaris      100%  (8/8)
-```
-
-</td>
-</tr>
-</table>
 
 ---
 
@@ -249,13 +215,13 @@ HIKARI/Model/
 
 <div align="center">
 
-| Model | Paper Name | RAG Train | RAG Infer | Acc |
-|-------|-----------|:---------:|:---------:|:---:|
-| `fuzzytopk` | Single-Image FT | — | — | 74.00% |
-| `M1` | 2-Stage Cascade FT | — | R0 | 59.38% |
-| `fuzzytopk_s1cascade` | Cascaded FT (α=0.9) | — | R2 | 79.80% |
-| `fuzzytopk_s1cascade` | Cascaded FT (α=0.5) | — | R2 | 74.75% |
-| **`fuzzytopk_s1cascade_ragR2_a09`** | **RAG-in-Training (Ours)** | **R2 K=1** | **R0** | **85.86%** |
+| Model | Description | RAG Train | RAG Infer |
+|-------|------------|:---------:|:---------:|
+| `fuzzytopk` | Single-Image Fine-Tune | — | — |
+| `M1` | 2-Stage Cascade FT | — | R0 |
+| `fuzzytopk_s1cascade` | Cascaded FT (α=0.9) | — | R2 |
+| `fuzzytopk_s1cascade` | Cascaded FT (α=0.5) | — | R2 |
+| **`fuzzytopk_s1cascade_ragR2_a09`** | **RAG-in-Training (Ours)** | **R2 K=1** | **R0** |
 
 </div>
 
@@ -395,21 +361,6 @@ Merging LoRA into base weights before Stage 3 → BLEU-4: 9.82 → **29.33 (3×)
 
 ---
 
-## 📄 Citation
-
-If you use HIKARI in your research, please cite:
-
-```bibtex
-@inproceedings{hikari2025,
-  title     = {HIKARI: RAG-in-Training for Fine-Grained Skin Lesion Diagnosis
-               with Vision-Language Models},
-  booktitle = {Proceedings of ITC-CSCC 2025},
-  year      = {2025}
-}
-```
-
----
-
 ## 📚 References
 
 - [Unsloth](https://github.com/unslothai/unsloth) — Efficient LLM fine-tuning
@@ -422,6 +373,6 @@ If you use HIKARI in your research, please cite:
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=4000&pause=500&color=888888&center=true&vCenter=true&width=600&lines=Validated+on+99-sample+locked+test+set+%E2%80%94+0+OOM+errors;RTX+5070+Ti+%C2%B7+Qwen3-VL-8B-Thinking+%C2%B7+SkinCAP+4%2C000+images;ITC-CSCC+2025+%C2%B7+RAG-in-Training+%C2%B7+Merged-Init" alt="footer" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=4000&pause=500&color=888888&center=true&vCenter=true&width=700&lines=Qwen3-VL-8B-Thinking+%C2%B7+Unsloth+%C2%B7+SkinCAP;SigLIP-2+%2B+BGE-M3+(train)+%C2%B7+CLIP+ViT-B%2F32+(inference);RAG-in-Training+%C2%B7+Merged-Init+%C2%B7+3-Stage+Pipeline;LoRA+rank%3D16+%C2%B7+4-bit+NF4+%C2%B7+FuzzyTopK+%C2%B7+RTX+5070+Ti" alt="footer" />
 
 </div>

@@ -4,28 +4,23 @@
 
 <img src="logo/HIKARI logo.png" alt="HIKARI Logo" width="100%"/>
 
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=800&color=FF9EBC&center=true&vCenter=true&width=800&lines=HIKARI+%F0%9F%8C%B8;RAG-in-Training+Pipeline;Vision-Language+Model+Fine-Tuning;3-Stage+Training+Architecture;Hybrid+Retrieval-Augmented+Generation;Qwen3-VL-8B+%C3%97+SkinCAP+%C3%97+LoRA" alt="Typing SVG" />
+
 <br/>
 
-<!-- Typing animation -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=800&color=FF9EBC&center=true&vCenter=true&width=800&lines=HIKARI+%F0%9F%8C%B8;RAG-in-Training+Pipeline;Vision-Language+Model+Fine-Tuning;3-Stage+Training+Architecture;Hybrid+Retrieval-Augmented+Generation;Qwen3-VL-8B+%C3%97+SkinCAP+%C3%97+LoRA;ITC-CSCC+2025" alt="Typing SVG" />
-
-<br/><br/>
-
-<!-- Badges -->
-[![Accuracy](https://img.shields.io/badge/Accuracy-85.86%25-brightgreen?style=for-the-badge&logo=checkmarx&logoColor=white)](Model/README.md)
+<!-- Badges — tech stack only -->
 [![Model](https://img.shields.io/badge/Backbone-Qwen3--VL--8B--Thinking-4B9EFF?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/Qwen/Qwen3-VL-8B-Thinking)
 [![Dataset](https://img.shields.io/badge/Dataset-SkinCAP_4K-FF8C00?style=for-the-badge&logo=databricks&logoColor=white)](https://huggingface.co/datasets/joshuachou/SkinCAP)
-
 [![GPU](https://img.shields.io/badge/GPU-RTX_5070_Ti-76B900?style=for-the-badge&logo=nvidia&logoColor=white)](.)
-[![Paper](https://img.shields.io/badge/Paper-ITC--CSCC_2025-E63946?style=for-the-badge&logo=arxiv&logoColor=white)](Model/Conference_Paper.tex)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](.)
+[![Framework](https://img.shields.io/badge/Framework-Unsloth+LoRA-A855F7?style=for-the-badge&logo=pytorch&logoColor=white)](https://github.com/unslothai/unsloth)
 
 <br/>
 
 > **HIKARI** *(光)* — Healthcare-oriented Intelligent Knowledge-Augmented Retrieval and Inference system
 >
 > A RAG-in-Training pipeline that fine-tunes **Qwen3-VL-8B-Thinking** on dermatology images,
-> injecting retrieved reference cases *during training* to achieve **85.86%** on 10-class skin disease classification.
+> injecting retrieved reference cases *during training* so the model learns to reason with visual similarity evidence.
 
 </div>
 
@@ -42,68 +37,31 @@
 | **R** | **R**etrieval and |
 | **I** | **I**nference system |
 
-HIKARI introduces **RAG-in-Training** — instead of using retrieval only at inference time, reference images are retrieved and injected into *every training sample*, so the model learns to reason about visual similarity evidence from the start. At inference, even switching to a different (simpler) retrieval encoder (CLIP) still yields best-in-class results, demonstrating true encoder-agnostic generalization.
+HIKARI introduces **RAG-in-Training** — instead of using retrieval only at inference time, reference images are retrieved and injected into *every training sample*, so the model learns to reason about visual similarity evidence from the start. At inference, even switching to a different (simpler) retrieval encoder still generalizes well, demonstrating true encoder-agnostic behavior.
 
 ---
 
-## 🏆 Results at a Glance
+## ⚙️ Techniques Used
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=2500&pause=600&color=4ADE80&center=true&vCenter=true&width=700&lines=FuzzyTopK+Label+Consolidation;Stratified+Train%2FVal+Split+%C2%B7+Sqrt+Oversampling;SigLIP-2+%2B+BGE-M3+%E2%86%92+RAG+Training+Index;CLIP+ViT-B%2F32+%E2%86%92+Inference+Retrieval;LoRA+rank%3D16+%C2%B7+4-bit+NF4+%C2%B7+AdamW+8-bit;Merged-Init+%E2%86%92+Stage+3+Caption+Training" alt="Techniques" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=2500&pause=600&color=4ADE80&center=true&vCenter=true&width=700&lines=FuzzyTopK+Label+Consolidation;Stratified+Split+%C2%B7+Sqrt+Oversampling;SigLIP-2+%2B+BGE-M3+%E2%86%92+RAG+Training+Index;CLIP+ViT-B%2F32+%E2%86%92+Inference+Retrieval;LoRA+rank%3D16+%C2%B7+4-bit+NF4+%C2%B7+AdamW+8-bit;Merged-Init+%E2%86%92+Stage+3+Caption+Training;Selective+Token+Supervision+(STS)" alt="Techniques" />
 
 </div>
 
-<table>
-<tr>
-<td width="48%">
-
-### 📊 Model Comparison
-
-| Rank | Model | Accuracy |
-|:----:|:------|:--------:|
-| 🥇 | **HIKARI (RAG-in-Training)** | **85.86%** |
-| 🥈 | Cascaded FT + Inference RAG | 79.80% |
-| 🥉 | Single-Image Fine-Tune | 74.00% |
-| 4 | Zero-Shot (Qwen2.5 + R0+P2) | 50.51% |
-| 5 | Base Qwen3-VL-8B (no FT) | 33.33% |
-
-</td>
-<td width="52%">
-
-### 🔬 Per-Disease Sensitivity
-
-| Disease | Sensitivity |
-|:--------|:-----------:|
-| 🟢 Psoriasis | **100%** (13/13) |
-| 🟢 Melanocytic Nevi | **100%** (12/12) |
-| 🟢 SCCIS | **100%** (12/12) |
-| 🟢 Basal Cell Carcinoma | **100%** (13/13) |
-| 🟢 Acne Vulgaris | **100%** (8/8) |
-| 🟡 Lichen Planus | 88.9% (8/9) |
-| 🟡 Scleroderma | 87.5% (7/8) |
-| 🟡 Photodermatoses | 75.0% (6/8) |
-| 🔴 Lupus Erythematosus | 55.6% (5/9) |
-| 🔴 Sarcoidosis | 14.3% (1/7) |
-
-</td>
-</tr>
-</table>
-
----
-
-## ⚙️ System Configuration
-
-| Component | Detail |
-|:----------|:-------|
-| 🧠 Backbone | Qwen3-VL-8B-Thinking (4-bit NF4 quantization) |
-| 📦 Dataset | SkinCAP — 4,000 dermatology images · 10 disease classes |
-| 🔍 RAG Encoder (training) | SigLIP-2 + BGE-M3 (R2), α=0.9, K=1 reference per sample |
-| 🔍 RAG Encoder (inference) | CLIP ViT-B/32 (R0), K=3 references |
-| 🎛️ LoRA | rank=16, alpha=32 · AdamW 8-bit paged |
-| 🖥️ GPU | NVIDIA RTX 5070 Ti (15.92 GB VRAM) |
-| ⏱️ Training Time | ~1h 44min · 1,314 steps |
-| 🖼️ Image Size | 672×672 thumbnail (LANCZOS) |
+| Component | Technique | Detail |
+|:----------|:----------|:-------|
+| 🧠 Backbone | Qwen3-VL-8B-Thinking | Vision-Language Model with extended reasoning chain |
+| 📦 Dataset | SkinCAP | 4,000 dermatology images · 10 disease classes |
+| 🏷️ Label Prep | FuzzyTopK | `thefuzz` near-duplicate label consolidation → top-K class filtering |
+| 📊 Sampling | Stratified + Sqrt Oversample | Class-balanced 911 train / 99 val split (locked) |
+| 🔍 RAG Training | HybridRAGRetriever (R2) | SigLIP-2 + BGE-M3, α=0.9, K=1 reference per training sample |
+| 🔍 RAG Inference | HybridRAGRetriever (R0) | CLIP ViT-B/32, K=3 references |
+| 🎛️ Fine-Tuning | LoRA | rank=16, alpha=32 · 4-bit NF4 quantization (Unsloth) |
+| ⚡ Optimizer | AdamW 8-bit paged | Memory-efficient optimizer for large VLM training |
+| 🔗 Stage Transfer | Merged-Init | `merge_and_unload()` before Stage 3 — prevents catastrophic interference |
+| 🏋️ Loss Weighting | STS + IBR | Selective Token Supervision for clinical terms · L2 LoRA regularization |
+| 🖼️ Image | 672×672 LANCZOS | Thumbnail resize before tokenization |
 
 ---
 
@@ -114,14 +72,14 @@ HIKARI introduces **RAG-in-Training** — instead of using retrieval only at inf
 ║  STAGE 1 — GROUP CLASSIFICATION                                      ║
 ╠══════════════════════════════════════════════════════════════════════╣
 ║                                                                      ║
-║  Skin Image ──► Qwen3-VL-8B ──► 4 Disease Groups  (88.68% acc)     ║
+║  Skin Image ──► Qwen3-VL-8B (LoRA) ──► 4 Disease Groups             ║
 ║                                                                      ║
 ║  ┌─ Inflammatory  (Psoriasis · Lichen · Lupus · Photo · Sclero)     ║
 ║  ├─ Benign Tumor  (Melanocytic Nevi · SCCIS)                        ║
 ║  ├─ Malignant     (Basal Cell Carcinoma · Sarcoidosis)              ║
 ║  └─ Acne          (Acne Vulgaris)                                   ║
 ║                                                                      ║
-║  Weights → initialize Stage 2                                        ║
+║  Trained weights → transferred to initialize Stage 2                 ║
 ╚══════════════════════════════════════════════════════════════════════╝
                               │
                               ▼
@@ -140,9 +98,9 @@ HIKARI introduces **RAG-in-Training** — instead of using retrieval only at inf
 ║  ║  [query_img] What skin disease is this? ║                       ║
 ║  ╚══════════════════════════════════════════╝                        ║
 ║       │                                                              ║
-║       ▼  → Qwen3-VL-8B → Disease Name  (CE loss on label token)     ║
+║       ▼  Qwen3-VL-8B → Disease Name  (cross-entropy on label token) ║
 ║                                                                      ║
-║  At inference:  CLIP R0 (K=3) → 85.86%  ← encoder-agnostic!        ║
+║  At inference: swap to CLIP R0 encoder → encoder-agnostic design    ║
 ╚══════════════════════════════════════════════════════════════════════╝
                               │
                               ▼
@@ -151,63 +109,63 @@ HIKARI introduces **RAG-in-Training** — instead of using retrieval only at inf
 ╠══════════════════════════════════════════════════════════════════════╣
 ║                                                                      ║
 ║  Stage 2 LoRA ──► merge_and_unload() ──► Merged base weights        ║
-║                                                  │                   ║
+║                    (Merged-Init trick)           │                   ║
 ║                                                  ▼                   ║
-║  Image + Prompt ────────────────────────► Fresh LoRA ──► Caption    ║
+║  Image + Prompt ──────────────────────► Fresh LoRA ──► Caption      ║
 ║  "Describe condition & recommend treatment"                          ║
 ║                                                                      ║
-║  BLEU-4: 9.82 (checkpoint init) → 29.33 (merged init)  ← 3× gain!  ║
 ║  Optional STS: per-token loss weights for clinical terminology       ║
+║  Optional IBR: L2 regularization on LoRA parameters                 ║
 ╚══════════════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
+## 🔑 Key Technical Insights
+
+| # | Insight |
+|:-:|:--------|
+| 1 | 🌸 **RAG-in-Training** — Injecting K=1 retrieved reference per training sample teaches the model to leverage visual similarity context without any architectural changes to the VLM. |
+| 2 | ✿ **Encoder-agnostic generalization** — Training with SigLIP-2+BGE-M3 (R2) but switching to CLIP (R0) at inference still generalizes well — the model learns the *concept* of reference-guided reasoning, not encoder-specific features. |
+| 3 | 🌸 **Merged-Init** — Merging Stage 2 LoRA adapters into base weights via `merge_and_unload()` before Stage 3 caption training prevents catastrophic task interference between classification and generation objectives. |
+| 4 | ✿ **Cascade penalty** — Stacking Stage 1 (group) → Stage 2 (disease) with weight transfer introduces initialization mismatch overhead that can outweigh the benefit of group-level context injection. |
+
+---
+
 ## 🔭 Attention Visualization
 
-> HIKARI learns to focus on **disease-relevant visual regions** — compared to the unfocused base model.
+> **LM Prefill Attention** — extracts attention from the last input token to `<|image_pad|>` positions, revealing where the model focuses during inference.
 
 <table align="center">
 <tr>
-<th align="center" width="50%">🔵 Base Qwen3-VL-8B (unfocused)</th>
-<th align="center" width="50%">🌸 HIKARI (disease-specific focus)</th>
+<th align="center" width="50%">🔵 Base Qwen3-VL-8B</th>
+<th align="center" width="50%">🌸 HIKARI (fine-tuned)</th>
 </tr>
 <tr>
 <td align="center" colspan="2">
 <img src="Model/gradcam_outputs/melanocytic_nevi_2_comparison.png" width="700" alt="Melanocytic Nevi — Base vs HIKARI"/>
-<br/><i>Melanocytic Nevi — LM Prefill Attention (last token → image patches)</i>
+<br/><i>Melanocytic Nevi — attention shifts toward lesion network & border structure</i>
 </td>
 </tr>
 <tr>
 <td align="center" colspan="2">
 <img src="Model/gradcam_outputs/basal_cell_carcinoma_3_comparison.png" width="700" alt="BCC — Base vs HIKARI"/>
-<br/><i>Basal Cell Carcinoma — Nodular lesion region annotation</i>
+<br/><i>Basal Cell Carcinoma — attention localizes to nodular lesion region</i>
 </td>
 </tr>
 </table>
 
 ---
 
-## 🔑 Key Findings
-
-| # | Finding |
-|:-:|:--------|
-| 1 | 🌸 **RAG-in-Training closes the train/inference gap** — Training with K=1 reference per sample teaches the model to use visual retrieval context. No architectural changes required. |
-| 2 | ✿ **Encoder-agnostic generalization** — HIKARI trained with SigLIP+BGE-M3 (R2) but performs **best with CLIP (R0)** at inference (+3.03 pp). The model learns the *concept* of reference-guided diagnosis, not encoder-specific features. |
-| 3 | 🌸 **Merged-Init prevents catastrophic interference** — Merging Stage 2 LoRA into base weights before Stage 3 training: BLEU-4 **9.82 → 29.33 (3×)**. Never fine-tune existing adapters on a different task in-place. |
-| 4 | ✿ **Group cascade hurts more than it helps** — 3-stage M-series (oracle: 66%) still underperforms 2-stage FuzzyTopK (74%). Cascade penalty from weight initialization mismatch outweighs group-context benefit. |
-
----
-
 ## 🔍 RAG Encoder Reference (R0–R4)
 
-| ID | Image Encoder | Text Encoder | α | Role |
-|:--:|:-------------|:-------------|:-:|:-----|
-| **R0** | `openai/clip-vit-base-patch32` | — | — | ✅ Best at **inference** |
+| ID | Image Encoder | Text Encoder | α | Role in HIKARI |
+|:--:|:-------------|:-------------|:-:|:---------------|
+| **R0** | `openai/clip-vit-base-patch32` | — | — | Used at **inference** |
 | R1 | CLIP | `medicalai/ClinicalBERT` | 0.5 | Clinical text variant |
-| **R2** | `google/siglip-2-base-patch16-512` | `BAAI/bge-m3` | 0.9 | ✅ Used during **training** |
-| R3 | `jinaai/jina-clip-v2` | `ncbi/MedCPT-Query-Encoder` | 0.7 | Best text-visual fusion |
-| R4 | `nomic-ai/nomic-embed-vision-v1.5` | `nomic-ai/nomic-embed-text-v1.5` | 0.5 | Cross-modal unified |
+| **R2** | `google/siglip-2-base-patch16-512` | `BAAI/bge-m3` | 0.9 | Used during **training** |
+| R3 | `jinaai/jina-clip-v2` | `ncbi/MedCPT-Query-Encoder` | 0.7 | Medical text-visual fusion |
+| R4 | `nomic-ai/nomic-embed-vision-v1.5` | `nomic-ai/nomic-embed-text-v1.5` | 0.5 | Cross-modal unified space |
 
 ---
 
@@ -232,7 +190,7 @@ python train_two_stage_FuzzyTopK.py \
     --rag_exp R2 \
     --alpha 0.9
 
-# Stage 3: Clinical caption generation (Merged-Init, best config)
+# Stage 3: Clinical caption generation (Merged-Init)
 python train_two_stage_FuzzyTopK.py \
     --stage3_init merged \
     --use_sts False
@@ -265,7 +223,7 @@ python gradcam_visualization.py
 python check_cuda.py  # Verify CUDA + GPU before training
 ```
 
-> 📖 See [`Model/README.md`](Model/README.md) for the **full technical reference** — every script explained, all experiments documented, ablation tables.
+> 📖 See [`Model/README.md`](Model/README.md) for the **full technical reference** — every script explained, all experiments documented.
 
 ---
 
@@ -277,8 +235,8 @@ HIKARI/
 ├── logo/
 │   └── HIKARI logo.png
 └── Model/
-    ├── README.md                      ← Full technical reference
-    ├── Conference_Paper.tex           ← ITC-CSCC 2025 paper
+    ├── README.md                      ← Full technical reference (all scripts defined)
+    ├── Conference_Paper.tex           ← Paper (LaTeX)
     ├── summary.md                     ← Project summary (EN)
     ├── summary_Th.md                  ← Project summary (TH) + all experiment definitions
     │
@@ -312,19 +270,6 @@ HIKARI/
 
 ---
 
-## 📄 Citation
-
-```bibtex
-@inproceedings{hikari2025,
-  title     = {HIKARI: RAG-in-Training for Fine-Grained Skin Lesion Diagnosis
-               with Vision-Language Models},
-  booktitle = {Proceedings of ITC-CSCC 2025},
-  year      = {2025}
-}
-```
-
----
-
 ## 📚 References
 
 | Library / Resource | Role in HIKARI |
@@ -341,7 +286,7 @@ HIKARI/
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=13&duration=4000&pause=500&color=AAAAAA&center=true&vCenter=true&width=700&lines=Qwen3-VL-8B-Thinking+%C2%B7+Unsloth+%C2%B7+SkinCAP;SigLIP-2+%2B+BGE-M3+(train)+%C2%B7+CLIP+(inference);RAG-in-Training+%C2%B7+Merged-Init+%C2%B7+STS+%C2%B7+IBR;3-Stage+Pipeline+%C2%B7+LoRA+%C2%B7+4-bit+NF4+%C2%B7+RTX+5070+Ti;ITC-CSCC+2025" alt="footer" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=13&duration=4000&pause=500&color=AAAAAA&center=true&vCenter=true&width=700&lines=Qwen3-VL-8B-Thinking+%C2%B7+Unsloth+%C2%B7+SkinCAP;SigLIP-2+%2B+BGE-M3+(train)+%C2%B7+CLIP+ViT-B%2F32+(inference);RAG-in-Training+%C2%B7+Merged-Init+%C2%B7+STS+%C2%B7+IBR;3-Stage+Pipeline+%C2%B7+LoRA+rank%3D16+%C2%B7+4-bit+NF4;FuzzyTopK+%C2%B7+HybridRAGRetriever+%C2%B7+RTX+5070+Ti" alt="footer" />
 
 <br/>
 

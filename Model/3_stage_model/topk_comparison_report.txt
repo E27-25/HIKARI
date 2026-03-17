@@ -1,0 +1,386 @@
+====================================================================================================
+                              TOP-K STRATEGY COMPARISON
+====================================================================================================
+
+Strategy A: Uniform K=5
+=======================
+
+📝 Description: Simple approach - same K for all groups
+
+📊 Configuration:
+   1. Pigmented Lesions: K=5
+   2. Papules, Nodules & Tumors: K=5
+   3. Papulosquamous/Scaly Plaques: K=5
+   4. Vesicles, Pustules & Acneiform: K=5
+   5. Erythema & Urticaria: K=5
+   6. Sclerosis, Atrophy & Depigmentation: K=5
+   7. Infections & Infestations: K=5
+
+✅ Pros:
+   + Simplest to implement
+   + Equal disease representation across groups
+   + Easy to understand and explain
+
+❌ Cons:
+   - Ignores group size differences
+   - Low coverage for large groups (45% for group 2)
+   - Wastes potential of small groups
+
+📈 Statistics:
+   • Total samples for Stage 2: 2108/4000 (52.7%)
+   • Coverage range: 44.5% - 78.5%
+   • Balance score: 41.9%
+   • Total classes in Stage 2: 42
+
+----------------------------------------------------------------------------------------------------
+
+Strategy B: Adaptive Coverage (70%)
+===================================
+
+📝 Description: K varies to achieve ~70% coverage per group
+
+📊 Configuration:
+   1. Pigmented Lesions: K=9
+   2. Papules, Nodules & Tumors: K=10
+   3. Papulosquamous/Scaly Plaques: K=10
+   4. Vesicles, Pustules & Acneiform: K=5
+   5. Erythema & Urticaria: K=8
+   6. Sclerosis, Atrophy & Depigmentation: K=5
+   7. Infections & Infestations: K=5
+
+✅ Pros:
+   + Consistent coverage across groups
+   + Captures majority of samples
+   + Balanced representation
+
+❌ Cons:
+   - More classes to learn (52 diseases)
+   - Potential overfitting on rare diseases
+   - Complex class distribution
+
+📈 Statistics:
+   • Total samples for Stage 2: 2914/4000 (72.8%)
+   • Coverage range: 62% - 78%
+   • Balance score: 65.4%
+   • Total classes in Stage 2: 59
+
+----------------------------------------------------------------------------------------------------
+
+Strategy C: Sample-Balanced (~200 per group)
+============================================
+
+📝 Description: K chosen to get similar samples per group
+
+📊 Configuration:
+   1. Pigmented Lesions: K=4
+   2. Papules, Nodules & Tumors: K=2
+   3. Papulosquamous/Scaly Plaques: K=2
+   4. Vesicles, Pustules & Acneiform: K=3
+   5. Erythema & Urticaria: K=3
+   6. Sclerosis, Atrophy & Depigmentation: K=5
+   7. Infections & Infestations: K=5
+
+✅ Pros:
+   + Balanced samples across groups for Stage 2
+   + Prevents group-level bias
+   + Good for equal group importance
+
+❌ Cons:
+   - Very low coverage for large groups (26% for group 2)
+   - Loses lots of data
+   - Uneven coverage creates confusion
+
+📈 Statistics:
+   • Total samples for Stage 2: 1508/4000 (37.7%)
+   • Coverage range: 26% - 78%
+   • Balance score: 71.4%
+   • Total classes in Stage 2: 31
+
+----------------------------------------------------------------------------------------------------
+
+Strategy D: RECOMMENDED - Hybrid Balanced
+=========================================
+
+📝 Description: Balance coverage + minimum samples + reasonable K
+
+📊 Configuration:
+   1. Pigmented Lesions: K=6
+   2. Papules, Nodules & Tumors: K=7
+   3. Papulosquamous/Scaly Plaques: K=7
+   4. Vesicles, Pustules & Acneiform: K=5
+   5. Erythema & Urticaria: K=6
+   6. Sclerosis, Atrophy & Depigmentation: K=5
+   7. Infections & Infestations: K=5
+
+💡 Rationale:
+   • Large groups (>900): K=7 for better coverage
+   • Medium groups (500-900): K=6 for balance
+   • Small groups (<500): K=5 to avoid overfitting rare diseases
+   • All K values ensure min 15 samples per disease
+
+✅ Pros:
+   + Balances coverage (53-78%) and sample distribution
+   + Reasonable number of classes (42 diseases)
+   + Better coverage than Strategy A
+   + More balanced than Strategy B
+
+❌ Cons:
+   - Slightly more complex to configure
+   - Still has some imbalance between groups
+
+📈 Statistics:
+   • Total samples for Stage 2: 2409/4000 (60.2%)
+   • Coverage range: 53.7% - 78.5%
+   • Balance score: 55.8%
+   • Total classes in Stage 2: 49
+
+----------------------------------------------------------------------------------------------------
+
+Strategy E: Conservative K=3
+============================
+
+📝 Description: Focus on most common diseases only
+
+📊 Configuration:
+   1. Pigmented Lesions: K=3
+   2. Papules, Nodules & Tumors: K=3
+   3. Papulosquamous/Scaly Plaques: K=3
+   4. Vesicles, Pustules & Acneiform: K=3
+   5. Erythema & Urticaria: K=3
+   6. Sclerosis, Atrophy & Depigmentation: K=3
+   7. Infections & Infestations: K=3
+
+✅ Pros:
+   + Focuses on most important diseases
+   + Fewer classes = easier to learn
+   + Strong performance on common cases
+
+❌ Cons:
+   - Very low coverage (30-50%)
+   - Large 'Other' category may be confusing
+   - Loses too much training data
+
+📈 Statistics:
+   • Total samples for Stage 2: 1406/4000 (35.1%)
+   • Coverage range: 30% - 56%
+   • Balance score: 45.2%
+   • Total classes in Stage 2: 28
+
+----------------------------------------------------------------------------------------------------
+
+====================================================================================================
+                                   FINAL RECOMMENDATION
+====================================================================================================
+
+🎯 RECOMMENDED: Strategy D - Hybrid Balanced
+
+WHY THIS IS THE BEST CHOICE:
+
+1. OPTIMAL COVERAGE (53-78%)
+   ✓ Captures majority of samples without overfitting rare diseases
+   ✓ Consistent across groups without extreme variation
+   
+2. BALANCED CLASS DISTRIBUTION
+   ✓ 42 disease classes + 7 'Other' categories = 49 total classes
+   ✓ Manageable for VLM without overwhelming the model
+   ✓ Each disease has sufficient samples (15+) for learning
+   
+3. GROUP-AWARE ADAPTATION
+   ✓ Larger groups get more K to leverage their data
+   ✓ Smaller groups stay conservative to avoid noise
+   ✓ Respects natural data distribution
+   
+4. PRACTICAL FOR 3-STAGE TRAINING
+   ✓ Stage 1: Clean 7-way classification (groups)
+   ✓ Stage 2: Hierarchical 49-way classification (diseases + other)
+   ✓ Stage 3: Leverage all 4000 samples for caption generation
+
+5. BETTER THAN ALTERNATIVES
+   ✓ More coverage than Strategy A (uniform K=5)
+   ✓ Fewer classes than Strategy B (70% coverage)
+   ✓ Less data loss than Strategy C (sample-balanced)
+   ✓ More comprehensive than Strategy E (K=3)
+
+
+====================================================================================================
+                              IMPLEMENTATION GUIDE
+====================================================================================================
+
+📦 PYTHON CONFIG FOR TRAINING SCRIPT:
+
+TOP_K_CONFIG = {
+    '1. Pigmented Lesions': 6,
+    '2. Papules, Nodules & Tumors': 7,
+    '3. Papulosquamous/Scaly Plaques': 7,
+    '4. Vesicles, Pustules & Acneiform': 5,
+    '5. Erythema & Urticaria': 6,
+    '6. Sclerosis, Atrophy & Depigmentation': 5,
+    '7. Infections & Infestations': 5,
+}
+
+# Expected distribution per group for Stage 2:
+EXPECTED_SAMPLES_STAGE2 = {
+    '1. Pigmented Lesions': 296,          # 58.5% coverage
+    '2. Papules, Nodules & Tumors': 542,  # 53.7% coverage
+    '3. Papulosquamous/Scaly Plaques': 536, # 58.9% coverage
+    '4. Vesicles, Pustules & Acneiform': 286, # 62.3% coverage
+    '5. Erythema & Urticaria': 341,       # 57.8% coverage
+    '6. Sclerosis, Atrophy & Depigmentation': 192, # 76.5% coverage
+    '7. Infections & Infestations': 216,  # 78.5% coverage
+}
+
+# Total: 2409 samples for Stage 2 disease classification
+# Remaining: 1591 samples in 'Other' categories across all groups
+
+
+====================================================================================================
+                         TRAINING PIPELINE RECOMMENDATIONS
+====================================================================================================
+
+🔄 STAGE 1: GROUP CLASSIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Input:  Images
+Output: 7 group labels
+Data:   All 4000 samples
+Classes: 7 groups
+
+Training Details:
+• Batch size: 16-32 (depending on GPU)
+• Epochs: 10-15
+• Learning rate: 1e-4 to 5e-5
+• Loss: CrossEntropyLoss with class weights for imbalanced groups
+• Metrics: Accuracy, F1-macro, Per-class F1
+
+Class Weights (based on inverse frequency):
+  Group 2 (1009 samples): weight = 1.0
+  Group 3 (910 samples):  weight = 1.1
+  Group 5 (590 samples):  weight = 1.7
+  Group 1 (506 samples):  weight = 2.0
+  Group 4 (459 samples):  weight = 2.2
+  Group 7 (275 samples):  weight = 3.7
+  Group 6 (251 samples):  weight = 4.0
+
+
+🔄 STAGE 2: DISEASE CLASSIFICATION (Within Groups)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Input:  Images + Group prediction from Stage 1
+Output: Disease label (Top-K + 'Other')
+Data:   All 4000 samples
+Classes: 49 total (42 diseases + 7 'Other' categories)
+
+Training Details:
+• Initialize from Stage 1 checkpoint
+• Batch size: 16-32
+• Epochs: 15-20
+• Learning rate: 5e-5 to 1e-5 (lower than Stage 1)
+• Loss: Focal Loss (γ=2) or Class-Weighted CrossEntropy
+• Metrics: Per-group F1, Overall weighted F1, Confusion matrix
+
+Important:
+• Use hierarchical approach: predict group first, then disease
+• Apply heavy class weights to 'Other' categories
+• Consider group-specific thresholds for 'Other' classification
+
+
+🔄 STAGE 3: CAPTION GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Input:  Images
+Output: Medical captions describing lesion characteristics
+Data:   All 4000 samples with caption annotations
+Task:   Conditional text generation
+
+Training Details:
+• Initialize from Stage 2 checkpoint (last epoch)
+• Batch size: 8-16 (captions are longer)
+• Epochs: 5-10
+• Learning rate: 1e-5 to 5e-6
+• Loss: CrossEntropyLoss on token predictions
+• Metrics: BLEU-4, ROUGE-L, CIDEr, METEOR
+
+Caption Format Example:
+"A circular, hyperpigmented lesion approximately 8mm in diameter located 
+on the forearm. The borders are irregular with asymmetric distribution 
+of pigmentation. Characteristic features suggest melanocytic nevus with 
+possible dysplastic changes."
+
+
+⚠️  CRITICAL IMPLEMENTATION NOTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. DATA PREPARATION
+   • Create separate JSON files for each stage
+   • Ensure stratified splits (train/val/test = 80/10/10)
+   • Validate that all diseases in Top-K have ≥15 samples
+   • Map remaining diseases to 'Other_GroupX' labels
+
+2. HANDLING 'OTHER' CATEGORY
+   Option A (Recommended): Separate 'Other' per group
+   • 'Other_Group1', 'Other_Group2', ..., 'Other_Group7'
+   • Advantage: Model learns group-specific patterns
+   
+   Option B: Single 'Other' category
+   • All rare diseases → one 'Other' class
+   • Simpler but loses group context
+
+3. CLASS IMBALANCE MITIGATION
+   • Use Focal Loss: FL = -α(1-p_t)^γ * log(p_t), γ=2
+   • Class weights: inverse frequency with smoothing
+   • Data augmentation for minority classes:
+     - Random rotation (±15°)
+     - Color jitter
+     - Random crop and resize
+     - Horizontal flip
+   • Oversampling: repeat rare disease samples 2-3x
+
+4. VALIDATION STRATEGY
+   • Stratify by BOTH group AND disease
+   • Monitor per-group metrics separately
+   • Early stopping on validation F1-macro
+   • Save best checkpoint per stage
+
+5. EVALUATION
+   Stage 1: Overall accuracy should be >85%
+   Stage 2: Per-group F1 >0.7, Overall weighted F1 >0.75
+   Stage 3: BLEU-4 >0.4, CIDEr >1.0
+
+6. GPU MEMORY OPTIMIZATION
+   • Use gradient checkpointing for Qwen3VL-8B
+   • Mixed precision training (fp16 or bf16)
+   • Gradient accumulation if needed
+   • Clear cache between stages
+
+
+====================================================================================================
+                              EXPECTED OUTCOMES
+====================================================================================================
+
+📊 PERFORMANCE TARGETS
+
+Stage 1 (Group Classification):
+  ✓ Training Accuracy: 90-95%
+  ✓ Validation Accuracy: 85-90%
+  ✓ Test Accuracy: 82-87%
+  ✓ F1-macro: >0.85
+
+Stage 2 (Disease Classification):
+  ✓ Training Accuracy: 80-85%
+  ✓ Validation Accuracy: 75-80%
+  ✓ Test Accuracy: 72-77%
+  ✓ F1-macro: >0.70
+  ✓ Per-group F1: >0.65 for all groups
+
+Stage 3 (Caption Generation):
+  ✓ BLEU-4: 0.35-0.45
+  ✓ ROUGE-L: 0.45-0.55
+  ✓ CIDEr: 0.8-1.2
+  ✓ METEOR: 0.30-0.40
+
+Total Training Time (single A100):
+  • Stage 1: ~2-3 hours
+  • Stage 2: ~3-4 hours
+  • Stage 3: ~4-5 hours
+  • Total: ~10-12 hours
+
+====================================================================================================
+Analysis complete! Use Strategy D (Hybrid Balanced) for optimal results.
+====================================================================================================

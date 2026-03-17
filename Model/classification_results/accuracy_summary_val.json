@@ -1,0 +1,10 @@
+{
+  "split": "val",
+  "total_predictions": 400,
+  "correct": 110,
+  "incorrect": 290,
+  "accuracy": 27.500000000000004,
+  "accuracy_percent": "27.50%",
+  "num_classes": 123,
+  "partial_matches_as_correct": 6
+}

@@ -1,0 +1,10 @@
+{
+  "split": "val",
+  "total_samples": 400,
+  "correct": 110,
+  "incorrect": 290,
+  "failed": 0,
+  "accuracy": 27.500000000000004,
+  "accuracy_percent": "27.50%",
+  "visualization_type": "saliency"
+}

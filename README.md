@@ -7,12 +7,11 @@
 
 <br/>
 
-<!-- ✿ Sakura Divider ✿ -->
 ```
 ✿ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✿
 ```
 
-### 🌸 *A RAG-in-Training Vision-Language Model for Fine-Grained Skin Lesion Diagnosis with Retrieval-Augmented Generation and Evidence-Based Clinical Recommendations* 🌸
+### 🌸 *A RAG-in-Training Vision-Language Model for Fine-Grained Skin Lesion Diagnosis* 🌸
 
 <br/>
 
@@ -51,28 +50,53 @@
 
 </div>
 
+> **HIKARI** is a RAG-in-Training pipeline that fine-tunes **Qwen3-VL-8B-Thinking** on the SkinCAP dermatology dataset using a novel training strategy: injecting retrieved reference images *during training* so the model learns to leverage visual similarity evidence — achieving **85.86% accuracy** on 10-class skin disease classification.
+
 ```
 ✿ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✿
 ```
 
 <div align="center">
 
-## 🌸 Implementation Results 🌸
+## 🌸 Results 🌸
 
 </div>
 
-> The HIKARI model has been built and validated on the **SkinCAP** dermatology dataset.
-> See [`Model/README.md`](Model/README.md) for the full technical reference.
+<table align="center">
+<tr>
+<td width="50%">
 
-<div align="center">
+### 🏆 Model Comparison
 
-| Model Variant | Accuracy |
+| Model | Acc |
 |:---|:---:|
-| 🥇 **HIKARI RAG-in-Training** (`fuzzytopk_s1cascade_ragR2_a09`) | **85.86%** |
+| 🥇 **HIKARI (RAG-in-Training)** | **85.86%** |
 | 🥈 Cascaded FT + Inference RAG | 79.80% |
 | 🥉 Single-Image Fine-Tune | 74.00% |
 | Zero-Shot Frontier (best) | 50.51% |
-| Base Qwen3-VL-8B (no fine-tuning) | 33.33% |
+| Base Qwen3-VL-8B (no FT) | 33.33% |
+
+</td>
+<td width="50%">
+
+### 🔬 Per-Disease Sensitivity
+
+| Disease | Sensitivity |
+|:---|:---:|
+| 🟢 Psoriasis | **100%** (13/13) |
+| 🟢 Melanocytic Nevi | **100%** (12/12) |
+| 🟢 SCCIS | **100%** (12/12) |
+| 🟢 Basal Cell Ca. | **100%** (13/13) |
+| 🟢 Acne Vulgaris | **100%** (8/8) |
+| 🟡 Lichen Planus | 88.9% (8/9) |
+| 🟡 Scleroderma | 87.5% (7/8) |
+| 🟡 Photodermatoses | 75.0% (6/8) |
+| 🔴 Lupus Erythematosus | 55.6% (5/9) |
+| 🔴 Sarcoidosis | 14.3% (1/7) |
+
+</td>
+</tr>
+</table>
 
 | Component | Detail |
 |:---|:---|
@@ -83,7 +107,96 @@
 | GPU | NVIDIA RTX 5070 Ti · 4-bit NF4 quantization |
 | Training time | ~1h 44min · LoRA rank 16 |
 
+```
+✿ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✿
+```
+
+<div align="center">
+
+## 🌸 HIKARI Pipeline 🌸
+
 </div>
+
+```
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  🌸 STAGE 1 — GROUP CLASSIFICATION                                                   │
+├──────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                      │
+│  Skin Image ───► Qwen3-VL-8B (LoRA) ────────────────────────────► Group Label      │
+│                                                                    (4 classes)       │
+│                                                                                      │
+│  Groups: Inflammatory · Benign Tumor · Malignant Tumor · Acne                       │
+│  Result: 88.68% group classification accuracy                                       │
+│  Weights transferred → initialize Stage 2                                           │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+                                         │
+                                         ▼
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  🌸 STAGE 2 — RAG-IN-TRAINING DISEASE CLASSIFICATION (Key Contribution)             │
+├──────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                      │
+│  RAG Index (911 train images, SigLIP-2 + BGE-M3, R2, α=0.9)                        │
+│                   │                                                                  │
+│                   ▼  For each training sample → retrieve K=1 most similar           │
+│                                                                                      │
+│  ┌─────────────────────────────────────────────────────────────────────────────┐    │
+│  │  [ref_img]   Reference: "psoriasis"                                         │    │
+│  │              "Erythematous plaques with silver scaling..."                   │    │
+│  │  [query_img] What skin disease does this patient have?                      │    │
+│  └─────────────────────────────────────────────────────────────────────────────┘    │
+│                   │                                                                  │
+│                   ▼  Qwen3-VL-8B → Disease Name (10 classes)                        │
+│                                                                                      │
+│  At inference: CLIP (R0) retrieves K=3 refs → 85.86% accuracy                      │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+                                         │
+                                         ▼
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  🌸 STAGE 3 — CLINICAL CAPTION GENERATION (Merged-Init)                             │
+├──────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                      │
+│  Stage 2 LoRA ──► merge_and_unload() ──► Merged weights ──► Fresh LoRA adapters    │
+│                    (Merged-Init trick)                                               │
+│                                         │                                           │
+│  Input Image + Prompt ──────────────────▼──► Clinical Caption                      │
+│  "Describe and recommend treatment"         (BLEU-4: 29.33 vs 9.82 baseline)       │
+│                                                                                      │
+│  Optional STS: per-token loss weights for clinical terminology                      │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+```
+      🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸
+```
+
+<div align="center">
+
+## 🌸 Attention Visualization 🌸
+
+*LM Prefill Attention — HIKARI focuses on disease-relevant visual regions*
+
+</div>
+
+<table align="center">
+<tr>
+<th align="center">Melanocytic Nevi</th>
+<th align="center">Basal Cell Carcinoma</th>
+</tr>
+<tr>
+<td align="center">
+<img src="Model/gradcam_outputs/melanocytic_nevi_2_comparison.png" width="380" alt="Melanocytic Nevi Attention"/>
+</td>
+<td align="center">
+<img src="Model/gradcam_outputs/basal_cell_carcinoma_3_comparison.png" width="380" alt="BCC Attention"/>
+</td>
+</tr>
+<tr>
+<td align="center"><i>Network & border focus</i></td>
+<td align="center"><i>Nodular lesion annotation</i></td>
+</tr>
+</table>
+
+> **Left:** Base Qwen3-VL-8B (unfocused, scattered) → **Right:** HIKARI (disease-specific region focus)
 
 ```
 ✿ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✿
@@ -91,463 +204,82 @@
 
 <div align="center">
 
-## 🌸 Training Pipeline 🌸
+## 🌸 Key Findings 🌸
 
 </div>
-
-### ✿ Data Preparation
-
-```
-┌──────────────────────────────────────────────────────────────────────────────────────┐
-│  🌸 DATA PREPARATION                                                                 │
-├──────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                      │
-│  SkinCAP Dataset (4,000 images)       Fuzzy Label Consolidation                   │
-│  Dermatology photos + captions ──────►  (thefuzz — merge near-duplicate labels)   │
-│  CSV: skincap_v240623.csv                            │                             │
-│                                                       ▼                             │
-│                                            Top-K Class Filtering                   │
-│                                            (Top 10 most frequent diseases)         │
-│                                                       │                             │
-│                                                       ▼                             │
-│  ┌────────────────────────────────────────────────────────────────────────┐       │
-│  │  10 Skin Disease Classes                                               │       │
-│  ├────────────────────────────────────────────────────────────────────────┤       │
-│  │  Psoriasis · Melanocytic Nevi · SCCIS · Basal Cell Carcinoma          │       │
-│  │  Acne Vulgaris · Lichen Planus · Scleroderma · Photodermatoses        │       │
-│  │  Lupus Erythematosus · Sarcoidosis                                     │       │
-│  └────────────────────────────────────────────────────────────────────────┘       │
-│                                                       │                             │
-│                                                       ▼                             │
-│                             Stratified 911 train / 99 val split (locked)           │
-│                             Sqrt oversampling for class imbalance (train only)     │
-└──────────────────────────────────────────────────────────────────────────────────────┘
-```
-
-<br/>
-
-### ✿ Stage 1: Group Classification
-
-```
-┌──────────────────────────────────────────────────────────────────────────────────────┐
-│  🌸 STAGE 1: GROUP CLASSIFICATION                                                    │
-├──────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                      │
-│  Input Image ───────►  Qwen3-VL-8B  ──────────────────────────────► Group Label   │
-│  (Skin photo)          (4-bit NF4)                                   (4 classes)   │
-│                                                                                      │
-│  Prompt: "What disease group? Inflammatory / Benign / Malignant / Acne"            │
-│                                                                                      │
-│  Groups:                                                                            │
-│  ├── Inflammatory: Psoriasis, Lichen Planus, Lupus, Photodermatoses, Scleroderma  │
-│  ├── Benign:       Melanocytic Nevi, SCCIS                                         │
-│  ├── Malignant:    Basal Cell Carcinoma, Sarcoidosis                               │
-│  └── Acne:         Acne Vulgaris                                                   │
-│                                                                                      │
-│  Training: 5 epochs · LoRA r=16 · Accuracy: 88.68%                                │
-│  Weights saved → initialize Stage 2                                                 │
-└──────────────────────────────────────────────────────────────────────────────────────┘
-```
-
-<br/>
-
-### ✿ Stage 2: RAG-in-Training Disease Classification
-
-```
-┌──────────────────────────────────────────────────────────────────────────────────────┐
-│  🌸 STAGE 2: RAG-IN-TRAINING DISEASE CLASSIFICATION (Key Contribution)              │
-├──────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                      │
-│  RAG Index (911 training images, encoded by SigLIP-2 + BGE-M3, R2, α=0.9)         │
-│                                              │                                      │
-│  For each training sample ───────────────► Retrieve K=1 most similar reference    │
-│                                              │                                      │
-│                                              ▼                                      │
-│  ┌──────────────────────────────────────────────────────────────────────┐        │
-│  │  Multi-image Prompt (per sample)                                     │        │
-│  │  [ref_img]   Reference: "psoriasis"                                  │        │
-│  │              Erythematous plaques with silver scaling...             │        │
-│  │  [query_img] What skin disease does this patient have?              │        │
-│  └──────────────────────────────────────────────────────────────────────┘        │
-│                                              │                                      │
-│                                              ▼                                      │
-│                               Qwen3-VL-8B → Disease Name                           │
-│                               Loss: Cross-Entropy on predicted label token          │
-│                                                                                      │
-│  Training: 3 epochs · Accuracy: 85.86% (best: CLIP R0 at inference)               │
-└──────────────────────────────────────────────────────────────────────────────────────┘
-```
-
-<br/>
-
-### ✿ Stage 3: Clinical Caption Generation (Merged-Init)
-
-```
-┌──────────────────────────────────────────────────────────────────────────────────────┐
-│  🌸 STAGE 3: CLINICAL CAPTION GENERATION (Merged-Init)                              │
-├──────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                      │
-│  Stage 2 LoRA adapters ────► merge_and_unload() ────► Merged base weights          │
-│  (classification weights)      (Merged-Init trick)      (fresh LoRA for captions)  │
-│                                              │                                      │
-│                                              ▼                                      │
-│  Input Image + Prompt ───► Qwen3-VL-8B (Merged-Init) ──────────► Caption Text     │
-│  "Describe the skin                                                                  │
-│   condition and                                                                      │
-│   recommend treatment"                                                               │
-│                                                                                      │
-│  Optional STS (Selective Token Supervision):                                        │
-│  • w_ans:    higher weight for diagnosis/recommendation sentences                   │
-│  • w_reason: higher weight for clinical terminology                                 │
-│  • w_surp:   higher weight for tokens the base model finds surprising               │
-│  • IBR:      L2 regularization on LoRA parameters                                  │
-│                                                                                      │
-│  Training: 3 epochs · BLEU-4: 29.33 (vs 9.82 checkpoint init — 3× gain)           │
-│  Loss: Cross-Entropy with STS token weighting                                      │
-└──────────────────────────────────────────────────────────────────────────────────────┘
-```
-
-<br/>
-
-```
-      🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸
-```
-
-<br/>
-
-<div align="center">
-
-## 🌸 ReGrounding Module Development 🌸
-
-</div>
-
-### ✿ Building Knowledge Base (Week 4)
-
-```
-┌──────────────────────────────────────────────────────────────────────────────────────┐
-│  🌸 BUILDING KNOWLEDGE BASE (Week 4)                                                │
-├──────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                      │
-│  Training Cases ──────► Vision Encoder ────────► Image Features                    │
-│  (Images + Masks)      (CLIP/DINOv2)                  │                            │
-│                                                        │                            │
-│                                                        ├────► Vector Database       │
-│  Segmentation ───────► Mask Encoder ──────────► Mask Features  (FAISS Index)      │
-│  Masks                                                 │                            │
-│                                                        │                            │
-│  Clinical Text ──────► Text Encoder ──────────► Text Features                     │
-│  (Captions +           (BioBERT)                       │                            │
-│   Guidelines)                                          │                            │
-│                                                        │                            │
-│  Treatment ───────────────────────────────────────────┴────► Metadata             │
-│  Outcomes                                                     (Disease, Outcome,    │
-│                                                                Treatment, etc.)     │
-│                                                                                      │
-│  Result: Knowledge Base with ~1000+ indexed cases                                  │
-└──────────────────────────────────────────────────────────────────────────────────────┘
-```
-
-<br/>
-
-```
-      🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸
-```
-
-<br/>
-
-<div align="center">
-
-## 🌸 Inference Pipeline 🌸
-
-</div>
-
-### ✿ User Input (via Web or LINE API)
-
-```
-┌──────────────────────────────────────────────────────────────────────────────────────┐
-│  🌸 USER INPUT (via Web or LINE API)                                               │
-├──────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                      │
-│  Patient Image ────────┐                                                            │
-│  (Oral Photo)          │                                                            │
-│                        ├──────────────────────────────────────────────┐            │
-│  User Instruction ─────┤                                              │            │
-│  (Thai or English)     │                                              │            │
-│  e.g., "Segment areas  │                                              │            │
-│   requiring treatment" │                                              │            │
-└─────────────────────────┴──────────────────────────────────────────────┼────────────┘
-```
-
-<br/>
-
-### ✿ Step 1: Initial Prediction
-
-```
-┌──────────────────────────────────────────────────────────────────────────────────────┐
-│  🌸 STEP 1: INITIAL PREDICTION (Trained Model from Stage 1-3)                      │
-├──────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                      │
-│  Image + Instruction ────► OralGPT Model ─────► Initial Results                    │
-│                            (Stage 1-2-3)              │                             │
-│                                                       ├──► Disease Classification    │
-│                                                       ├──► Segmentation Masks        │
-│                                                       ├──► Clinical Caption          │
-│                                                       └──► Uncertainty Score         │
-│                                                              │                       │
-└──────────────────────────────────────────────────────────────┼───────────────────────┘
-```
-
-<br/>
-
-### ✿ Step 2: Uncertainty Estimation
-
-```
-┌──────────────────────────────────────────────────────────────────────────────────────┐
-│  🌸 STEP 2: UNCERTAINTY ESTIMATION (Monte Carlo Dropout)                           │
-├──────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                      │
-│  Multiple Forward Passes ────► Statistical Analysis ────► Uncertainty Score        │
-│  (with dropout enabled)         (variance calculation)         │                   │
-│                                                                 │                   │
-│                                                                 ▼                   │
-│                                                    ┌────────────────────────┐      │
-│                                                    │ If Uncertainty > 0.7   │      │
-│                                                    │ → Retrieve more cases  │      │
-│                                                    │    (k=10)              │      │
-│                                                    │ Else                   │      │
-│                                                    │ → Retrieve fewer (k=3) │      │
-│                                                    └────────────────────────┘      │
-│                                                                 │                   │
-└─────────────────────────────────────────────────────────────────┼───────────────────┘
-```
-
-<br/>
-
-### ✿ Step 3: Visual-Semantic Retrieval (ReGrounding)
-
-```
-┌──────────────────────────────────────────────────────────────────────────────────────┐
-│  🌸 STEP 3: VISUAL-SEMANTIC RETRIEVAL (ReGrounding)                                │
-├──────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                      │
-│  Query Encoding:                                                                    │
-│  ┌─────────────────────────────────────────────────────────────────┐              │
-│  │  Patient Image ────► Vision Encoder ────► Image Features        │              │
-│  │                                                  │                │              │
-│  │  Predicted Masks ──► Mask Encoder ──────► Mask Features         │              │
-│  │                                                  │                │              │
-│  │  Instruction ──────► Text Encoder ──────► Text Features          │              │
-│  │                                                  │                │              │
-│  │                                                  ▼                │              │
-│  │                                        Combined Query Vector      │              │
-│  └─────────────────────────────────────────────────────────────────┘              │
-│                                                  │                                  │
-│                                                  ▼                                  │
-│  Similarity Search:                                                                │
-│  ┌─────────────────────────────────────────────────────────────────┐              │
-│  │  Query Vector ──────► Vector Database (FAISS) ──► Top-k Cases  │              │
-│  │                                                           │       │              │
-│  │                                                           ▼       │              │
-│  │                              Retrieved Cases with:                │              │
-│  │                              • Similar images                     │              │
-│  │                              • Segmentation masks                 │              │
-│  │                              • Disease diagnosis                  │              │
-│  │                              • Treatment used                     │              │
-│  │                              • Clinical outcomes                  │              │
-│  │                              • Follow-up duration                 │              │
-│  └─────────────────────────────────────────────────────────────────┘              │
-│                                                  │                                  │
-│                                                  ▼                                  │
-│  Cross-Modal Re-ranking:                                                           │
-│  ┌─────────────────────────────────────────────────────────────────┐              │
-│  │  For each retrieved case:                                        │              │
-│  │    Score = α × Visual_Similarity                                 │              │
-│  │          + (1-α) × Semantic_Similarity                           │              │
-│  │          + 0.2 × Language_Match_Bonus                            │              │
-│  │                                                                   │              │
-│  │  α = 0.7 if uncertainty > 0.5, else 0.3 (adaptive weighting)    │              │
-│  │                                                                   │              │
-│  │  Sort by final score ──────────────► Top-k Ranked Cases         │              │
-│  └─────────────────────────────────────────────────────────────────┘              │
-│                                                  │                                  │
-└──────────────────────────────────────────────────┼──────────────────────────────────┘
-```
-
-<br/>
-
-### ✿ Step 4: Evidence-Based Suggestion Generation
-
-```
-┌──────────────────────────────────────────────────────────────────────────────────────┐
-│  🌸 STEP 4: EVIDENCE-BASED SUGGESTION GENERATION                                   │
-├──────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                      │
-│  Build Context from Retrieved Cases:                                               │
-│  ┌─────────────────────────────────────────────────────────────────┐              │
-│  │  For each retrieved case i:                                      │              │
-│  │    • Image_i + Segmentation_i (visual template)                  │              │
-│  │    • Description_i (clinical narrative)                          │              │
-│  │    • Treatment_i (what was done)                                 │              │
-│  │    • Outcome_i (result: improved/stable/worsened)                │              │
-│  │    • Similarity_Score_i                                          │              │
-│  └─────────────────────────────────────────────────────────────────┘              │
-│                          │                                                          │
-│                          ▼                                                          │
-│  Aggregate Evidence:                                                               │
-│  ┌─────────────────────────────────────────────────────────────────┐              │
-│  │  • Successful treatments: 12/15 cases improved with Treatment X  │              │
-│  │  • Average follow-up: 6 months                                   │              │
-│  │  • Complication rate: 2/15 cases                                 │              │
-│  │  • Evidence strength: 12/15 = 80%                                │              │
-│  └─────────────────────────────────────────────────────────────────┘              │
-│                          │                                                          │
-│                          ▼                                                          │
-│  Generate Clinical Suggestion:                                                     │
-│  ┌─────────────────────────────────────────────────────────────────┐              │
-│  │  LLM Input:                                                      │              │
-│  │    • Current case: [Image + Segmentation + Classification]       │              │
-│  │    • Retrieved evidence: [Top-k cases + outcomes]                │              │
-│  │    • Uncertainty score: 0.65                                     │              │
-│  │    • Language: Thai/English                                      │              │
-│  │                                                                   │              │
-│  │  Prompt Template:                                                │              │
-│  │    "Based on {k} similar cases with {evidence_strength}          │              │
-│  │     success rate:                                                │              │
-│  │     • Diagnosis: [Disease Name]                                  │              │
-│  │     • Segmentation: [Areas marked]                               │              │
-│  │     • Recommended treatment: [Treatment X]                       │              │
-│  │     • Expected outcome: [Predicted based on evidence]            │              │
-│  │     • Monitoring plan: [Based on similar cases]                  │              │
-│  │     • Confidence: {1 - uncertainty}                              │              │
-│  │     • Evidence: {similar_case_summaries}                         │              │
-│  │     {IF uncertainty > 0.7:                                       │              │
-│  │        Recommendation: Consult specialist}"                      │              │
-│  │                                                                   │              │
-│  │  Temperature: 0.3 if uncertain, 0.7 if confident                │              │
-│  └─────────────────────────────────────────────────────────────────┘              │
-│                          │                                                          │
-└──────────────────────────┼──────────────────────────────────────────────────────────┘
-```
-
-<br/>
-
-### ✿ Final Output
-
-```
-┌──────────────────────────────────────────────────────────────────────────────────────┐
-│  🌸 FINAL OUTPUT                                                                    │
-├──────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                      │
-│  ┌────────────────────────────────────────────────────────────────┐                │
-│  │  1. Disease Classification:                                     │                │
-│  │     • Primary: Oral Lichen Planus (OLP)                         │                │
-│  │     • Confidence: 85%                                            │                │
-│  │                                                                  │                │
-│  │  2. Segmentation Masks:                                         │                │
-│  │     • Erosive Area 1: [Polygon coordinates] <seg1>             │                │
-│  │     • Erosive Area 2: [Polygon coordinates] <seg2>             │                │
-│  │     • White Striae: [Polygon coordinates] <seg3>               │                │
-│  │                                                                  │                │
-│  │  3. Clinical Description:                                       │                │
-│  │     "Clinical examination reveals bilateral reticular           │                │
-│  │      white striae on buccal mucosa with erosive areas..."       │                │
-│  │                                                                  │                │
-│  │  4. Evidence-Based Recommendation:                              │                │
-│  │     "Based on 12 similar cases (80% success rate):              │                │
-│  │      • Treatment: Topical corticosteroids                       │                │
-│  │      • Expected improvement: 4-6 weeks                          │                │
-│  │      • Monitor erosive areas <seg1>, <seg2> monthly             │                │
-│  │      • Biopsy if no improvement in 8 weeks                      │                │
-│  │      Evidence: 12/15 similar cases showed improvement"          │                │
-│  │                                                                  │                │
-│  │  5. Similar Cases References:                                   │                │
-│  │     • Case #234: 85% similarity, Improved after 6 weeks         │                │
-│  │     • Case #567: 82% similarity, Complete healing               │                │
-│  │     • Case #891: 78% similarity, Partial improvement            │                │
-│  │                                                                  │                │
-│  │  6. Uncertainty & Safety:                                       │                │
-│  │     • Uncertainty Score: 0.35 (Low)                             │                │
-│  │     • Recommendation: Suitable for monitoring                   │                │
-│  │     [If high uncertainty: "Consult specialist recommended"]     │                │
-│  └────────────────────────────────────────────────────────────────┘                │
-│                                                                                      │
-└──────────────────────────────────────────────────────────────────────────────────────┘
-```
-
-<br/>
-
-```
-      🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸
-```
-
-<br/>
-
-<div align="center">
-
-## 🌸 User Interface Delivery 🌸
-
-</div>
-
-<table align="center">
-<tr>
-<td align="center" width="50%">
-
-### 🌸 Web Interface
-
-</td>
-<td align="center" width="50%">
-
-### 🌸 LINE API
-
-</td>
-</tr>
-<tr>
-<td>
-
-- 📤 Upload image
-- ✍️ Enter instruction (Thai or English)
-- 🔍 View segmentation overlay
-- 📋 Read detailed report
-- 📚 Access similar cases
-- 👩‍⚕️ Medical professional use
-
-</td>
-<td>
-
-- 📱 Send image via LINE chat
-- 💬 Receive results in chat
-- 🗣️ Interactive Q&A
-- 🔗 Share with healthcare provider
-- 🎯 Simple interface for public
-- ⚡ Quick screening
-
-</td>
-</tr>
-</table>
-
-<br/>
-
-```
-      🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸 ✿ 🌸
-```
-
-<br/>
-
-<div align="center">
-
-## 🌸 Key Innovations 🌸
 
 | | |
 |:---:|:---|
-| 🌸 | **Multilingual Support** — Thai & English |
-| ✿ | **Visual Grounding** — Complex instruction understanding |
-| 🌸 | **ReGrounding (Novel)** — Retrieval-augmented visual grounding |
-| ✿ | **Uncertainty-Aware** — Knows when to consult specialists |
-| 🌸 | **Evidence-Based** — Recommendations backed by clinical outcomes |
+| 🌸 | **RAG-in-Training closes the train/inference gap** — Training with K=1 reference per sample teaches the model to use retrieval context; no architectural changes needed |
+| ✿ | **Encoder-agnostic generalization** — Trained with SigLIP+BGE-M3 (R2) but best performance with CLIP (R0) at inference (+3.03 pp) — model learns the *concept*, not encoder-specific features |
+| 🌸 | **Merged-Init prevents catastrophic forgetting** — Merging LoRA into base weights before Stage 3 → BLEU-4: 9.82 → **29.33 (3×)** |
+| ✿ | **Group cascade hurts more than it helps** — 3-stage M-series (oracle: 66%) still underperforms 2-stage FuzzyTopK (74%) due to cascade penalty from weight initialization mismatch |
+
+```
+✿ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✿
+```
+
+<div align="center">
+
+## 🌸 Quick Start 🌸
 
 </div>
 
-<br/>
+```bash
+git clone https://github.com/E27-25/HIKARI.git
+cd HIKARI/Model
+pip install -r requirements.txt
+
+# Train — RAG-in-Training (Stage 1 + 2)
+python train_two_stage_FuzzyTopK.py \
+    --start_from_stage1 --rag_k_train 1 --rag_exp R2 --alpha 0.9
+
+# Evaluate — Full benchmark
+python run_rag_benchmark.py \
+    --method fuzzytopk_s1cascade_ragR2_a09 --rag_exp R0
+
+# Attention visualization
+python gradcam_visualization.py
+```
+
+> See [`Model/README.md`](Model/README.md) for the full technical reference — all scripts defined, all experiments documented.
+
+```
+✿ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✿
+```
+
+<div align="center">
+
+## 🌸 RAG Encoder Configurations 🌸
+
+</div>
+
+| ID | Image Encoder | Text Encoder | Role |
+|:--:|:---|:---|:---|
+| **R0** | CLIP ViT-B/32 | — | ✅ Best at **inference** |
+| R1 | CLIP | ClinicalBERT | Generic clinical text |
+| **R2** | SigLIP-2 | BGE-M3 | ✅ Used during **training** |
+| R3 | Jina-CLIP-v2 | MedCPT | Best with α=0.7 |
+| R4 | Nomic Vision | Nomic Text | Cross-modal unified |
+
+```
+✿ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✿
+```
+
+<div align="center">
+
+## 🌸 Citation 🌸
+
+</div>
+
+```bibtex
+@inproceedings{hikari2025,
+  title     = {HIKARI: RAG-in-Training for Fine-Grained Skin Lesion Diagnosis
+               with Vision-Language Models},
+  booktitle = {Proceedings of ITC-CSCC 2025},
+  year      = {2025}
+}
+```
 
 ---
 

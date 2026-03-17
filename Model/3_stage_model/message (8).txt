@@ -1,0 +1,81 @@
+import pandas as pd
+import re
+
+# 1. โหลดข้อมูลจากไฟล์ CSV
+df = pd.read_csv('skincap_v240623.csv')
+
+# 2. กระบวนการทำความสะอาดคอลัมน์ disease 
+# - เปลี่ยน '-' และ '_' เป็นสเปซบาร์
+# - เปลี่ยนเป็นตัวพิมพ์เล็กทั้งหมด
+# - ตัดช่องว่างส่วนเกินหน้า/หลัง 
+df['clean_disease'] = df['disease'].astype(str).str.replace('-', ' ').str.replace('_', ' ').str.lower().str.strip()
+
+# - ใช้ regex เพื่อยุบช่องว่างหลายๆ อันให้เหลือแค่ 1 ช่องว่าง (แก้ปัญหาการพิมพ์เว้นวรรคไม่เท่ากัน)
+df['clean_disease'] = df['clean_disease'].apply(lambda x: re.sub(r'\s+', ' ', x))
+
+# 👉 เพิ่มเติม: แก้ไขคำที่พิมพ์ติดกันผิดพลาด (Typo) ให้ถูกต้อง
+df['clean_disease'] = df['clean_disease'].replace('squamous cell carcinomapsoriasis', 'squamous cell carcinoma')
+
+# 3. ฟังก์ชันสำหรับจัดกลุ่มโรคตาม Keyword (Morphology 7 กลุ่ม)
+def categorize_morphology(disease):
+    d = str(disease)
+    
+    # กลุ่ม 1. Pigmented Lesions
+    if any(k in d for k in ['nevus', 'nevi', 'melanoma', 'lentigo', 'pigment', 'hyperpigmentation', 'nigricans', 'naevus', 'macule', 'sun damaged', 'hematoma']):
+        return '1. Pigmented Lesions'
+    
+    # กลุ่ม 7. Infections & Infestations
+    if any(k in d for k in ['scabies', 'nematode', 'pediculosis', 'tinea', 'onychomycosis', 'bite', 'tungiasis', 'myiasis', 'infection', 'coccidioidomycosis', 'verruca', 'wart', 'molluscum', 'lyme', 'condyloma']):
+        return '7. Infections & Infestations'
+    
+    # กลุ่ม 4. Vesicles, Pustules & Acneiform
+    if any(k in d for k in ['acne', 'folliculitis', 'rosacea', 'hidradenitis', 'bullosa', 'bullous', 'gestationis', 'porphyria', 'dyshidrotic', 'pustular', 'abscess', 'milia', 'neutrophilic dermatoses', 'hailey hailey', 'paronychia']):
+        return '4. Vesicles, Pustules & Acneiform'
+        
+    # กลุ่ม 6. Sclerosis, Atrophy & Depigmentation
+    if any(k in d for k in ['vitiligo', 'scleroderma', 'morphea', 'striae', 'scar', 'aplasia cutis', 'scleromyxedema', 'necrobiosis lipoidica', 'tuberous sclerosis', 'abrasion', 'ulceration', 'ehlers danlos']):
+        return '6. Sclerosis, Atrophy & Depigmentation'
+        
+    # กลุ่ม 5. Erythema & Urticaria
+    if any(k in d for k in ['erythema', 'urticaria', 'drug eruption', 'stevens johnson', 'hemangioma', 'angioma', 'port wine', 'telangiectas', 'pyogenic granuloma', 'fixed eruption', 'behcets', 'photodermatoses', 'dermatomyositis', 'stasis edema', 'livedo reticularis', 'lymphocytic infiltrations']):
+        return '5. Erythema & Urticaria'
+        
+    # กลุ่ม 3. Papulosquamous/Scaly Plaques
+    if any(k in d for k in ['psoriasis', 'lichen', 'pityriasis', 'dermatitis', 'eczema', 'lupus', 'mycosis fungoides', 'porokeratosis', 'actinic keratosis', 'neurodermatitis', 'ichthyosis', 'prurigo', 'excoriation', 'dariers', 'acrodermatitis', 'cheilitis', 'hyperkeratosis', 'papilomatosis confluentes', 'graft vs host']):
+        return '3. Papulosquamous/Scaly Plaques'
+        
+    # กลุ่ม 2. Papules, Nodules & Tumors (ดักจับก้อนและเนื้องอกที่เหลือทั้งหมด)
+    if any(k in d for k in ['carcinoma', 'sarcoma', 'cyst', 'fibroma', 'keloid', 'syringoma', 'xanthoma', 'acrochordon', 'papillomatosis', 'neurofibromatosis', 'keratoacanthoma', 'lipoma', 'neuroma', 'sarcoidosis', 'granuloma', 'rhinophyma', 'mucinosis', 'histiocytosis', 'poroma', 'tumor', 'neoplasm', 'lymphoma', 'leukemia', 'fordyce', 'calcinosis', 'pilomatricoma', 'trichilemmoma', 'fibrokeratoma', 'trichofolliculoma', 'angioleiomyoma', 'neurothekeoma', 'acanthoma', 'hyperplasia', 'keratosis', 'papule']):
+        return '2. Papules, Nodules & Tumors'
+        
+    return '8. Others / Unclassified'
+
+# 4. สร้างคอลัมน์สำหรับกลุ่มโรค
+df['disease_group'] = df['clean_disease'].apply(categorize_morphology)
+
+# 5. Group by โรคที่ถูก clean แล้วเพื่อนับจำนวนแถว
+summary_df = df.groupby(['disease_group', 'clean_disease']).size().reset_index(name='Row Count')
+
+# เรียงลำดับจากกลุ่มและจำนวนที่มากที่สุดไปน้อยที่สุด
+summary_df = summary_df.sort_values(by=['disease_group', 'Row Count'], ascending=[True, False])
+
+# 6. บันทึกผลลัพธ์เป็นไฟล์ CSV ใหม่
+summary_df.to_csv('grouped_disease_summary.csv', index=False)
+
+# 7. นับจำนวนโรคในแต่ละกลุ่ม
+disease_count_per_group = summary_df.groupby('disease_group')['clean_disease'].count().reset_index(name='Disease Count')
+
+# เปลี่ยนชื่อคอลัมน์ให้เข้าใจง่ายขึ้น
+disease_count_per_group.columns = ['Disease Group', 'Number of Diseases']
+
+# 8. นับจำนวนโรครวมทั้งหมด (ชนิดของโรคที่ไม่ซ้ำกัน)
+total_diseases = summary_df['clean_disease'].nunique()
+
+# 9. แสดงผลลัพธ์ออกทางหน้าจอ
+print("=" * 55)
+print("สรุปจำนวน 'ชนิดของโรค' ในแต่ละกลุ่ม (Morphology Groups)")
+print("=" * 55)
+print(disease_count_per_group.to_string(index=False))
+print("-" * 55)
+print(f"รวมจำนวนโรคทั้งหมด: {total_diseases} โรค")
+print("=" * 55)

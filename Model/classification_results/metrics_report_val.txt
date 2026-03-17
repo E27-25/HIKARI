@@ -1,0 +1,420 @@
+================================================================================
+CLASSIFICATION METRICS REPORT - VAL
+Generated: 2026-01-16T09:47:02.218150
+================================================================================
+
+SAMPLE STATISTICS
+--------------------------------------------------
+Total samples:           400
+Successful predictions:  400
+Valid predictions:       391
+Unknown predictions:     9
+Failed predictions:      0
+Number of classes:       187
+Classes in ground truth: 122
+Classes in predictions:  89
+
+ACCURACY METRICS
+--------------------------------------------------
+Accuracy:               0.2251
+Balanced Accuracy:      0.1914
+Zero-One Loss:          0.7749
+
+PRECISION / RECALL / F1-SCORE
+--------------------------------------------------
+Metric                    Macro      Micro   Weighted
+--------------------------------------------------
+Precision                0.1793     0.2251     0.2432
+Recall                   0.1810     0.2251     0.2251
+F1-Score                 0.1552     0.2251     0.2086
+Jaccard (IoU)            0.1052     0.1268     0.1355
+
+MEDICAL METRICS (Macro Averaged)
+--------------------------------------------------
+Sensitivity (Recall):   0.1914
+Specificity:            0.9937
+PPV (Precision):        0.1896
+NPV:                    0.9936
+
+CORRELATION & AGREEMENT METRICS
+--------------------------------------------------
+Matthews Corr. Coef:    0.2142
+Cohen's Kappa:          0.2125
+Cohen's Kappa (linear): 0.2584
+Cohen's Kappa (quadr.): 0.2540
+
+OVERALL SCORE
+--------------------------------------------------
+Combined Score:         0.2775
+(Weighted avg of accuracy, balanced acc, F1 macro/weighted, MCC)
+
+CLASS IMBALANCE
+--------------------------------------------------
+Imbalance Ratio:        16.00
+Most samples:           melanocytic-nevi
+Least samples:          acquired autoimmune bullous diseaseherpes gestationis
+
+MOST DIFFICULT CLASSES (Highest Error Rate)
+--------------------------------------------------
+  acanthosis nigricans: 100.00%
+  acquired autoimmune bullous diseaseherpes gestationis: 100.00%
+  acrochordon: 100.00%
+  actinic-keratosis: 100.00%
+  angioma: 100.00%
+  basal-cell-carcinoma-nodular: 100.00%
+  basal-cell-carcinoma-superficial: 100.00%
+  becker nevus: 100.00%
+  benign-keratosis: 100.00%
+  blue-nevus: 100.00%
+
+TOP CONFUSION PAIRS
+--------------------------------------------------
+  melanocytic-nevi -> seborrheic-keratosis: 7
+  acne vulgaris -> acne: 3
+  dysplastic-nevus -> melanocytic-nevi: 3
+  pustular psoriasis -> psoriasis: 3
+  verruca-vulgaris -> seborrheic-keratosis: 3
+  acne -> acne vulgaris: 2
+  acne vulgaris -> lupus erythematosus: 2
+  allergic contact dermatitis -> eczema: 2
+  allergic contact dermatitis -> photodermatoses: 2
+  basal-cell-carcinoma -> melanocytic-nevi: 2
+  basal-cell-carcinoma -> squamous-cell-carcinoma: 2
+  dermatomyositis -> allergic contact dermatitis: 2
+  drug eruption -> allergic contact dermatitis: 2
+  folliculitis -> acne: 2
+  incontinentia pigmenti -> lichen planus: 2
+  lichen planus -> psoriasis: 2
+  lupus erythematosus -> stevens johnson syndrome: 2
+  melanoma -> seborrheic-keratosis: 2
+  photodermatoses -> lichen planus: 2
+  pilar cyst -> acne: 2
+
+ERROR ANALYSIS SUMMARY
+--------------------------------------------------
+Total errors:           307
+Error rate:             76.75%
+Unique confusion pairs: 273
+
+PER-CLASS METRICS (sklearn classification_report)
+--------------------------------------------------------------------------------
+Class                                             Prec      Rec       F1      Sup
+--------------------------------------------------------------------------------
+abrasions-ulcerations-and-physical-injuries      0.000    0.000    0.000        0
+abscess                                          0.000    0.000    0.000        0
+acanthosis nigricans                             0.000    0.000    0.000        2
+acne                                             0.143    0.333    0.200        9
+acne vulgaris                                    0.400    0.400    0.400       10
+acne-cystic                                      0.000    0.000    0.000        0
+acquired autoimmune bullous diseaseherpes ges    0.000    0.000    0.000        1
+acquired-digital-fibrokeratoma                   0.000    0.000    0.000        0
+acral-melanotic-macule                           0.000    0.000    0.000        0
+acrochordon                                      0.000    0.000    0.000        3
+acrodermatitis enteropathica                     1.000    0.667    0.800        3
+actinic keratosis                                0.000    0.000    0.000        0
+actinic-keratosis                                0.000    0.000    0.000        2
+allergic contact dermatitis                      0.167    0.200    0.182       10
+angioleiomyoma                                   0.000    0.000    0.000        0
+angioma                                          0.000    0.000    0.000        2
+aplasia cutis                                    0.000    0.000    0.000        0
+arteriovenous-hemangioma                         0.000    0.000    0.000        0
+atypical-spindle-cell-nevus-of-reed              0.000    0.000    0.000        0
+basal cell carcinoma                             0.000    0.000    0.000        0
+basal cell carcinoma morpheiform                 0.000    0.000    0.000        0
+basal-cell-carcinoma                             0.136    0.273    0.182       11
+basal-cell-carcinoma-nodular                     0.000    0.000    0.000        1
+basal-cell-carcinoma-superficial                 0.000    0.000    0.000        1
+becker nevus                                     0.000    0.000    0.000        3
+behcets disease                                  0.000    0.000    0.000        0
+benign-keratosis                                 0.000    0.000    0.000        1
+blastic-plasmacytoid-dendritic-cell-neoplasm     0.000    0.000    0.000        0
+blue-nevus                                       0.000    0.000    0.000        1
+calcinosis cutis                                 0.000    0.000    0.000        1
+cellular-neurothekeoma                           0.000    0.000    0.000        0
+cheilitis                                        0.000    0.000    0.000        0
+chondroid-syringoma                              0.000    0.000    0.000        0
+clear-cell-acanthoma                             0.000    0.000    0.000        0
+coccidioidomycosis                               0.000    0.000    0.000        0
+condyloma-accuminatum                            0.000    0.000    0.000        1
+congenital nevus                                 0.333    1.000    0.500        1
+dariers disease                                  0.000    0.000    0.000        3
+dermatofibroma                                   0.000    0.000    0.000        4
+dermatomyositis                                  0.000    0.000    0.000        4
+disseminated actinic porokeratosis               0.000    0.000    0.000        2
+drug eruption                                    0.333    0.143    0.200        7
+drug induced pigmentary changes                  0.000    0.000    0.000        0
+dyshidrotic eczema                               0.000    0.000    0.000        5
+dysplastic-nevus                                 0.000    0.000    0.000        4
+eccrine-poroma                                   0.000    0.000    0.000        1
+eczema                                           0.125    1.000    0.222        1
+eczema-spongiotic-dermatitis                     0.000    0.000    0.000        0
+ehlers danlos syndrome                           0.333    0.500    0.400        2
+epidermal nevus                                  0.000    0.000    0.000        0
+epidermal-cyst                                   0.000    0.000    0.000        2
+epidermal-nevus                                  0.500    0.250    0.333        4
+epidermolysis bullosa                            0.000    0.000    0.000        0
+erythema annulare centrifigum                    0.000    0.000    0.000        1
+erythema elevatum diutinum                       0.000    0.000    0.000        1
+erythema multiforme                              0.333    0.429    0.375        7
+erythema nodosum                                 1.000    0.333    0.500        3
+factitial dermatitis                             0.000    0.000    0.000        0
+fibrous-papule                                   0.000    0.000    0.000        1
+fixed eruptions                                  0.000    0.000    0.000        1
+focal-acral-hyperkeratosis                       0.000    0.000    0.000        0
+folliculitis                                     0.500    0.333    0.400        9
+fordyce spots                                    1.000    0.333    0.500        3
+foreign-body-granuloma                           0.000    0.000    0.000        0
+glomangioma                                      0.000    0.000    0.000        0
+graft-vs-host-disease                            0.000    0.000    0.000        0
+granuloma annulare                               0.000    0.000    0.000        3
+granuloma pyogenic                               0.000    0.000    0.000        2
+hailey hailey disease                            0.000    0.000    0.000        2
+halo nevus                                       0.000    0.000    0.000        0
+hematoma                                         0.000    0.000    0.000        0
+hidradenitis                                     0.000    0.000    0.000        0
+hyperpigmentation                                0.000    0.000    0.000        0
+ichthyosis vulgaris                              0.000    0.000    0.000        2
+incontinentia pigmenti                           0.000    0.000    0.000        2
+inverted-follicular-keratosis                    0.000    0.000    0.000        1
+juvenile xanthogranuloma                         0.333    0.500    0.400        2
+kaposi sarcoma                                   0.000    0.000    0.000        0
+kaposi-sarcoma                                   0.000    0.000    0.000        3
+keloid                                           1.000    0.667    0.800        3
+keratosis pilaris                                0.000    0.000    0.000        1
+langerhans cell histiocytosis                    0.500    0.500    0.500        2
+lentigo maligna                                  0.500    1.000    0.667        1
+leukemia-cutis                                   0.000    0.000    0.000        0
+lichen amyloidosis                               0.000    0.000    0.000        2
+lichen planus                                    0.080    0.286    0.125        7
+lichen simplex                                   0.000    0.000    0.000        2
+lichenoid-keratosis                              0.000    0.000    0.000        0
+lipoma                                           0.000    0.000    0.000        0
+livedo reticularis                               0.000    0.000    0.000        0
+lupus erythematosus                              0.167    0.100    0.125       10
+lupus subacute                                   0.000    0.000    0.000        3
+lyme disease                                     0.400    0.667    0.500        3
+lymphangioma                                     0.333    0.500    0.400        2
+lymphocytic-infiltrations                        0.000    0.000    0.000        0
+malignant melanoma                               1.000    0.333    0.500        3
+melanocytic-nevi                                 0.438    0.438    0.438       16
+melanoma                                         0.000    0.000    0.000        5
+melanoma-acral-lentiginous                       0.000    0.000    0.000        0
+melanoma-in-situ                                 0.000    0.000    0.000        0
+metastatic-carcinoma                             0.000    0.000    0.000        0
+milia                                            0.000    0.000    0.000        4
+molluscum-contagiosum                            0.000    0.000    0.000        1
+morphea                                          0.000    0.000    0.000        0
+mucinosis                                        0.200    1.000    0.333        1
+mucous cyst                                      0.000    0.000    0.000        1
+mycosis fungoides                                0.000    0.000    0.000        0
+mycosis-fungoides                                1.000    0.333    0.500        6
+myiasis                                          0.000    0.000    0.000        1
+naevus comedonicus                               0.000    0.000    0.000        0
+necrobiosis lipoidica                            0.000    0.000    0.000        1
+nematode infection                               0.667    0.500    0.571        4
+neurodermatitis                                  0.000    0.000    0.000        2
+neurofibroma                                     0.000    0.000    0.000        2
+neurofibromatosis                                1.000    0.333    0.500        3
+neuroma                                          0.000    0.000    0.000        0
+neurotic excoriations                            0.000    0.000    0.000        1
+neutrophilic dermatoses                          0.400    0.400    0.400        5
+nevocytic nevus                                  0.000    0.000    0.000        3
+nevus sebaceous of jadassohn                     1.000    1.000    1.000        2
+nevus-lipomatosus-superficialis                  0.000    0.000    0.000        0
+nodular-melanoma-(nm)                            0.000    0.000    0.000        1
+onychomycosis                                    0.000    0.000    0.000        0
+papilomatosis confluentes and reticulate         0.000    0.000    0.000        1
+paronychia                                       0.500    0.500    0.500        2
+pediculosis lids                                 0.500    1.000    0.667        2
+perioral dermatitis                              0.000    0.000    0.000        1
+photodermatoses                                  0.000    0.000    0.000       11
+pigmented-spindle-cell-nevus-of-reed             0.000    0.000    0.000        0
+pilar cyst                                       0.167    0.167    0.167        6
+pilomatricoma                                    0.000    0.000    0.000        2
+pityriasis lichenoides chronica                  0.000    0.000    0.000        2
+pityriasis rosea                                 0.333    0.250    0.286        4
+pityriasis rubra pilaris                         0.500    0.500    0.500        2
+porokeratosis actinic                            0.500    0.500    0.500        2
+porokeratosis of mibelli                         0.000    0.000    0.000        3
+porphyria                                        1.000    0.200    0.333        5
+port wine stain                                  1.000    0.333    0.500        3
+prurigo nodularis                                0.000    0.000    0.000        0
+prurigo-nodularis                                0.333    0.500    0.400        2
+psoriasis                                        0.318    0.583    0.412       12
+pustular psoriasis                               0.000    0.000    0.000        3
+pyogenic granuloma                               0.000    0.000    0.000        0
+pyogenic-granuloma                               0.500    0.250    0.333        4
+reactive-lymphoid-hyperplasia                    0.000    0.000    0.000        0
+rhinophyma                                       0.000    0.000    0.000        1
+rosacea                                          0.000    0.000    0.000        2
+sarcoidosis                                      0.167    0.333    0.222        3
+scabies                                          0.167    0.200    0.182        5
+scar                                             0.000    0.000    0.000        0
+scleroderma                                      0.000    0.000    0.000        5
+scleromyxedema                                   0.000    0.000    0.000        0
+sebaceous-carcinoma                              0.000    0.000    0.000        0
+seborrheic dermatitis                            0.100    0.333    0.154        3
+seborrheic keratosis                             0.000    0.000    0.000        0
+seborrheic-keratosis                             0.056    0.400    0.098        5
+seborrheic-keratosis-irritated                   0.000    0.000    0.000        3
+solar-lentigo                                    0.000    0.000    0.000        1
+solid cystic basal cell carcinoma                0.000    0.000    0.000        2
+squamous cell carcinoma                          0.000    0.000    0.000        0
+squamous-cell-carcinoma                          0.333    0.385    0.357       13
+squamous-cell-carcinoma-in-situ                  0.000    0.000    0.000        2
+squamous-cell-carcinoma-keratoacanthoma          0.000    0.000    0.000        0
+stasis edema                                     0.000    0.000    0.000        0
+stevens johnson syndrome                         0.000    0.000    0.000        2
+striae                                           0.000    0.000    0.000        3
+subcutaneous-t-cell-lymphoma                     0.000    0.000    0.000        0
+sun damaged skin                                 0.000    0.000    0.000        1
+superficial spreading melanoma ssm               0.000    0.000    0.000        2
+syringocystadenoma-papilliferum                  0.000    0.000    0.000        0
+syringoma                                        0.000    0.000    0.000        1
+telangiectases                                   0.000    0.000    0.000        2
+tick bite                                        0.000    0.000    0.000        1
+tinea-pedis                                      0.000    0.000    0.000        0
+trichilemmoma                                    0.000    0.000    0.000        0
+trichofolliculoma                                0.000    0.000    0.000        1
+tuberous sclerosis                               0.500    0.500    0.500        2
+tungiasis                                        0.667    0.667    0.667        3
+urticaria                                        0.000    0.000    0.000        3
+urticaria pigmentosa                             0.000    0.000    0.000        4
+verruca-vulgaris                                 0.000    0.000    0.000        4
+verruciform-xanthoma                             0.000    0.000    0.000        0
+vitiligo                                         0.000    0.000    0.000        2
+wart                                             0.000    0.000    0.000        0
+xanthogranuloma                                  0.000    0.000    0.000        0
+xanthomas                                        0.000    0.000    0.000        4
+xeroderma pigmentosum                            0.167    1.000    0.286        1
+--------------------------------------------------------------------------------
+macro avg                                        0.124    0.125    0.107      391
+weighted avg                                     0.243    0.225    0.209      391
+
+
+PER-CLASS DETAILED METRICS (Medical)
+----------------------------------------------------------------------------------------------------
+Class                                  Sens    Spec     PPV     NPV      F1    TP    FP    FN     TN
+----------------------------------------------------------------------------------------------------
+melanocytic-nevi                      0.438   0.976   0.438   0.976   0.438     7     9     9    366
+squamous-cell-carcinoma               0.385   0.974   0.333   0.979   0.357     5    10     8    368
+psoriasis                             0.583   0.960   0.318   0.986   0.412     7    15     5    364
+basal-cell-carcinoma                  0.273   0.950   0.136   0.978   0.182     3    19     8    361
+photodermatoses                       0.000   0.992   0.000   0.972   0.000     0     3    11    377
+acne vulgaris                         0.400   0.984   0.400   0.984   0.400     4     6     6    375
+allergic contact dermatitis           0.200   0.974   0.167   0.979   0.182     2    10     8    371
+lupus erythematosus                   0.100   0.987   0.167   0.977   0.125     1     5     9    376
+acne                                  0.333   0.953   0.143   0.984   0.200     3    18     6    364
+folliculitis                          0.333   0.992   0.500   0.984   0.400     3     3     6    379
+drug eruption                         0.143   0.995   0.333   0.985   0.200     1     2     6    382
+erythema multiforme                   0.429   0.984   0.333   0.990   0.375     3     6     4    378
+lichen planus                         0.286   0.940   0.080   0.986   0.125     2    23     5    361
+mycosis-fungoides                     0.333   1.000   1.000   0.990   0.500     2     0     4    385
+pilar cyst                            0.167   0.987   0.167   0.987   0.167     1     5     5    380
+dyshidrotic eczema                    0.000   1.000   0.000   0.987   0.000     0     0     5    386
+melanoma                              0.000   0.995   0.000   0.987   0.000     0     2     5    384
+neutrophilic dermatoses               0.400   0.992   0.400   0.992   0.400     2     3     3    383
+porphyria                             0.200   1.000   1.000   0.990   0.333     1     0     4    386
+scabies                               0.200   0.987   0.167   0.990   0.182     1     5     4    381
+scleroderma                           0.000   0.987   0.000   0.987   0.000     0     5     5    381
+seborrheic-keratosis                  0.400   0.912   0.056   0.992   0.098     2    34     3    352
+dermatofibroma                        0.000   0.997   0.000   0.990   0.000     0     1     4    386
+dermatomyositis                       0.000   1.000   0.000   0.990   0.000     0     0     4    387
+dysplastic-nevus                      0.000   1.000   0.000   0.990   0.000     0     0     4    387
+epidermal-nevus                       0.250   0.997   0.500   0.992   0.333     1     1     3    386
+milia                                 0.000   0.997   0.000   0.990   0.000     0     1     4    386
+nematode infection                    0.500   0.997   0.667   0.995   0.571     2     1     2    386
+pityriasis rosea                      0.250   0.995   0.333   0.992   0.286     1     2     3    385
+pyogenic-granuloma                    0.250   0.997   0.500   0.992   0.333     1     1     3    386
+urticaria pigmentosa                  0.000   0.997   0.000   0.990   0.000     0     1     4    386
+verruca-vulgaris                      0.000   1.000   0.000   0.990   0.000     0     0     4    387
+xanthomas                             0.000   0.997   0.000   0.990   0.000     0     1     4    386
+acrochordon                           0.000   0.997   0.000   0.992   0.000     0     1     3    387
+acrodermatitis enteropathica          0.667   1.000   1.000   0.997   0.800     2     0     1    388
+becker nevus                          0.000   1.000   0.000   0.992   0.000     0     0     3    388
+dariers disease                       0.000   1.000   0.000   0.992   0.000     0     0     3    388
+erythema nodosum                      0.333   1.000   1.000   0.995   0.500     1     0     2    388
+fordyce spots                         0.333   1.000   1.000   0.995   0.500     1     0     2    388
+granuloma annulare                    0.000   0.997   0.000   0.992   0.000     0     1     3    387
+kaposi-sarcoma                        0.000   0.995   0.000   0.992   0.000     0     2     3    386
+keloid                                0.667   1.000   1.000   0.997   0.800     2     0     1    388
+lupus subacute                        0.000   1.000   0.000   0.992   0.000     0     0     3    388
+lyme disease                          0.667   0.992   0.400   0.997   0.500     2     3     1    385
+malignant melanoma                    0.333   1.000   1.000   0.995   0.500     1     0     2    388
+neurofibromatosis                     0.333   1.000   1.000   0.995   0.500     1     0     2    388
+nevocytic nevus                       0.000   0.997   0.000   0.992   0.000     0     1     3    387
+porokeratosis of mibelli              0.000   0.995   0.000   0.992   0.000     0     2     3    386
+port wine stain                       0.333   1.000   1.000   0.995   0.500     1     0     2    388
+pustular psoriasis                    0.000   1.000   0.000   0.992   0.000     0     0     3    388
+sarcoidosis                           0.333   0.987   0.167   0.995   0.222     1     5     2    383
+seborrheic dermatitis                 0.333   0.977   0.100   0.995   0.154     1     9     2    379
+seborrheic-keratosis-irritated        0.000   0.997   0.000   0.992   0.000     0     1     3    387
+striae                                0.000   1.000   0.000   0.992   0.000     0     0     3    388
+tungiasis                             0.667   0.997   0.667   0.997   0.667     2     1     1    387
+urticaria                             0.000   0.987   0.000   0.992   0.000     0     5     3    383
+acanthosis nigricans                  0.000   1.000   0.000   0.995   0.000     0     0     2    389
+actinic-keratosis                     0.000   0.997   0.000   0.995   0.000     0     1     2    388
+angioma                               0.000   0.997   0.000   0.995   0.000     0     1     2    388
+disseminated actinic porokeratosis    0.000   1.000   0.000   0.995   0.000     0     0     2    389
+ehlers danlos syndrome                0.500   0.995   0.333   0.997   0.400     1     2     1    387
+epidermal-cyst                        0.000   0.992   0.000   0.995   0.000     0     3     2    386
+granuloma pyogenic                    0.000   1.000   0.000   0.995   0.000     0     0     2    389
+hailey hailey disease                 0.000   1.000   0.000   0.995   0.000     0     0     2    389
+ichthyosis vulgaris                   0.000   1.000   0.000   0.995   0.000     0     0     2    389
+incontinentia pigmenti                0.000   0.995   0.000   0.995   0.000     0     2     2    387
+juvenile xanthogranuloma              0.500   0.995   0.333   0.997   0.400     1     2     1    387
+langerhans cell histiocytosis         0.500   0.997   0.500   0.997   0.500     1     1     1    388
+lichen amyloidosis                    0.000   0.995   0.000   0.995   0.000     0     2     2    387
+lichen simplex                        0.000   0.992   0.000   0.995   0.000     0     3     2    386
+lymphangioma                          0.500   0.995   0.333   0.997   0.400     1     2     1    387
+neurodermatitis                       0.000   1.000   0.000   0.995   0.000     0     0     2    389
+neurofibroma                          0.000   0.995   0.000   0.995   0.000     0     2     2    387
+nevus sebaceous of jadassohn          1.000   1.000   1.000   1.000   1.000     2     0     0    389
+paronychia                            0.500   0.997   0.500   0.997   0.500     1     1     1    388
+pediculosis lids                      1.000   0.995   0.500   1.000   0.667     2     2     0    387
+pilomatricoma                         0.000   0.997   0.000   0.995   0.000     0     1     2    388
+pityriasis lichenoides chronica       0.000   1.000   0.000   0.995   0.000     0     0     2    389
+pityriasis rubra pilaris              0.500   0.997   0.500   0.997   0.500     1     1     1    388
+porokeratosis actinic                 0.500   0.997   0.500   0.997   0.500     1     1     1    388
+prurigo-nodularis                     0.500   0.995   0.333   0.997   0.400     1     2     1    387
+rosacea                               0.000   0.987   0.000   0.995   0.000     0     5     2    384
+solid cystic basal cell carcinoma     0.000   1.000   0.000   0.995   0.000     0     0     2    389
+squamous-cell-carcinoma-in-situ       0.000   0.995   0.000   0.995   0.000     0     2     2    387
+stevens johnson syndrome              0.000   0.995   0.000   0.995   0.000     0     2     2    387
+superficial spreading melanoma ssm    0.000   1.000   0.000   0.995   0.000     0     0     2    389
+telangiectases                        0.000   1.000   0.000   0.995   0.000     0     0     2    389
+tuberous sclerosis                    0.500   0.997   0.500   0.997   0.500     1     1     1    388
+vitiligo                              0.000   0.997   0.000   0.995   0.000     0     1     2    388
+acquired autoimmune bullous disease   0.000   0.995   0.000   0.997   0.000     0     2     1    388
+basal-cell-carcinoma-nodular          0.000   1.000   0.000   0.997   0.000     0     0     1    390
+basal-cell-carcinoma-superficial      0.000   1.000   0.000   0.997   0.000     0     0     1    390
+benign-keratosis                      0.000   1.000   0.000   0.997   0.000     0     0     1    390
+blue-nevus                            0.000   1.000   0.000   0.997   0.000     0     0     1    390
+calcinosis cutis                      0.000   1.000   0.000   0.997   0.000     0     0     1    390
+condyloma-accuminatum                 0.000   1.000   0.000   0.997   0.000     0     0     1    390
+congenital nevus                      1.000   0.995   0.333   1.000   0.500     1     2     0    388
+eccrine-poroma                        0.000   1.000   0.000   0.997   0.000     0     0     1    390
+eczema                                1.000   0.982   0.125   1.000   0.222     1     7     0    383
+erythema annulare centrifigum         0.000   1.000   0.000   0.997   0.000     0     0     1    390
+erythema elevatum diutinum            0.000   1.000   0.000   0.997   0.000     0     0     1    390
+fibrous-papule                        0.000   0.997   0.000   0.997   0.000     0     1     1    389
+fixed eruptions                       0.000   0.997   0.000   0.997   0.000     0     1     1    389
+inverted-follicular-keratosis         0.000   1.000   0.000   0.997   0.000     0     0     1    390
+keratosis pilaris                     0.000   0.997   0.000   0.997   0.000     0     1     1    389
+lentigo maligna                       1.000   0.997   0.500   1.000   0.667     1     1     0    389
+molluscum-contagiosum                 0.000   1.000   0.000   0.997   0.000     0     0     1    390
+mucinosis                             1.000   0.990   0.200   1.000   0.333     1     4     0    386
+mucous cyst                           0.000   0.992   0.000   0.997   0.000     0     3     1    387
+myiasis                               0.000   1.000   0.000   0.997   0.000     0     0     1    390
+necrobiosis lipoidica                 0.000   1.000   0.000   0.997   0.000     0     0     1    390
+neurotic excoriations                 0.000   1.000   0.000   0.997   0.000     0     0     1    390
+nodular-melanoma-(nm)                 0.000   1.000   0.000   0.997   0.000     0     0     1    390
+papilomatosis confluentes and retic   0.000   0.997   0.000   0.997   0.000     0     1     1    389
+perioral dermatitis                   0.000   1.000   0.000   0.997   0.000     0     0     1    390
+rhinophyma                            0.000   1.000   0.000   0.997   0.000     0     0     1    390
+solar-lentigo                         0.000   1.000   0.000   0.997   0.000     0     0     1    390
+sun damaged skin                      0.000   0.992   0.000   0.997   0.000     0     3     1    387
+syringoma                             0.000   1.000   0.000   0.997   0.000     0     0     1    390
+tick bite                             0.000   1.000   0.000   0.997   0.000     0     0     1    390
+trichofolliculoma                     0.000   1.000   0.000   0.997   0.000     0     0     1    390
+xeroderma pigmentosum                 1.000   0.987   0.167   1.000   0.286     1     5     0    385

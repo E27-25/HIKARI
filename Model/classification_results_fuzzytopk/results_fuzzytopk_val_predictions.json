@@ -1,0 +1,3204 @@
+{
+  "predictions": [
+    {
+      "id": 2277,
+      "file_name": "2277.png",
+      "image_path": "SkinCAP\\skincap\\2277.png",
+      "ground_truth": "juvenile xanthogranuloma",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 3209,
+      "file_name": "3209.png",
+      "image_path": "SkinCAP\\skincap\\3209.png",
+      "ground_truth": "ichthyosis vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 2993,
+      "file_name": "2993.png",
+      "image_path": "SkinCAP\\skincap\\2993.png",
+      "ground_truth": "urticaria pigmentosa",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 2854,
+      "file_name": "2854.png",
+      "image_path": "SkinCAP\\skincap\\2854.png",
+      "ground_truth": "syringoma",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1733,
+      "file_name": "1733.png",
+      "image_path": "SkinCAP\\skincap\\1733.png",
+      "ground_truth": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1169,
+      "file_name": "1169.png",
+      "image_path": "SkinCAP\\skincap\\1169.png",
+      "ground_truth": "melanoma",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 1864,
+      "file_name": "1864.png",
+      "image_path": "SkinCAP\\skincap\\1864.png",
+      "ground_truth": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3216,
+      "file_name": "3216.png",
+      "image_path": "SkinCAP\\skincap\\3216.png",
+      "ground_truth": "vitiligo",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 3212,
+      "file_name": "3212.png",
+      "image_path": "SkinCAP\\skincap\\3212.png",
+      "ground_truth": "pyogenic granuloma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1087,
+      "file_name": "1087.png",
+      "image_path": "SkinCAP\\skincap\\1087.png",
+      "ground_truth": "neurofibromatosis",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 1600,
+      "file_name": "1600.png",
+      "image_path": "SkinCAP\\skincap\\1600.png",
+      "ground_truth": "acne",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 9,
+      "file_name": "9.png",
+      "image_path": "SkinCAP\\skincap\\9.png",
+      "ground_truth": "basal cell carcinoma superficial",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 1553,
+      "file_name": "1553.png",
+      "image_path": "SkinCAP\\skincap\\1553.png",
+      "ground_truth": "acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 675,
+      "file_name": "675.png",
+      "image_path": "SkinCAP\\skincap\\675.png",
+      "ground_truth": "pilar cyst",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 241,
+      "file_name": "241.png",
+      "image_path": "SkinCAP\\skincap\\241.png",
+      "ground_truth": "molluscum contagiosum",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 1643,
+      "file_name": "1643.png",
+      "image_path": "SkinCAP\\skincap\\1643.png",
+      "ground_truth": "acne",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 3542,
+      "file_name": "3542.png",
+      "image_path": "SkinCAP\\skincap\\3542.png",
+      "ground_truth": "pityriasis rosea",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 876,
+      "file_name": "876.png",
+      "image_path": "SkinCAP\\skincap\\876.png",
+      "ground_truth": "allergic contact dermatitis",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1972,
+      "file_name": "1972.png",
+      "image_path": "SkinCAP\\skincap\\1972.png",
+      "ground_truth": "acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1990,
+      "file_name": "1990.png",
+      "image_path": "SkinCAP\\skincap\\1990.png",
+      "ground_truth": "paronychia",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1665,
+      "file_name": "1665.png",
+      "image_path": "SkinCAP\\skincap\\1665.png",
+      "ground_truth": "drug eruption",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 682,
+      "file_name": "682.png",
+      "image_path": "SkinCAP\\skincap\\682.png",
+      "ground_truth": "pilar cyst",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 969,
+      "file_name": "969.png",
+      "image_path": "SkinCAP\\skincap\\969.png",
+      "ground_truth": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 3477,
+      "file_name": "3477.png",
+      "image_path": "SkinCAP\\skincap\\3477.png",
+      "ground_truth": "scabies",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3087,
+      "file_name": "3087.png",
+      "image_path": "SkinCAP\\skincap\\3087.png",
+      "ground_truth": "drug eruption",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 383,
+      "file_name": "383.png",
+      "image_path": "SkinCAP\\skincap\\383.png",
+      "ground_truth": "inverted follicular keratosis",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 61,
+      "file_name": "61.png",
+      "image_path": "SkinCAP\\skincap\\61.png",
+      "ground_truth": "seborrheic keratosis irritated",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 3425,
+      "file_name": "3425.png",
+      "image_path": "SkinCAP\\skincap\\3425.png",
+      "ground_truth": "ehlers danlos syndrome",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2215,
+      "file_name": "2215.png",
+      "image_path": "SkinCAP\\skincap\\2215.png",
+      "ground_truth": "lymphangioma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2672,
+      "file_name": "2672.png",
+      "image_path": "SkinCAP\\skincap\\2672.png",
+      "ground_truth": "incontinentia pigmenti",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 208,
+      "file_name": "208.png",
+      "image_path": "SkinCAP\\skincap\\208.png",
+      "ground_truth": "verruca vulgaris",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 402,
+      "file_name": "402.png",
+      "image_path": "SkinCAP\\skincap\\402.png",
+      "ground_truth": "angioma",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 2255,
+      "file_name": "2255.png",
+      "image_path": "SkinCAP\\skincap\\2255.png",
+      "ground_truth": "neurodermatitis",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3507,
+      "file_name": "3507.png",
+      "image_path": "SkinCAP\\skincap\\3507.png",
+      "ground_truth": "seborrheic dermatitis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 3529,
+      "file_name": "3529.png",
+      "image_path": "SkinCAP\\skincap\\3529.png",
+      "ground_truth": "lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3310,
+      "file_name": "3310.png",
+      "image_path": "SkinCAP\\skincap\\3310.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1816,
+      "file_name": "1816.png",
+      "image_path": "SkinCAP\\skincap\\1816.png",
+      "ground_truth": "pyogenic granuloma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 309,
+      "file_name": "309.png",
+      "image_path": "SkinCAP\\skincap\\309.png",
+      "ground_truth": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 3582,
+      "file_name": "3582.png",
+      "image_path": "SkinCAP\\skincap\\3582.png",
+      "ground_truth": "naevus comedonicus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 1024,
+      "file_name": "1024.png",
+      "image_path": "SkinCAP\\skincap\\1024.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1895,
+      "file_name": "1895.png",
+      "image_path": "SkinCAP\\skincap\\1895.png",
+      "ground_truth": "lichen simplex",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 3689,
+      "file_name": "3689.png",
+      "image_path": "SkinCAP\\skincap\\3689.png",
+      "ground_truth": "myiasis",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 752,
+      "file_name": "752.png",
+      "image_path": "SkinCAP\\skincap\\752.png",
+      "ground_truth": "erythema multiforme",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3984,
+      "file_name": "3984.png",
+      "image_path": "SkinCAP\\skincap\\3984.png",
+      "ground_truth": "melanoma",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 575,
+      "file_name": "575.png",
+      "image_path": "SkinCAP\\skincap\\575.png",
+      "ground_truth": "dysplastic nevus",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 1838,
+      "file_name": "1838.png",
+      "image_path": "SkinCAP\\skincap\\1838.png",
+      "ground_truth": "basal cell carcinoma nodular",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3936,
+      "file_name": "3936.png",
+      "image_path": "SkinCAP\\skincap\\3936.png",
+      "ground_truth": "hailey hailey disease",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 3673,
+      "file_name": "3673.png",
+      "image_path": "SkinCAP\\skincap\\3673.png",
+      "ground_truth": "porokeratosis of mibelli",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 785,
+      "file_name": "785.png",
+      "image_path": "SkinCAP\\skincap\\785.png",
+      "ground_truth": "acne",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1019,
+      "file_name": "1019.png",
+      "image_path": "SkinCAP\\skincap\\1019.png",
+      "ground_truth": "neurotic excoriations",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 448,
+      "file_name": "448.png",
+      "image_path": "SkinCAP\\skincap\\448.png",
+      "ground_truth": "seborrheic keratosis",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3925,
+      "file_name": "3925.png",
+      "image_path": "SkinCAP\\skincap\\3925.png",
+      "ground_truth": "scabies",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3280,
+      "file_name": "3280.png",
+      "image_path": "SkinCAP\\skincap\\3280.png",
+      "ground_truth": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1390,
+      "file_name": "1390.png",
+      "image_path": "SkinCAP\\skincap\\1390.png",
+      "ground_truth": "urticaria pigmentosa",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2983,
+      "file_name": "2983.png",
+      "image_path": "SkinCAP\\skincap\\2983.png",
+      "ground_truth": "photodermatoses",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 1650,
+      "file_name": "1650.png",
+      "image_path": "SkinCAP\\skincap\\1650.png",
+      "ground_truth": "dermatomyositis",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 249,
+      "file_name": "249.png",
+      "image_path": "SkinCAP\\skincap\\249.png",
+      "ground_truth": "neurofibroma",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 404,
+      "file_name": "404.png",
+      "image_path": "SkinCAP\\skincap\\404.png",
+      "ground_truth": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2647,
+      "file_name": "2647.png",
+      "image_path": "SkinCAP\\skincap\\2647.png",
+      "ground_truth": "pediculosis lids",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2677,
+      "file_name": "2677.png",
+      "image_path": "SkinCAP\\skincap\\2677.png",
+      "ground_truth": "pilomatricoma",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 2759,
+      "file_name": "2759.png",
+      "image_path": "SkinCAP\\skincap\\2759.png",
+      "ground_truth": "dermatomyositis",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 222,
+      "file_name": "222.png",
+      "image_path": "SkinCAP\\skincap\\222.png",
+      "ground_truth": "verruca vulgaris",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 3888,
+      "file_name": "3888.png",
+      "image_path": "SkinCAP\\skincap\\3888.png",
+      "ground_truth": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 3539,
+      "file_name": "3539.png",
+      "image_path": "SkinCAP\\skincap\\3539.png",
+      "ground_truth": "erythema multiforme",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1913,
+      "file_name": "1913.png",
+      "image_path": "SkinCAP\\skincap\\1913.png",
+      "ground_truth": "urticaria",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1684,
+      "file_name": "1684.png",
+      "image_path": "SkinCAP\\skincap\\1684.png",
+      "ground_truth": "folliculitis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 1735,
+      "file_name": "1735.png",
+      "image_path": "SkinCAP\\skincap\\1735.png",
+      "ground_truth": "granuloma annulare",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 1452,
+      "file_name": "1452.png",
+      "image_path": "SkinCAP\\skincap\\1452.png",
+      "ground_truth": "scabies",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1766,
+      "file_name": "1766.png",
+      "image_path": "SkinCAP\\skincap\\1766.png",
+      "ground_truth": "acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 2700,
+      "file_name": "2700.png",
+      "image_path": "SkinCAP\\skincap\\2700.png",
+      "ground_truth": "lichen amyloidosis",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 398,
+      "file_name": "398.png",
+      "image_path": "SkinCAP\\skincap\\398.png",
+      "ground_truth": "prurigo nodularis",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 387,
+      "file_name": "387.png",
+      "image_path": "SkinCAP\\skincap\\387.png",
+      "ground_truth": "kaposi sarcoma",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 780,
+      "file_name": "780.png",
+      "image_path": "SkinCAP\\skincap\\780.png",
+      "ground_truth": "rosacea",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1668,
+      "file_name": "1668.png",
+      "image_path": "SkinCAP\\skincap\\1668.png",
+      "ground_truth": "sarcoidosis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 3308,
+      "file_name": "3308.png",
+      "image_path": "SkinCAP\\skincap\\3308.png",
+      "ground_truth": "photodermatoses",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 1938,
+      "file_name": "1938.png",
+      "image_path": "SkinCAP\\skincap\\1938.png",
+      "ground_truth": "dyshidrotic eczema",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 3214,
+      "file_name": "3214.png",
+      "image_path": "SkinCAP\\skincap\\3214.png",
+      "ground_truth": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 996,
+      "file_name": "996.png",
+      "image_path": "SkinCAP\\skincap\\996.png",
+      "ground_truth": "necrobiosis lipoidica",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1937,
+      "file_name": "1937.png",
+      "image_path": "SkinCAP\\skincap\\1937.png",
+      "ground_truth": "acanthosis nigricans",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 2361,
+      "file_name": "2361.png",
+      "image_path": "SkinCAP\\skincap\\2361.png",
+      "ground_truth": "erythema multiforme",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2339,
+      "file_name": "2339.png",
+      "image_path": "SkinCAP\\skincap\\2339.png",
+      "ground_truth": "porphyria",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 3615,
+      "file_name": "3615.png",
+      "image_path": "SkinCAP\\skincap\\3615.png",
+      "ground_truth": "lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2963,
+      "file_name": "2963.png",
+      "image_path": "SkinCAP\\skincap\\2963.png",
+      "ground_truth": "seborrheic keratosis",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 542,
+      "file_name": "542.png",
+      "image_path": "SkinCAP\\skincap\\542.png",
+      "ground_truth": "basal cell carcinoma nodular",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3728,
+      "file_name": "3728.png",
+      "image_path": "SkinCAP\\skincap\\3728.png",
+      "ground_truth": "acrodermatitis enteropathica",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 878,
+      "file_name": "878.png",
+      "image_path": "SkinCAP\\skincap\\878.png",
+      "ground_truth": "allergic contact dermatitis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 1989,
+      "file_name": "1989.png",
+      "image_path": "SkinCAP\\skincap\\1989.png",
+      "ground_truth": "basal cell carcinoma nodular",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2741,
+      "file_name": "2741.png",
+      "image_path": "SkinCAP\\skincap\\2741.png",
+      "ground_truth": "mucous cyst",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 1141,
+      "file_name": "1141.png",
+      "image_path": "SkinCAP\\skincap\\1141.png",
+      "ground_truth": "allergic contact dermatitis",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 975,
+      "file_name": "975.png",
+      "image_path": "SkinCAP\\skincap\\975.png",
+      "ground_truth": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 2106,
+      "file_name": "2106.png",
+      "image_path": "SkinCAP\\skincap\\2106.png",
+      "ground_truth": "folliculitis",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 3701,
+      "file_name": "3701.png",
+      "image_path": "SkinCAP\\skincap\\3701.png",
+      "ground_truth": "dermatofibroma",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 1354,
+      "file_name": "1354.png",
+      "image_path": "SkinCAP\\skincap\\1354.png",
+      "ground_truth": "drug eruption",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3522,
+      "file_name": "3522.png",
+      "image_path": "SkinCAP\\skincap\\3522.png",
+      "ground_truth": "tungiasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 129,
+      "file_name": "129.png",
+      "image_path": "SkinCAP\\skincap\\129.png",
+      "ground_truth": "benign keratosis",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 277,
+      "file_name": "277.png",
+      "image_path": "SkinCAP\\skincap\\277.png",
+      "ground_truth": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 938,
+      "file_name": "938.png",
+      "image_path": "SkinCAP\\skincap\\938.png",
+      "ground_truth": "eczema",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 242,
+      "file_name": "242.png",
+      "image_path": "SkinCAP\\skincap\\242.png",
+      "ground_truth": "dysplastic nevus",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 2585,
+      "file_name": "2585.png",
+      "image_path": "SkinCAP\\skincap\\2585.png",
+      "ground_truth": "photodermatoses",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 2900,
+      "file_name": "2900.png",
+      "image_path": "SkinCAP\\skincap\\2900.png",
+      "ground_truth": "allergic contact dermatitis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 291,
+      "file_name": "291.png",
+      "image_path": "SkinCAP\\skincap\\291.png",
+      "ground_truth": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 30,
+      "file_name": "30.png",
+      "image_path": "SkinCAP\\skincap\\30.png",
+      "ground_truth": "mycosis fungoides",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3968,
+      "file_name": "3968.png",
+      "image_path": "SkinCAP\\skincap\\3968.png",
+      "ground_truth": "lupus erythematosus",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2411,
+      "file_name": "2411.png",
+      "image_path": "SkinCAP\\skincap\\2411.png",
+      "ground_truth": "calcinosis cutis",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 943,
+      "file_name": "943.png",
+      "image_path": "SkinCAP\\skincap\\943.png",
+      "ground_truth": "erythema multiforme",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2269,
+      "file_name": "2269.png",
+      "image_path": "SkinCAP\\skincap\\2269.png",
+      "ground_truth": "folliculitis",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2410,
+      "file_name": "2410.png",
+      "image_path": "SkinCAP\\skincap\\2410.png",
+      "ground_truth": "nevus sebaceous of jadassohn",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 87,
+      "file_name": "87.png",
+      "image_path": "SkinCAP\\skincap\\87.png",
+      "ground_truth": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 1385,
+      "file_name": "1385.png",
+      "image_path": "SkinCAP\\skincap\\1385.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 263,
+      "file_name": "263.png",
+      "image_path": "SkinCAP\\skincap\\263.png",
+      "ground_truth": "actinic keratosis",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 921,
+      "file_name": "921.png",
+      "image_path": "SkinCAP\\skincap\\921.png",
+      "ground_truth": "dariers disease",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 1016,
+      "file_name": "1016.png",
+      "image_path": "SkinCAP\\skincap\\1016.png",
+      "ground_truth": "acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 496,
+      "file_name": "496.png",
+      "image_path": "SkinCAP\\skincap\\496.png",
+      "ground_truth": "blue nevus",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 1850,
+      "file_name": "1850.png",
+      "image_path": "SkinCAP\\skincap\\1850.png",
+      "ground_truth": "lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2120,
+      "file_name": "2120.png",
+      "image_path": "SkinCAP\\skincap\\2120.png",
+      "ground_truth": "pustular psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3685,
+      "file_name": "3685.png",
+      "image_path": "SkinCAP\\skincap\\3685.png",
+      "ground_truth": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1795,
+      "file_name": "1795.png",
+      "image_path": "SkinCAP\\skincap\\1795.png",
+      "ground_truth": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1530,
+      "file_name": "1530.png",
+      "image_path": "SkinCAP\\skincap\\1530.png",
+      "ground_truth": "lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3972,
+      "file_name": "3972.png",
+      "image_path": "SkinCAP\\skincap\\3972.png",
+      "ground_truth": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2752,
+      "file_name": "2752.png",
+      "image_path": "SkinCAP\\skincap\\2752.png",
+      "ground_truth": "mucinosis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1635,
+      "file_name": "1635.png",
+      "image_path": "SkinCAP\\skincap\\1635.png",
+      "ground_truth": "erythema nodosum",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 1277,
+      "file_name": "1277.png",
+      "image_path": "SkinCAP\\skincap\\1277.png",
+      "ground_truth": "erythema nodosum",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 2921,
+      "file_name": "2921.png",
+      "image_path": "SkinCAP\\skincap\\2921.png",
+      "ground_truth": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 824,
+      "file_name": "824.png",
+      "image_path": "SkinCAP\\skincap\\824.png",
+      "ground_truth": "acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 2826,
+      "file_name": "2826.png",
+      "image_path": "SkinCAP\\skincap\\2826.png",
+      "ground_truth": "acne",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 2990,
+      "file_name": "2990.png",
+      "image_path": "SkinCAP\\skincap\\2990.png",
+      "ground_truth": "photodermatoses",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 3094,
+      "file_name": "3094.png",
+      "image_path": "SkinCAP\\skincap\\3094.png",
+      "ground_truth": "nevocytic nevus",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2209,
+      "file_name": "2209.png",
+      "image_path": "SkinCAP\\skincap\\2209.png",
+      "ground_truth": "drug eruption",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 868,
+      "file_name": "868.png",
+      "image_path": "SkinCAP\\skincap\\868.png",
+      "ground_truth": "telangiectases",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1734,
+      "file_name": "1734.png",
+      "image_path": "SkinCAP\\skincap\\1734.png",
+      "ground_truth": "pityriasis lichenoides chronica",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 2485,
+      "file_name": "2485.png",
+      "image_path": "SkinCAP\\skincap\\2485.png",
+      "ground_truth": "fordyce spots",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3574,
+      "file_name": "3574.png",
+      "image_path": "SkinCAP\\skincap\\3574.png",
+      "ground_truth": "pityriasis rosea",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 2162,
+      "file_name": "2162.png",
+      "image_path": "SkinCAP\\skincap\\2162.png",
+      "ground_truth": "malignant melanoma",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 1086,
+      "file_name": "1086.png",
+      "image_path": "SkinCAP\\skincap\\1086.png",
+      "ground_truth": "scleroderma",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 677,
+      "file_name": "677.png",
+      "image_path": "SkinCAP\\skincap\\677.png",
+      "ground_truth": "sarcoidosis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 2252,
+      "file_name": "2252.png",
+      "image_path": "SkinCAP\\skincap\\2252.png",
+      "ground_truth": "lichen amyloidosis",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1947,
+      "file_name": "1947.png",
+      "image_path": "SkinCAP\\skincap\\1947.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2703,
+      "file_name": "2703.png",
+      "image_path": "SkinCAP\\skincap\\2703.png",
+      "ground_truth": "keratosis pilaris",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 526,
+      "file_name": "526.png",
+      "image_path": "SkinCAP\\skincap\\526.png",
+      "ground_truth": "dysplastic nevus",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 516,
+      "file_name": "516.png",
+      "image_path": "SkinCAP\\skincap\\516.png",
+      "ground_truth": "pyogenic granuloma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3137,
+      "file_name": "3137.png",
+      "image_path": "SkinCAP\\skincap\\3137.png",
+      "ground_truth": "solid cystic basal cell carcinoma",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2182,
+      "file_name": "2182.png",
+      "image_path": "SkinCAP\\skincap\\2182.png",
+      "ground_truth": "scleroderma",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 3116,
+      "file_name": "3116.png",
+      "image_path": "SkinCAP\\skincap\\3116.png",
+      "ground_truth": "mucous cyst",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 284,
+      "file_name": "284.png",
+      "image_path": "SkinCAP\\skincap\\284.png",
+      "ground_truth": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 3343,
+      "file_name": "3343.png",
+      "image_path": "SkinCAP\\skincap\\3343.png",
+      "ground_truth": "disseminated actinic porokeratosis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 1991,
+      "file_name": "1991.png",
+      "image_path": "SkinCAP\\skincap\\1991.png",
+      "ground_truth": "neutrophilic dermatoses",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2998,
+      "file_name": "2998.png",
+      "image_path": "SkinCAP\\skincap\\2998.png",
+      "ground_truth": "lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 351,
+      "file_name": "351.png",
+      "image_path": "SkinCAP\\skincap\\351.png",
+      "ground_truth": "verruca vulgaris",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3932,
+      "file_name": "3932.png",
+      "image_path": "SkinCAP\\skincap\\3932.png",
+      "ground_truth": "granuloma annulare",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 3861,
+      "file_name": "3861.png",
+      "image_path": "SkinCAP\\skincap\\3861.png",
+      "ground_truth": "pityriasis rubra pilaris",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3597,
+      "file_name": "3597.png",
+      "image_path": "SkinCAP\\skincap\\3597.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 987,
+      "file_name": "987.png",
+      "image_path": "SkinCAP\\skincap\\987.png",
+      "ground_truth": "kaposi sarcoma",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 238,
+      "file_name": "238.png",
+      "image_path": "SkinCAP\\skincap\\238.png",
+      "ground_truth": "epidermal cyst",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 981,
+      "file_name": "981.png",
+      "image_path": "SkinCAP\\skincap\\981.png",
+      "ground_truth": "rhinophyma",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1260,
+      "file_name": "1260.png",
+      "image_path": "SkinCAP\\skincap\\1260.png",
+      "ground_truth": "drug eruption",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 3305,
+      "file_name": "3305.png",
+      "image_path": "SkinCAP\\skincap\\3305.png",
+      "ground_truth": "photodermatoses",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 3407,
+      "file_name": "3407.png",
+      "image_path": "SkinCAP\\skincap\\3407.png",
+      "ground_truth": "porphyria",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3600,
+      "file_name": "3600.png",
+      "image_path": "SkinCAP\\skincap\\3600.png",
+      "ground_truth": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1487,
+      "file_name": "1487.png",
+      "image_path": "SkinCAP\\skincap\\1487.png",
+      "ground_truth": "dariers disease",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 459,
+      "file_name": "459.png",
+      "image_path": "SkinCAP\\skincap\\459.png",
+      "ground_truth": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 80,
+      "file_name": "80.png",
+      "image_path": "SkinCAP\\skincap\\80.png",
+      "ground_truth": "acrochordon",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 2002,
+      "file_name": "2002.png",
+      "image_path": "SkinCAP\\skincap\\2002.png",
+      "ground_truth": "urticaria",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 1328,
+      "file_name": "1328.png",
+      "image_path": "SkinCAP\\skincap\\1328.png",
+      "ground_truth": "pityriasis rubra pilaris",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2454,
+      "file_name": "2454.png",
+      "image_path": "SkinCAP\\skincap\\2454.png",
+      "ground_truth": "becker nevus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3,
+      "file_name": "3.png",
+      "image_path": "SkinCAP\\skincap\\3.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3763,
+      "file_name": "3763.png",
+      "image_path": "SkinCAP\\skincap\\3763.png",
+      "ground_truth": "pediculosis lids",
+      "predicted": "lice",
+      "status": "success"
+    },
+    {
+      "id": 2173,
+      "file_name": "2173.png",
+      "image_path": "SkinCAP\\skincap\\2173.png",
+      "ground_truth": "port wine stain",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 3190,
+      "file_name": "3190.png",
+      "image_path": "SkinCAP\\skincap\\3190.png",
+      "ground_truth": "lentigo maligna",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 2210,
+      "file_name": "2210.png",
+      "image_path": "SkinCAP\\skincap\\2210.png",
+      "ground_truth": "lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 662,
+      "file_name": "662.png",
+      "image_path": "SkinCAP\\skincap\\662.png",
+      "ground_truth": "acrodermatitis enteropathica",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3124,
+      "file_name": "3124.png",
+      "image_path": "SkinCAP\\skincap\\3124.png",
+      "ground_truth": "lupus subacute",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1532,
+      "file_name": "1532.png",
+      "image_path": "SkinCAP\\skincap\\1532.png",
+      "ground_truth": "neutrophilic dermatoses",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 3825,
+      "file_name": "3825.png",
+      "image_path": "SkinCAP\\skincap\\3825.png",
+      "ground_truth": "lupus subacute",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 3974,
+      "file_name": "3974.png",
+      "image_path": "SkinCAP\\skincap\\3974.png",
+      "ground_truth": "neurofibromatosis",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2495,
+      "file_name": "2495.png",
+      "image_path": "SkinCAP\\skincap\\2495.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3784,
+      "file_name": "3784.png",
+      "image_path": "SkinCAP\\skincap\\3784.png",
+      "ground_truth": "tungiasis",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2618,
+      "file_name": "2618.png",
+      "image_path": "SkinCAP\\skincap\\2618.png",
+      "ground_truth": "striae",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3448,
+      "file_name": "3448.png",
+      "image_path": "SkinCAP\\skincap\\3448.png",
+      "ground_truth": "paronychia",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1223,
+      "file_name": "1223.png",
+      "image_path": "SkinCAP\\skincap\\1223.png",
+      "ground_truth": "seborrheic dermatitis",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2562,
+      "file_name": "2562.png",
+      "image_path": "SkinCAP\\skincap\\2562.png",
+      "ground_truth": "striae",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3566,
+      "file_name": "3566.png",
+      "image_path": "SkinCAP\\skincap\\3566.png",
+      "ground_truth": "neutrophilic dermatoses",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 436,
+      "file_name": "436.png",
+      "image_path": "SkinCAP\\skincap\\436.png",
+      "ground_truth": "seborrheic keratosis irritated",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3739,
+      "file_name": "3739.png",
+      "image_path": "SkinCAP\\skincap\\3739.png",
+      "ground_truth": "prurigo nodularis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2080,
+      "file_name": "2080.png",
+      "image_path": "SkinCAP\\skincap\\2080.png",
+      "ground_truth": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 732,
+      "file_name": "732.png",
+      "image_path": "SkinCAP\\skincap\\732.png",
+      "ground_truth": "photodermatoses",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3121,
+      "file_name": "3121.png",
+      "image_path": "SkinCAP\\skincap\\3121.png",
+      "ground_truth": "milia",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2051,
+      "file_name": "2051.png",
+      "image_path": "SkinCAP\\skincap\\2051.png",
+      "ground_truth": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 1079,
+      "file_name": "1079.png",
+      "image_path": "SkinCAP\\skincap\\1079.png",
+      "ground_truth": "allergic contact dermatitis",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 2948,
+      "file_name": "2948.png",
+      "image_path": "SkinCAP\\skincap\\2948.png",
+      "ground_truth": "photodermatoses",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 3588,
+      "file_name": "3588.png",
+      "image_path": "SkinCAP\\skincap\\3588.png",
+      "ground_truth": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2958,
+      "file_name": "2958.png",
+      "image_path": "SkinCAP\\skincap\\2958.png",
+      "ground_truth": "dyshidrotic eczema",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 14,
+      "file_name": "14.png",
+      "image_path": "SkinCAP\\skincap\\14.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1859,
+      "file_name": "1859.png",
+      "image_path": "SkinCAP\\skincap\\1859.png",
+      "ground_truth": "langerhans cell histiocytosis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 648,
+      "file_name": "648.png",
+      "image_path": "SkinCAP\\skincap\\648.png",
+      "ground_truth": "acrochordon",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 1781,
+      "file_name": "1781.png",
+      "image_path": "SkinCAP\\skincap\\1781.png",
+      "ground_truth": "kaposi sarcoma",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1203,
+      "file_name": "1203.png",
+      "image_path": "SkinCAP\\skincap\\1203.png",
+      "ground_truth": "stevens johnson syndrome",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 3999,
+      "file_name": "3999.png",
+      "image_path": "SkinCAP\\skincap\\3999.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3956,
+      "file_name": "3956.png",
+      "image_path": "SkinCAP\\skincap\\3956.png",
+      "ground_truth": "pityriasis rosea",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 2626,
+      "file_name": "2626.png",
+      "image_path": "SkinCAP\\skincap\\2626.png",
+      "ground_truth": "folliculitis",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3149,
+      "file_name": "3149.png",
+      "image_path": "SkinCAP\\skincap\\3149.png",
+      "ground_truth": "erythema annulare centrifigum",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 1093,
+      "file_name": "1093.png",
+      "image_path": "SkinCAP\\skincap\\1093.png",
+      "ground_truth": "pyogenic granuloma",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 3076,
+      "file_name": "3076.png",
+      "image_path": "SkinCAP\\skincap\\3076.png",
+      "ground_truth": "acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 2200,
+      "file_name": "2200.png",
+      "image_path": "SkinCAP\\skincap\\2200.png",
+      "ground_truth": "malignant melanoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3625,
+      "file_name": "3625.png",
+      "image_path": "SkinCAP\\skincap\\3625.png",
+      "ground_truth": "porokeratosis actinic",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2793,
+      "file_name": "2793.png",
+      "image_path": "SkinCAP\\skincap\\2793.png",
+      "ground_truth": "dyshidrotic eczema",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 470,
+      "file_name": "470.png",
+      "image_path": "SkinCAP\\skincap\\470.png",
+      "ground_truth": "fibrous papule",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2953,
+      "file_name": "2953.png",
+      "image_path": "SkinCAP\\skincap\\2953.png",
+      "ground_truth": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2787,
+      "file_name": "2787.png",
+      "image_path": "SkinCAP\\skincap\\2787.png",
+      "ground_truth": "neurodermatitis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 48,
+      "file_name": "48.png",
+      "image_path": "SkinCAP\\skincap\\48.png",
+      "ground_truth": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 3526,
+      "file_name": "3526.png",
+      "image_path": "SkinCAP\\skincap\\3526.png",
+      "ground_truth": "nematode infection",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2267,
+      "file_name": "2267.png",
+      "image_path": "SkinCAP\\skincap\\2267.png",
+      "ground_truth": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1030,
+      "file_name": "1030.png",
+      "image_path": "SkinCAP\\skincap\\1030.png",
+      "ground_truth": "erythema elevatum diutinum",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2168,
+      "file_name": "2168.png",
+      "image_path": "SkinCAP\\skincap\\2168.png",
+      "ground_truth": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1918,
+      "file_name": "1918.png",
+      "image_path": "SkinCAP\\skincap\\1918.png",
+      "ground_truth": "xanthomas",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2441,
+      "file_name": "2441.png",
+      "image_path": "SkinCAP\\skincap\\2441.png",
+      "ground_truth": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1564,
+      "file_name": "1564.png",
+      "image_path": "SkinCAP\\skincap\\1564.png",
+      "ground_truth": "folliculitis",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 1577,
+      "file_name": "1577.png",
+      "image_path": "SkinCAP\\skincap\\1577.png",
+      "ground_truth": "sarcoidosis",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 261,
+      "file_name": "261.png",
+      "image_path": "SkinCAP\\skincap\\261.png",
+      "ground_truth": "nodular melanoma (nm)",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2443,
+      "file_name": "2443.png",
+      "image_path": "SkinCAP\\skincap\\2443.png",
+      "ground_truth": "scabies",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1730,
+      "file_name": "1730.png",
+      "image_path": "SkinCAP\\skincap\\1730.png",
+      "ground_truth": "lyme disease",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2788,
+      "file_name": "2788.png",
+      "image_path": "SkinCAP\\skincap\\2788.png",
+      "ground_truth": "acne",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 3245,
+      "file_name": "3245.png",
+      "image_path": "SkinCAP\\skincap\\3245.png",
+      "ground_truth": "mycosis fungoides",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 656,
+      "file_name": "656.png",
+      "image_path": "SkinCAP\\skincap\\656.png",
+      "ground_truth": "photodermatoses",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 2571,
+      "file_name": "2571.png",
+      "image_path": "SkinCAP\\skincap\\2571.png",
+      "ground_truth": "photodermatoses",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 627,
+      "file_name": "627.png",
+      "image_path": "SkinCAP\\skincap\\627.png",
+      "ground_truth": "melanocytic nevi",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 450,
+      "file_name": "450.png",
+      "image_path": "SkinCAP\\skincap\\450.png",
+      "ground_truth": "melanoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3528,
+      "file_name": "3528.png",
+      "image_path": "SkinCAP\\skincap\\3528.png",
+      "ground_truth": "nematode infection",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 193,
+      "file_name": "193.png",
+      "image_path": "SkinCAP\\skincap\\193.png",
+      "ground_truth": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 3096,
+      "file_name": "3096.png",
+      "image_path": "SkinCAP\\skincap\\3096.png",
+      "ground_truth": "neutrophilic dermatoses",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 373,
+      "file_name": "373.png",
+      "image_path": "SkinCAP\\skincap\\373.png",
+      "ground_truth": "neurofibroma",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 2022,
+      "file_name": "2022.png",
+      "image_path": "SkinCAP\\skincap\\2022.png",
+      "ground_truth": "tick bite",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2088,
+      "file_name": "2088.png",
+      "image_path": "SkinCAP\\skincap\\2088.png",
+      "ground_truth": "allergic contact dermatitis",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 567,
+      "file_name": "567.png",
+      "image_path": "SkinCAP\\skincap\\567.png",
+      "ground_truth": "solar lentigo",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 899,
+      "file_name": "899.png",
+      "image_path": "SkinCAP\\skincap\\899.png",
+      "ground_truth": "perioral dermatitis",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1483,
+      "file_name": "1483.png",
+      "image_path": "SkinCAP\\skincap\\1483.png",
+      "ground_truth": "pustular psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1636,
+      "file_name": "1636.png",
+      "image_path": "SkinCAP\\skincap\\1636.png",
+      "ground_truth": "actinic keratosis",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2391,
+      "file_name": "2391.png",
+      "image_path": "SkinCAP\\skincap\\2391.png",
+      "ground_truth": "acne",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 3678,
+      "file_name": "3678.png",
+      "image_path": "SkinCAP\\skincap\\3678.png",
+      "ground_truth": "nematode infection",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1755,
+      "file_name": "1755.png",
+      "image_path": "SkinCAP\\skincap\\1755.png",
+      "ground_truth": "psoriasis",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 2395,
+      "file_name": "2395.png",
+      "image_path": "SkinCAP\\skincap\\2395.png",
+      "ground_truth": "xanthomas",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3060,
+      "file_name": "3060.png",
+      "image_path": "SkinCAP\\skincap\\3060.png",
+      "ground_truth": "erythema multiforme",
+      "predicted": null,
+      "status": "error"
+    },
+    {
+      "id": 1077,
+      "file_name": "1077.png",
+      "image_path": "SkinCAP\\skincap\\1077.png",
+      "ground_truth": "keloid",
+      "predicted": null,
+      "status": "error"
+    },
+    {
+      "id": 2208,
+      "file_name": "2208.png",
+      "image_path": "SkinCAP\\skincap\\2208.png",
+      "ground_truth": "acne vulgaris",
+      "predicted": null,
+      "status": "error"
+    },
+    {
+      "id": 2300,
+      "file_name": "2300.png",
+      "image_path": "SkinCAP\\skincap\\2300.png",
+      "ground_truth": "folliculitis",
+      "predicted": null,
+      "status": "error"
+    },
+    {
+      "id": 3052,
+      "file_name": "3052.png",
+      "image_path": "SkinCAP\\skincap\\3052.png",
+      "ground_truth": "dyshidrotic eczema",
+      "predicted": null,
+      "status": "error"
+    },
+    {
+      "id": 1011,
+      "file_name": "1011.png",
+      "image_path": "SkinCAP\\skincap\\1011.png",
+      "ground_truth": "folliculitis",
+      "predicted": null,
+      "status": "error"
+    },
+    {
+      "id": 3993,
+      "file_name": "3993.png",
+      "image_path": "SkinCAP\\skincap\\3993.png",
+      "ground_truth": "pityriasis rosea",
+      "predicted": null,
+      "status": "error"
+    },
+    {
+      "id": 1085,
+      "file_name": "1085.png",
+      "image_path": "SkinCAP\\skincap\\1085.png",
+      "ground_truth": "urticaria pigmentosa",
+      "predicted": null,
+      "status": "error"
+    },
+    {
+      "id": 586,
+      "file_name": "586.png",
+      "image_path": "SkinCAP\\skincap\\586.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1880,
+      "file_name": "1880.png",
+      "image_path": "SkinCAP\\skincap\\1880.png",
+      "ground_truth": "rosacea",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 2634,
+      "file_name": "2634.png",
+      "image_path": "SkinCAP\\skincap\\2634.png",
+      "ground_truth": "pilomatricoma",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 3746,
+      "file_name": "3746.png",
+      "image_path": "SkinCAP\\skincap\\3746.png",
+      "ground_truth": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 3624,
+      "file_name": "3624.png",
+      "image_path": "SkinCAP\\skincap\\3624.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1621,
+      "file_name": "1621.png",
+      "image_path": "SkinCAP\\skincap\\1621.png",
+      "ground_truth": "milia",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 2045,
+      "file_name": "2045.png",
+      "image_path": "SkinCAP\\skincap\\2045.png",
+      "ground_truth": "folliculitis",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 2685,
+      "file_name": "2685.png",
+      "image_path": "SkinCAP\\skincap\\2685.png",
+      "ground_truth": "acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 871,
+      "file_name": "871.png",
+      "image_path": "SkinCAP\\skincap\\871.png",
+      "ground_truth": "porokeratosis actinic",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1289,
+      "file_name": "1289.png",
+      "image_path": "SkinCAP\\skincap\\1289.png",
+      "ground_truth": "drug eruption",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2941,
+      "file_name": "2941.png",
+      "image_path": "SkinCAP\\skincap\\2941.png",
+      "ground_truth": "neurofibromatosis",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3590,
+      "file_name": "3590.png",
+      "image_path": "SkinCAP\\skincap\\3590.png",
+      "ground_truth": "necrobiosis lipoidica",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 2324,
+      "file_name": "2324.png",
+      "image_path": "SkinCAP\\skincap\\2324.png",
+      "ground_truth": "acrodermatitis enteropathica",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 3741,
+      "file_name": "3741.png",
+      "image_path": "SkinCAP\\skincap\\3741.png",
+      "ground_truth": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 865,
+      "file_name": "865.png",
+      "image_path": "SkinCAP\\skincap\\865.png",
+      "ground_truth": "pilar cyst",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 272,
+      "file_name": "272.png",
+      "image_path": "SkinCAP\\skincap\\272.png",
+      "ground_truth": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 1097,
+      "file_name": "1097.png",
+      "image_path": "SkinCAP\\skincap\\1097.png",
+      "ground_truth": "vitiligo",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1644,
+      "file_name": "1644.png",
+      "image_path": "SkinCAP\\skincap\\1644.png",
+      "ground_truth": "dermatomyositis",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1293,
+      "file_name": "1293.png",
+      "image_path": "SkinCAP\\skincap\\1293.png",
+      "ground_truth": "ichthyosis vulgaris",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3298,
+      "file_name": "3298.png",
+      "image_path": "SkinCAP\\skincap\\3298.png",
+      "ground_truth": "prurigo nodularis",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 132,
+      "file_name": "132.png",
+      "image_path": "SkinCAP\\skincap\\132.png",
+      "ground_truth": "acrochordon",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 3367,
+      "file_name": "3367.png",
+      "image_path": "SkinCAP\\skincap\\3367.png",
+      "ground_truth": "urticaria pigmentosa",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 939,
+      "file_name": "939.png",
+      "image_path": "SkinCAP\\skincap\\939.png",
+      "ground_truth": "xanthomas",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 230,
+      "file_name": "230.png",
+      "image_path": "SkinCAP\\skincap\\230.png",
+      "ground_truth": "verruca vulgaris",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 3179,
+      "file_name": "3179.png",
+      "image_path": "SkinCAP\\skincap\\3179.png",
+      "ground_truth": "scabies",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3148,
+      "file_name": "3148.png",
+      "image_path": "SkinCAP\\skincap\\3148.png",
+      "ground_truth": "nevocytic nevus",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3453,
+      "file_name": "3453.png",
+      "image_path": "SkinCAP\\skincap\\3453.png",
+      "ground_truth": "scabies",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1329,
+      "file_name": "1329.png",
+      "image_path": "SkinCAP\\skincap\\1329.png",
+      "ground_truth": "pilar cyst",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2805,
+      "file_name": "2805.png",
+      "image_path": "SkinCAP\\skincap\\2805.png",
+      "ground_truth": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 900,
+      "file_name": "900.png",
+      "image_path": "SkinCAP\\skincap\\900.png",
+      "ground_truth": "congenital nevus",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 2282,
+      "file_name": "2282.png",
+      "image_path": "SkinCAP\\skincap\\2282.png",
+      "ground_truth": "disseminated actinic porokeratosis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2819,
+      "file_name": "2819.png",
+      "image_path": "SkinCAP\\skincap\\2819.png",
+      "ground_truth": "epidermal nevus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2622,
+      "file_name": "2622.png",
+      "image_path": "SkinCAP\\skincap\\2622.png",
+      "ground_truth": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3791,
+      "file_name": "3791.png",
+      "image_path": "SkinCAP\\skincap\\3791.png",
+      "ground_truth": "melanoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1106,
+      "file_name": "1106.png",
+      "image_path": "SkinCAP\\skincap\\1106.png",
+      "ground_truth": "scleroderma",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 1555,
+      "file_name": "1555.png",
+      "image_path": "SkinCAP\\skincap\\1555.png",
+      "ground_truth": "pyogenic granuloma",
+      "predicted": "squamous cell papilloma",
+      "status": "success"
+    },
+    {
+      "id": 1894,
+      "file_name": "1894.png",
+      "image_path": "SkinCAP\\skincap\\1894.png",
+      "ground_truth": "becker nevus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 670,
+      "file_name": "670.png",
+      "image_path": "SkinCAP\\skincap\\670.png",
+      "ground_truth": "pilar cyst",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1003,
+      "file_name": "1003.png",
+      "image_path": "SkinCAP\\skincap\\1003.png",
+      "ground_truth": "fixed eruptions",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 2987,
+      "file_name": "2987.png",
+      "image_path": "SkinCAP\\skincap\\2987.png",
+      "ground_truth": "telangiectases",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 2188,
+      "file_name": "2188.png",
+      "image_path": "SkinCAP\\skincap\\2188.png",
+      "ground_truth": "erythema multiforme",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 701,
+      "file_name": "701.png",
+      "image_path": "SkinCAP\\skincap\\701.png",
+      "ground_truth": "seborrheic dermatitis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 2601,
+      "file_name": "2601.png",
+      "image_path": "SkinCAP\\skincap\\2601.png",
+      "ground_truth": "erythema nodosum",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2496,
+      "file_name": "2496.png",
+      "image_path": "SkinCAP\\skincap\\2496.png",
+      "ground_truth": "granuloma annulare",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 293,
+      "file_name": "293.png",
+      "image_path": "SkinCAP\\skincap\\293.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2655,
+      "file_name": "2655.png",
+      "image_path": "SkinCAP\\skincap\\2655.png",
+      "ground_truth": "incontinentia pigmenti",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 2800,
+      "file_name": "2800.png",
+      "image_path": "SkinCAP\\skincap\\2800.png",
+      "ground_truth": "malignant melanoma",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3837,
+      "file_name": "3837.png",
+      "image_path": "SkinCAP\\skincap\\3837.png",
+      "ground_truth": "porokeratosis of mibelli",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2875,
+      "file_name": "2875.png",
+      "image_path": "SkinCAP\\skincap\\2875.png",
+      "ground_truth": "acne",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1094,
+      "file_name": "1094.png",
+      "image_path": "SkinCAP\\skincap\\1094.png",
+      "ground_truth": "melanoma",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2746,
+      "file_name": "2746.png",
+      "image_path": "SkinCAP\\skincap\\2746.png",
+      "ground_truth": "lupus subacute",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 859,
+      "file_name": "859.png",
+      "image_path": "SkinCAP\\skincap\\859.png",
+      "ground_truth": "epidermal nevus",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 1456,
+      "file_name": "1456.png",
+      "image_path": "SkinCAP\\skincap\\1456.png",
+      "ground_truth": "pityriasis lichenoides chronica",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 1517,
+      "file_name": "1517.png",
+      "image_path": "SkinCAP\\skincap\\1517.png",
+      "ground_truth": "tuberous sclerosis",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 667,
+      "file_name": "667.png",
+      "image_path": "SkinCAP\\skincap\\667.png",
+      "ground_truth": "porokeratosis of mibelli",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 1495,
+      "file_name": "1495.png",
+      "image_path": "SkinCAP\\skincap\\1495.png",
+      "ground_truth": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3417,
+      "file_name": "3417.png",
+      "image_path": "SkinCAP\\skincap\\3417.png",
+      "ground_truth": "scleroderma",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 2604,
+      "file_name": "2604.png",
+      "image_path": "SkinCAP\\skincap\\2604.png",
+      "ground_truth": "superficial spreading melanoma ssm",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 1858,
+      "file_name": "1858.png",
+      "image_path": "SkinCAP\\skincap\\1858.png",
+      "ground_truth": "acne",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 3955,
+      "file_name": "3955.png",
+      "image_path": "SkinCAP\\skincap\\3955.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3947,
+      "file_name": "3947.png",
+      "image_path": "SkinCAP\\skincap\\3947.png",
+      "ground_truth": "langerhans cell histiocytosis",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 414,
+      "file_name": "414.png",
+      "image_path": "SkinCAP\\skincap\\414.png",
+      "ground_truth": "seborrheic keratosis",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 3550,
+      "file_name": "3550.png",
+      "image_path": "SkinCAP\\skincap\\3550.png",
+      "ground_truth": "keloid",
+      "predicted": "lipoma",
+      "status": "success"
+    },
+    {
+      "id": 954,
+      "file_name": "954.png",
+      "image_path": "SkinCAP\\skincap\\954.png",
+      "ground_truth": "lyme disease",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3504,
+      "file_name": "3504.png",
+      "image_path": "SkinCAP\\skincap\\3504.png",
+      "ground_truth": "photodermatoses",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 327,
+      "file_name": "327.png",
+      "image_path": "SkinCAP\\skincap\\327.png",
+      "ground_truth": "melanocytic nevi",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 1186,
+      "file_name": "1186.png",
+      "image_path": "SkinCAP\\skincap\\1186.png",
+      "ground_truth": "lichen simplex",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3167,
+      "file_name": "3167.png",
+      "image_path": "SkinCAP\\skincap\\3167.png",
+      "ground_truth": "port wine stain",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 934,
+      "file_name": "934.png",
+      "image_path": "SkinCAP\\skincap\\934.png",
+      "ground_truth": "porphyria",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 2709,
+      "file_name": "2709.png",
+      "image_path": "SkinCAP\\skincap\\2709.png",
+      "ground_truth": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 188,
+      "file_name": "188.png",
+      "image_path": "SkinCAP\\skincap\\188.png",
+      "ground_truth": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 285,
+      "file_name": "285.png",
+      "image_path": "SkinCAP\\skincap\\285.png",
+      "ground_truth": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 2886,
+      "file_name": "2886.png",
+      "image_path": "SkinCAP\\skincap\\2886.png",
+      "ground_truth": "urticaria pigmentosa",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 788,
+      "file_name": "788.png",
+      "image_path": "SkinCAP\\skincap\\788.png",
+      "ground_truth": "acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 2365,
+      "file_name": "2365.png",
+      "image_path": "SkinCAP\\skincap\\2365.png",
+      "ground_truth": "pustular psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1482,
+      "file_name": "1482.png",
+      "image_path": "SkinCAP\\skincap\\1482.png",
+      "ground_truth": "drug eruption",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3530,
+      "file_name": "3530.png",
+      "image_path": "SkinCAP\\skincap\\3530.png",
+      "ground_truth": "lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3627,
+      "file_name": "3627.png",
+      "image_path": "SkinCAP\\skincap\\3627.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2534,
+      "file_name": "2534.png",
+      "image_path": "SkinCAP\\skincap\\2534.png",
+      "ground_truth": "scleroderma",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 2575,
+      "file_name": "2575.png",
+      "image_path": "SkinCAP\\skincap\\2575.png",
+      "ground_truth": "nematode infection",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 3398,
+      "file_name": "3398.png",
+      "image_path": "SkinCAP\\skincap\\3398.png",
+      "ground_truth": "milia",
+      "predicted": null,
+      "status": "error"
+    },
+    {
+      "id": 1201,
+      "file_name": "1201.png",
+      "image_path": "SkinCAP\\skincap\\1201.png",
+      "ground_truth": "porphyria",
+      "predicted": null,
+      "status": "error"
+    },
+    {
+      "id": 2262,
+      "file_name": "2262.png",
+      "image_path": "SkinCAP\\skincap\\2262.png",
+      "ground_truth": "milia",
+      "predicted": null,
+      "status": "error"
+    },
+    {
+      "id": 323,
+      "file_name": "323.png",
+      "image_path": "SkinCAP\\skincap\\323.png",
+      "ground_truth": "melanocytic nevi",
+      "predicted": null,
+      "status": "error"
+    },
+    {
+      "id": 1551,
+      "file_name": "1551.png",
+      "image_path": "SkinCAP\\skincap\\1551.png",
+      "ground_truth": "urticaria",
+      "predicted": null,
+      "status": "error"
+    },
+    {
+      "id": 3778,
+      "file_name": "3778.png",
+      "image_path": "SkinCAP\\skincap\\3778.png",
+      "ground_truth": "mycosis fungoides",
+      "predicted": null,
+      "status": "error"
+    },
+    {
+      "id": 512,
+      "file_name": "512.png",
+      "image_path": "SkinCAP\\skincap\\512.png",
+      "ground_truth": "dysplastic nevus",
+      "predicted": null,
+      "status": "error"
+    },
+    {
+      "id": 2197,
+      "file_name": "2197.png",
+      "image_path": "SkinCAP\\skincap\\2197.png",
+      "ground_truth": "keloid",
+      "predicted": null,
+      "status": "error"
+    },
+    {
+      "id": 1882,
+      "file_name": "1882.png",
+      "image_path": "SkinCAP\\skincap\\1882.png",
+      "ground_truth": "xanthomas",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 2989,
+      "file_name": "2989.png",
+      "image_path": "SkinCAP\\skincap\\2989.png",
+      "ground_truth": "epidermal nevus",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 178,
+      "file_name": "178.png",
+      "image_path": "SkinCAP\\skincap\\178.png",
+      "ground_truth": "dermatofibroma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3306,
+      "file_name": "3306.png",
+      "image_path": "SkinCAP\\skincap\\3306.png",
+      "ground_truth": "allergic contact dermatitis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 1084,
+      "file_name": "1084.png",
+      "image_path": "SkinCAP\\skincap\\1084.png",
+      "ground_truth": "tungiasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2473,
+      "file_name": "2473.png",
+      "image_path": "SkinCAP\\skincap\\2473.png",
+      "ground_truth": "perioral dermatitis",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 1409,
+      "file_name": "1409.png",
+      "image_path": "SkinCAP\\skincap\\1409.png",
+      "ground_truth": "photodermatoses",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 3472,
+      "file_name": "3472.png",
+      "image_path": "SkinCAP\\skincap\\3472.png",
+      "ground_truth": "mycosis fungoides",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 1471,
+      "file_name": "1471.png",
+      "image_path": "SkinCAP\\skincap\\1471.png",
+      "ground_truth": "stevens johnson syndrome",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 397,
+      "file_name": "397.png",
+      "image_path": "SkinCAP\\skincap\\397.png",
+      "ground_truth": "condyloma accuminatum",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 1557,
+      "file_name": "1557.png",
+      "image_path": "SkinCAP\\skincap\\1557.png",
+      "ground_truth": "port wine stain",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 380,
+      "file_name": "380.png",
+      "image_path": "SkinCAP\\skincap\\380.png",
+      "ground_truth": "pyogenic granuloma",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 419,
+      "file_name": "419.png",
+      "image_path": "SkinCAP\\skincap\\419.png",
+      "ground_truth": "dermatofibroma",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 1379,
+      "file_name": "1379.png",
+      "image_path": "SkinCAP\\skincap\\1379.png",
+      "ground_truth": "allergic contact dermatitis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3128,
+      "file_name": "3128.png",
+      "image_path": "SkinCAP\\skincap\\3128.png",
+      "ground_truth": "dyshidrotic eczema",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3921,
+      "file_name": "3921.png",
+      "image_path": "SkinCAP\\skincap\\3921.png",
+      "ground_truth": "pilar cyst",
+      "predicted": "lipoma",
+      "status": "success"
+    },
+    {
+      "id": 882,
+      "file_name": "882.png",
+      "image_path": "SkinCAP\\skincap\\882.png",
+      "ground_truth": "epidermal nevus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 637,
+      "file_name": "637.png",
+      "image_path": "SkinCAP\\skincap\\637.png",
+      "ground_truth": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 1139,
+      "file_name": "1139.png",
+      "image_path": "SkinCAP\\skincap\\1139.png",
+      "ground_truth": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 1394,
+      "file_name": "1394.png",
+      "image_path": "SkinCAP\\skincap\\1394.png",
+      "ground_truth": "mycosis fungoides",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 1732,
+      "file_name": "1732.png",
+      "image_path": "SkinCAP\\skincap\\1732.png",
+      "ground_truth": "acquired autoimmune bullous diseaseherpes gestationis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 2860,
+      "file_name": "2860.png",
+      "image_path": "SkinCAP\\skincap\\2860.png",
+      "ground_truth": "nevocytic nevus",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 654,
+      "file_name": "654.png",
+      "image_path": "SkinCAP\\skincap\\654.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3301,
+      "file_name": "3301.png",
+      "image_path": "SkinCAP\\skincap\\3301.png",
+      "ground_truth": "ehlers danlos syndrome",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 3109,
+      "file_name": "3109.png",
+      "image_path": "SkinCAP\\skincap\\3109.png",
+      "ground_truth": "nevus sebaceous of jadassohn",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 27,
+      "file_name": "27.png",
+      "image_path": "SkinCAP\\skincap\\27.png",
+      "ground_truth": "mycosis fungoides",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 3561,
+      "file_name": "3561.png",
+      "image_path": "SkinCAP\\skincap\\3561.png",
+      "ground_truth": "neutrophilic dermatoses",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3316,
+      "file_name": "3316.png",
+      "image_path": "SkinCAP\\skincap\\3316.png",
+      "ground_truth": "striae",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1140,
+      "file_name": "1140.png",
+      "image_path": "SkinCAP\\skincap\\1140.png",
+      "ground_truth": "lymphangioma",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 2414,
+      "file_name": "2414.png",
+      "image_path": "SkinCAP\\skincap\\2414.png",
+      "ground_truth": "erythema multiforme",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 1840,
+      "file_name": "1840.png",
+      "image_path": "SkinCAP\\skincap\\1840.png",
+      "ground_truth": "acne",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 903,
+      "file_name": "903.png",
+      "image_path": "SkinCAP\\skincap\\903.png",
+      "ground_truth": "milia",
+      "predicted": "user examine this skin image step by step: 1. describe the lesion type (macule, papule, plaque, nodule, vesicle, etc.) 2. note the distribution",
+      "status": "success"
+    },
+    {
+      "id": 1719,
+      "file_name": "1719.png",
+      "image_path": "SkinCAP\\skincap\\1719.png",
+      "ground_truth": "allergic contact dermatitis",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2233,
+      "file_name": "2233.png",
+      "image_path": "SkinCAP\\skincap\\2233.png",
+      "ground_truth": "lyme disease",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 2873,
+      "file_name": "2873.png",
+      "image_path": "SkinCAP\\skincap\\2873.png",
+      "ground_truth": "juvenile xanthogranuloma",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 2662,
+      "file_name": "2662.png",
+      "image_path": "SkinCAP\\skincap\\2662.png",
+      "ground_truth": "sun damaged skin",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2933,
+      "file_name": "2933.png",
+      "image_path": "SkinCAP\\skincap\\2933.png",
+      "ground_truth": "porphyria",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 815,
+      "file_name": "815.png",
+      "image_path": "SkinCAP\\skincap\\815.png",
+      "ground_truth": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2299,
+      "file_name": "2299.png",
+      "image_path": "SkinCAP\\skincap\\2299.png",
+      "ground_truth": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 109,
+      "file_name": "109.png",
+      "image_path": "SkinCAP\\skincap\\109.png",
+      "ground_truth": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 2466,
+      "file_name": "2466.png",
+      "image_path": "SkinCAP\\skincap\\2466.png",
+      "ground_truth": "becker nevus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2070,
+      "file_name": "2070.png",
+      "image_path": "SkinCAP\\skincap\\2070.png",
+      "ground_truth": "folliculitis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 953,
+      "file_name": "953.png",
+      "image_path": "SkinCAP\\skincap\\953.png",
+      "ground_truth": "fordyce spots",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 896,
+      "file_name": "896.png",
+      "image_path": "SkinCAP\\skincap\\896.png",
+      "ground_truth": "dermatofibroma",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 384,
+      "file_name": "384.png",
+      "image_path": "SkinCAP\\skincap\\384.png",
+      "ground_truth": "trichofolliculoma",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 123,
+      "file_name": "123.png",
+      "image_path": "SkinCAP\\skincap\\123.png",
+      "ground_truth": "epidermal cyst",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 131,
+      "file_name": "131.png",
+      "image_path": "SkinCAP\\skincap\\131.png",
+      "ground_truth": "eccrine poroma",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 1729,
+      "file_name": "1729.png",
+      "image_path": "SkinCAP\\skincap\\1729.png",
+      "ground_truth": "acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 2419,
+      "file_name": "2419.png",
+      "image_path": "SkinCAP\\skincap\\2419.png",
+      "ground_truth": "dermatomyositis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 357,
+      "file_name": "357.png",
+      "image_path": "SkinCAP\\skincap\\357.png",
+      "ground_truth": "seborrheic keratosis",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 2234,
+      "file_name": "2234.png",
+      "image_path": "SkinCAP\\skincap\\2234.png",
+      "ground_truth": "fordyce spots",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3655,
+      "file_name": "3655.png",
+      "image_path": "SkinCAP\\skincap\\3655.png",
+      "ground_truth": "dariers disease",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 3034,
+      "file_name": "3034.png",
+      "image_path": "SkinCAP\\skincap\\3034.png",
+      "ground_truth": "papilomatosis confluentes and reticulate",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2772,
+      "file_name": "2772.png",
+      "image_path": "SkinCAP\\skincap\\2772.png",
+      "ground_truth": "tuberous sclerosis",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 420,
+      "file_name": "420.png",
+      "image_path": "SkinCAP\\skincap\\420.png",
+      "ground_truth": "seborrheic keratosis irritated",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3017,
+      "file_name": "3017.png",
+      "image_path": "SkinCAP\\skincap\\3017.png",
+      "ground_truth": "hailey hailey disease",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 572,
+      "file_name": "572.png",
+      "image_path": "SkinCAP\\skincap\\572.png",
+      "ground_truth": "angioma",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 915,
+      "file_name": "915.png",
+      "image_path": "SkinCAP\\skincap\\915.png",
+      "ground_truth": "superficial spreading melanoma ssm",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 1004,
+      "file_name": "1004.png",
+      "image_path": "SkinCAP\\skincap\\1004.png",
+      "ground_truth": "allergic contact dermatitis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1127,
+      "file_name": "1127.png",
+      "image_path": "SkinCAP\\skincap\\1127.png",
+      "ground_truth": "xeroderma pigmentosum",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 3038,
+      "file_name": "3038.png",
+      "image_path": "SkinCAP\\skincap\\3038.png",
+      "ground_truth": "acanthosis nigricans",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 103,
+      "file_name": "103.png",
+      "image_path": "SkinCAP\\skincap\\103.png",
+      "ground_truth": "seborrheic keratosis",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 457,
+      "file_name": "457.png",
+      "image_path": "SkinCAP\\skincap\\457.png",
+      "ground_truth": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 2620,
+      "file_name": "2620.png",
+      "image_path": "SkinCAP\\skincap\\2620.png",
+      "ground_truth": "solid cystic basal cell carcinoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    }
+  ]
+}

@@ -127,13 +127,8 @@ HIKARI/Model/
 │   ├── inference_group_classification.py     # Stage 1 group classifier inference
 │   └── inference_qwen3.py                    # Raw Qwen3-VL caption inference
 │
-├── 🧠 Adapter & Token Methods
-│   ├── SIB.py                        # SIB-TinyLoRA adapter implementation
-│   ├── medical_token_importance.py   # Selective Token Supervision (STS) for medical captions
-│   └── merge_exp4.py                 # Merge Stage 3 Exp 4 LoRA adapters into base weights
-│
 ├── 🧪 Experiments & Ablation
-│   ├── run_stage3_experiments.py     # Stage 3 ablation (Way1/2 × STS, 4 experiments)
+│   ├── run_stage3_experiments.py     # Stage 3 ablation (4 experiments)
 │   └── run_rag_benchmark.py          # Full RAG benchmark runner
 │
 ├── 📈 Analysis & Visualization
@@ -146,8 +141,6 @@ HIKARI/Model/
 │   └── EDA.ipynb                     # Dataset EDA notebook
 │
 ├── 🧪 Testing & Utilities
-│   ├── SIB_test.py                   # SIB-TinyLoRA unit tests (initial)
-│   ├── SIB_test2.py → SIB_test_final2.py  # Iterative SIB integration tests
 │   ├── test_callback.py              # Training callback tests
 │   ├── test_data_pipeline.py         # Dataset pipeline smoke tests
 │   ├── test_inference_1sample.py     # Single-sample inference smoke test
@@ -156,8 +149,7 @@ HIKARI/Model/
 │   └── check_cuda.py                 # CUDA/GPU environment check
 │
 ├── 📄 Paper & Docs
-│   ├── Conference_Paper.tex          # ITC-CSCC 2025 paper (LaTeX)
-│   ├── SIB_idea.tex                  # SIB-TinyLoRA design document
+│   ├── Conference_Paper.tex          # Paper (LaTeX)
 │   ├── summary.md                    # Full project summary (EN)
 │   ├── summary_Th.md                 # Full project summary (TH) + experiment definitions
 │   ├── paper_draft.md                # Draft paper notes
@@ -189,7 +181,7 @@ HIKARI/Model/
 |--------|---------|
 | `train.py` | **Prototype** — earliest SFT caption trainer for Qwen2-VL. Loads SkinCAP CSV, builds image+caption pairs, trains with Unsloth SFTTrainer. Single stage only. |
 | `train_two_stage.py` | **Two-stage baseline** — Stage 1: classification, Stage 2: caption. Carries Stage 1 LoRA weights into Stage 2. No fuzzy matching, no top-K filtering. |
-| `train_two_stage_FuzzyTopK.py` | **Main training script.** Adds fuzzy disease-name consolidation (`thefuzz`), top-K class filtering, stratified splits, sqrt oversampling, and the RAG-in-Training loop. Controls `--rag_k_train`, `--rag_exp`, `--alpha`, `--stage3_init`, `--use_sts` flags. Produces the `fuzzytopk` and `fuzzytopk_s1cascade_ragR2_a09` model families. |
+| `train_two_stage_FuzzyTopK.py` | **Main training script.** Adds fuzzy disease-name consolidation (`thefuzz`), top-K class filtering, stratified splits, sqrt oversampling, and the RAG-in-Training loop. Controls `--rag_k_train`, `--rag_exp`, `--alpha`, `--stage3_init` flags. Produces the `fuzzytopk` and `fuzzytopk_s1cascade_ragR2_a09` model families. |
 | `train_three_stage_hybrid_topk.py` | **M-series 3-stage pipeline.** Stage 1: group classifier (4 or 3 groups). Stage 2: disease classifier per group. Stage 3: caption from Stage 2 checkpoint. Supports `GROUP_MODE` = `"4group"` / `"3group"` and `TOP_N` = 10/15. Produces `skincap_3stage_*` model families. |
 | `train_qwen3_caption.py` | **Baseline SFT caption** using Qwen3-VL-8B-Thinking directly. Loads raw SkinCAP `caption_zh_polish_en` column; no classification stage. Used to establish the caption-only baseline. |
 | `train_qwen3_thinking.py` | **Thinking-mode SFT variant.** Enables Qwen3's extended reasoning chain (`<think>…</think>`) during fine-tuning. Experimental; explores whether explicit reasoning improves diagnosis. |
@@ -210,16 +202,6 @@ HIKARI/Model/
 
 ---
 
-### 🧠 Adapter & Token Methods
-
-| Script | Purpose |
-|--------|---------|
-| `SIB.py` | **SIB-TinyLoRA adapter.** Implements `SIBTinyLoRALinear` — a parameter-efficient linear layer that learns a low-rank update `U Σ V^T` via a tiny shared scalar vector `v` and fixed random projection `P`. Reduces trainable parameters vs standard LoRA. `inject_vlm_tiny_lora()` replaces `q_proj`/`v_proj` layers in-place. Written in PyTorch, compatible with Qwen2-VL. |
-| `medical_token_importance.py` | **Selective Token Supervision (STS) for medical captions.** Computes per-token loss weights from three signals: (1) answer-proximity weight `w_ans` — higher weight for diagnosis/recommendation sentences, (2) medical-token weight `w_reason` — detects clinical terminology via regex patterns, (3) surprise weight `w_surp` — tokens the base model finds unlikely. Combined as `w(t) = normalize(w_ans × w_reason × w_surp)`. Also implements IBR (Information Bottleneck Regularization) as L2 penalty on LoRA parameters. Adapted from SIB-TinyLoRA (arXiv:2410.10040). |
-| `merge_exp4.py` | **LoRA merge utility for Experiment 4.** Merges trained Stage 3 (Way 2 + STS) LoRA adapters into the base model weights using Unsloth's `merge_and_unload()`. Produces a standalone HuggingFace-compatible merged checkpoint (`*_merged/`). |
-
----
-
 ### 📡 RAG Retrieval
 
 | Script | Purpose |
@@ -232,7 +214,7 @@ HIKARI/Model/
 
 | Script | Purpose |
 |--------|---------|
-| `run_stage3_experiments.py` | **Stage 3 ablation orchestrator.** Runs 4 sequential experiments via subprocess: Exp 1 (checkpoint init, no STS), Exp 2 (merged init, no STS), Exp 3 (checkpoint init + STS+IBR), Exp 4 (merged init + STS+IBR). Each trains a Stage 3 caption model and evaluates BLEU/ROUGE. Supports `--skip N` and `--only N M` flags. |
+| `run_stage3_experiments.py` | **Stage 3 ablation orchestrator.** Runs 4 sequential experiments via subprocess comparing checkpoint-init vs merged-init for Stage 3 caption training. Each trains a Stage 3 caption model and evaluates BLEU/ROUGE. Supports `--skip N` and `--only N M` flags. |
 
 ---
 
@@ -254,8 +236,6 @@ HIKARI/Model/
 
 | Script | Purpose |
 |--------|---------|
-| `SIB_test.py` | **SIB-TinyLoRA unit test (v1).** Tests that `SIBTinyLoRALinear` can be instantiated and produces finite output; checks SVD decomposition correctness. |
-| `SIB_test2.py` … `SIB_test_final2.py` | **Iterative SIB integration tests.** Progressive tests verifying: adapter injection into Qwen2-VL layers, gradient flow through `v` only, FP16 overflow clamp, and end-to-end training step convergence. `SIB_test_final2.py` is the last stable test suite. |
 | `test_callback.py` | **Training callback tests.** Verifies that custom `SFTTrainer` callbacks (checkpoint save, logging, RAG index refresh) fire at the correct training steps without errors. |
 | `test_data_pipeline.py` | **Dataset pipeline smoke tests.** Loads a small subset of SkinCAP, runs the full fuzzy-matching and formatting pipeline, and asserts expected output shapes and label distributions. |
 | `test_inference_1sample.py` | **Single-sample inference smoke test.** Loads a merged model checkpoint and runs inference on one image; verifies the output is a valid disease name string, not a crash. |
@@ -437,7 +417,6 @@ If you use HIKARI in your research, please cite:
 - [SkinCAP Dataset](https://huggingface.co/datasets/joshuachou/SkinCAP) — 4,000 dermatology images
 - [BGE-M3](https://huggingface.co/BAAI/bge-m3) — Multilingual text embeddings
 - [SigLIP-2](https://huggingface.co/google/siglip-2-base-patch16-512) — Image encoder
-- [SIB-TinyLoRA](https://arxiv.org/abs/2410.10040) — Surprise-based token importance method
 
 ---
 

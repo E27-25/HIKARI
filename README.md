@@ -45,7 +45,7 @@ HIKARI introduces **RAG-in-Training** — instead of using retrieval only at inf
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=2500&pause=600&color=4ADE80&center=true&vCenter=true&width=700&lines=FuzzyTopK+Label+Consolidation;Stratified+Split+%C2%B7+Sqrt+Oversampling;SigLIP-2+%2B+BGE-M3+%E2%86%92+RAG+Training+Index;CLIP+ViT-B%2F32+%E2%86%92+Inference+Retrieval;LoRA+rank%3D16+%C2%B7+4-bit+NF4+%C2%B7+AdamW+8-bit;Merged-Init+%E2%86%92+Stage+3+Caption+Training;Selective+Token+Supervision+(STS)" alt="Techniques" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=2500&pause=600&color=4ADE80&center=true&vCenter=true&width=700&lines=FuzzyTopK+Label+Consolidation;Stratified+Split+%C2%B7+Sqrt+Oversampling;SigLIP-2+%2B+BGE-M3+%E2%86%92+RAG+Training+Index;CLIP+ViT-B%2F32+%E2%86%92+Inference+Retrieval;LoRA+rank%3D16+%C2%B7+4-bit+NF4+%C2%B7+AdamW+8-bit;Merged-Init+%E2%86%92+Stage+3+Caption+Training" alt="Techniques" />
 
 </div>
 
@@ -60,7 +60,6 @@ HIKARI introduces **RAG-in-Training** — instead of using retrieval only at inf
 | 🎛️ Fine-Tuning | LoRA | rank=16, alpha=32 · 4-bit NF4 quantization (Unsloth) |
 | ⚡ Optimizer | AdamW 8-bit paged | Memory-efficient optimizer for large VLM training |
 | 🔗 Stage Transfer | Merged-Init | `merge_and_unload()` before Stage 3 — prevents catastrophic interference |
-| 🏋️ Loss Weighting | STS + IBR | Selective Token Supervision for clinical terms · L2 LoRA regularization |
 | 🖼️ Image | 672×672 LANCZOS | Thumbnail resize before tokenization |
 
 ---
@@ -113,9 +112,6 @@ HIKARI introduces **RAG-in-Training** — instead of using retrieval only at inf
 ║                                                  ▼                   ║
 ║  Image + Prompt ──────────────────────► Fresh LoRA ──► Caption      ║
 ║  "Describe condition & recommend treatment"                          ║
-║                                                                      ║
-║  Optional STS: per-token loss weights for clinical terminology       ║
-║  Optional IBR: L2 regularization on LoRA parameters                 ║
 ╚══════════════════════════════════════════════════════════════════════╝
 ```
 
@@ -192,8 +188,7 @@ python train_two_stage_FuzzyTopK.py \
 
 # Stage 3: Clinical caption generation (Merged-Init)
 python train_two_stage_FuzzyTopK.py \
-    --stage3_init merged \
-    --use_sts False
+    --stage3_init merged
 ```
 
 ### 3. Evaluate
@@ -251,10 +246,6 @@ HIKARI/
     │   ├── run_rag_benchmark.py                ← Full benchmark sweep
     │   └── rag_retrieval.py                    ← HybridRAGRetriever (R0–R4)
     │
-    ├── 🧠 Methods
-    │   ├── SIB.py                       ← SIB-TinyLoRA adapter
-    │   └── medical_token_importance.py  ← Selective Token Supervision (STS)
-    │
     ├── 📈 Analysis
     │   ├── gradcam_visualization.py     ← LM Prefill Attention maps
     │   ├── plot_confusion_matrix.py     ← Confusion matrix plots
@@ -280,13 +271,12 @@ HIKARI/
 | [SigLIP-2](https://huggingface.co/google/siglip-2-base-patch16-512) | Image encoder for RAG training (R2) |
 | [BGE-M3](https://huggingface.co/BAAI/bge-m3) | Text encoder for RAG training (R2) |
 | [CLIP ViT-B/32](https://huggingface.co/openai/clip-vit-base-patch32) | Image encoder for RAG inference (R0) |
-| [SIB-TinyLoRA](https://arxiv.org/abs/2410.10040) | Surprise-based token importance (STS) |
 
 ---
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=13&duration=4000&pause=500&color=AAAAAA&center=true&vCenter=true&width=700&lines=Qwen3-VL-8B-Thinking+%C2%B7+Unsloth+%C2%B7+SkinCAP;SigLIP-2+%2B+BGE-M3+(train)+%C2%B7+CLIP+ViT-B%2F32+(inference);RAG-in-Training+%C2%B7+Merged-Init+%C2%B7+STS+%C2%B7+IBR;3-Stage+Pipeline+%C2%B7+LoRA+rank%3D16+%C2%B7+4-bit+NF4;FuzzyTopK+%C2%B7+HybridRAGRetriever+%C2%B7+RTX+5070+Ti" alt="footer" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=13&duration=4000&pause=500&color=AAAAAA&center=true&vCenter=true&width=700&lines=Qwen3-VL-8B-Thinking+%C2%B7+Unsloth+%C2%B7+SkinCAP;SigLIP-2+%2B+BGE-M3+(train)+%C2%B7+CLIP+ViT-B%2F32+(inference);RAG-in-Training+%C2%B7+Merged-Init+%C2%B7+3-Stage+Pipeline;LoRA+rank%3D16+%C2%B7+4-bit+NF4+%C2%B7+FuzzyTopK;HybridRAGRetriever+%C2%B7+RTX+5070+Ti" alt="footer" />
 
 <hr/>
 

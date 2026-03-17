@@ -17,7 +17,7 @@
 
 <br/>
 
-> **HIKARI** *(光)* — Healthcare-oriented Intelligent Knowledge-Augmented Retrieval and Inference system
+> **HIKARI** *(光・ヒカリ)* — Healthcare-oriented Intelligent Knowledge-Augmented Retrieval and Inference system
 >
 > A RAG-in-Training pipeline that fine-tunes **Qwen3-VL-8B-Thinking** on dermatology images,
 > injecting retrieved reference cases *during training* so the model learns to reason with visual similarity evidence.
@@ -290,15 +290,15 @@ HIKARI/
 
 <br/>
 
-✿ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✿
+<p>✿ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✿</p>
 
-🌸 **HIKARI Project** 🌸
+<p>🌸 <strong>HIKARI Project</strong> 🌸</p>
 
-**光 · ヒカリ**
+<p><strong>光（ヒカリ）</strong></p>
 
-*Healthcare-oriented Intelligent Knowledge-Augmented Retrieval and Inference system*
+<p><em>Healthcare-oriented Intelligent Knowledge-Augmented Retrieval and Inference system</em></p>
 
-✿ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✿
+<p>✿ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✿</p>
 
 <sub>Made with 💗 and 🌸</sub>
 

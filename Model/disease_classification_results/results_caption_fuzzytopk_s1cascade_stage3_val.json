@@ -1,0 +1,13 @@
+{
+  "total_samples": 99,
+  "valid_samples": 99,
+  "avg_generated_length": 46.8,
+  "avg_reference_length": 61.7,
+  "bleu_1": 29.22,
+  "bleu_2": 18.65,
+  "bleu_3": 13.03,
+  "bleu_4": 9.82,
+  "rouge_1": 38.9,
+  "rouge_2": 15.71,
+  "rouge_L": 27.89
+}

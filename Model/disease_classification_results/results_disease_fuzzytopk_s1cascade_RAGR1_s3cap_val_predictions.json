@@ -1,0 +1,994 @@
+{
+  "predictions": [
+    {
+      "id": 10,
+      "file_name": "10.png",
+      "image_path": "SkinCAP\\skincap\\10.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "squamous cell carcinoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 99,
+      "file_name": "99.png",
+      "image_path": "SkinCAP\\skincap\\99.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 144,
+      "file_name": "144.png",
+      "image_path": "SkinCAP\\skincap\\144.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 267,
+      "file_name": "267.png",
+      "image_path": "SkinCAP\\skincap\\267.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 274,
+      "file_name": "274.png",
+      "image_path": "SkinCAP\\skincap\\274.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 277,
+      "file_name": "277.png",
+      "image_path": "SkinCAP\\skincap\\277.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 279,
+      "file_name": "279.png",
+      "image_path": "SkinCAP\\skincap\\279.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 283,
+      "file_name": "283.png",
+      "image_path": "SkinCAP\\skincap\\283.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 287,
+      "file_name": "287.png",
+      "image_path": "SkinCAP\\skincap\\287.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 315,
+      "file_name": "315.png",
+      "image_path": "SkinCAP\\skincap\\315.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 458,
+      "file_name": "458.png",
+      "image_path": "SkinCAP\\skincap\\458.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 484,
+      "file_name": "484.png",
+      "image_path": "SkinCAP\\skincap\\484.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "squamous cell carcinoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 518,
+      "file_name": "518.png",
+      "image_path": "SkinCAP\\skincap\\518.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 557,
+      "file_name": "557.png",
+      "image_path": "SkinCAP\\skincap\\557.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "squamous cell carcinoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 564,
+      "file_name": "564.png",
+      "image_path": "SkinCAP\\skincap\\564.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 581,
+      "file_name": "581.png",
+      "image_path": "SkinCAP\\skincap\\581.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 625,
+      "file_name": "625.png",
+      "image_path": "SkinCAP\\skincap\\625.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 644,
+      "file_name": "644.png",
+      "image_path": "SkinCAP\\skincap\\644.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "melanocytic nevi",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 655,
+      "file_name": "655.png",
+      "image_path": "SkinCAP\\skincap\\655.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 704,
+      "file_name": "704.png",
+      "image_path": "SkinCAP\\skincap\\704.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "photodermatoses",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 731,
+      "file_name": "731.png",
+      "image_path": "SkinCAP\\skincap\\731.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "squamous cell carcinoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 771,
+      "file_name": "771.png",
+      "image_path": "SkinCAP\\skincap\\771.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 778,
+      "file_name": "778.png",
+      "image_path": "SkinCAP\\skincap\\778.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 820,
+      "file_name": "820.png",
+      "image_path": "SkinCAP\\skincap\\820.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 884,
+      "file_name": "884.png",
+      "image_path": "SkinCAP\\skincap\\884.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "sarcoidosis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 904,
+      "file_name": "904.png",
+      "image_path": "SkinCAP\\skincap\\904.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "squamous cell carcinoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1005,
+      "file_name": "1005.png",
+      "image_path": "SkinCAP\\skincap\\1005.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1006,
+      "file_name": "1006.png",
+      "image_path": "SkinCAP\\skincap\\1006.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1069,
+      "file_name": "1069.png",
+      "image_path": "SkinCAP\\skincap\\1069.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1111,
+      "file_name": "1111.png",
+      "image_path": "SkinCAP\\skincap\\1111.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1133,
+      "file_name": "1133.png",
+      "image_path": "SkinCAP\\skincap\\1133.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "sarcoidosis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 1145,
+      "file_name": "1145.png",
+      "image_path": "SkinCAP\\skincap\\1145.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1207,
+      "file_name": "1207.png",
+      "image_path": "SkinCAP\\skincap\\1207.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "sarcoidosis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 1225,
+      "file_name": "1225.png",
+      "image_path": "SkinCAP\\skincap\\1225.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "squamous cell carcinoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1226,
+      "file_name": "1226.png",
+      "image_path": "SkinCAP\\skincap\\1226.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "squamous cell carcinoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1285,
+      "file_name": "1285.png",
+      "image_path": "SkinCAP\\skincap\\1285.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1345,
+      "file_name": "1345.png",
+      "image_path": "SkinCAP\\skincap\\1345.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1362,
+      "file_name": "1362.png",
+      "image_path": "SkinCAP\\skincap\\1362.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "photodermatoses",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 1402,
+      "file_name": "1402.png",
+      "image_path": "SkinCAP\\skincap\\1402.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1462,
+      "file_name": "1462.png",
+      "image_path": "SkinCAP\\skincap\\1462.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "photodermatoses",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 1537,
+      "file_name": "1537.png",
+      "image_path": "SkinCAP\\skincap\\1537.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1577,
+      "file_name": "1577.png",
+      "image_path": "SkinCAP\\skincap\\1577.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "sarcoidosis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 1627,
+      "file_name": "1627.png",
+      "image_path": "SkinCAP\\skincap\\1627.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1638,
+      "file_name": "1638.png",
+      "image_path": "SkinCAP\\skincap\\1638.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 1691,
+      "file_name": "1691.png",
+      "image_path": "SkinCAP\\skincap\\1691.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1723,
+      "file_name": "1723.png",
+      "image_path": "SkinCAP\\skincap\\1723.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1767,
+      "file_name": "1767.png",
+      "image_path": "SkinCAP\\skincap\\1767.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "photodermatoses",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 1772,
+      "file_name": "1772.png",
+      "image_path": "SkinCAP\\skincap\\1772.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "scleroderma",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 1820,
+      "file_name": "1820.png",
+      "image_path": "SkinCAP\\skincap\\1820.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "sarcoidosis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 1831,
+      "file_name": "1831.png",
+      "image_path": "SkinCAP\\skincap\\1831.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1960,
+      "file_name": "1960.png",
+      "image_path": "SkinCAP\\skincap\\1960.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2012,
+      "file_name": "2012.png",
+      "image_path": "SkinCAP\\skincap\\2012.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "sarcoidosis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 2257,
+      "file_name": "2257.png",
+      "image_path": "SkinCAP\\skincap\\2257.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 2271,
+      "file_name": "2271.png",
+      "image_path": "SkinCAP\\skincap\\2271.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2276,
+      "file_name": "2276.png",
+      "image_path": "SkinCAP\\skincap\\2276.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "photodermatoses",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 2458,
+      "file_name": "2458.png",
+      "image_path": "SkinCAP\\skincap\\2458.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2509,
+      "file_name": "2509.png",
+      "image_path": "SkinCAP\\skincap\\2509.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 2570,
+      "file_name": "2570.png",
+      "image_path": "SkinCAP\\skincap\\2570.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2579,
+      "file_name": "2579.png",
+      "image_path": "SkinCAP\\skincap\\2579.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "scleroderma",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 2611,
+      "file_name": "2611.png",
+      "image_path": "SkinCAP\\skincap\\2611.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "sarcoidosis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 2642,
+      "file_name": "2642.png",
+      "image_path": "SkinCAP\\skincap\\2642.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 2664,
+      "file_name": "2664.png",
+      "image_path": "SkinCAP\\skincap\\2664.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2687,
+      "file_name": "2687.png",
+      "image_path": "SkinCAP\\skincap\\2687.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 2709,
+      "file_name": "2709.png",
+      "image_path": "SkinCAP\\skincap\\2709.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2716,
+      "file_name": "2716.png",
+      "image_path": "SkinCAP\\skincap\\2716.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "squamous cell carcinoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2726,
+      "file_name": "2726.png",
+      "image_path": "SkinCAP\\skincap\\2726.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "squamous cell carcinoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2770,
+      "file_name": "2770.png",
+      "image_path": "SkinCAP\\skincap\\2770.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2776,
+      "file_name": "2776.png",
+      "image_path": "SkinCAP\\skincap\\2776.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2832,
+      "file_name": "2832.png",
+      "image_path": "SkinCAP\\skincap\\2832.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "squamous cell carcinoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2882,
+      "file_name": "2882.png",
+      "image_path": "SkinCAP\\skincap\\2882.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "squamous cell carcinoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2928,
+      "file_name": "2928.png",
+      "image_path": "SkinCAP\\skincap\\2928.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 2939,
+      "file_name": "2939.png",
+      "image_path": "SkinCAP\\skincap\\2939.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2966,
+      "file_name": "2966.png",
+      "image_path": "SkinCAP\\skincap\\2966.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3001,
+      "file_name": "3001.png",
+      "image_path": "SkinCAP\\skincap\\3001.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3091,
+      "file_name": "3091.png",
+      "image_path": "SkinCAP\\skincap\\3091.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3107,
+      "file_name": "3107.png",
+      "image_path": "SkinCAP\\skincap\\3107.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3201,
+      "file_name": "3201.png",
+      "image_path": "SkinCAP\\skincap\\3201.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 3247,
+      "file_name": "3247.png",
+      "image_path": "SkinCAP\\skincap\\3247.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 3253,
+      "file_name": "3253.png",
+      "image_path": "SkinCAP\\skincap\\3253.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lupus erythematosus",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 3279,
+      "file_name": "3279.png",
+      "image_path": "SkinCAP\\skincap\\3279.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3280,
+      "file_name": "3280.png",
+      "image_path": "SkinCAP\\skincap\\3280.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "photodermatoses",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 3354,
+      "file_name": "3354.png",
+      "image_path": "SkinCAP\\skincap\\3354.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "squamous cell carcinoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3377,
+      "file_name": "3377.png",
+      "image_path": "SkinCAP\\skincap\\3377.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3487,
+      "file_name": "3487.png",
+      "image_path": "SkinCAP\\skincap\\3487.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3606,
+      "file_name": "3606.png",
+      "image_path": "SkinCAP\\skincap\\3606.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3614,
+      "file_name": "3614.png",
+      "image_path": "SkinCAP\\skincap\\3614.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3651,
+      "file_name": "3651.png",
+      "image_path": "SkinCAP\\skincap\\3651.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3676,
+      "file_name": "3676.png",
+      "image_path": "SkinCAP\\skincap\\3676.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "basal cell carcinoma nodular",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3707,
+      "file_name": "3707.png",
+      "image_path": "SkinCAP\\skincap\\3707.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3735,
+      "file_name": "3735.png",
+      "image_path": "SkinCAP\\skincap\\3735.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "squamous cell carcinoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3751,
+      "file_name": "3751.png",
+      "image_path": "SkinCAP\\skincap\\3751.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "squamous cell carcinoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3789,
+      "file_name": "3789.png",
+      "image_path": "SkinCAP\\skincap\\3789.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3799,
+      "file_name": "3799.png",
+      "image_path": "SkinCAP\\skincap\\3799.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3802,
+      "file_name": "3802.png",
+      "image_path": "SkinCAP\\skincap\\3802.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "sarcoidosis",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 3836,
+      "file_name": "3836.png",
+      "image_path": "SkinCAP\\skincap\\3836.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "scleroderma",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 3878,
+      "file_name": "3878.png",
+      "image_path": "SkinCAP\\skincap\\3878.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "squamous cell carcinoma",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3889,
+      "file_name": "3889.png",
+      "image_path": "SkinCAP\\skincap\\3889.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "scleroderma",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 3966,
+      "file_name": "3966.png",
+      "image_path": "SkinCAP\\skincap\\3966.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3980,
+      "file_name": "3980.png",
+      "image_path": "SkinCAP\\skincap\\3980.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    }
+  ]
+}

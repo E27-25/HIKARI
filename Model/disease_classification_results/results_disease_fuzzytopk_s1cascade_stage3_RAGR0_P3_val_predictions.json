@@ -1,0 +1,994 @@
+{
+  "predictions": [
+    {
+      "id": 10,
+      "file_name": "10.png",
+      "image_path": "SkinCAP\\skincap\\10.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a typical presentation of squamous cell carcinoma, characterized by a red patch with central ulceration, necrosis, and crusting. Squamous cell carcinoma is a common type of skin cancer that typically originates from the squamous cells in the epidermis. It tends to grow slowly but can invade surrounding",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 99,
+      "file_name": "99.png",
+      "image_path": "SkinCAP\\skincap\\99.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "This is a typical description of a mole, which refers to a pigmented skin lesion that is usually black or brown, with well-defined borders, symmetrical shape, and uniform color. Moles are common skin lesions that are mostly benign, but in some cases may progress to malignant melanoma. It is recommended",
+      "predicted": "This is a typical description of a mole, which refers to a pigmented skin lesion that is usually black or brown, with well-defined borders, symmetrical shape, and uniform color. Moles are common skin lesions that are mostly benign, but in some cases may progress to malignant melanoma. It is recommended",
+      "status": "success"
+    },
+    {
+      "id": 144,
+      "file_name": "144.png",
+      "image_path": "SkinCAP\\skincap\\144.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "This is a photo of a skin lesion on the left auricle, showing a black pigmented macule with symmetrical shape, regular borders, and good skin markings, consistent with a melanocytic nevus. Melanocytic nevi are common skin lesions that are usually benign, formed by an",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 267,
+      "file_name": "267.png",
+      "image_path": "SkinCAP\\skincap\\267.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "The patient presents with oval-shaped red papules on the skin, uniform in color with clear borders, consistent with a diagnosis of basal cell carcinoma. Basal cell carcinoma is a common type of skin cancer that typically grows slowly but can invade surrounding tissues. It is recommended to seek medical attention promptly for further evaluation and",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 274,
+      "file_name": "274.png",
+      "image_path": "SkinCAP\\skincap\\274.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "The patient presents with black papules with slightly uneven color, well-defined borders, and symmetrical shapes, consistent with features of a melanocytic nevus. Melanocytic nevi are common skin lesions that are usually benign, but regular monitoring for any changes is important",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 277,
+      "file_name": "277.png",
+      "image_path": "SkinCAP\\skincap\\277.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "The patient presents with red papules on the trunk, suggestive of a skin tumor. Further investigation is recommended for a definitive diagnosis, which may include a tissue biopsy to rule out malignant melanoma and other possibilities",
+      "predicted": "The patient presents with red papules on the trunk, suggestive of a skin tumor. Further investigation is recommended for a definitive diagnosis, which may include a tissue biopsy to rule out malignant melanoma and other possibilities",
+      "status": "success"
+    },
+    {
+      "id": 279,
+      "file_name": "279.png",
+      "image_path": "SkinCAP\\skincap\\279.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "The patient presents with black papules on the skin with irregular borders, high color contrast, and indistinct edges, suggestive of a melanocytic nevus. Melanocytic nevi are common benign skin lesions that typically present as pigmented spots or patches, but in some cases may require further",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 283,
+      "file_name": "283.png",
+      "image_path": "SkinCAP\\skincap\\283.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "This is a typical description of a mole, which refers to a pigmented skin lesion that is usually black or brown, with well-defined borders, symmetrical shape, and uniform color. Moles are common skin lesions that are mostly benign, but in some cases may require treatment or monitoring",
+      "predicted": "This is a typical description of a mole, which refers to a pigmented skin lesion that is usually black or brown, with well-defined borders, symmetrical shape, and uniform color. Moles are common skin lesions that are mostly benign, but in some cases may require treatment or monitoring",
+      "status": "success"
+    },
+    {
+      "id": 287,
+      "file_name": "287.png",
+      "image_path": "SkinCAP\\skincap\\287.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "This is a common skin condition, usually caused by excessive proliferation of skin cells. It is typically benign and often appears on the head, neck, and upper limbs. The appearance of these lesions is usually round or oval, with colors ranging from red to purple, and they can be smooth or slightly raised. Treatment",
+      "predicted": "This is a common skin condition, usually caused by excessive proliferation of skin cells. It is typically benign and often appears on the head, neck, and upper limbs. The appearance of these lesions is usually round or oval, with colors ranging from red to purple, and they can be smooth or slightly raised. Treatment",
+      "status": "success"
+    },
+    {
+      "id": 315,
+      "file_name": "315.png",
+      "image_path": "SkinCAP\\skincap\\315.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "The patient presents with a light red papule with central ulceration and scales, which is consistent with the clinical features of basal cell carcinoma. Basal cell carcinoma is a common type of skin cancer that typically grows slowly but can be locally invasive. It is recommended to seek medical attention promptly for further diagnosis and treatment",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 458,
+      "file_name": "458.png",
+      "image_path": "SkinCAP\\skincap\\458.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "The patient presents with brownish-red papules with uneven color, clear borders, and symmetrical shape, consistent with features of a melanocytic nevus. Melanocytic nevi are common skin lesions that result from an overgrowth of pigment-producing cells, typically benign but require regular monitoring for any",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 484,
+      "file_name": "484.png",
+      "image_path": "SkinCAP\\skincap\\484.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "a dark red nodule with a central ulceration, which is consistent with the clinical presentation of squamous cell carcinoma. Squamous cell carcinoma is a common type of skin cancer that typically originates from the squamous epithelial cells of the epidermis. It often occurs in sun-exposed areas",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 518,
+      "file_name": "518.png",
+      "image_path": "SkinCAP\\skincap\\518.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "The patient presents with a pale red nodule with dilated blood vessels around it, suggestive of basal cell carcinoma. Basal cell carcinoma is a common type of skin cancer that typically grows slowly but can invade deeper tissues if not treated promptly. It is recommended to seek medical attention for further evaluation and treatment",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 557,
+      "file_name": "557.png",
+      "image_path": "SkinCAP\\skincap\\557.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "The patient presents with red patches on the forehead with raised edges, clear boundaries, and central ulceration and crusting, consistent with the clinical features of basal cell carcinoma. Basal cell carcinoma is a common type of skin cancer that typically grows slowly but can invade surrounding tissues. Treatment usually involves surgical excision,",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 564,
+      "file_name": "564.png",
+      "image_path": "SkinCAP\\skincap\\564.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a typical presentation of basal cell carcinoma, characterized by a pale red nodule with dilated blood vessels around it. Basal cell carcinoma is a common type of skin cancer that usually grows slowly but can invade surrounding tissues. Treatment typically involves surgical removal of the lesion, sometimes combined with radiation therapy or chemotherapy",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 581,
+      "file_name": "581.png",
+      "image_path": "SkinCAP\\skincap\\581.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a picture of a skin lesion on the left auricle, showing a shallow ulcer with granulation tissue growth, consistent with the clinical presentation of basal cell carcinoma. Basal cell carcinoma is a common type of skin cancer that typically grows slowly but can invade surrounding tissues if not treated promptly. It is recommended",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 625,
+      "file_name": "625.png",
+      "image_path": "SkinCAP\\skincap\\625.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "The patient presents with brownish-red papules with uneven color, clear borders, and symmetrical shape, consistent with features of a melanocytic nevus. Melanocytic nevi are common skin lesions that result from an increase in melanocytes in the skin. Most melanocytic nevi are",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 644,
+      "file_name": "644.png",
+      "image_path": "SkinCAP\\skincap\\644.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "The patient presents with oval-shaped red patches on the skin with white scaly edges, which are consistent with the clinical features of lichen planus. Lichen planus is a common chronic skin condition characterized by localized thickening of the skin, color changes, and scaling. Treatment typically involves topical medications and good",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 655,
+      "file_name": "655.png",
+      "image_path": "SkinCAP\\skincap\\655.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a typical presentation of basal cell carcinoma, characterized by a purplish-red patch with raised, rolled, and clear borders, commonly found on the head and neck. Basal cell carcinoma is a common type of skin cancer that usually grows slowly but can invade surrounding tissues. Treatment options include surgical excision",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 704,
+      "file_name": "704.png",
+      "image_path": "SkinCAP\\skincap\\704.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the back of the hand, showing diffuse erythematous patches and papules, and based on the clinical presentation, it is likely to be flat warts. Flat warts are a common chronic skin condition, often caused by fungal infections, commonly seen in the hands, feet,",
+      "predicted": "This is a photo of the back of the hand, showing diffuse erythematous patches and papules, and based on the clinical presentation, it is likely to be flat warts. Flat warts are a common chronic skin condition, often caused by fungal infections, commonly seen in the hands, feet,",
+      "status": "success"
+    },
+    {
+      "id": 731,
+      "file_name": "731.png",
+      "image_path": "SkinCAP\\skincap\\731.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a picture of a skin lesion in the eye area, showing a light brown papule with a central ulceration and erosion, consistent with the clinical presentation of basal cell carcinoma. Basal cell carcinoma is a common type of skin cancer that typically grows slowly but can invade surrounding tissues if not treated promptly",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 771,
+      "file_name": "771.png",
+      "image_path": "SkinCAP\\skincap\\771.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of hands showing redness, swelling, and scabs on fingertips and around them, consistent with the clinical presentation of contact dermatitis. Contact dermatitis is an inflammatory skin condition caused by exposure to irritants or allergens, commonly seen in cases of skin contact with substances like metals, cosmetics",
+      "predicted": "This is a photo of hands showing redness, swelling, and scabs on fingertips and around them, consistent with the clinical presentation of contact dermatitis. Contact dermatitis is an inflammatory skin condition caused by exposure to irritants or allergens, commonly seen in cases of skin contact with substances like metals, cosmetics",
+      "status": "success"
+    },
+    {
+      "id": 778,
+      "file_name": "778.png",
+      "image_path": "SkinCAP\\skincap\\778.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "This is a picture of facial skin lesions showing inflammatory papules, pustules, and scars consistent with acne vulgaris. Acne vulgaris is a common chronic inflammatory skin condition that typically occurs during adolescence, characterized by follicular plugging, bacterial infection, and excessive keratinization. Treatment options include topical",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 820,
+      "file_name": "820.png",
+      "image_path": "SkinCAP\\skincap\\820.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the genital area showing red patches, based on the symptoms and medical history, the initial diagnosis is flat warts. Flat warts are a common skin condition characterized by red, flat, scaly patches on the skin, often found on the genitals, thighs, and buttocks. Treatment",
+      "predicted": "This is a photo of the genital area showing red patches, based on the symptoms and medical history, the initial diagnosis is flat warts. Flat warts are a common skin condition characterized by red, flat, scaly patches on the skin, often found on the genitals, thighs, and buttocks. Treatment",
+      "status": "success"
+    },
+    {
+      "id": 884,
+      "file_name": "884.png",
+      "image_path": "SkinCAP\\skincap\\884.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the ear showing scattered red papules on the auricle, with some pustules and crusts. Based on the symptoms and signs, the preliminary diagnosis is hair follicle involvement (possibly a manifestation of a skin condition) and acne. Further investigations are recommended to confirm the diagnosis",
+      "predicted": "This is a photo of the ear showing scattered red papules on the auricle, with some pustules and crusts. Based on the symptoms and signs, the preliminary diagnosis is hair follicle involvement (possibly a manifestation of a skin condition) and acne. Further investigations are recommended to confirm the diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 904,
+      "file_name": "904.png",
+      "image_path": "SkinCAP\\skincap\\904.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a photo of a skin lesion on the right cheek, showing a large round protrusion with central ulceration, necrosis, and shedding of the crust, which is consistent with squamous cell carcinoma. Squamous cell carcinoma is a common type of skin cancer that typically originates from the epidermis",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1005,
+      "file_name": "1005.png",
+      "image_path": "SkinCAP\\skincap\\1005.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of facial skin lesions showing erythematous papules, pustules, and comedones, consistent with the diagnosis of acne vulgaris. Acne vulgaris is a common chronic skin condition that typically occurs during adolescence, characterized by inflammatory papules, pustules, and comedones",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1006,
+      "file_name": "1006.png",
+      "image_path": "SkinCAP\\skincap\\1006.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the back showing large circular or ring-shaped red patches, which are typical manifestations of lupus erythematosus. Lupus erythematosus is a chronic autoimmune disease that primarily affects the skin, joints, kidneys, and other organs. Common skin symptoms include butterfly-shaped facial rash,",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1069,
+      "file_name": "1069.png",
+      "image_path": "SkinCAP\\skincap\\1069.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the neck showing edematous erythema with clear borders, consistent with the clinical presentation of lupus erythematosus. Lupus erythematosus is a chronic autoimmune disease that primarily affects the skin, joints, kidneys, and other organs. Common symptoms include facial rash,",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1111,
+      "file_name": "1111.png",
+      "image_path": "SkinCAP\\skincap\\1111.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of a fingernail showing white, shiny, and brittle nails, which are indicative of psoriasis. Psoriasis is a chronic inflammatory skin condition that often affects the nails, leading to symptoms such as nail pitting, thickening, and whitening. It is recommended to consult a dermat",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1133,
+      "file_name": "1133.png",
+      "image_path": "SkinCAP\\skincap\\1133.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "This is a picture of facial skin lesions showing follicular papules, with some being red and some showing pustules, consistent with the diagnosis of acne vulgaris. Acne vulgaris is a common chronic inflammatory skin condition that typically occurs during adolescence, characterized by inflammatory lesions around hair follicles. The et",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1145,
+      "file_name": "1145.png",
+      "image_path": "SkinCAP\\skincap\\1145.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a picture of facial skin lesions, showing infiltrative edematous erythema with blisters and crusting on the surface. Based on the symptoms and signs, the preliminary diagnosis is lupus erythematosus. Lupus erythematosus is a chronic autoimmune disease that mainly affects the skin",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1207,
+      "file_name": "1207.png",
+      "image_path": "SkinCAP\\skincap\\1207.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a picture of facial skin lesions, showing infiltrative erythema, possibly indicative of systemic lupus erythematosus. Systemic lupus erythematosus is an autoimmune disease that typically presents with skin lesions, arthritis, and multi-organ involvement",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1225,
+      "file_name": "1225.png",
+      "image_path": "SkinCAP\\skincap\\1225.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the nose showing a round red patch with a scab on the surface, and the edges are elevated, consistent with the clinical presentation of basal cell carcinoma. Basal cell carcinoma is a common type of skin cancer that typically grows slowly, but if not treated promptly, it can invade surrounding",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 1226,
+      "file_name": "1226.png",
+      "image_path": "SkinCAP\\skincap\\1226.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a typical presentation of basal cell carcinoma, characterized by a pale pink dome-shaped nodule with dilated blood vessels around it. Basal cell carcinoma is a common type of skin cancer that usually grows slowly but can invade surrounding tissues. Treatment typically involves surgical removal of the affected area",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 1285,
+      "file_name": "1285.png",
+      "image_path": "SkinCAP\\skincap\\1285.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the back showing large dark red patches and swelling, which is a typical presentation of lupus erythematosus. Lupus erythematosus is a chronic autoimmune disease that primarily affects the skin, joints, kidneys, and other organs. Common skin manifestations include butterfly rash, red patches",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1345,
+      "file_name": "1345.png",
+      "image_path": "SkinCAP\\skincap\\1345.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "This is a facial photo showing erythematous papules, comedones, and whiteheads consistent with the clinical presentation of acne vulgaris. Acne vulgaris is a common chronic inflammatory skin condition that typically occurs during adolescence, characterized by follicular plugging due to excessive sebum production and keratinization",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1362,
+      "file_name": "1362.png",
+      "image_path": "SkinCAP\\skincap\\1362.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a picture of skin lesions on the trunk, showing dark red edematous patches with clear borders, and some areas have blisters. Based on the characteristics of the lesions, the preliminary diagnosis is photodermatitis. Photodermatitis is a skin inflammatory reaction caused by prolonged exposure to ultraviolet",
+      "predicted": "This is a picture of skin lesions on the trunk, showing dark red edematous patches with clear borders, and some areas have blisters. Based on the characteristics of the lesions, the preliminary diagnosis is photodermatitis. Photodermatitis is a skin inflammatory reaction caused by prolonged exposure to ultraviolet",
+      "status": "success"
+    },
+    {
+      "id": 1402,
+      "file_name": "1402.png",
+      "image_path": "SkinCAP\\skincap\\1402.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "This is a photo of facial skin lesions showing erythematous papules and comedones at the hairline, consistent with the clinical presentation of acne vulgaris. Acne vulgaris is a common chronic inflammatory skin condition, often occurring during adolescence, characterized by follicular plugging, bacterial colonization, and inflammatory",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1462,
+      "file_name": "1462.png",
+      "image_path": "SkinCAP\\skincap\\1462.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the face showing a red patch with a few hairs and scales on top, consistent with the clinical presentation of nodular disease. Nodular disease is a chronic, multisystem, non-caseating disease that can affect various organs in the body, commonly seen in the skin, eyes,",
+      "predicted": "This is a photo of the face showing a red patch with a few hairs and scales on top, consistent with the clinical presentation of nodular disease. Nodular disease is a chronic, multisystem, non-caseating disease that can affect various organs in the body, commonly seen in the skin, eyes,",
+      "status": "success"
+    },
+    {
+      "id": 1537,
+      "file_name": "1537.png",
+      "image_path": "SkinCAP\\skincap\\1537.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "This is a photo of facial skin lesions showing multiple red papules and nodules of varying sizes, consistent with the diagnosis of nodular disease. Nodular disease is a chronic systemic condition that can affect multiple organs, characterized by the formation of non-caseating granulomas. Treatment typically involves the use of",
+      "predicted": "This is a photo of facial skin lesions showing multiple red papules and nodules of varying sizes, consistent with the diagnosis of nodular disease. Nodular disease is a chronic systemic condition that can affect multiple organs, characterized by the formation of non-caseating granulomas. Treatment typically involves the use of",
+      "status": "success"
+    },
+    {
+      "id": 1577,
+      "file_name": "1577.png",
+      "image_path": "SkinCAP\\skincap\\1577.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "The photo shows several dark red patches on the skin with silver-white scales, which is a typical presentation of psoriasis. Psoriasis is a chronic and recurrent skin disease characterized by red patches covered with silvery-white scales. It commonly affects joints, scalp, trunk, and limbs. Treatment options include topical medications,",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1627,
+      "file_name": "1627.png",
+      "image_path": "SkinCAP\\skincap\\1627.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the face showing multiple red patches with white scales on top, consistent with the clinical presentation of psoriasis. Psoriasis is a chronic, recurrent skin disease characterized by red patches covered with silvery-white scales, commonly affecting joints, scalp, trunk, and limbs. Treatment options include topical medications",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1638,
+      "file_name": "1638.png",
+      "image_path": "SkinCAP\\skincap\\1638.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "The patient presents with a red patch on the skin after sun exposure, with raised edges, clear borders, and a shiny appearance, consistent with basal cell carcinoma. Basal cell carcinoma is a common type of skin cancer that typically grows slowly but can invade deeper tissues if not treated promptly. It is usually caused by",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 1691,
+      "file_name": "1691.png",
+      "image_path": "SkinCAP\\skincap\\1691.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a picture of skin lesions on the external genitalia, characterized by dark red patches with clear borders, and white scales on top, consistent with the clinical features of psoriasis. Psoriasis is a chronic relapsing skin disease commonly seen on the scalp, trunk, and limbs. The etiology of",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1723,
+      "file_name": "1723.png",
+      "image_path": "SkinCAP\\skincap\\1723.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of a fingernail, showing a concave nail plate, shiny, and thinning of the nail, which are typical signs of psoriasis. Psoriasis is a chronic, recurrent skin disease characterized by red patches, scales, and itching on the skin. The condition can also affect the",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1767,
+      "file_name": "1767.png",
+      "image_path": "SkinCAP\\skincap\\1767.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the lower limbs showing multiple red patches, with some merging into large edematous erythema, consistent with the clinical presentation of acute urticaria. Urticaria is an allergic skin condition characterized by red, itchy patches on the skin, often accompanied by edema",
+      "predicted": "This is a photo of the lower limbs showing multiple red patches, with some merging into large edematous erythema, consistent with the clinical presentation of acute urticaria. Urticaria is an allergic skin condition characterized by red, itchy patches on the skin, often accompanied by edema",
+      "status": "success"
+    },
+    {
+      "id": 1772,
+      "file_name": "1772.png",
+      "image_path": "SkinCAP\\skincap\\1772.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of a face showing a skin lesion, characterized by redness, swelling, and a wax-like sheen on the skin, which is a typical presentation of scleroderma. Scleroderma is a connective tissue disease that typically causes skin hardening and tightness, and",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 1820,
+      "file_name": "1820.png",
+      "image_path": "SkinCAP\\skincap\\1820.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a picture of facial skin lesions showing rhomboid-shaped red patches with the same color as the skin, consistent with the clinical presentation of lupus erythematosus. Lupus erythematosus is a chronic autoimmune disease that typically presents with skin lesions, including red patches, rashes, and",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1831,
+      "file_name": "1831.png",
+      "image_path": "SkinCAP\\skincap\\1831.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of a child showing erythema on the face and neck, with some areas of desquamation, consistent with the clinical presentation of lupus erythematosus. Lupus erythematosus is a chronic autoimmune disease that primarily affects the skin, joints, kidneys, and other organs",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1960,
+      "file_name": "1960.png",
+      "image_path": "SkinCAP\\skincap\\1960.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This photo shows thickening of the nails and yellowish-white changes, which are typical manifestations of psoriasis. Psoriasis is a chronic inflammatory skin disease that often presents with red patches, scales, and joint pain. Nail changes are one of the common features of psoriasis, which can manifest as nail thickening",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2012,
+      "file_name": "2012.png",
+      "image_path": "SkinCAP\\skincap\\2012.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of a skin lesion on the left side of the face. The lesion appears as a red nodule, and based on the clinical presentation and imaging findings, it is consistent with a diagnosis of sarcoidosis. Sarcoidosis is a systemic disease that can affect multiple organs, typically presenting",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 2257,
+      "file_name": "2257.png",
+      "image_path": "SkinCAP\\skincap\\2257.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of a skin lesion on the head, showing a patch of hair loss with a red base, which is likely to be a residual lesion after the hair follicles have been damaged by the herpes zoster virus. Herpes zoster is a viral infection that typically presents with a painful vesicular",
+      "predicted": "This is a photo of a skin lesion on the head, showing a patch of hair loss with a red base, which is likely to be a residual lesion after the hair follicles have been damaged by the herpes zoster virus. Herpes zoster is a viral infection that typically presents with a painful vesicular",
+      "status": "success"
+    },
+    {
+      "id": 2271,
+      "file_name": "2271.png",
+      "image_path": "SkinCAP\\skincap\\2271.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a picture of skin lesion showing symmetrical red patches with central atrophy and slight scaling, typical of lupus erythematosus. Lupus erythematosus is a chronic autoimmune disease that primarily affects the skin, joints, kidneys, and other organs. Common skin manifestations include malar rash,",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 2276,
+      "file_name": "2276.png",
+      "image_path": "SkinCAP\\skincap\\2276.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a picture of skin lesions on the lower limbs, showing infiltrative erythema with desquamation. Based on the symptoms and signs, the diagnosis of discoid lupus erythematosus (DLE) is likely. DLE is a chronic autoimmune disease characterized by skin lesions such as butterfly",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 2458,
+      "file_name": "2458.png",
+      "image_path": "SkinCAP\\skincap\\2458.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "The patient presents with a pale red patch with nodules of varying sizes in the center, suggestive of a skin malignancy such as squamous cell carcinoma. Squamous cell carcinoma is a common type of skin cancer that typically originates from the squamous cells in the epidermis. It often presents as a firm",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2509,
+      "file_name": "2509.png",
+      "image_path": "SkinCAP\\skincap\\2509.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "This is a facial photo showing red papules, whiteheads, and pustules consistent with hair follicles, indicative of acne vulgaris. Acne vulgaris is a common chronic inflammatory skin condition that typically occurs during adolescence, caused by blockage of hair follicles and sebaceous glands. Treatment options",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 2570,
+      "file_name": "2570.png",
+      "image_path": "SkinCAP\\skincap\\2570.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the abdomen and buttocks, showing large red patches with thick white scales. Based on the symptoms and presentation, psoriasis is diagnosed. Psoriasis is a chronic inflammatory skin disease characterized by red patches covered with silvery-white scales. It commonly affects joints, scalp, trunk, and limbs",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2579,
+      "file_name": "2579.png",
+      "image_path": "SkinCAP\\skincap\\2579.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of hands showing redness, swelling, and joint deformities, which are consistent with the clinical manifestations of rheumatoid arthritis. Rheumatoid arthritis is a chronic autoimmune disease that primarily affects the joints, leading to inflammation, pain, stiffness, and deformities. In severe cases, it",
+      "predicted": "This is a photo of hands showing redness, swelling, and joint deformities, which are consistent with the clinical manifestations of rheumatoid arthritis. Rheumatoid arthritis is a chronic autoimmune disease that primarily affects the joints, leading to inflammation, pain, stiffness, and deformities. In severe cases, it",
+      "status": "success"
+    },
+    {
+      "id": 2611,
+      "file_name": "2611.png",
+      "image_path": "SkinCAP\\skincap\\2611.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the ear showing scattered red papules on the earlobe, consistent with the clinical presentation of sarcoidosis. Sarcoidosis is a chronic systemic disease that typically affects the lungs, lymph nodes, eyes, skin, and other organs. It is characterized by the formation of non-case",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 2642,
+      "file_name": "2642.png",
+      "image_path": "SkinCAP\\skincap\\2642.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the upper limb showing multiple round red patches with scales on the skin, indicative of psoriasis. Psoriasis is a chronic, recurrent skin disease characterized by red patches, scales, and itching, commonly found on the scalp, trunk, and limbs. Treatment options include topical medications, phototherapy",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2664,
+      "file_name": "2664.png",
+      "image_path": "SkinCAP\\skincap\\2664.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the hand, showing redness and thickening of the skin, indicative of actinic dermatitis. Actinic dermatitis is a skin inflammation caused by prolonged exposure to ultraviolet light, commonly seen on sun-exposed areas such as the hands, face, and neck. Treatment involves avoiding",
+      "predicted": "This is a photo of the hand, showing redness and thickening of the skin, indicative of actinic dermatitis. Actinic dermatitis is a skin inflammation caused by prolonged exposure to ultraviolet light, commonly seen on sun-exposed areas such as the hands, face, and neck. Treatment involves avoiding",
+      "status": "success"
+    },
+    {
+      "id": 2687,
+      "file_name": "2687.png",
+      "image_path": "SkinCAP\\skincap\\2687.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the face showing a light red patch with central ulceration, crusting, and a few small scabs on the surface, consistent with a diagnosis of squamous cell carcinoma. Squamous cell carcinoma is a common type of skin cancer that typically originates from the epidermis. It often",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2709,
+      "file_name": "2709.png",
+      "image_path": "SkinCAP\\skincap\\2709.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a photo of the nose showing a single red nodule, suggestive of basal cell carcinoma. Basal cell carcinoma is a common type of skin cancer that typically grows slowly but can invade surrounding tissues. It is recommended to seek medical attention promptly for further evaluation and treatment",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2716,
+      "file_name": "2716.png",
+      "image_path": "SkinCAP\\skincap\\2716.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a photo of the neck showing a large red patch with scales on the surface, based on the characteristics of the lesion and clinical presentation, a diagnosis of psoriasis can be made. Psoriasis is a chronic relapsing skin disease commonly seen on the scalp, trunk, and limbs. The etiology",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2726,
+      "file_name": "2726.png",
+      "image_path": "SkinCAP\\skincap\\2726.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a picture of skin lesion in the hand, showing a round red nodule with central ulceration and crusting, which is consistent with squamous cell carcinoma. Squamous cell carcinoma is a common type of skin cancer that typically originates from squamous cells in the epidermis. It tends to grow",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2770,
+      "file_name": "2770.png",
+      "image_path": "SkinCAP\\skincap\\2770.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "The patient presents with irregularly shaped, light brown patches on the skin with uneven color, relatively clear borders, and some scaling on the surface, which is consistent with the clinical presentation of basal cell carcinoma. Basal cell carcinoma is a common type of skin cancer that typically grows slowly but can invade surrounding tissues and",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2776,
+      "file_name": "2776.png",
+      "image_path": "SkinCAP\\skincap\\2776.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of hands showing dark red patches on the back of the hands, with silvery-white scales on top, which is a typical presentation of psoriasis. Psoriasis is a chronic inflammatory skin disease characterized by red patches, scales, and itching, which can affect the skin, joints, and other",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2832,
+      "file_name": "2832.png",
+      "image_path": "SkinCAP\\skincap\\2832.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "The patient presents with light brown papules with uneven surface, some areas of keratin sheath formation, and significant keratosis. Based on the pathological features of the lesion tissue, the diagnosis of squamous cell carcinoma is confirmed",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2882,
+      "file_name": "2882.png",
+      "image_path": "SkinCAP\\skincap\\2882.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a picture of skin lesion on the lower leg, showing a round ulcer with granulation tissue growth at the base. Based on the pathological findings, the diagnosis is squamous cell carcinoma. Squamous cell carcinoma is a common type of skin cancer that typically originates from the epidermis and may present as",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2928,
+      "file_name": "2928.png",
+      "image_path": "SkinCAP\\skincap\\2928.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "This is a facial photo showing erythematous papules and whiteheads consistent with the distribution of hair follicles, indicative of acne vulgaris. Acne vulgaris is a common chronic inflammatory skin condition that typically occurs during adolescence, characterized by inflammatory papules, pustules, and cysts around hair",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 2939,
+      "file_name": "2939.png",
+      "image_path": "SkinCAP\\skincap\\2939.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the upper limb. It shows scattered, irregularly shaped erythematous plaques on the skin, with some merging and others remaining separate, and normal skin color in the center. Based on the characteristics of the lesions, the clinical diagnosis is lichen planus. Lichen plan",
+      "predicted": "This is a photo of the upper limb. It shows scattered, irregularly shaped erythematous plaques on the skin, with some merging and others remaining separate, and normal skin color in the center. Based on the characteristics of the lesions, the clinical diagnosis is lichen planus. Lichen plan",
+      "status": "success"
+    },
+    {
+      "id": 2966,
+      "file_name": "2966.png",
+      "image_path": "SkinCAP\\skincap\\2966.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a picture of a skin lesion on the face, showing a round red patch with central ulceration and crusting, forming a depression. This presentation is consistent with basal cell carcinoma, a common type of skin cancer that typically grows slowly but can invade surrounding tissues. Treatment usually involves surgical excision, cry",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3001,
+      "file_name": "3001.png",
+      "image_path": "SkinCAP\\skincap\\3001.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a picture of skin lesions on the fingers, showing red patches and shiny white scales on the nail plate, which is a typical presentation of psoriasis. Psoriasis is a chronic and recurrent skin disease characterized by red patches, scales, and itching, which can affect the skin and joints. Treatment options include",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3091,
+      "file_name": "3091.png",
+      "image_path": "SkinCAP\\skincap\\3091.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of a skin lesion on the head, showing a round protrusion with central ulceration and crusting, forming a depression. Based on the characteristics of the lesion, the patient has been diagnosed with basal cell carcinoma, which is the most common type of skin cancer. Basal cell carcinoma typically",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3107,
+      "file_name": "3107.png",
+      "image_path": "SkinCAP\\skincap\\3107.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the face showing a raised, purplish-red, dome-shaped nodule with a smooth surface, diagnosed as basal cell carcinoma. Basal cell carcinoma is a common type of skin cancer that typically grows slowly but can invade surrounding tissues. Treatment usually involves surgical removal of the lesion, with",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3201,
+      "file_name": "3201.png",
+      "image_path": "SkinCAP\\skincap\\3201.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the upper limb showing multiple erythematous patches with scales, consistent with the presentation of psoriasis. Psoriasis is a chronic, recurrent skin disease characterized by red patches, scales, and itching, commonly found on the scalp, elbows, knees, and other joints. Treatment options include",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3247,
+      "file_name": "3247.png",
+      "image_path": "SkinCAP\\skincap\\3247.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "This is a facial photo showing erythematous papules, whiteheads, and pustules consistent with hair follicles, indicative of acne vulgaris. Acne vulgaris is a common chronic inflammatory skin condition that typically occurs during adolescence, characterized by follicular plugging and bacterial infection due to excessive se",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 3253,
+      "file_name": "3253.png",
+      "image_path": "SkinCAP\\skincap\\3253.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the neck showing edematous erythema, along with the presence of papules and pustules. These symptoms, combined with the patient's medical history, present consistent with a diagnosis of acne vulgaris. Acne vulgaris is a common chronic inflammatory skin condition that typically occurs",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 3279,
+      "file_name": "3279.png",
+      "image_path": "SkinCAP\\skincap\\3279.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "The patient presents with purple-red polygonal flat papules, which are typical manifestations of lichen planus. Lichen planus is a chronic inflammatory skin condition characterized by localized thickening of the skin, color changes, and the formation of scales. This condition is commonly seen on the extensor surfaces of the",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3280,
+      "file_name": "3280.png",
+      "image_path": "SkinCAP\\skincap\\3280.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a picture of skin lesions on the trunk, showing numerous varying-sized purple-red patches with central atrophy, which is a typical presentation of lichen planus. Lichen planus is a common chronic inflammatory skin disease characterized by localized thickening of the skin, color changes, and scaling. Treatment typically",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3354,
+      "file_name": "3354.png",
+      "image_path": "SkinCAP\\skincap\\3354.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a picture of facial skin lesion showing infiltrative edematous erythema on the left cheek, with surface ulceration, necrosis, and crusting, consistent with the clinical presentation of squamous cell carcinoma. Squamous cell carcinoma is a common type of skin cancer that typically originates in the ep",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3377,
+      "file_name": "3377.png",
+      "image_path": "SkinCAP\\skincap\\3377.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the buttocks and thighs showing large red patches with thick scales. Based on the symptoms and presentation, the preliminary diagnosis is psoriasis. Psoriasis is a chronic, recurrent skin disease characterized by red patches covered with silvery-white scales, commonly affecting joints, scalp, trunk, and limbs",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3487,
+      "file_name": "3487.png",
+      "image_path": "SkinCAP\\skincap\\3487.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "The patient presents with scattered red patches on the skin, some of which have formed scabs and fallen off, consistent with the clinical manifestations of psoriasis. Psoriasis is a chronic inflammatory skin disease characterized by red patches, scales, and itching on the skin, commonly found on the scalp, trunk, and limbs",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3606,
+      "file_name": "3606.png",
+      "image_path": "SkinCAP\\skincap\\3606.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a photo of a skin lesion on the left cheek. It shows a single red nodule with a smooth surface, and clinical examination and medical history are consistent with a diagnosis of basal cell carcinoma. Basal cell carcinoma is a common type of skin cancer that typically grows slowly, but if left untreated,",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3614,
+      "file_name": "3614.png",
+      "image_path": "SkinCAP\\skincap\\3614.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a photo of a skin lesion showing a dark red nodule with clear borders, smooth surface, and central ulceration, consistent with the clinical features of basal cell carcinoma. Basal cell carcinoma is a common type of skin cancer that typically grows slowly but can have potential invasiveness. It is recommended",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3651,
+      "file_name": "3651.png",
+      "image_path": "SkinCAP\\skincap\\3651.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of skin lesions showing flat purple patches with a waxy sheen, consistent with the clinical presentation of lichen planus. Lichen planus is a common chronic skin condition that typically appears as flat, round, or polygonal patches on the skin, often found on the limbs, trunk",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3676,
+      "file_name": "3676.png",
+      "image_path": "SkinCAP\\skincap\\3676.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a picture of facial skin lesion showing reticular, translucent, yellow-white papules, consistent with the clinical presentation of basal cell carcinoma. Basal cell carcinoma is a common type of skin cancer that typically occurs on the head and neck, especially the face. It grows slowly but can invade surrounding tissues and",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3707,
+      "file_name": "3707.png",
+      "image_path": "SkinCAP\\skincap\\3707.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a picture of skin lesion showing dark red patches with scales on the surface, consistent with the clinical manifestations of psoriasis. Psoriasis is a chronic, recurrent skin disease characterized by red patches covered with silvery-white scales. The etiology of psoriasis is complex and may be related to factors such as",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3735,
+      "file_name": "3735.png",
+      "image_path": "SkinCAP\\skincap\\3735.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a picture of facial skin lesion showing a single large purplish-red polygonal nodule, which is characteristic of nodular disease. Nodular disease is a systemic condition that can affect multiple organs, characterized by the formation of non-caseating granulomas. Treatment typically involves the use of steroids",
+      "predicted": "This is a picture of facial skin lesion showing a single large purplish-red polygonal nodule, which is characteristic of nodular disease. Nodular disease is a systemic condition that can affect multiple organs, characterized by the formation of non-caseating granulomas. Treatment typically involves the use of steroids",
+      "status": "success"
+    },
+    {
+      "id": 3751,
+      "file_name": "3751.png",
+      "image_path": "SkinCAP\\skincap\\3751.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a photo of the lower lip showing a round protrusion with a central ulcerated scab. Based on the characteristics of the lesion, along with clinical presentation and laboratory test results, the diagnosis is squamous cell carcinoma. Squamous cell carcinoma is a common type of oral cancer that typically originates from the",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3789,
+      "file_name": "3789.png",
+      "image_path": "SkinCAP\\skincap\\3789.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of the lower leg showing a large red patch with scales on it. Based on the symptoms and appearance in the photo, the most likely diagnosis is psoriasis. Psoriasis is a chronic, recurrent skin disease characterized by red patches covered with silvery-white scales, commonly found on joints, scalp",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3799,
+      "file_name": "3799.png",
+      "image_path": "SkinCAP\\skincap\\3799.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a picture of skin lesions on the lower leg, showing dark red flat papules with a shiny surface and clear borders, consistent with the clinical features of lichen planus. Lichen planus is a chronic inflammatory skin disease characterized by the presence of flat, skin-colored, or dark red patches on",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3802,
+      "file_name": "3802.png",
+      "image_path": "SkinCAP\\skincap\\3802.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a photo of facial skin lesions showing infiltrative edematous erythema and vesicles on a base of fissures and erosion, consistent with the clinical presentation of chronic lichen planus. Chronic lichen planus is a chronic inflammatory skin disease characterized by localized thickening, erosion, and fiss",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3836,
+      "file_name": "3836.png",
+      "image_path": "SkinCAP\\skincap\\3836.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of facial skin lesions. It shows red, infiltrated patches on the nose and both sides, with erosion and crusting, consistent with the clinical presentation of lupus erythematosus. Lupus erythematosus is an autoimmune disease that primarily affects the skin and multiple organ systems,",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 3878,
+      "file_name": "3878.png",
+      "image_path": "SkinCAP\\skincap\\3878.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "This is a picture of skin lesion showing irregularly shaped ulcer with raised edges, surface necrosis, crusting, and adherent scab. These features are consistent with squamous cell carcinoma. Squamous cell carcinoma is a common type of skin cancer that typically originates from squamous cells in the epidermis",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3889,
+      "file_name": "3889.png",
+      "image_path": "SkinCAP\\skincap\\3889.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of skin lesions on the lower limbs, showing multiple dark red patches with silvery-white scales, indicative of psoriasis. Psoriasis is a chronic, recurrent skin disease commonly seen on the scalp, trunk, limbs, and other areas. The cause of psoriasis is not fully understood, but",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3966,
+      "file_name": "3966.png",
+      "image_path": "SkinCAP\\skincap\\3966.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a picture of skin lesion showing flat papules or plaques on the skin surface, with a smooth texture and same color as the surrounding skin. Based on the characteristics of the lesion, differential diagnoses to consider include lichen planus, lichen striatus, and flat warts. A definitive diagnosis",
+      "predicted": "This is a picture of skin lesion showing flat papules or plaques on the skin surface, with a smooth texture and same color as the surrounding skin. Based on the characteristics of the lesion, differential diagnoses to consider include lichen planus, lichen striatus, and flat warts. A definitive diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 3980,
+      "file_name": "3980.png",
+      "image_path": "SkinCAP\\skincap\\3980.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "This is a photo of facial skin lesions showing edematous erythema on the left cheek, with central pallor and cold, indicative of lupus erythematosus. Lupus erythematosus is a chronic autoimmune disease characterized by skin manifestations, arthritis, and multi-organ involvement. Treatment typically",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    }
+  ]
+}

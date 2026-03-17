@@ -1,0 +1,83 @@
+# Model weights (large — stored elsewhere)
+skincap_*/
+3_stage_model/
+unsloth_compiled_cache/
+
+# Dataset
+SkinCAP/
+
+# RAG index files (large binary)
+*.npz
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Log files
+*.log
+analyze_output.txt
+output.log
+output_sota.log
+
+# Large archives
+Model.zip
+../Model.zip
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Thai PDF report (local only)
+*.pdf
+
+# Old model classification results (early prototype, 123-class model)
+classification_results/
+classification_results_fuzzytopk/
+group_classification_results/
+
+# Intermediate/scratch results
+stage1_train_predictions.json
+evaluation_results.json
+evaluation_results_qwen3.json
+val_captions_stage3.json
+
+# Draft / scratch files
+answer.md
+paper_draft.md
+SIB_idea.tex
+conference.tex
+
+# Experimental / scratch Python files
+SIB.py
+SIB_test.py
+SIB_test2.py
+SIB_test3.py
+SIB_test4.py
+SIB_test_final.py
+SIB_test_final2.py
+check_cuda.py
+fix_emoji.py
+test_callback.py
+test_data_pipeline.py
+test_inference_1sample.py
+test_parallel_formatting.py
+medical_token_importance.py
+results_EDA.py
+visualize.py
+visualize_attention.py
+inference_classification.py
+inference_classification_FuzzyTopK.py
+inference.py
+inference_qwen3.py
+train.py
+train_qwen3_thinking.py
+train_two_stage.py
+merge_exp4.py
+
+# Merged-only gradcam images (keep _comparison.png only)
+gradcam_outputs/*_base.png
+gradcam_outputs/*_hikari.png

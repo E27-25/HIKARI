@@ -1,0 +1,46 @@
+{
+  "1": {
+    "name": "Way 1 (checkpoint init, no STS)",
+    "method": "fuzzytopk_s1cascade_stage3",
+    "bleu_1": 29.22,
+    "bleu_2": 18.65,
+    "bleu_3": 13.03,
+    "bleu_4": 9.82,
+    "rouge_1": 38.9,
+    "rouge_2": 15.71,
+    "rouge_l": null
+  },
+  "2": {
+    "name": "Way 2 (merged init, no STS)",
+    "method": "fuzzytopk_s1cascade_merged_init_stage3",
+    "bleu_1": 42.22,
+    "bleu_2": 35.19,
+    "bleu_3": 31.55,
+    "bleu_4": 29.33,
+    "rouge_1": 53.55,
+    "rouge_2": 36.33,
+    "rouge_l": null
+  },
+  "3": {
+    "name": "Way 1 + STS (checkpoint init, STS+IBR)",
+    "method": "fuzzytopk_s1cascade_sts_stage3",
+    "bleu_1": 0.01,
+    "bleu_2": 0.0,
+    "bleu_3": 0.0,
+    "bleu_4": 0.0,
+    "rouge_1": 5.03,
+    "rouge_2": 0.38,
+    "rouge_l": null
+  },
+  "4": {
+    "name": "Way 2 + STS (merged init, STS+IBR)",
+    "method": "fuzzytopk_s1cascade_merged_init_sts_stage3",
+    "bleu_1": 1.78,
+    "bleu_2": 1.09,
+    "bleu_3": 0.78,
+    "bleu_4": 0.61,
+    "rouge_1": 15.68,
+    "rouge_2": 5.83,
+    "rouge_l": 13.12
+  }
+}

@@ -1,0 +1,994 @@
+{
+  "predictions": [
+    {
+      "id": 10,
+      "file_name": "10.png",
+      "image_path": "SkinCAP\\skincap\\10.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Basal cell carcinoma",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 99,
+      "file_name": "99.png",
+      "image_path": "SkinCAP\\skincap\\99.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Wait, another thought: the new image's lesion is a small, raised papule with two colors. Melanocytic nevi can have multiple colors",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 144,
+      "file_name": "144.png",
+      "image_path": "SkinCAP\\skincap\\144.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "But the key is the most likely. Let's see the references",
+      "predicted": "But the key is the most likely. Let's see the references",
+      "status": "success"
+    },
+    {
+      "id": 267,
+      "file_name": "267.png",
+      "image_path": "SkinCAP\\skincap\\267.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Basal cell carcinoma: The reference says dark red nodule with clear boundaries. The new image is a ring, not a nodule, so less likely",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 274,
+      "file_name": "274.png",
+      "image_path": "SkinCAP\\skincap\\274.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Wait, but the references mention that melanocytic nevi are common benign lesions. The new image's lesion is a small brown spot",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 277,
+      "file_name": "277.png",
+      "image_path": "SkinCAP\\skincap\\277.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Wait, let's think again. The",
+      "predicted": "Wait, let's think again. The",
+      "status": "success"
+    },
+    {
+      "id": 279,
+      "file_name": "279.png",
+      "image_path": "SkinCAP\\skincap\\279.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Wait, let's think about the most likely",
+      "predicted": "Wait, let's think about the most likely",
+      "status": "success"
+    },
+    {
+      "id": 283,
+      "file_name": "283.png",
+      "image_path": "SkinCAP\\skincap\\283.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Melanocytic nevus - flat papule with uneven color (though less likely, but reference 2 mentions",
+      "predicted": "Melanocytic nevus - flat papule with uneven color (though less likely, but reference 2 mentions",
+      "status": "success"
+    },
+    {
+      "id": 287,
+      "file_name": "287.png",
+      "image_path": "SkinCAP\\skincap\\287.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "So the top three:",
+      "predicted": "So the top three:",
+      "status": "success"
+    },
+    {
+      "id": 315,
+      "file_name": "315.png",
+      "image_path": "SkinCAP\\skincap\\315.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Melanocytic nevi: reference 3 says dark red papules with hair. The new image's lesion is on the scalp, but the",
+      "predicted": "Melanocytic nevi: reference 3 says dark red papules with hair. The new image's lesion is on the scalp, but the",
+      "status": "success"
+    },
+    {
+      "id": 458,
+      "file_name": "458.png",
+      "image_path": "SkinCAP\\skincap\\458.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Moll",
+      "predicted": "Moll",
+      "status": "success"
+    },
+    {
+      "id": 484,
+      "file_name": "484.png",
+      "image_path": "SkinCAP\\skincap\\484.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Basal cell carcinoma – but BCC",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 518,
+      "file_name": "518.png",
+      "image_path": "SkinCAP\\skincap\\518.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Squamous Cell Car",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 557,
+      "file_name": "557.png",
+      "image_path": "SkinCAP\\skincap\\557.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Wait, another possibility: Keratoacanthoma? But those are more rapid-growing, with a central crater, which isn't seen here",
+      "predicted": "Wait, another possibility: Keratoacanthoma? But those are more rapid-growing, with a central crater, which isn't seen here",
+      "status": "success"
+    },
+    {
+      "id": 564,
+      "file_name": "564.png",
+      "image_path": "SkinCAP\\skincap\\564.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Melanocytic nevus: the lesion is pink, raised, on the nose. Reference 2 was a similar pink papule. But melanocytic nevi can be",
+      "predicted": "melanocytic nevi",
+      "status": "success"
+    },
+    {
+      "id": 581,
+      "file_name": "581.png",
+      "image_path": "SkinCAP\\skincap\\581.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Common skin cancers on earlobe: B",
+      "predicted": "Common skin cancers on earlobe: B",
+      "status": "success"
+    },
+    {
+      "id": 625,
+      "file_name": "625.png",
+      "image_path": "SkinCAP\\skincap\\625.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "melan",
+      "predicted": "melan",
+      "status": "success"
+    },
+    {
+      "id": 644,
+      "file_name": "644.png",
+      "image_path": "SkinCAP\\skincap\\644.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Wait, maybe a different approach",
+      "predicted": "Wait, maybe a different approach",
+      "status": "success"
+    },
+    {
+      "id": 655,
+      "file_name": "655.png",
+      "image_path": "SkinCAP\\skincap\\655.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Squamous cell carcinoma in situ, because the description",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 704,
+      "file_name": "704.png",
+      "image_path": "SkinCAP\\skincap\\704.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Another possibility: miliaria (",
+      "predicted": "Another possibility: miliaria (",
+      "status": "success"
+    },
+    {
+      "id": 731,
+      "file_name": "731.png",
+      "image_path": "SkinCAP\\skincap\\731.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Wait, let's check the references again. Reference 1 was SCC in situ (flat, crusted), reference 2 and 3 were scleroderma (rashes, patches). So the new image is a raised lesion, not a rash",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 771,
+      "file_name": "771.png",
+      "image_path": "SkinCAP\\skincap\\771.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, let's",
+      "predicted": "Wait, let's",
+      "status": "success"
+    },
+    {
+      "id": 778,
+      "file_name": "778.png",
+      "image_path": "SkinCAP\\skincap\\778.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Keratosis pilaris: but that's usually on the extensor surfaces (arms, legs), not face, and has a rough texture. The new image doesn't show that",
+      "predicted": "Keratosis pilaris: but that's usually on the extensor surfaces (arms, legs), not face, and has a rough texture. The new image doesn't show that",
+      "status": "success"
+    },
+    {
+      "id": 820,
+      "file_name": "820.png",
+      "image_path": "SkinCAP\\skincap\\820.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "But wait, is there another",
+      "predicted": "But wait, is there another",
+      "status": "success"
+    },
+    {
+      "id": 884,
+      "file_name": "884.png",
+      "image_path": "SkinCAP\\skincap\\884.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Psoriasis: the reference 2 has dry, scaly skin. The",
+      "predicted": "Psoriasis: the reference 2 has dry, scaly skin. The",
+      "status": "success"
+    },
+    {
+      "id": 904,
+      "file_name": "904.png",
+      "image_path": "SkinCAP\\skincap\\904.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Actinic Keratosis (",
+      "predicted": "Actinic Keratosis (",
+      "status": "success"
+    },
+    {
+      "id": 1005,
+      "file_name": "1005.png",
+      "image_path": "SkinCAP\\skincap\\1005.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "1",
+      "predicted": "1",
+      "status": "success"
+    },
+    {
+      "id": 1006,
+      "file_name": "1006.png",
+      "image_path": "SkinCAP\\skincap\\1006.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "For",
+      "predicted": "For",
+      "status": "success"
+    },
+    {
+      "id": 1069,
+      "file_name": "1069.png",
+      "image_path": "SkinCAP\\skincap\\1069.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Another possibility: lupus erythematosus? But lupus malar rash",
+      "predicted": "Another possibility: lupus erythematosus? But lupus malar rash",
+      "status": "success"
+    },
+    {
+      "id": 1111,
+      "file_name": "1111.png",
+      "image_path": "SkinCAP\\skincap\\1111.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Onychomycosis (fungal infection) - evidence: yellow discoloration, thick",
+      "predicted": "Onychomycosis (fungal infection) - evidence: yellow discoloration, thick",
+      "status": "success"
+    },
+    {
+      "id": 1133,
+      "file_name": "1133.png",
+      "image_path": "SkinCAP\\skincap\\1133.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1145,
+      "file_name": "1145.png",
+      "image_path": "SkinCAP\\skincap\\1145.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Lupus Erythematosus (SLE) - symmetric erythematous rash across the cheeks and nasal",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 1207,
+      "file_name": "1207.png",
+      "image_path": "SkinCAP\\skincap\\1207.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, another possibility: Lichen Planus? But l",
+      "predicted": "Wait, another possibility: Lichen Planus? But l",
+      "status": "success"
+    },
+    {
+      "id": 1225,
+      "file_name": "1225.png",
+      "image_path": "SkinCAP\\skincap\\1225.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Check the image again",
+      "predicted": "Check the image again",
+      "status": "success"
+    },
+    {
+      "id": 1226,
+      "file_name": "1226.png",
+      "image_path": "SkinCAP\\skincap\\1226.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Wait, another angle: the new image has a small red nodule with central ulceration. BCC can present as a nodular ulcerative lesion. Also,",
+      "predicted": "Wait, another angle: the new image has a small red nodule with central ulceration. BCC can present as a nodular ulcerative lesion. Also,",
+      "status": "success"
+    },
+    {
+      "id": 1285,
+      "file_name": "1285.png",
+      "image_path": "SkinCAP\\skincap\\1285.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, maybe the most likely is sarcoidosis? Or maybe erythema nodosum, but that",
+      "predicted": "Wait, maybe the most likely is sarcoidosis? Or maybe erythema nodosum, but that",
+      "status": "success"
+    },
+    {
+      "id": 1345,
+      "file_name": "1345.png",
+      "image_path": "SkinCAP\\skincap\\1345.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Acne vulgaris - erythematous papules and possible comedones on the facial",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1362,
+      "file_name": "1362.png",
+      "image_path": "SkinCAP\\skincap\\1362.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, the problem says \"list the 3 most likely diagnoses\" based on the references. The references are photodermatoses (two",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 1402,
+      "file_name": "1402.png",
+      "image_path": "SkinCAP\\skincap\\1402.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1462,
+      "file_name": "1462.png",
+      "image_path": "SkinCAP\\skincap\\1462.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Photodermatitis (photodermatoses)",
+      "predicted": "Photodermatitis (photodermatoses)",
+      "status": "success"
+    },
+    {
+      "id": 1537,
+      "file_name": "1537.png",
+      "image_path": "SkinCAP\\skincap\\1537.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Folliculitis - red papules around hair follic",
+      "predicted": "Folliculitis - red papules around hair follic",
+      "status": "success"
+    },
+    {
+      "id": 1577,
+      "file_name": "1577.png",
+      "image_path": "SkinCAP\\skincap\\1577.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Alternatively, cutaneous lupus erythematosus, but that's usually malar rash, not ulcer",
+      "predicted": "Alternatively, cutaneous lupus erythematosus, but that's usually malar rash, not ulcer",
+      "status": "success"
+    },
+    {
+      "id": 1627,
+      "file_name": "1627.png",
+      "image_path": "SkinCAP\\skincap\\1627.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1638,
+      "file_name": "1638.png",
+      "image_path": "SkinCAP\\skincap\\1638.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Psoriasis - but the new image doesn't show the",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1691,
+      "file_name": "1691.png",
+      "image_path": "SkinCAP\\skincap\\1691.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, let's think about the references. The user provided three references, each with a disease and image",
+      "predicted": "Wait, let's think about the references. The user provided three references, each with a disease and image",
+      "status": "success"
+    },
+    {
+      "id": 1723,
+      "file_name": "1723.png",
+      "image_path": "SkinCAP\\skincap\\1723.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1767,
+      "file_name": "1767.png",
+      "image_path": "SkinCAP\\skincap\\1767.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Lichen planus – brown flat papules on lower extremities (as per",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 1772,
+      "file_name": "1772.png",
+      "image_path": "SkinCAP\\skincap\\1772.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, the",
+      "predicted": "Wait, the",
+      "status": "success"
+    },
+    {
+      "id": 1820,
+      "file_name": "1820.png",
+      "image_path": "SkinCAP\\skincap\\1820.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Sarcoid",
+      "predicted": "sarcoidosis",
+      "status": "success"
+    },
+    {
+      "id": 1831,
+      "file_name": "1831.png",
+      "image_path": "SkinCAP\\skincap\\1831.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "The new image: child with red patches on face, especially cheeks and nose. Psoriasis in infants can present with erythematous plaques, sometimes with scaling. The references",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1960,
+      "file_name": "1960.png",
+      "image_path": "SkinCAP\\skincap\\1960.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2012,
+      "file_name": "2012.png",
+      "image_path": "SkinCAP\\skincap\\2012.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, another thought: **Lichen planus**. Lichen planus can have papules with white streaks (Wickham's striae), but the new image",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2257,
+      "file_name": "2257.png",
+      "image_path": "SkinCAP\\skincap\\2257.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, let's think again. The reference 2 is psoriasis,",
+      "predicted": "Wait, let's think again. The reference 2 is psoriasis,",
+      "status": "success"
+    },
+    {
+      "id": 2271,
+      "file_name": "2271.png",
+      "image_path": "SkinCAP\\skincap\\2271.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, let's think of",
+      "predicted": "Wait, let's think of",
+      "status": "success"
+    },
+    {
+      "id": 2276,
+      "file_name": "2276.png",
+      "image_path": "SkinCAP\\skincap\\2276.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Striae distensae – but Ref 1 has streaks, which the new image doesn't. So not",
+      "predicted": "Striae distensae – but Ref 1 has streaks, which the new image doesn't. So not",
+      "status": "success"
+    },
+    {
+      "id": 2458,
+      "file_name": "2458.png",
+      "image_path": "SkinCAP\\skincap\\2458.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Photodermatoses (photodermatitis) - erythematous, raised lesion consistent with UV-induced inflammation (edematous erythema as in",
+      "predicted": "photodermatoses",
+      "status": "success"
+    },
+    {
+      "id": 2509,
+      "file_name": "2509.png",
+      "image_path": "SkinCAP\\skincap\\2509.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 2570,
+      "file_name": "2570.png",
+      "image_path": "SkinCAP\\skincap\\2570.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, but let's think again. The new image's skin has a pinkish-red hue with some lighter patches. Scler",
+      "predicted": "Wait, but let's think again. The new image's skin has a pinkish-red hue with some lighter patches. Scler",
+      "status": "success"
+    },
+    {
+      "id": 2579,
+      "file_name": "2579.png",
+      "image_path": "SkinCAP\\skincap\\2579.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Scleroderma - diffuse erythema (though scleroderma's ery",
+      "predicted": "scleroderma",
+      "status": "success"
+    },
+    {
+      "id": 2611,
+      "file_name": "2611.png",
+      "image_path": "SkinCAP\\skincap\\2611.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Sarcoidosis: granulomatous disease, can have nodular lesions. Reference 2 is nodular vasculitis, which is a type of sarcoidosis? Wait, nodular vasculitis is a different condition, but reference 2 says \"nodular vasculitis is a chronic, multi-system inflammatory",
+      "predicted": "Sarcoidosis: granulomatous disease, can have nodular lesions. Reference 2 is nodular vasculitis, which is a type of sarcoidosis? Wait, nodular vasculitis is a different condition, but reference 2 says \"nodular vasculitis is a chronic, multi-system inflammatory",
+      "status": "success"
+    },
+    {
+      "id": 2642,
+      "file_name": "2642.png",
+      "image_path": "SkinCAP\\skincap\\2642.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, maybe the third is",
+      "predicted": "Wait, maybe the third is",
+      "status": "success"
+    },
+    {
+      "id": 2664,
+      "file_name": "2664.png",
+      "image_path": "SkinCAP\\skincap\\2664.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2687,
+      "file_name": "2687.png",
+      "image_path": "SkinCAP\\skincap\\2687.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, but the references given are photodermatoses, SCC in situ. So maybe the",
+      "predicted": "Wait, but the references given are photodermatoses, SCC in situ. So maybe the",
+      "status": "success"
+    },
+    {
+      "id": 2709,
+      "file_name": "2709.png",
+      "image_path": "SkinCAP\\skincap\\2709.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "So the three",
+      "predicted": "So the three",
+      "status": "success"
+    },
+    {
+      "id": 2716,
+      "file_name": "2716.png",
+      "image_path": "SkinCAP\\skincap\\2716.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "So the",
+      "predicted": "So the",
+      "status": "success"
+    },
+    {
+      "id": 2726,
+      "file_name": "2726.png",
+      "image_path": "SkinCAP\\skincap\\2726.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Wait, let's consider the key",
+      "predicted": "Wait, let's consider the key",
+      "status": "success"
+    },
+    {
+      "id": 2770,
+      "file_name": "2770.png",
+      "image_path": "SkinCAP\\skincap\\2770.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Seborrheic keratosis – but usually",
+      "predicted": "Seborrheic keratosis – but usually",
+      "status": "success"
+    },
+    {
+      "id": 2776,
+      "file_name": "2776.png",
+      "image_path": "SkinCAP\\skincap\\2776.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "3",
+      "predicted": "3",
+      "status": "success"
+    },
+    {
+      "id": 2832,
+      "file_name": "2832.png",
+      "image_path": "SkinCAP\\skincap\\2832.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "",
+      "predicted": "",
+      "status": "success"
+    },
+    {
+      "id": 2882,
+      "file_name": "2882.png",
+      "image_path": "SkinCAP\\skincap\\2882.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "The new image:",
+      "predicted": "The new image:",
+      "status": "success"
+    },
+    {
+      "id": 2928,
+      "file_name": "2928.png",
+      "image_path": "SkinCAP\\skincap\\2928.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Folliculitis - Clustered red papules around hair follicles, though less common on the face compared to acne vulgaris and often more localized to follicular areas",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 2939,
+      "file_name": "2939.png",
+      "image_path": "SkinCAP\\skincap\\2939.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait",
+      "predicted": "Wait",
+      "status": "success"
+    },
+    {
+      "id": 2966,
+      "file_name": "2966.png",
+      "image_path": "SkinCAP\\skincap\\2966.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Wait, maybe the third is a different skin cancer, but BCC is most common. Let's check the references again",
+      "predicted": "Wait, maybe the third is a different skin cancer, but BCC is most common. Let's check the references again",
+      "status": "success"
+    },
+    {
+      "id": 3001,
+      "file_name": "3001.png",
+      "image_path": "SkinCAP\\skincap\\3001.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Lichen planus - Nail involvement with onycholysis and possible ridges, but the new image's",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3091,
+      "file_name": "3091.png",
+      "image_path": "SkinCAP\\skincap\\3091.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Molluscum contagiosum: caused by poxvirus, presents as multiple small (2-5mm) papules, dome-shaped, with a central umbilication (dimple). Common in children",
+      "predicted": "Molluscum contagiosum: caused by poxvirus, presents as multiple small (2-5mm) papules, dome-shaped, with a central umbilication (dimple). Common in children",
+      "status": "success"
+    },
+    {
+      "id": 3107,
+      "file_name": "3107.png",
+      "image_path": "SkinCAP\\skincap\\3107.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "SCCIS: red, scaly, flat or slightly elevated, often on sun-exposed skin,",
+      "predicted": "SCCIS: red, scaly, flat or slightly elevated, often on sun-exposed skin,",
+      "status": "success"
+    },
+    {
+      "id": 3201,
+      "file_name": "3201.png",
+      "image_path": "SkinCAP\\skincap\\3201.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Cutaneous lupus erythematosus (CLE) - evidence: red, inflamed lesions on sun-exposed upper arm, mottled appearance consistent with SCLE or discoid lupus, which",
+      "predicted": "lupus erythematosus",
+      "status": "success"
+    },
+    {
+      "id": 3247,
+      "file_name": "3247.png",
+      "image_path": "SkinCAP\\skincap\\3247.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 3253,
+      "file_name": "3253.png",
+      "image_path": "SkinCAP\\skincap\\3253.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, let",
+      "predicted": "Wait, let",
+      "status": "success"
+    },
+    {
+      "id": 3279,
+      "file_name": "3279.png",
+      "image_path": "SkinCAP\\skincap\\3279.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, the new image's lesions are small, raised, and numerous. Let's think of the",
+      "predicted": "Wait, the new image's lesions are small, raised, and numerous. Let's think of the",
+      "status": "success"
+    },
+    {
+      "id": 3280,
+      "file_name": "3280.png",
+      "image_path": "SkinCAP\\skincap\\3280.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Tinea versicolor: caused by Malassezia, can cause hypopigmented patches",
+      "predicted": "Tinea versicolor: caused by Malassezia, can cause hypopigmented patches",
+      "status": "success"
+    },
+    {
+      "id": 3354,
+      "file_name": "3354.png",
+      "image_path": "SkinCAP\\skincap\\3354.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Squamous cell carcinoma: Ulcerated, raised nodule with necrosis, sun-exposed area. SCC often has a more aggressive",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3377,
+      "file_name": "3377.png",
+      "image_path": "SkinCAP\\skincap\\3377.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Another condition: impetigo, but impetigo has honey-colored crusts, which isn't seen",
+      "predicted": "Another condition: impetigo, but impetigo has honey-colored crusts, which isn't seen",
+      "status": "success"
+    },
+    {
+      "id": 3487,
+      "file_name": "3487.png",
+      "image_path": "SkinCAP\\skincap\\3487.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "But the references given are lichen planus, flat warts, sarcoid",
+      "predicted": "But the references given are lichen planus, flat warts, sarcoid",
+      "status": "success"
+    },
+    {
+      "id": 3606,
+      "file_name": "3606.png",
+      "image_path": "SkinCAP\\skincap\\3606.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Actinic keratosis - Precancerous lesion often on",
+      "predicted": "Actinic keratosis - Precancerous lesion often on",
+      "status": "success"
+    },
+    {
+      "id": 3614,
+      "file_name": "3614.png",
+      "image_path": "SkinCAP\\skincap\\3614.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Lichen planus - but does it fit? The reference says pale pink dome-shaped papules, but the new image isn't dome-shaped. However, maybe in some cases, but the key is the central depression. The new image has a central area that's darker, maybe a depression. Wait, reference 2 says \"slight central depression\". The new image's lesion has a central part that's darker, which could be a depression. But lichen planus is usually more papular with a central",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3651,
+      "file_name": "3651.png",
+      "image_path": "SkinCAP\\skincap\\3651.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So the new image's lesions are",
+      "predicted": "So the new image's lesions are",
+      "status": "success"
+    },
+    {
+      "id": 3676,
+      "file_name": "3676.png",
+      "image_path": "SkinCAP\\skincap\\3676.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, but let's check the references. Reference 1 and 3 are BCC, reference 2 is sarcoidosis. The new image has multiple lesions, so maybe sarcoidosis? But the reference 2 says \"light red infiltr",
+      "predicted": "Wait, but let's check the references. Reference 1 and 3 are BCC, reference 2 is sarcoidosis. The new image has multiple lesions, so maybe sarcoidosis? But the reference 2 says \"light red infiltr",
+      "status": "success"
+    },
+    {
+      "id": 3707,
+      "file_name": "3707.png",
+      "image_path": "SkinCAP\\skincap\\3707.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, maybe another condition like \"lichen simplex\" but that's not a thing. Or maybe \"pityriasis rubra pilaris\" but that",
+      "predicted": "Wait, maybe another condition like \"lichen simplex\" but that's not a thing. Or maybe \"pityriasis rubra pilaris\" but that",
+      "status": "success"
+    },
+    {
+      "id": 3735,
+      "file_name": "3735.png",
+      "image_path": "SkinCAP\\skincap\\3735.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Squamous Cell Carcin",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3751,
+      "file_name": "3751.png",
+      "image_path": "SkinCAP\\skincap\\3751.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Squamous cell carcinoma - ulcer",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3789,
+      "file_name": "3789.png",
+      "image_path": "SkinCAP\\skincap\\3789.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, the references given are psoriasis (scaly patches), lichen planus (flat-topped bumps), so the new",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3799,
+      "file_name": "3799.png",
+      "image_path": "SkinCAP\\skincap\\3799.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Wait, the user provided three references, all labeled as \"lichen planus\", but the descriptions vary. Let's check:",
+      "predicted": "Wait, the user provided three references, all labeled as \"lichen planus\", but the descriptions vary. Let's check:",
+      "status": "success"
+    },
+    {
+      "id": 3802,
+      "file_name": "3802.png",
+      "image_path": "SkinCAP\\skincap\\3802.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Acne vulgaris: pustules are inflamed follicles with a central comedo (white or black head) and surrounding redness. The image shows a small lesion with a central punctum, which is the comedo, and redness around it. That's classic",
+      "predicted": "Acne vulgaris: pustules are inflamed follicles with a central comedo (white or black head) and surrounding redness. The image shows a small lesion with a central punctum, which is the comedo, and redness around it. That's classic",
+      "status": "success"
+    },
+    {
+      "id": 3836,
+      "file_name": "3836.png",
+      "image_path": "SkinCAP\\skincap\\3836.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Another angle: rhinophyma is a form of rosacea, so the",
+      "predicted": "Another angle: rhinophyma is a form of rosacea, so the",
+      "status": "success"
+    },
+    {
+      "id": 3878,
+      "file_name": "3878.png",
+      "image_path": "SkinCAP\\skincap\\3878.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Squamous cell carcinoma (invasive) often has these features. SCC in situ (Bowen's) is usually a flat, scaly lesion without ulceration, but",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3889,
+      "file_name": "3889.png",
+      "image_path": "SkinCAP\\skincap\\3889.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Lupus erythematosus: reference 3 has ulcers with crusts, but the new image's lesions are dark, not ulcers. However, lupus can have other skin manifestations like discoid lupus, which has red, scaly patches that can become hyperpigmented. But the new image's lesions are dark, maybe hyperpigmented",
+      "predicted": "Lupus erythematosus: reference 3 has ulcers with crusts, but the new image's lesions are dark, not ulcers. However, lupus can have other skin manifestations like discoid lupus, which has red, scaly patches that can become hyperpigmented. But the new image's lesions are dark, maybe hyperpigmented",
+      "status": "success"
+    },
+    {
+      "id": 3966,
+      "file_name": "3966.png",
+      "image_path": "SkinCAP\\skincap\\3966.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Lichen striatus: Reference 2 mentions \"dense",
+      "predicted": "Lichen striatus: Reference 2 mentions \"dense",
+      "status": "success"
+    },
+    {
+      "id": 3980,
+      "file_name": "3980.png",
+      "image_path": "SkinCAP\\skincap\\3980.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Sarcoidosis: The lesion is a",
+      "predicted": "Sarcoidosis: The lesion is a",
+      "status": "success"
+    }
+  ]
+}

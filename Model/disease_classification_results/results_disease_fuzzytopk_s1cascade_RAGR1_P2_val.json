@@ -1,0 +1,219 @@
+{
+  "method": "fuzzytopk_s1cascade",
+  "rag_experiment": "R1",
+  "prompt_variant": "P2",
+  "group_mode": "4group",
+  "top_n": 10,
+  "total_samples": 99,
+  "successful_predictions": 99,
+  "valid_predictions": 99,
+  "num_diseases": 10,
+  "accuracy": 0.696969696969697,
+  "balanced_accuracy": 0.6667887667887669,
+  "precision_macro": 0.6866910866910867,
+  "recall_macro": 0.6667887667887669,
+  "f1_macro": 0.6642050920576132,
+  "precision_micro": 0.696969696969697,
+  "recall_micro": 0.696969696969697,
+  "f1_micro": 0.696969696969697,
+  "precision_weighted": 0.7042448292448293,
+  "recall_weighted": 0.696969696969697,
+  "f1_weighted": 0.6898699869466282,
+  "matthews_corrcoef": 0.662550622965809,
+  "cohen_kappa": 0.660726525017135,
+  "confusion_matrix": [
+    [
+      9,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      5,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    [
+      1,
+      0,
+      8,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      2,
+      1,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      0,
+      3,
+      2,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      3,
+      0,
+      0,
+      0,
+      3,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      11,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      11,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      2,
+      10,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      7
+    ]
+  ],
+  "per_disease_detailed": {
+    "psoriasis": {
+      "sensitivity": 0.6923076923076923,
+      "specificity": 0.9534883720930233,
+      "ppv": 0.6923076923076923,
+      "npv": 0.9534883720930233,
+      "support": 13
+    },
+    "lupus erythematosus": {
+      "sensitivity": 0.5555555555555556,
+      "specificity": 0.9444444444444444,
+      "ppv": 0.5,
+      "npv": 0.9550561797752809,
+      "support": 9
+    },
+    "lichen planus": {
+      "sensitivity": 0.8888888888888888,
+      "specificity": 0.9888888888888889,
+      "ppv": 0.8888888888888888,
+      "npv": 0.9888888888888889,
+      "support": 9
+    },
+    "scleroderma": {
+      "sensitivity": 0.25,
+      "specificity": 0.989010989010989,
+      "ppv": 0.6666666666666666,
+      "npv": 0.9375,
+      "support": 8
+    },
+    "photodermatoses": {
+      "sensitivity": 0.375,
+      "specificity": 0.967032967032967,
+      "ppv": 0.5,
+      "npv": 0.946236559139785,
+      "support": 8
+    },
+    "sarcoidosis": {
+      "sensitivity": 0.42857142857142855,
+      "specificity": 0.9347826086956522,
+      "ppv": 0.3333333333333333,
+      "npv": 0.9555555555555556,
+      "support": 7
+    },
+    "melanocytic nevi": {
+      "sensitivity": 0.9166666666666666,
+      "specificity": 1.0,
+      "ppv": 1.0,
+      "npv": 0.9886363636363636,
+      "support": 12
+    },
+    "squamous cell carcinoma in situ": {
+      "sensitivity": 0.9166666666666666,
+      "specificity": 0.9655172413793104,
+      "ppv": 0.7857142857142857,
+      "npv": 0.9882352941176471,
+      "support": 12
+    },
+    "basal cell carcinoma": {
+      "sensitivity": 0.7692307692307693,
+      "specificity": 0.9302325581395349,
+      "ppv": 0.625,
+      "npv": 0.963855421686747,
+      "support": 13
+    },
+    "acne vulgaris": {
+      "sensitivity": 0.875,
+      "specificity": 0.989010989010989,
+      "ppv": 0.875,
+      "npv": 0.989010989010989,
+      "support": 8
+    }
+  },
+  "overall_score": 0.7079652523625274
+}

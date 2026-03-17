@@ -1,0 +1,994 @@
+{
+  "predictions": [
+    {
+      "id": 10,
+      "file_name": "10.png",
+      "image_path": "SkinCAP\\skincap\\10.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the nodule could be indicative of a benign skin condition like a sebaceous cyst or a keratocystic epidermal nevus. However, further evaluation by a dermatologist would be necessary for a definitive diagnosis",
+      "predicted": "Based on the features described, the nodule could be indicative of a benign skin condition like a sebaceous cyst or a keratocystic epidermal nevus. However, further evaluation by a dermatologist would be necessary for a definitive diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 99,
+      "file_name": "99.png",
+      "image_path": "SkinCAP\\skincap\\99.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Based on the features described, the lesion could be a melanocytic nevus. However, given the irregular border and the presence of darker areas, it's important to consider the possibility of a more serious condition such as melanoma. A dermatologist should evaluate the lesion further through clinical examination and possibly with additional tests like dermoscopy or biopsy to confirm the diagnosis",
+      "predicted": "Based on the features described, the lesion could be a melanocytic nevus. However, given the irregular border and the presence of darker areas, it's important to consider the possibility of a more serious condition such as melanoma. A dermatologist should evaluate the lesion further through clinical examination and possibly with additional tests like dermoscopy or biopsy to confirm the diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 144,
+      "file_name": "144.png",
+      "image_path": "SkinCAP\\skincap\\144.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Based on the features described, the lesion resembles a melanocytic nevus. It is a common skin pigmentation abnormality that typically presents as a dark brown or brown patch. Further skin examination and diagnosis are recommended to confirm the exact nature of the lesion",
+      "predicted": "Based on the features described, the lesion resembles a melanocytic nevus. It is a common skin pigmentation abnormality that typically presents as a dark brown or brown patch. Further skin examination and diagnosis are recommended to confirm the exact nature of the lesion",
+      "status": "success"
+    },
+    {
+      "id": 267,
+      "file_name": "267.png",
+      "image_path": "SkinCAP\\skincap\\267.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Based on the features described, the lesion resembles a vascular lesion, such as a hemangioma or a port-wine stain. However, without further clinical information or a biopsy, it's important to note that this is a general assessment and a definitive diagnosis should be made by a dermatologist after a thorough evaluation",
+      "predicted": "Based on the features described, the lesion resembles a vascular lesion, such as a hemangioma or a port-wine stain. However, without further clinical information or a biopsy, it's important to note that this is a general assessment and a definitive diagnosis should be made by a dermatologist after a thorough evaluation",
+      "status": "success"
+    },
+    {
+      "id": 274,
+      "file_name": "274.png",
+      "image_path": "SkinCAP\\skincap\\274.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Based on the features described, the lesion could be indicative of a melanocytic nevus, given the presence of brownish spots that might represent areas of hyperpigmentation within the lesion. However, further evaluation through dermatoscopy or biopsy would be necessary for a definitive diagnosis",
+      "predicted": "Based on the features described, the lesion could be indicative of a melanocytic nevus, given the presence of brownish spots that might represent areas of hyperpigmentation within the lesion. However, further evaluation through dermatoscopy or biopsy would be necessary for a definitive diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 277,
+      "file_name": "277.png",
+      "image_path": "SkinCAP\\skincap\\277.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Based on the features described, the nodule could be indicative of a vascular lesion such as a hemangioma or a lipoma. However, further clinical evaluation and possibly a biopsy would be necessary for a definitive diagnosis",
+      "predicted": "Based on the features described, the nodule could be indicative of a vascular lesion such as a hemangioma or a lipoma. However, further clinical evaluation and possibly a biopsy would be necessary for a definitive diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 279,
+      "file_name": "279.png",
+      "image_path": "SkinCAP\\skincap\\279.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Based on the features described, the lesion resembles a melanocytic nevus, which can sometimes have a mix of colors and a slightly irregular shape. However, further evaluation, such as dermoscopy or biopsy, would be necessary for a definitive diagnosis",
+      "predicted": "Based on the features described, the lesion resembles a melanocytic nevus, which can sometimes have a mix of colors and a slightly irregular shape. However, further evaluation, such as dermoscopy or biopsy, would be necessary for a definitive diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 283,
+      "file_name": "283.png",
+      "image_path": "SkinCAP\\skincap\\283.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Based on the features described, the nodule could be indicative of a melanoma. However, it's important to note that a definitive diagnosis can only be made through a biopsy or pathological examination",
+      "predicted": "Based on the features described, the nodule could be indicative of a melanoma. However, it's important to note that a definitive diagnosis can only be made through a biopsy or pathological examination",
+      "status": "success"
+    },
+    {
+      "id": 287,
+      "file_name": "287.png",
+      "image_path": "SkinCAP\\skincap\\287.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Based on the features described, the nodule could be indicative of a dermatofibroma. Dermatofibromas are typically subcutaneous nodules that are usually asymptomatic and present as smooth, firm, and well-circumscribed lesions. They are often found on the trunk, neck, and axilla. However, a definitive diagnosis would require a biopsy and histopathological examination",
+      "predicted": "Based on the features described, the nodule could be indicative of a dermatofibroma. Dermatofibromas are typically subcutaneous nodules that are usually asymptomatic and present as smooth, firm, and well-circumscribed lesions. They are often found on the trunk, neck, and axilla. However, a definitive diagnosis would require a biopsy and histopathological examination",
+      "status": "success"
+    },
+    {
+      "id": 315,
+      "file_name": "315.png",
+      "image_path": "SkinCAP\\skincap\\315.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Based on the features described, the lesion could be indicative of a cutaneous condition such as a seborrheic keratosis, a benign growth commonly found on the skin. However, without further diagnostic information like a biopsy or clinical history, a definitive diagnosis cannot be made. It is important for the patient to consult a dermatologist for a proper evaluation and management plan",
+      "predicted": "Based on the features described, the lesion could be indicative of a cutaneous condition such as a seborrheic keratosis, a benign growth commonly found on the skin. However, without further diagnostic information like a biopsy or clinical history, a definitive diagnosis cannot be made. It is important for the patient to consult a dermatologist for a proper evaluation and management plan",
+      "status": "success"
+    },
+    {
+      "id": 458,
+      "file_name": "458.png",
+      "image_path": "SkinCAP\\skincap\\458.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Based on the features described, the nodule could be indicative of a skin condition such as a sebaceous cyst, a type of cyst that forms when a hair follicle becomes blocked and filled with sebum. Alternatively, it could be a type of benign tumor like a lipoma or a fibroma. Further examination under a dermatoscope or biopsy would be necessary to confirm the exact nature of the lesion",
+      "predicted": "Based on the features described, the nodule could be indicative of a skin condition such as a sebaceous cyst, a type of cyst that forms when a hair follicle becomes blocked and filled with sebum. Alternatively, it could be a type of benign tumor like a lipoma or a fibroma. Further examination under a dermatoscope or biopsy would be necessary to confirm the exact nature of the lesion",
+      "status": "success"
+    },
+    {
+      "id": 484,
+      "file_name": "484.png",
+      "image_path": "SkinCAP\\skincap\\484.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the specific skin disease could be a form of squamous cell carcinoma, particularly if the ulcerated areas indicate a more advanced stage of the condition. However, further diagnostic tests such as a biopsy would be necessary to confirm the diagnosis",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 518,
+      "file_name": "518.png",
+      "image_path": "SkinCAP\\skincap\\518.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the lesion could be indicative of a seborrheic keratosis, which is a benign skin growth commonly found on the face and other areas of the body. It often presents as a small, rough, and scaly patch or nodule. However, further evaluation by a dermatologist is necessary for an accurate diagnosis",
+      "predicted": "Based on the features described, the lesion could be indicative of a seborrheic keratosis, which is a benign skin growth commonly found on the face and other areas of the body. It often presents as a small, rough, and scaly patch or nodule. However, further evaluation by a dermatologist is necessary for an accurate diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 557,
+      "file_name": "557.png",
+      "image_path": "SkinCAP\\skincap\\557.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the nodule could be indicative of a basal cell carcinoma, given its location on the forehead and the presence of crusting and ulceration. However, a definitive diagnosis would require a biopsy and further evaluation by a dermatologist",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 564,
+      "file_name": "564.png",
+      "image_path": "SkinCAP\\skincap\\564.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the lesion could be indicative of a melanocytic nevus, given its location and coloration. However, further clinical evaluation and possibly a biopsy would be necessary to confirm the diagnosis",
+      "predicted": "Based on the features described, the lesion could be indicative of a melanocytic nevus, given its location and coloration. However, further clinical evaluation and possibly a biopsy would be necessary to confirm the diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 581,
+      "file_name": "581.png",
+      "image_path": "SkinCAP\\skincap\\581.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the lesion could be indicative of a skin condition such as basal cell carcinoma or another form of cutaneous malignancy. However, without further clinical information or a biopsy, it's not possible to definitively diagnose the condition. It would be advisable to consult a dermatologist for a proper evaluation and potential treatment",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 625,
+      "file_name": "625.png",
+      "image_path": "SkinCAP\\skincap\\625.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Based on the features described, the lesion most closely resembles a melanocytic nevus. The presence of a central pigmented dot and the mixed coloration are characteristic of benign moles. However, further evaluation by a dermatologist is recommended to rule out any potential concerns",
+      "predicted": "Based on the features described, the lesion most closely resembles a melanocytic nevus. The presence of a central pigmented dot and the mixed coloration are characteristic of benign moles. However, further evaluation by a dermatologist is recommended to rule out any potential concerns",
+      "status": "success"
+    },
+    {
+      "id": 644,
+      "file_name": "644.png",
+      "image_path": "SkinCAP\\skincap\\644.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Based on the features described, the lesion could be indicative of a melanocytic nevus. However, it's important to note that a definitive diagnosis requires a histopathological examination through a biopsy",
+      "predicted": "Based on the features described, the lesion could be indicative of a melanocytic nevus. However, it's important to note that a definitive diagnosis requires a histopathological examination through a biopsy",
+      "status": "success"
+    },
+    {
+      "id": 655,
+      "file_name": "655.png",
+      "image_path": "SkinCAP\\skincap\\655.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the lesion could be indicative of a chronic inflammatory condition or a more serious skin disorder like squamous cell carcinoma. However, without further information or a biopsy, it is difficult to make a definitive diagnosis. It would be advisable to consult a dermatologist for a proper evaluation and treatment plan",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 704,
+      "file_name": "704.png",
+      "image_path": "SkinCAP\\skincap\\704.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the lesion resembles a white macule with a slightly scaling surface, which could be indicative of a condition like pityriasis alba, a benign skin condition characterized by small, white, scaly patches that typically appear on the face, neck, and upper chest. However, without further clinical information or a medical examination, a definitive diagnosis cannot be made",
+      "predicted": "Based on the features described, the lesion resembles a white macule with a slightly scaling surface, which could be indicative of a condition like pityriasis alba, a benign skin condition characterized by small, white, scaly patches that typically appear on the face, neck, and upper chest. However, without further clinical information or a medical examination, a definitive diagnosis cannot be made",
+      "status": "success"
+    },
+    {
+      "id": 731,
+      "file_name": "731.png",
+      "image_path": "SkinCAP\\skincap\\731.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the lesion resembles a seborrheic keratosis. These are benign growths that often appear as rough, raised lesions on the skin, particularly on the face and neck. They can vary in color but are usually flesh-colored, brown, or tan. While they are generally harmless, they can sometimes be mistaken for more serious conditions like basal cell carcinoma or squamous cell carcinoma. It's important to consult a dermatologist for an accurate diagnosis and appropriate treatment",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 771,
+      "file_name": "771.png",
+      "image_path": "SkinCAP\\skincap\\771.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Specific Skin Disease",
+      "predicted": "Specific Skin Disease",
+      "status": "success"
+    },
+    {
+      "id": 778,
+      "file_name": "778.png",
+      "image_path": "SkinCAP\\skincap\\778.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Based on the features observed, the specific skin disease could be pityriasis rosea, a self-limiting condition characterized by a rash of small, scaly, pinkish-red spots that appear in clusters. However, it's important to note that a definitive diagnosis should be made by a dermatologist who can examine the skin directly and consider other factors such as medical history and physical examination findings",
+      "predicted": "Based on the features observed, the specific skin disease could be pityriasis rosea, a self-limiting condition characterized by a rash of small, scaly, pinkish-red spots that appear in clusters. However, it's important to note that a definitive diagnosis should be made by a dermatologist who can examine the skin directly and consider other factors such as medical history and physical examination findings",
+      "status": "success"
+    },
+    {
+      "id": 820,
+      "file_name": "820.png",
+      "image_path": "SkinCAP\\skincap\\820.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease is likely psoriasis. Psoriasis commonly presents with red plaques covered with silvery scales, which matches the appearance of the lesions in the image",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 884,
+      "file_name": "884.png",
+      "image_path": "SkinCAP\\skincap\\884.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the lesion resembles a condition commonly associated with contact dermatitis or a similar inflammatory response. However, without more information about the patient's history and the specific circumstances under which the lesion appeared, a definitive diagnosis cannot be made. Further evaluation by a dermatologist would be necessary to confirm the exact nature of the lesion and determine the appropriate treatment plan",
+      "predicted": "Based on the features described, the lesion resembles a condition commonly associated with contact dermatitis or a similar inflammatory response. However, without more information about the patient's history and the specific circumstances under which the lesion appeared, a definitive diagnosis cannot be made. Further evaluation by a dermatologist would be necessary to confirm the exact nature of the lesion and determine the appropriate treatment plan",
+      "status": "success"
+    },
+    {
+      "id": 904,
+      "file_name": "904.png",
+      "image_path": "SkinCAP\\skincap\\904.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the specific skin disease could be a form of squamous cell carcinoma, particularly if there is evidence of ulceration and crusting. However, further diagnostic tests such as a biopsy would be necessary to confirm the diagnosis",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1005,
+      "file_name": "1005.png",
+      "image_path": "SkinCAP\\skincap\\1005.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease could be rosacea, a chronic inflammatory condition characterized by redness and small bumps on the face. However, further examination by a dermatologist is necessary for an accurate diagnosis",
+      "predicted": "Based on the features described, the specific skin disease could be rosacea, a chronic inflammatory condition characterized by redness and small bumps on the face. However, further examination by a dermatologist is necessary for an accurate diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 1006,
+      "file_name": "1006.png",
+      "image_path": "SkinCAP\\skincap\\1006.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the skin disease could be lupus erythematosus. The presence of multiple erythematous macules, along with the possibility of scaling or crusting, aligns with the characteristics of lupus erythematosus. However, further diagnostic tests and a detailed medical history would be necessary to confirm the diagnosis",
+      "predicted": "Based on the features described, the skin disease could be lupus erythematosus. The presence of multiple erythematous macules, along with the possibility of scaling or crusting, aligns with the characteristics of lupus erythematosus. However, further diagnostic tests and a detailed medical history would be necessary to confirm the diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 1069,
+      "file_name": "1069.png",
+      "image_path": "SkinCAP\\skincap\\1069.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the lesion could be indicative of a skin condition such as contact dermatitis, eczema, or a viral infection like molluscum contagiosum. However, without further information about the patient's medical history, symptoms, and the presence of any systemic symptoms, a definitive diagnosis cannot be made. It is important to consult a dermatologist for a proper evaluation and diagnosis",
+      "predicted": "Based on the features described, the lesion could be indicative of a skin condition such as contact dermatitis, eczema, or a viral infection like molluscum contagiosum. However, without further information about the patient's medical history, symptoms, and the presence of any systemic symptoms, a definitive diagnosis cannot be made. It is important to consult a dermatologist for a proper evaluation and diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 1111,
+      "file_name": "1111.png",
+      "image_path": "SkinCAP\\skincap\\1111.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease could be **onycholysis**, which is a condition where the nail separates from the nail bed, often accompanied by scaling or peeling of the nail bed. However, the presence of scaling and the distribution suggest it might also be related to **psoriasis** or another inflammatory condition affecting the nail beds. Further clinical evaluation by a dermatologist would be necessary for an accurate diagnosis",
+      "predicted": "Based on the features described, the specific skin disease could be **onycholysis**, which is a condition where the nail separates from the nail bed, often accompanied by scaling or peeling of the nail bed. However, the presence of scaling and the distribution suggest it might also be related to **psoriasis** or another inflammatory condition affecting the nail beds. Further clinical evaluation by a dermatologist would be necessary for an accurate diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 1133,
+      "file_name": "1133.png",
+      "image_path": "SkinCAP\\skincap\\1133.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Based on the features described, the specific skin disease is likely acne vulgaris. The presence of multiple red papules on the cheek area is characteristic of acne vulgaris, which is a common chronic inflammatory skin condition affecting adolescents",
+      "predicted": "Based on the features described, the specific skin disease is likely acne vulgaris. The presence of multiple red papules on the cheek area is characteristic of acne vulgaris, which is a common chronic inflammatory skin condition affecting adolescents",
+      "status": "success"
+    },
+    {
+      "id": 1145,
+      "file_name": "1145.png",
+      "image_path": "SkinCAP\\skincap\\1145.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease could be lupus erythematosus. However, further diagnostic evaluation including histopathological examination would be necessary to confirm the diagnosis",
+      "predicted": "Based on the features described, the specific skin disease could be lupus erythematosus. However, further diagnostic evaluation including histopathological examination would be necessary to confirm the diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 1207,
+      "file_name": "1207.png",
+      "image_path": "SkinCAP\\skincap\\1207.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the skin disease could be lupus erythematosus, given the presence of facial rashes and the characteristic mixed coloration and scaly texture. However, further evaluation with a Wood's lamp examination would be necessary for a definitive diagnosis",
+      "predicted": "Based on the features described, the skin disease could be lupus erythematosus, given the presence of facial rashes and the characteristic mixed coloration and scaly texture. However, further evaluation with a Wood's lamp examination would be necessary for a definitive diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 1225,
+      "file_name": "1225.png",
+      "image_path": "SkinCAP\\skincap\\1225.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease could be basal cell carcinoma. However, it's important to note that a definitive diagnosis requires histopathological examination",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 1226,
+      "file_name": "1226.png",
+      "image_path": "SkinCAP\\skincap\\1226.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the nodule could be indicative of a basal cell carcinoma or a squamous cell carcinoma. However, without a definitive diagnosis through a biopsy, it's important to consider that this could also be another type of skin lesion",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 1285,
+      "file_name": "1285.png",
+      "image_path": "SkinCAP\\skincap\\1285.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the skin disease most likely corresponds to **psoriasis**. The presence of small, raised bumps (papules), the mixed coloration, and the scaly appearance are characteristic of psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1345,
+      "file_name": "1345.png",
+      "image_path": "SkinCAP\\skincap\\1345.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Based on the features described, the specific skin disease in this image is likely acne vulgaris. The presence of small, red papules scattered across the cheek is characteristic of acne vulgaris, which is a common chronic inflammatory skin condition typically seen in adolescents but can persist into adulthood",
+      "predicted": "Based on the features described, the specific skin disease in this image is likely acne vulgaris. The presence of small, red papules scattered across the cheek is characteristic of acne vulgaris, which is a common chronic inflammatory skin condition typically seen in adolescents but can persist into adulthood",
+      "status": "success"
+    },
+    {
+      "id": 1362,
+      "file_name": "1362.png",
+      "image_path": "SkinCAP\\skincap\\1362.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features observed, the skin disease could be photodermatitis, as the lesions are red and have a somewhat blurred border, which is consistent with the description provided in Reference 1. However, further examination and medical consultation would be necessary to confirm the diagnosis",
+      "predicted": "Based on the features observed, the skin disease could be photodermatitis, as the lesions are red and have a somewhat blurred border, which is consistent with the description provided in Reference 1. However, further examination and medical consultation would be necessary to confirm the diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 1402,
+      "file_name": "1402.png",
+      "image_path": "SkinCAP\\skincap\\1402.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Based on the features described, the specific skin disease is most likely **acne vulgaris**. The presence of small, raised lesions with a mix of red and pink coloration, along with the distribution on the forehead, aligns with the characteristics of acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 1462,
+      "file_name": "1462.png",
+      "image_path": "SkinCAP\\skincap\\1462.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the lesion most closely resembles a diagnosis of **contact dermatitis**. Contact dermatitis is an inflammatory skin condition that occurs when the skin comes into direct contact with an irritant or allergen. The redness, scaling, and crusting are typical manifestations of this condition. However, further clinical evaluation and possibly a biopsy would be necessary for a definitive diagnosis",
+      "predicted": "Based on the features described, the lesion most closely resembles a diagnosis of **contact dermatitis**. Contact dermatitis is an inflammatory skin condition that occurs when the skin comes into direct contact with an irritant or allergen. The redness, scaling, and crusting are typical manifestations of this condition. However, further clinical evaluation and possibly a biopsy would be necessary for a definitive diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 1537,
+      "file_name": "1537.png",
+      "image_path": "SkinCAP\\skincap\\1537.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Based on the features described, the skin disease could be a form of hyperpigmentation or a benign skin condition like seborrheic keratosis. However, without further information or a clinical examination, it is difficult to make a definitive diagnosis",
+      "predicted": "Based on the features described, the skin disease could be a form of hyperpigmentation or a benign skin condition like seborrheic keratosis. However, without further information or a clinical examination, it is difficult to make a definitive diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 1577,
+      "file_name": "1577.png",
+      "image_path": "SkinCAP\\skincap\\1577.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the lesion could be indicative of a melanoma, particularly a superficial spreading melanoma, which often presents as a brown or black lesion with irregular borders and a crusted surface. However, a definitive diagnosis requires a biopsy and further evaluation by a dermatologist",
+      "predicted": "Based on the features described, the lesion could be indicative of a melanoma, particularly a superficial spreading melanoma, which often presents as a brown or black lesion with irregular borders and a crusted surface. However, a definitive diagnosis requires a biopsy and further evaluation by a dermatologist",
+      "status": "success"
+    },
+    {
+      "id": 1627,
+      "file_name": "1627.png",
+      "image_path": "SkinCAP\\skincap\\1627.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease in this image is most likely **psoriasis**. Psoriasis is characterized by red, scaly patches that can vary in size and location on the body. The presence of scales and the distribution of the lesions on the face align with the typical presentation of psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1638,
+      "file_name": "1638.png",
+      "image_path": "SkinCAP\\skincap\\1638.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the lesion resembles a squamous cell carcinoma in situ or a basal cell carcinoma. However, without a definitive diagnosis through a biopsy, it's important to consult a dermatologist for a proper evaluation and treatment plan",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 1691,
+      "file_name": "1691.png",
+      "image_path": "SkinCAP\\skincap\\1691.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease could be considered as a variant of cutaneous lupus erythematosus, specifically malar rash, which often presents as symmetrical erythematous lesions on the face and back. However, further clinical evaluation and laboratory tests would be necessary for a definitive diagnosis",
+      "predicted": "Based on the features described, the specific skin disease could be considered as a variant of cutaneous lupus erythematosus, specifically malar rash, which often presents as symmetrical erythematous lesions on the face and back. However, further clinical evaluation and laboratory tests would be necessary for a definitive diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 1723,
+      "file_name": "1723.png",
+      "image_path": "SkinCAP\\skincap\\1723.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease that could be considered is psoriasis affecting the nails. This is supported by the presence of scaling and the involvement of the nail bed, which is characteristic of psoriatic nail disease. However, it's important to note that a definitive diagnosis should be made by a dermatologist through a physical examination and possibly a biopsy",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 1767,
+      "file_name": "1767.png",
+      "image_path": "SkinCAP\\skincap\\1767.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the most likely diagnosis is lichen planus, as the lesions match the clinical presentation of brown, flat papules characteristic of this condition",
+      "predicted": "Based on the features described, the most likely diagnosis is lichen planus, as the lesions match the clinical presentation of brown, flat papules characteristic of this condition",
+      "status": "success"
+    },
+    {
+      "id": 1772,
+      "file_name": "1772.png",
+      "image_path": "SkinCAP\\skincap\\1772.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the most likely diagnosis is **lichen planus**. Lichen planus typically presents as flat-topped papules or plaques that can be white, gray, or brown, often with a characteristic \"waxing and waning\" appearance. The distribution on the cheeks is also consistent with lichen planus. However, it's important to note that a definitive diagnosis would require a skin biopsy and further clinical evaluation",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 1820,
+      "file_name": "1820.png",
+      "image_path": "SkinCAP\\skincap\\1820.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease is most likely **acne vulgaris**. The scattered red papules and nodules are characteristic of acne vulgaris, a common chronic inflammatory skin condition",
+      "predicted": "Based on the features described, the specific skin disease is most likely **acne vulgaris**. The scattered red papules and nodules are characteristic of acne vulgaris, a common chronic inflammatory skin condition",
+      "status": "success"
+    },
+    {
+      "id": 1831,
+      "file_name": "1831.png",
+      "image_path": "SkinCAP\\skincap\\1831.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease could be rosacea, a chronic inflammatory condition characterized by redness and small bumps on the face. However, without more information about the patient's medical history and symptoms, a definitive diagnosis cannot be made",
+      "predicted": "Based on the features described, the specific skin disease could be rosacea, a chronic inflammatory condition characterized by redness and small bumps on the face. However, without more information about the patient's medical history and symptoms, a definitive diagnosis cannot be made",
+      "status": "success"
+    },
+    {
+      "id": 1960,
+      "file_name": "1960.png",
+      "image_path": "SkinCAP\\skincap\\1960.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease is nail psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2012,
+      "file_name": "2012.png",
+      "image_path": "SkinCAP\\skincap\\2012.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on these features, the specific skin disease could be pityriasis rosea, a self-limiting viral infection that causes a characteristic rash. However, further investigation would be needed to confirm the diagnosis",
+      "predicted": "Based on these features, the specific skin disease could be pityriasis rosea, a self-limiting viral infection that causes a characteristic rash. However, further investigation would be needed to confirm the diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 2257,
+      "file_name": "2257.png",
+      "image_path": "SkinCAP\\skincap\\2257.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the lesion resembles a seborrheic keratosis. Seborrheic keratoses are benign growths that often appear as rough, scaly patches on the skin, particularly on the face, scalp, and chest. They can vary in size and color, and while they are not cancerous, they can sometimes be mistaken for other skin conditions",
+      "predicted": "Based on the features described, the lesion resembles a seborrheic keratosis. Seborrheic keratoses are benign growths that often appear as rough, scaly patches on the skin, particularly on the face, scalp, and chest. They can vary in size and color, and while they are not cancerous, they can sometimes be mistaken for other skin conditions",
+      "status": "success"
+    },
+    {
+      "id": 2271,
+      "file_name": "2271.png",
+      "image_path": "SkinCAP\\skincap\\2271.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the skin disease could be psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2276,
+      "file_name": "2276.png",
+      "image_path": "SkinCAP\\skincap\\2276.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features observed—red macules with a scaly texture, distributed symmetrically on the legs—the most likely diagnosis is **lichen simplex chronicus**. This condition typically presents as well-defined, itchy, and often sharply demarcated patches of skin that can become thickened and scaly over time",
+      "predicted": "Based on the features observed—red macules with a scaly texture, distributed symmetrically on the legs—the most likely diagnosis is **lichen simplex chronicus**. This condition typically presents as well-defined, itchy, and often sharply demarcated patches of skin that can become thickened and scaly over time",
+      "status": "success"
+    },
+    {
+      "id": 2458,
+      "file_name": "2458.png",
+      "image_path": "SkinCAP\\skincap\\2458.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the lesion could be indicative of a skin condition such as psoriasis, eczema, or a form of dermatitis. However, without further information or a medical examination, it's difficult to definitively diagnose the condition. It would be advisable to consult a dermatologist for a proper evaluation and diagnosis",
+      "predicted": "Based on the features described, the lesion could be indicative of a skin condition such as psoriasis, eczema, or a form of dermatitis. However, without further information or a medical examination, it's difficult to definitively diagnose the condition. It would be advisable to consult a dermatologist for a proper evaluation and diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 2509,
+      "file_name": "2509.png",
+      "image_path": "SkinCAP\\skincap\\2509.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Based on the features described, the specific skin disease is most likely acne vulgaris. The presence of red papules, whiteheads, and pustules, along with the distribution on the cheeks and forehead, aligns with the characteristics of acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 2570,
+      "file_name": "2570.png",
+      "image_path": "SkinCAP\\skincap\\2570.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Given the appearance of small, raised bumps with a light pinkish-red color and a slightly blurred border, the most likely diagnosis is **dermatitis**. Dermatitis refers to inflammation of the skin, which can manifest in various forms including eczema, contact dermatitis, or seborrheic dermatitis. Further evaluation by a dermatologist would be necessary for a definitive diagnosis and appropriate treatment",
+      "predicted": "Given the appearance of small, raised bumps with a light pinkish-red color and a slightly blurred border, the most likely diagnosis is **dermatitis**. Dermatitis refers to inflammation of the skin, which can manifest in various forms including eczema, contact dermatitis, or seborrheic dermatitis. Further evaluation by a dermatologist would be necessary for a definitive diagnosis and appropriate treatment",
+      "status": "success"
+    },
+    {
+      "id": 2579,
+      "file_name": "2579.png",
+      "image_path": "SkinCAP\\skincap\\2579.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease could be psoriasis. However, it's important to note that a definitive diagnosis should be made by a dermatologist through a physical examination and possibly additional tests",
+      "predicted": "Based on the features described, the specific skin disease could be psoriasis. However, it's important to note that a definitive diagnosis should be made by a dermatologist through a physical examination and possibly additional tests",
+      "status": "success"
+    },
+    {
+      "id": 2611,
+      "file_name": "2611.png",
+      "image_path": "SkinCAP\\skincap\\2611.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease could be psoriasis. The presence of scaly plaques on the earlobe is consistent with the clinical presentation of psoriasis. However, further medical evaluation is necessary for a definitive diagnosis",
+      "predicted": "Based on the features described, the specific skin disease could be psoriasis. The presence of scaly plaques on the earlobe is consistent with the clinical presentation of psoriasis. However, further medical evaluation is necessary for a definitive diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 2642,
+      "file_name": "2642.png",
+      "image_path": "SkinCAP\\skincap\\2642.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the skin disease could be considered as a form of acne vulgaris, given the presence of small, red papules and the distribution across the skin. However, further evaluation by a dermatologist would be necessary for a definitive diagnosis",
+      "predicted": "Based on the features described, the skin disease could be considered as a form of acne vulgaris, given the presence of small, red papules and the distribution across the skin. However, further evaluation by a dermatologist would be necessary for a definitive diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 2664,
+      "file_name": "2664.png",
+      "image_path": "SkinCAP\\skincap\\2664.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease is likely psoriasis. The presence of red plaques with a scaly surface, especially on the palms, is characteristic of psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2687,
+      "file_name": "2687.png",
+      "image_path": "SkinCAP\\skincap\\2687.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the lesion could be indicative of a chronic inflammatory condition, such as psoriasis or eczema. However, without further clinical information or a biopsy, it is challenging to make a definitive diagnosis. The presence of scaling and crusting, along with the location, suggests a possibility of eczematous dermatitis or a variant of psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2709,
+      "file_name": "2709.png",
+      "image_path": "SkinCAP\\skincap\\2709.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the specific skin disease could be basal cell carcinoma. Basal cell carcinomas often present as nodular lesions with a crusted surface and a somewhat irregular border. However, it's important to note that a definitive diagnosis should be made by a dermatologist through a biopsy and further evaluation",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2716,
+      "file_name": "2716.png",
+      "image_path": "SkinCAP\\skincap\\2716.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the lesion is most consistent with psoriasis. However, without further information or a clinical history, it's important to note that this could also be another condition like lichen planus or eczema. A definitive diagnosis would require a dermatological evaluation and possibly a biopsy",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2726,
+      "file_name": "2726.png",
+      "image_path": "SkinCAP\\skincap\\2726.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the nodule resembles a seborrheic keratosis. Seborrheic keratoses are benign growths that appear as rough, scaly patches or bumps on the skin. They are often found on the trunk, arms, and legs but can also occur on the palms and soles. While they are generally harmless, they can sometimes be mistaken for other skin conditions like warts or basal cell carcinomas",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 2770,
+      "file_name": "2770.png",
+      "image_path": "SkinCAP\\skincap\\2770.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the lesion resembles a psoriasis plaque. Psoriasis is a chronic inflammatory skin condition characterized by red, scaly patches that can vary in size and location. The presence of scales and crusts, along with the mixed coloration, is typical of psoriasis lesions. However, a definitive diagnosis should be confirmed through a dermatological evaluation and possibly a biopsy",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 2776,
+      "file_name": "2776.png",
+      "image_path": "SkinCAP\\skincap\\2776.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features observed, the lesion could be indicative of a cutaneous condition such as a verruca vulgaris (common wart), which typically presents as a small, hard, rough nodule with a characteristic \"cork-screw\" appearance. However, without more clinical information or a biopsy, a definitive diagnosis cannot be made. Further evaluation by a dermatologist would be necessary for a precise diagnosis and appropriate treatment",
+      "predicted": "Based on the features observed, the lesion could be indicative of a cutaneous condition such as a verruca vulgaris (common wart), which typically presents as a small, hard, rough nodule with a characteristic \"cork-screw\" appearance. However, without more clinical information or a biopsy, a definitive diagnosis cannot be made. Further evaluation by a dermatologist would be necessary for a precise diagnosis and appropriate treatment",
+      "status": "success"
+    },
+    {
+      "id": 2832,
+      "file_name": "2832.png",
+      "image_path": "SkinCAP\\skincap\\2832.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the nodule could be indicative of a skin condition such as a sebaceous cyst or a pilomatrixoma. These lesions typically present as a painless, firm nodule that can be mistaken for a wart or a small tumor. However, further examination by a dermatologist would be necessary for a definitive diagnosis",
+      "predicted": "Based on the features described, the nodule could be indicative of a skin condition such as a sebaceous cyst or a pilomatrixoma. These lesions typically present as a painless, firm nodule that can be mistaken for a wart or a small tumor. However, further examination by a dermatologist would be necessary for a definitive diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 2882,
+      "file_name": "2882.png",
+      "image_path": "SkinCAP\\skincap\\2882.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the specific skin disease could be a form of squamous cell carcinoma, particularly one that has progressed to a more invasive stage where the surface is ulcerated and crusted. However, further diagnostic tests such as biopsy would be necessary to confirm the diagnosis",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 2928,
+      "file_name": "2928.png",
+      "image_path": "SkinCAP\\skincap\\2928.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Based on the features described, the specific skin disease could be acne vulgaris or another form of inflammatory skin condition affecting the face. However, further evaluation by a dermatologist would be necessary for a definitive diagnosis",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 2939,
+      "file_name": "2939.png",
+      "image_path": "SkinCAP\\skincap\\2939.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the lesion resembles a condition known as **lichen planus**. However, without further clinical information or a biopsy, a definitive diagnosis cannot be made. The presence of a smooth, brownish patch along the flexural crease is consistent with the appearance of lichen planus lesions, which can sometimes present with a brownish hue",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 2966,
+      "file_name": "2966.png",
+      "image_path": "SkinCAP\\skincap\\2966.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the lesion resembles basal cell carcinoma, which often presents as a red base with crusted areas. However, without a biopsy or additional clinical information, a definitive diagnosis cannot be made. Further evaluation by a dermatologist is recommended",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3001,
+      "file_name": "3001.png",
+      "image_path": "SkinCAP\\skincap\\3001.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease could be **onycholysis** or **onychomycosis**, but given the crusted appearance and the location, it might be more indicative of **onychomycosis** (a fungal infection of the nail). However, a definitive diagnosis would require a clinical examination and possibly a fungal culture",
+      "predicted": "Based on the features described, the specific skin disease could be **onycholysis** or **onychomycosis**, but given the crusted appearance and the location, it might be more indicative of **onychomycosis** (a fungal infection of the nail). However, a definitive diagnosis would require a clinical examination and possibly a fungal culture",
+      "status": "success"
+    },
+    {
+      "id": 3091,
+      "file_name": "3091.png",
+      "image_path": "SkinCAP\\skincap\\3091.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease in this image is most consistent with **psoriasis**. The presence of red patches with silvery scales, along with the scattered distribution and sharp borders, aligns with the characteristics of psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3107,
+      "file_name": "3107.png",
+      "image_path": "SkinCAP\\skincap\\3107.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the lesion could be indicative of a squamous cell carcinoma in situ or another form of premalignant skin condition. However, a definitive diagnosis would require a biopsy and further evaluation by a dermatologist",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3201,
+      "file_name": "3201.png",
+      "image_path": "SkinCAP\\skincap\\3201.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease could be lupus erythematosus. However, further diagnostic testing would be necessary to confirm the diagnosis",
+      "predicted": "Based on the features described, the specific skin disease could be lupus erythematosus. However, further diagnostic testing would be necessary to confirm the diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 3247,
+      "file_name": "3247.png",
+      "image_path": "SkinCAP\\skincap\\3247.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Based on the features described, the specific skin disease is likely acne vulgaris",
+      "predicted": "acne vulgaris",
+      "status": "success"
+    },
+    {
+      "id": 3253,
+      "file_name": "3253.png",
+      "image_path": "SkinCAP\\skincap\\3253.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the skin disease most likely corresponds to lupus erythematosus. The presence of multiple erythematous plaques, along with the distribution and texture observed, aligns with the characteristics of this condition",
+      "predicted": "Based on the features described, the skin disease most likely corresponds to lupus erythematosus. The presence of multiple erythematous plaques, along with the distribution and texture observed, aligns with the characteristics of this condition",
+      "status": "success"
+    },
+    {
+      "id": 3279,
+      "file_name": "3279.png",
+      "image_path": "SkinCAP\\skincap\\3279.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease could be lichen planus, a chronic inflammatory condition affecting the skin and mucous membranes. Lichen planus typically presents as a purple-brown, flat-topped papule or plaque with a distinctive \"target\" or \"dusky\" appearance, often accompanied by scaling and pruritus. However, the presence of a tattoo-like pattern in the image might suggest a different condition such as a reaction to a tattoo or a pigmentary change due to another underlying condition. Further clinical evaluation and possibly a biopsy would be necessary for an accurate diagnosis",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3280,
+      "file_name": "3280.png",
+      "image_path": "SkinCAP\\skincap\\3280.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features observed—scaly papules with a sharp border and symmetrical distribution—the specific skin disease could be psoriasis. However, it is important to note that a definitive diagnosis should be made by a dermatologist who can examine the patient in person and consider other factors such as medical history and response to treatment",
+      "predicted": "Based on the features observed—scaly papules with a sharp border and symmetrical distribution—the specific skin disease could be psoriasis. However, it is important to note that a definitive diagnosis should be made by a dermatologist who can examine the patient in person and consider other factors such as medical history and response to treatment",
+      "status": "success"
+    },
+    {
+      "id": 3354,
+      "file_name": "3354.png",
+      "image_path": "SkinCAP\\skincap\\3354.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the specific skin disease could be a form of cutaneous malignancy, possibly a squamous cell carcinoma or a basal cell carcinoma, given the presence of ulceration, crusting, and the location on the nose. However, a definitive diagnosis would require a biopsy and further clinical evaluation",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3377,
+      "file_name": "3377.png",
+      "image_path": "SkinCAP\\skincap\\3377.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the skin disease most likely corresponds to **psoriasis**. The presence of reddish-brown, scaly patches distributed over a large area, especially on the buttocks and thighs, is characteristic of psoriasis",
+      "predicted": "psoriasis",
+      "status": "success"
+    },
+    {
+      "id": 3487,
+      "file_name": "3487.png",
+      "image_path": "SkinCAP\\skincap\\3487.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the lesion resembles a seborrheic keratosis, which is a benign skin growth that often presents as a small, smooth, and slightly raised lesion. However, a definitive diagnosis would require a skin biopsy and consultation with a dermatologist",
+      "predicted": "Based on the features described, the lesion resembles a seborrheic keratosis, which is a benign skin growth that often presents as a small, smooth, and slightly raised lesion. However, a definitive diagnosis would require a skin biopsy and consultation with a dermatologist",
+      "status": "success"
+    },
+    {
+      "id": 3606,
+      "file_name": "3606.png",
+      "image_path": "SkinCAP\\skincap\\3606.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the lesion could be indicative of a basal cell carcinoma, given its location on the nose, the presence of crusting and ulceration, and the possibility of bleeding or necrosis. However, further clinical evaluation and histopathological examination would be necessary for an accurate diagnosis",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3614,
+      "file_name": "3614.png",
+      "image_path": "SkinCAP\\skincap\\3614.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the specific skin disease could be squamous cell carcinoma in situ or another form of skin cancer. However, without further information or a biopsy, it's not possible to definitively diagnose the condition. It is important to consult a dermatologist for an accurate diagnosis and appropriate treatment",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3651,
+      "file_name": "3651.png",
+      "image_path": "SkinCAP\\skincap\\3651.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the skin disease could be lichen planus. However, the presence of scales and the slightly blurred border might suggest a different condition like psoriasis or a variant of lichen planus known as lichen planus with hyperkeratosis. Further clinical evaluation and possibly a biopsy would be necessary for a definitive diagnosis",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3676,
+      "file_name": "3676.png",
+      "image_path": "SkinCAP\\skincap\\3676.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the lesions resemble seborrheic keratoses. These are benign growths that commonly appear on the skin, especially on the face, chest, and back. They are usually brown or black and can have a rough, warty appearance",
+      "predicted": "Based on the features described, the lesions resemble seborrheic keratoses. These are benign growths that commonly appear on the skin, especially on the face, chest, and back. They are usually brown or black and can have a rough, warty appearance",
+      "status": "success"
+    },
+    {
+      "id": 3707,
+      "file_name": "3707.png",
+      "image_path": "SkinCAP\\skincap\\3707.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on these features, the specific skin disease is likely lichen planus. The scattered pinpoint-sized follicular white papules with a sharp border are characteristic of lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3735,
+      "file_name": "3735.png",
+      "image_path": "SkinCAP\\skincap\\3735.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the specific skin disease could be squamous cell carcinoma in situ. However, a definitive diagnosis would require a tissue biopsy and pathological examination",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3751,
+      "file_name": "3751.png",
+      "image_path": "SkinCAP\\skincap\\3751.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the lesion resembles a basal cell carcinoma. Basal cell carcinomas often present as nodular lesions with a crusted surface, and they can have a slightly blurred border. However, a definitive diagnosis would require histopathological examination",
+      "predicted": "basal cell carcinoma",
+      "status": "success"
+    },
+    {
+      "id": 3789,
+      "file_name": "3789.png",
+      "image_path": "SkinCAP\\skincap\\3789.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described—scaly plaques with a reddish-violet hue and a somewhat blurred border—the most likely diagnosis is psoriasis. However, it is important to note that a definitive diagnosis should be made by a dermatologist through a physical examination and possibly additional tests",
+      "predicted": "Based on the features described—scaly plaques with a reddish-violet hue and a somewhat blurred border—the most likely diagnosis is psoriasis. However, it is important to note that a definitive diagnosis should be made by a dermatologist through a physical examination and possibly additional tests",
+      "status": "success"
+    },
+    {
+      "id": 3799,
+      "file_name": "3799.png",
+      "image_path": "SkinCAP\\skincap\\3799.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described—scaly papules with a sharp border and a clustered distribution—the specific skin disease is likely **lichen simplex chronicus**. This condition is characterized by chronic, intensely itchy skin lesions that can appear as papules or plaques, often with a scaly surface",
+      "predicted": "Based on the features described—scaly papules with a sharp border and a clustered distribution—the specific skin disease is likely **lichen simplex chronicus**. This condition is characterized by chronic, intensely itchy skin lesions that can appear as papules or plaques, often with a scaly surface",
+      "status": "success"
+    },
+    {
+      "id": 3802,
+      "file_name": "3802.png",
+      "image_path": "SkinCAP\\skincap\\3802.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the lesion could be indicative of a seborrheic keratosis, which often presents as a small, raised, and rough nodule with a crusty surface. However, further evaluation by a dermatologist would be necessary for a definitive diagnosis",
+      "predicted": "Based on the features described, the lesion could be indicative of a seborrheic keratosis, which often presents as a small, raised, and rough nodule with a crusty surface. However, further evaluation by a dermatologist would be necessary for a definitive diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 3836,
+      "file_name": "3836.png",
+      "image_path": "SkinCAP\\skincap\\3836.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the lesion resembles a nasal polyp, which is a benign growth that can occur on the nasal mucosa. However, without further clinical information or a biopsy, a definitive diagnosis cannot be made. It's important to consult a dermatologist for a proper evaluation and diagnosis",
+      "predicted": "Based on the features described, the lesion resembles a nasal polyp, which is a benign growth that can occur on the nasal mucosa. However, without further clinical information or a biopsy, a definitive diagnosis cannot be made. It's important to consult a dermatologist for a proper evaluation and diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 3878,
+      "file_name": "3878.png",
+      "image_path": "SkinCAP\\skincap\\3878.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Based on the features described, the lesion resembles a squamous cell carcinoma in situ, as indicated by the presence of a crusted surface, mixed colors, and an irregular border. However, it is important to note that a definitive diagnosis requires a biopsy and further evaluation by a dermatologist or oncologist",
+      "predicted": "squamous cell carcinoma in situ",
+      "status": "success"
+    },
+    {
+      "id": 3889,
+      "file_name": "3889.png",
+      "image_path": "SkinCAP\\skincap\\3889.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the lesion resembles the appearance of a pigmented lesion, possibly a melanoma or a benign nevus. However, without further clinical information or a biopsy, a definitive diagnosis cannot be made. It is important to consult a dermatologist for a proper evaluation and diagnosis",
+      "predicted": "Based on the features described, the lesion resembles the appearance of a pigmented lesion, possibly a melanoma or a benign nevus. However, without further clinical information or a biopsy, a definitive diagnosis cannot be made. It is important to consult a dermatologist for a proper evaluation and diagnosis",
+      "status": "success"
+    },
+    {
+      "id": 3966,
+      "file_name": "3966.png",
+      "image_path": "SkinCAP\\skincap\\3966.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the specific skin disease is likely lichen planus",
+      "predicted": "lichen planus",
+      "status": "success"
+    },
+    {
+      "id": 3980,
+      "file_name": "3980.png",
+      "image_path": "SkinCAP\\skincap\\3980.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Based on the features described, the lesion resembles a sebaceous cyst or a dermal sinus tract. These conditions typically present as a painless, firm, and smooth nodule, often located on the face or scalp. However, further clinical evaluation and possibly a biopsy would be necessary for a definitive diagnosis",
+      "predicted": "Based on the features described, the lesion resembles a sebaceous cyst or a dermal sinus tract. These conditions typically present as a painless, firm, and smooth nodule, often located on the face or scalp. However, further clinical evaluation and possibly a biopsy would be necessary for a definitive diagnosis",
+      "status": "success"
+    }
+  ]
+}

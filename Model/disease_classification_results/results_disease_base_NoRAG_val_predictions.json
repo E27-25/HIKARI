@@ -1,0 +1,994 @@
+{
+  "predictions": [
+    {
+      "id": 10,
+      "file_name": "10.png",
+      "image_path": "SkinCAP\\skincap\\10.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion: it's a raised, solid growth on the skin. Let's check the morphology. Papule is a small, solid, raised lesion <0.5 cm. Plaque is larger, flat-topped, raised. Nodule",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion: it's a raised, solid growth on the skin. Let's check the morphology. Papule is a small, solid, raised lesion <0.5 cm. Plaque is larger, flat-topped, raised. Nodule",
+      "status": "success"
+    },
+    {
+      "id": 99,
+      "file_name": "99.png",
+      "image_path": "SkinCAP\\skincap\\99.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion is a small, raised area on the skin. Let's check the morphology: it's a papule because it's a solid, elevated lesion less than 0.5 cm in diameter. The color—there's a brownish",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion is a small, raised area on the skin. Let's check the morphology: it's a papule because it's a solid, elevated lesion less than 0.5 cm in diameter. The color—there's a brownish",
+      "status": "success"
+    },
+    {
+      "id": 144,
+      "file_name": "144.png",
+      "image_path": "SkinCAP\\skincap\\144.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "*Lesion Morphology**: The lesion appears to be a small, raised bump. It's a papule because it's a",
+      "predicted": "*Lesion Morphology**: The lesion appears to be a small, raised bump. It's a papule because it's a",
+      "status": "success"
+    },
+    {
+      "id": 267,
+      "file_name": "267.png",
+      "image_path": "SkinCAP\\skincap\\267.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Lesion morphology: It's a small, raised lesion. Papules are small, solid, elevated lesions, usually less than 0.5 cm. This looks",
+      "predicted": "Lesion morphology: It's a small, raised lesion. Papules are small, solid, elevated lesions, usually less than 0.5 cm. This looks",
+      "status": "success"
+    },
+    {
+      "id": 274,
+      "file_name": "274.png",
+      "image_path": "SkinCAP\\skincap\\274.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "Got it, let's analyze this dermatological image step by step. First, the image shows a small mark on the skin, which looks like a drawn smiley face with a \"CA\" next to it. Wait, but the question is about a skin disease, so maybe the \"CA\" is a typo or",
+      "predicted": "Got it, let's analyze this dermatological image step by step. First, the image shows a small mark on the skin, which looks like a drawn smiley face with a \"CA\" next to it. Wait, but the question is about a skin disease, so maybe the \"CA\" is a typo or",
+      "status": "success"
+    },
+    {
+      "id": 277,
+      "file_name": "277.png",
+      "image_path": "SkinCAP\\skincap\\277.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion: it's a small, raised, solid bump on the skin. Let's check the morphology. Papule is a small, solid, elevated lesion less than 0.5 cm in diameter. The lesion here is small, so",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion: it's a small, raised, solid bump on the skin. Let's check the morphology. Papule is a small, solid, elevated lesion less than 0.5 cm in diameter. The lesion here is small, so",
+      "status": "success"
+    },
+    {
+      "id": 279,
+      "file_name": "279.png",
+      "image_path": "SkinCAP\\skincap\\279.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion in the center: it's a small, round spot. Let's check the morphology. It looks like a papule because it's a raised, solid lesion. Now color: the center is a reddish-brown, and there",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion in the center: it's a small, round spot. Let's check the morphology. It looks like a papule because it's a raised, solid lesion. Now color: the center is a reddish-brown, and there",
+      "status": "success"
+    },
+    {
+      "id": 283,
+      "file_name": "283.png",
+      "image_path": "SkinCAP\\skincap\\283.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion: it's a single, well-defined area on the skin. Let's check the morphology. The lesion looks like a papule or maybe a plaque? Wait, papules are small, solid elevations, while plaques are larger",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion: it's a single, well-defined area on the skin. Let's check the morphology. The lesion looks like a papule or maybe a plaque? Wait, papules are small, solid elevations, while plaques are larger",
+      "status": "success"
+    },
+    {
+      "id": 287,
+      "file_name": "287.png",
+      "image_path": "SkinCAP\\skincap\\287.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion: it's a raised, solid bump on the skin. Let's check the morphology. Papule is a small, solid, elevated lesion less than 0.5 cm. This looks like a papule. Now color: the",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion: it's a raised, solid bump on the skin. Let's check the morphology. Papule is a small, solid, elevated lesion less than 0.5 cm. This looks like a papule. Now color: the",
+      "status": "success"
+    },
+    {
+      "id": 315,
+      "file_name": "315.png",
+      "image_path": "SkinCAP\\skincap\\315.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion is in the scalp with hair around it. Let's look at the morphology: the lesion appears to be a papule or nodule. It's raised above the skin surface. Now color: there's a red area, maybe some",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion is in the scalp with hair around it. Let's look at the morphology: the lesion appears to be a papule or nodule. It's raised above the skin surface. Now color: there's a red area, maybe some",
+      "status": "success"
+    },
+    {
+      "id": 458,
+      "file_name": "458.png",
+      "image_path": "SkinCAP\\skincap\\458.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "*Lesion Morphology**: The lesion is a raised, solid growth. It's a nodule because it's a palpable, elevated lesion that",
+      "predicted": "*Lesion Morphology**: The lesion is a raised, solid growth. It's a nodule because it's a palpable, elevated lesion that",
+      "status": "success"
+    },
+    {
+      "id": 484,
+      "file_name": "484.png",
+      "image_path": "SkinCAP\\skincap\\484.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion morphology. The image shows a raised, solid lesion. Let's recall the terms: papule is a small, solid, elevated lesion <0.5 cm; nodule is larger, deeper. Here, the lesion looks like a",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion morphology. The image shows a raised, solid lesion. Let's recall the terms: papule is a small, solid, elevated lesion <0.5 cm; nodule is larger, deeper. Here, the lesion looks like a",
+      "status": "success"
+    },
+    {
+      "id": 518,
+      "file_name": "518.png",
+      "image_path": "SkinCAP\\skincap\\518.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion morphology. The image shows a small, raised area on the skin. Let's check the types: papule is a small, solid, raised lesion (usually <5mm), plaque is larger and flat-topped, nodule is",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion morphology. The image shows a small, raised area on the skin. Let's check the types: papule is a small, solid, raised lesion (usually <5mm), plaque is larger and flat-topped, nodule is",
+      "status": "success"
+    },
+    {
+      "id": 557,
+      "file_name": "557.png",
+      "image_path": "SkinCAP\\skincap\\557.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion: it's a small, raised area. Let's check the morphology. Papule is a solid, raised lesion <0.5 cm, which this seems to be. The color is red, maybe with a central area that's",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion: it's a small, raised area. Let's check the morphology. Papule is a solid, raised lesion <0.5 cm, which this seems to be. The color is red, maybe with a central area that's",
+      "status": "success"
+    },
+    {
+      "id": 564,
+      "file_name": "564.png",
+      "image_path": "SkinCAP\\skincap\\564.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Morphology: The lesion appears to be a raised, solid area. It's a nodule because it's",
+      "predicted": "Morphology: The lesion appears to be a raised, solid area. It's a nodule because it's",
+      "status": "success"
+    },
+    {
+      "id": 581,
+      "file_name": "581.png",
+      "image_path": "SkinCAP\\skincap\\581.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion is on the ear. Let's look at the morphology: it's a raised, well-defined area. The lesion appears to be a nodule or a papule, but given the size and the appearance, maybe a nodule",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion is on the ear. Let's look at the morphology: it's a raised, well-defined area. The lesion appears to be a nodule or a papule, but given the size and the appearance, maybe a nodule",
+      "status": "success"
+    },
+    {
+      "id": 625,
+      "file_name": "625.png",
+      "image_path": "SkinCAP\\skincap\\625.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion: it's a small, raised area. Let's check the morphology. The lesion appears to be a papule because it's a small, solid, elevated lesion (less than 0.5 cm, but the ruler might help",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion: it's a small, raised area. Let's check the morphology. The lesion appears to be a papule because it's a small, solid, elevated lesion (less than 0.5 cm, but the ruler might help",
+      "status": "success"
+    },
+    {
+      "id": 644,
+      "file_name": "644.png",
+      "image_path": "SkinCAP\\skincap\\644.png",
+      "ground_truth": "melanocytic nevi",
+      "disease_group": "2. Benign Tumors, Nevi & Cysts",
+      "predicted_raw": "*Lesion Morphology**: The lesion appears to be a papule. A papule is a small, solid,",
+      "predicted": "*Lesion Morphology**: The lesion appears to be a papule. A papule is a small, solid,",
+      "status": "success"
+    },
+    {
+      "id": 655,
+      "file_name": "655.png",
+      "image_path": "SkinCAP\\skincap\\655.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion morphology. The image shows a large, raised area on the skin. It's not a flat spot (so not macule), and it's elevated but not a small bump (papule) or a solid mass (nodule",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion morphology. The image shows a large, raised area on the skin. It's not a flat spot (so not macule), and it's elevated but not a small bump (papule) or a solid mass (nodule",
+      "status": "success"
+    },
+    {
+      "id": 704,
+      "file_name": "704.png",
+      "image_path": "SkinCAP\\skincap\\704.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions look like small, discrete, raised bumps. They're not large plaques or nodules",
+      "predicted": "*Lesion Morphology**: The lesions look like small, discrete, raised bumps. They're not large plaques or nodules",
+      "status": "success"
+    },
+    {
+      "id": 731,
+      "file_name": "731.png",
+      "image_path": "SkinCAP\\skincap\\731.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Starting with lesion morphology: The lesion appears to be a small, raised bump on the eyelid. It's a papule",
+      "predicted": "Starting with lesion morphology: The lesion appears to be a small, raised bump on the eyelid. It's a papule",
+      "status": "success"
+    },
+    {
+      "id": 771,
+      "file_name": "771.png",
+      "image_path": "SkinCAP\\skincap\\771.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Starting with Image A: It shows two hands. The left hand",
+      "predicted": "Starting with Image A: It shows two hands. The left hand",
+      "status": "success"
+    },
+    {
+      "id": 778,
+      "file_name": "778.png",
+      "image_path": "SkinCAP\\skincap\\778.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows multiple small, raised bumps on the skin. They look like papules because they're discrete, solid, elevated lesions. Now, color: the lesions are a bit pinkish or light",
+      "predicted": "So, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows multiple small, raised bumps on the skin. They look like papules because they're discrete, solid, elevated lesions. Now, color: the lesions are a bit pinkish or light",
+      "status": "success"
+    },
+    {
+      "id": 820,
+      "file_name": "820.png",
+      "image_path": "SkinCAP\\skincap\\820.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions look like raised, rough areas. They're not flat (so not macules),",
+      "predicted": "*Lesion Morphology**: The lesions look like raised, rough areas. They're not flat (so not macules),",
+      "status": "success"
+    },
+    {
+      "id": 884,
+      "file_name": "884.png",
+      "image_path": "SkinCAP\\skincap\\884.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions look like small, raised, solid bumps. They're not flat (so not macules)",
+      "predicted": "*Lesion Morphology**: The lesions look like small, raised, solid bumps. They're not flat (so not macules)",
+      "status": "success"
+    },
+    {
+      "id": 904,
+      "file_name": "904.png",
+      "image_path": "SkinCAP\\skincap\\904.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "*Lesion Morphology**: The lesion appears to be a nodule or a papule. Wait, the top",
+      "predicted": "*Lesion Morphology**: The lesion appears to be a nodule or a papule. Wait, the top",
+      "status": "success"
+    },
+    {
+      "id": 1005,
+      "file_name": "1005.png",
+      "image_path": "SkinCAP\\skincap\\1005.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the image shows a close-up of the forehead area. Let's look at the lesion morphology. The affected area appears to be a flat, red patch without raised edges, so that's a macule. Macules are flat, non-pal",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the image shows a close-up of the forehead area. Let's look at the lesion morphology. The affected area appears to be a flat, red patch without raised edges, so that's a macule. Macules are flat, non-pal",
+      "status": "success"
+    },
+    {
+      "id": 1006,
+      "file_name": "1006.png",
+      "image_path": "SkinCAP\\skincap\\1006.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions appear to be raised, flat-topped, and somewhat",
+      "predicted": "*Lesion Morphology**: The lesions appear to be raised, flat-topped, and somewhat",
+      "status": "success"
+    },
+    {
+      "id": 1069,
+      "file_name": "1069.png",
+      "image_path": "SkinCAP\\skincap\\1069.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the patient's neck and lower face are visible. Let's look at the lesion morphology. The area on the neck has a red, diffuse rash. It doesn't look like a papule (small solid bump), plaque (flat, raised),",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the patient's neck and lower face are visible. Let's look at the lesion morphology. The area on the neck has a red, diffuse rash. It doesn't look like a papule (small solid bump), plaque (flat, raised),",
+      "status": "success"
+    },
+    {
+      "id": 1111,
+      "file_name": "1111.png",
+      "image_path": "SkinCAP\\skincap\\1111.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Starting with lesion morphology: The affected areas on the nails look like they have thickened, discolored areas. The nail plates are not smooth",
+      "predicted": "Starting with lesion morphology: The affected areas on the nails look like they have thickened, discolored areas. The nail plates are not smooth",
+      "status": "success"
+    },
+    {
+      "id": 1133,
+      "file_name": "1133.png",
+      "image_path": "SkinCAP\\skincap\\1133.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "*Lesion Morphology**: The lesions are small, discrete, elevated, and round",
+      "predicted": "*Lesion Morphology**: The lesions are small, discrete, elevated, and round",
+      "status": "success"
+    },
+    {
+      "id": 1145,
+      "file_name": "1145.png",
+      "image_path": "SkinCAP\\skincap\\1145.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion is on the cheek area, near the eye. Let's check the morphology: it's a large, flat, red area. Wait, macule is a flat, non-palpable lesion, plaque is raised but flat,",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion is on the cheek area, near the eye. Let's check the morphology: it's a large, flat, red area. Wait, macule is a flat, non-palpable lesion, plaque is raised but flat,",
+      "status": "success"
+    },
+    {
+      "id": 1207,
+      "file_name": "1207.png",
+      "image_path": "SkinCAP\\skincap\\1207.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Got it, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows multiple small, raised lesions on the face, especially around the eyes and cheeks. They look like papules—small, solid, elevated lesions. Now, color: the lesions are",
+      "predicted": "Got it, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows multiple small, raised lesions on the face, especially around the eyes and cheeks. They look like papules—small, solid, elevated lesions. Now, color: the lesions are",
+      "status": "success"
+    },
+    {
+      "id": 1225,
+      "file_name": "1225.png",
+      "image_path": "SkinCAP\\skincap\\1225.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion morphology: the area is a raised, red, well-demarcated patch. It looks like a plaque because it's a flat-topped, elevated lesion. The color is red, which is typical for inflammatory conditions. Now, check",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion morphology: the area is a raised, red, well-demarcated patch. It looks like a plaque because it's a flat-topped, elevated lesion. The color is red, which is typical for inflammatory conditions. Now, check",
+      "status": "success"
+    },
+    {
+      "id": 1226,
+      "file_name": "1226.png",
+      "image_path": "SkinCAP\\skincap\\1226.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion morphology: it's a small, raised, solid lesion. Papules are small, solid, elevated lesions, usually less than 0.5 cm. Plaques are larger, flat-topped, and more than 0",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion morphology: it's a small, raised, solid lesion. Papules are small, solid, elevated lesions, usually less than 0.5 cm. Plaques are larger, flat-topped, and more than 0",
+      "status": "success"
+    },
+    {
+      "id": 1285,
+      "file_name": "1285.png",
+      "image_path": "SkinCAP\\skincap\\1285.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions appear to be large, flat, and spread over a significant area. They look like plaques because they",
+      "predicted": "*Lesion Morphology**: The lesions appear to be large, flat, and spread over a significant area. They look like plaques because they",
+      "status": "success"
+    },
+    {
+      "id": 1345,
+      "file_name": "1345.png",
+      "image_path": "SkinCAP\\skincap\\1345.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Next, color: the lesions",
+      "predicted": "Next, color: the lesions",
+      "status": "success"
+    },
+    {
+      "id": 1362,
+      "file_name": "1362.png",
+      "image_path": "SkinCAP\\skincap\\1362.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions here are raised, flat-topped, and",
+      "predicted": "*Lesion Morphology**: The lesions here are raised, flat-topped, and",
+      "status": "success"
+    },
+    {
+      "id": 1402,
+      "file_name": "1402.png",
+      "image_path": "SkinCAP\\skincap\\1402.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "*Lesion Morphology**: The lesions look like small, discrete, elevated bumps. They're not large plaques or nodules",
+      "predicted": "*Lesion Morphology**: The lesions look like small, discrete, elevated bumps. They're not large plaques or nodules",
+      "status": "success"
+    },
+    {
+      "id": 1462,
+      "file_name": "1462.png",
+      "image_path": "SkinCAP\\skincap\\1462.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The affected area looks like a raised, rough patch. It's not a flat macule, but",
+      "predicted": "*Lesion Morphology**: The affected area looks like a raised, rough patch. It's not a flat macule, but",
+      "status": "success"
+    },
+    {
+      "id": 1537,
+      "file_name": "1537.png",
+      "image_path": "SkinCAP\\skincap\\1537.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "Got it, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows small, raised bumps on the skin. Let's recall the definitions: papules are small, solid, elevated lesions (usually <5mm), plaques are larger, flat-t",
+      "predicted": "Got it, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows small, raised bumps on the skin. Let's recall the definitions: papules are small, solid, elevated lesions (usually <5mm), plaques are larger, flat-t",
+      "status": "success"
+    },
+    {
+      "id": 1577,
+      "file_name": "1577.png",
+      "image_path": "SkinCAP\\skincap\\1577.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion morphology. The image shows a raised, rough area with multiple small bumps (papules) and a larger, irregularly shaped lesion. The central part looks like a plaque, which is a raised, flat-topped lesion. But",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion morphology. The image shows a raised, rough area with multiple small bumps (papules) and a larger, irregularly shaped lesion. The central part looks like a plaque, which is a raised, flat-topped lesion. But",
+      "status": "success"
+    },
+    {
+      "id": 1627,
+      "file_name": "1627.png",
+      "image_path": "SkinCAP\\skincap\\1627.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions are raised, dome-shaped, and have a central umb",
+      "predicted": "*Lesion Morphology**: The lesions are raised, dome-shaped, and have a central umb",
+      "status": "success"
+    },
+    {
+      "id": 1638,
+      "file_name": "1638.png",
+      "image_path": "SkinCAP\\skincap\\1638.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion is on the skin, probably the arm or leg. Let's look at the morphology: it's a raised, well-defined area. The size seems small, maybe a papule or nodule. Wait, the lesion has a central",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion is on the skin, probably the arm or leg. Let's look at the morphology: it's a raised, well-defined area. The size seems small, maybe a papule or nodule. Wait, the lesion has a central",
+      "status": "success"
+    },
+    {
+      "id": 1691,
+      "file_name": "1691.png",
+      "image_path": "SkinCAP\\skincap\\1691.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows multiple small, red spots. Let's recall the definitions: macule is a flat, non-palpable spot; papule is a small, solid, raised lesion; plaque",
+      "predicted": "So, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows multiple small, red spots. Let's recall the definitions: macule is a flat, non-palpable spot; papule is a small, solid, raised lesion; plaque",
+      "status": "success"
+    },
+    {
+      "id": 1723,
+      "file_name": "1723.png",
+      "image_path": "SkinCAP\\skincap\\1723.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Starting with lesion morphology: The affected areas on the nails—there's a white or yellowish discoloration, which might be a",
+      "predicted": "Starting with lesion morphology: The affected areas on the nails—there's a white or yellowish discoloration, which might be a",
+      "status": "success"
+    },
+    {
+      "id": 1767,
+      "file_name": "1767.png",
+      "image_path": "SkinCAP\\skincap\\1767.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows a leg with multiple small, raised areas. Let's check if they're papules (small, solid, elevated lesions), plaques (flat, raised, larger), macules (",
+      "predicted": "So, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows a leg with multiple small, raised areas. Let's check if they're papules (small, solid, elevated lesions), plaques (flat, raised, larger), macules (",
+      "status": "success"
+    },
+    {
+      "id": 1772,
+      "file_name": "1772.png",
+      "image_path": "SkinCAP\\skincap\\1772.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions are raised",
+      "predicted": "*Lesion Morphology**: The lesions are raised",
+      "status": "success"
+    },
+    {
+      "id": 1820,
+      "file_name": "1820.png",
+      "image_path": "SkinCAP\\skincap\\1820.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions are small,",
+      "predicted": "*Lesion Morphology**: The lesions are small,",
+      "status": "success"
+    },
+    {
+      "id": 1831,
+      "file_name": "1831.png",
+      "image_path": "SkinCAP\\skincap\\1831.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions look like small, raised bumps. They're scattered across the face, especially on the cheeks and nose",
+      "predicted": "*Lesion Morphology**: The lesions look like small, raised bumps. They're scattered across the face, especially on the cheeks and nose",
+      "status": "success"
+    },
+    {
+      "id": 1960,
+      "file_name": "1960.png",
+      "image_path": "SkinCAP\\skincap\\1960.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The affected area is on the nail plate. The nail has a white or pale disc",
+      "predicted": "*Lesion Morphology**: The affected area is on the nail plate. The nail has a white or pale disc",
+      "status": "success"
+    },
+    {
+      "id": 2012,
+      "file_name": "2012.png",
+      "image_path": "SkinCAP\\skincap\\2012.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Lesion morphology: The lesion appears to be a plaque. Plaques are raised, flat-topped lesions that are larger than papules. The area on the ear has a thick",
+      "predicted": "Lesion morphology: The lesion appears to be a plaque. Plaques are raised, flat-topped lesions that are larger than papules. The area on the ear has a thick",
+      "status": "success"
+    },
+    {
+      "id": 2257,
+      "file_name": "2257.png",
+      "image_path": "SkinCAP\\skincap\\2257.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion is on the scalp with hair around it. Let's look at the morphology: the lesion appears to be a raised, well-demarcated area. It's a papule or maybe a plaque? Wait, the lesion is pinkish",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion is on the scalp with hair around it. Let's look at the morphology: the lesion appears to be a raised, well-demarcated area. It's a papule or maybe a plaque? Wait, the lesion is pinkish",
+      "status": "success"
+    },
+    {
+      "id": 2271,
+      "file_name": "2271.png",
+      "image_path": "SkinCAP\\skincap\\2271.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The skin has a raised, well-defined area on the chest. It looks like a plaque—flat",
+      "predicted": "*Lesion Morphology**: The skin has a raised, well-defined area on the chest. It looks like a plaque—flat",
+      "status": "success"
+    },
+    {
+      "id": 2276,
+      "file_name": "2276.png",
+      "image_path": "SkinCAP\\skincap\\2276.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions are flat, non-p",
+      "predicted": "*Lesion Morphology**: The lesions are flat, non-p",
+      "status": "success"
+    },
+    {
+      "id": 2458,
+      "file_name": "2458.png",
+      "image_path": "SkinCAP\\skincap\\2458.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion morphology. The image shows a red, raised area. Let's recall the definitions: papule is a small, solid, raised lesion <0.5 cm; plaque is a larger, flat-topped, raised lesion. Here,",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion morphology. The image shows a red, raised area. Let's recall the definitions: papule is a small, solid, raised lesion <0.5 cm; plaque is a larger, flat-topped, raised lesion. Here,",
+      "status": "success"
+    },
+    {
+      "id": 2509,
+      "file_name": "2509.png",
+      "image_path": "SkinCAP\\skincap\\2509.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "*Lesion Morphology**: The lesions are small, discrete, raised bumps. They look like papules (small",
+      "predicted": "*Lesion Morphology**: The lesions are small, discrete, raised bumps. They look like papules (small",
+      "status": "success"
+    },
+    {
+      "id": 2570,
+      "file_name": "2570.png",
+      "image_path": "SkinCAP\\skincap\\2570.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The image shows multiple areas of erythema (redness) with some lighter patches",
+      "predicted": "*Lesion Morphology**: The image shows multiple areas of erythema (redness) with some lighter patches",
+      "status": "success"
+    },
+    {
+      "id": 2579,
+      "file_name": "2579.png",
+      "image_path": "SkinCAP\\skincap\\2579.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions appear as thickened, raised areas on the skin, especially on the fingers. They",
+      "predicted": "*Lesion Morphology**: The lesions appear as thickened, raised areas on the skin, especially on the fingers. They",
+      "status": "success"
+    },
+    {
+      "id": 2611,
+      "file_name": "2611.png",
+      "image_path": "SkinCAP\\skincap\\2611.png",
+      "ground_truth": "photodermatoses",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesion appears to be a raised, solid area. It's not flat (so not",
+      "predicted": "*Lesion Morphology**: The lesion appears to be a raised, solid area. It's not flat (so not",
+      "status": "success"
+    },
+    {
+      "id": 2642,
+      "file_name": "2642.png",
+      "image_path": "SkinCAP\\skincap\\2642.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows several small, raised, red lesions on the skin. Let's recall the definitions: papules are small, solid, raised lesions (usually <5mm), plaques are larger,",
+      "predicted": "So, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows several small, raised, red lesions on the skin. Let's recall the definitions: papules are small, solid, raised lesions (usually <5mm), plaques are larger,",
+      "status": "success"
+    },
+    {
+      "id": 2664,
+      "file_name": "2664.png",
+      "image_path": "SkinCAP\\skincap\\2664.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions look like plaques or maybe papules, but they're",
+      "predicted": "*Lesion Morphology**: The lesions look like plaques or maybe papules, but they're",
+      "status": "success"
+    },
+    {
+      "id": 2687,
+      "file_name": "2687.png",
+      "image_path": "SkinCAP\\skincap\\2687.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The main area is a large,",
+      "predicted": "*Lesion Morphology**: The main area is a large,",
+      "status": "success"
+    },
+    {
+      "id": 2709,
+      "file_name": "2709.png",
+      "image_path": "SkinCAP\\skincap\\2709.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion morphology: it's a raised, solid bump on the skin, which is a papule. Papules are small, solid, elevated lesions less than 0.5 cm in diameter. Now, color: the lesion is red,",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion morphology: it's a raised, solid bump on the skin, which is a papule. Papules are small, solid, elevated lesions less than 0.5 cm in diameter. Now, color: the lesion is red,",
+      "status": "success"
+    },
+    {
+      "id": 2716,
+      "file_name": "2716.png",
+      "image_path": "SkinCAP\\skincap\\2716.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows raised, thickened areas on the skin. Papules are small, solid elevations, but these look larger. Plaques are flat-topped, raised lesions, but these seem",
+      "predicted": "So, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows raised, thickened areas on the skin. Papules are small, solid elevations, but these look larger. Plaques are flat-topped, raised lesions, but these seem",
+      "status": "success"
+    },
+    {
+      "id": 2726,
+      "file_name": "2726.png",
+      "image_path": "SkinCAP\\skincap\\2726.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion is on the palm of a hand. Let's look at the morphology: it's a raised, well-defined area. The size seems small, maybe a papule or nodule. Now color: the lesion has a yellowish,",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion is on the palm of a hand. Let's look at the morphology: it's a raised, well-defined area. The size seems small, maybe a papule or nodule. Now color: the lesion has a yellowish,",
+      "status": "success"
+    },
+    {
+      "id": 2770,
+      "file_name": "2770.png",
+      "image_path": "SkinCAP\\skincap\\2770.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion's morphology. The image shows a raised, somewhat irregular area on the skin. It looks like a plaque because it's a flat-topped, elevated lesion. Now, color: the lesion has a pinkish-red hue with some darker",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion's morphology. The image shows a raised, somewhat irregular area on the skin. It looks like a plaque because it's a flat-topped, elevated lesion. Now, color: the lesion has a pinkish-red hue with some darker",
+      "status": "success"
+    },
+    {
+      "id": 2776,
+      "file_name": "2776.png",
+      "image_path": "SkinCAP\\skincap\\2776.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesion appears to be a papule or plaque. Papules are solid, raised lesions <0",
+      "predicted": "*Lesion Morphology**: The lesion appears to be a papule or plaque. Papules are solid, raised lesions <0",
+      "status": "success"
+    },
+    {
+      "id": 2832,
+      "file_name": "2832.png",
+      "image_path": "SkinCAP\\skincap\\2832.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Next, color",
+      "predicted": "Next, color",
+      "status": "success"
+    },
+    {
+      "id": 2882,
+      "file_name": "2882.png",
+      "image_path": "SkinCAP\\skincap\\2882.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Starting with morphology: The lesion appears to be a nodule. A nodule is a solid, raised lesion that",
+      "predicted": "Starting with morphology: The lesion appears to be a nodule. A nodule is a solid, raised lesion that",
+      "status": "success"
+    },
+    {
+      "id": 2928,
+      "file_name": "2928.png",
+      "image_path": "SkinCAP\\skincap\\2928.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows multiple small, raised bumps on the skin. Let's recall the definitions: papules are small, solid, raised lesions (usually <5mm), plaques are larger, flat-t",
+      "predicted": "So, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows multiple small, raised bumps on the skin. Let's recall the definitions: papules are small, solid, raised lesions (usually <5mm), plaques are larger, flat-t",
+      "status": "success"
+    },
+    {
+      "id": 2939,
+      "file_name": "2939.png",
+      "image_path": "SkinCAP\\skincap\\2939.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesion appears to be a plaque. Plaques are elevated, flat",
+      "predicted": "*Lesion Morphology**: The lesion appears to be a plaque. Plaques are elevated, flat",
+      "status": "success"
+    },
+    {
+      "id": 2966,
+      "file_name": "2966.png",
+      "image_path": "SkinCAP\\skincap\\2966.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Lesion morphology: The lesion appears to be a plaque or a nodule? Wait, plaques are flat,",
+      "predicted": "Lesion morphology: The lesion appears to be a plaque or a nodule? Wait, plaques are flat,",
+      "status": "success"
+    },
+    {
+      "id": 3001,
+      "file_name": "3001.png",
+      "image_path": "SkinCAP\\skincap\\3001.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions look like plaques or maybe thickened areas. Plaques are elevated, flat-topped lesions, which these seem",
+      "predicted": "*Lesion Morphology**: The lesions look like plaques or maybe thickened areas. Plaques are elevated, flat-topped lesions, which these seem",
+      "status": "success"
+    },
+    {
+      "id": 3091,
+      "file_name": "3091.png",
+      "image_path": "SkinCAP\\skincap\\3091.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, look at the lesions. They're on the scalp, so that's a key area. The lesions appear as small, raised bumps. Let's check morphology: papules are small, solid, raised lesions. Plaques are larger, flat",
+      "predicted": "So, let's analyze this dermatological image step by step. First, look at the lesions. They're on the scalp, so that's a key area. The lesions appear as small, raised bumps. Let's check morphology: papules are small, solid, raised lesions. Plaques are larger, flat",
+      "status": "success"
+    },
+    {
+      "id": 3107,
+      "file_name": "3107.png",
+      "image_path": "SkinCAP\\skincap\\3107.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Got it, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows multiple raised, rough areas on the skin. They look like papules or plaques. Papules are small, solid elevations, while plaques are larger, flat-topped",
+      "predicted": "Got it, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows multiple raised, rough areas on the skin. They look like papules or plaques. Papules are small, solid elevations, while plaques are larger, flat-topped",
+      "status": "success"
+    },
+    {
+      "id": 3201,
+      "file_name": "3201.png",
+      "image_path": "SkinCAP\\skincap\\3201.png",
+      "ground_truth": "sarcoidosis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, look at the lesion morphology. The image shows a large area of redness on the skin, which appears to be a plaque—since it's a raised, flat-topped lesion. Wait, but maybe it's a macule? No,",
+      "predicted": "So, let's analyze this dermatological image step by step. First, look at the lesion morphology. The image shows a large area of redness on the skin, which appears to be a plaque—since it's a raised, flat-topped lesion. Wait, but maybe it's a macule? No,",
+      "status": "success"
+    },
+    {
+      "id": 3247,
+      "file_name": "3247.png",
+      "image_path": "SkinCAP\\skincap\\3247.png",
+      "ground_truth": "acne vulgaris",
+      "disease_group": "4. Acne & Follicular Disorders",
+      "predicted_raw": "*Lesion Morphology**: The lesions are small, discrete,",
+      "predicted": "*Lesion Morphology**: The lesions are small, discrete,",
+      "status": "success"
+    },
+    {
+      "id": 3253,
+      "file_name": "3253.png",
+      "image_path": "SkinCAP\\skincap\\3253.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions are flat, elevated, or slightly raised? Wait, they look",
+      "predicted": "*Lesion Morphology**: The lesions are flat, elevated, or slightly raised? Wait, they look",
+      "status": "success"
+    },
+    {
+      "id": 3279,
+      "file_name": "3279.png",
+      "image_path": "SkinCAP\\skincap\\3279.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, look at the lesions. The skin has multiple small, raised bumps. They seem to be papules—small, solid, elevated lesions. Now, color: the lesions are pinkish or reddish, which is common in inflammatory conditions. There",
+      "predicted": "So, let's analyze this dermatological image step by step. First, look at the lesions. The skin has multiple small, raised bumps. They seem to be papules—small, solid, elevated lesions. Now, color: the lesions are pinkish or reddish, which is common in inflammatory conditions. There",
+      "status": "success"
+    },
+    {
+      "id": 3280,
+      "file_name": "3280.png",
+      "image_path": "SkinCAP\\skincap\\3280.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions look like small, flat, well-demarcated spots. They're not",
+      "predicted": "*Lesion Morphology**: The lesions look like small, flat, well-demarcated spots. They're not",
+      "status": "success"
+    },
+    {
+      "id": 3354,
+      "file_name": "3354.png",
+      "image_path": "SkinCAP\\skincap\\3354.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Got it, let's analyze this dermatological image step by step. First, the lesion is on the nose. Let's look at the morphology: it's a large, raised, irregular growth. The description mentions papule, plaque, nodule, etc. A nodule is a solid, raised lesion deeper than",
+      "predicted": "Got it, let's analyze this dermatological image step by step. First, the lesion is on the nose. Let's look at the morphology: it's a large, raised, irregular growth. The description mentions papule, plaque, nodule, etc. A nodule is a solid, raised lesion deeper than",
+      "status": "success"
+    },
+    {
+      "id": 3377,
+      "file_name": "3377.png",
+      "image_path": "SkinCAP\\skincap\\3377.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows numerous small, red spots on the skin. Let's recall the definitions: macules are flat, non-palpable lesions; papules are small, solid, raised lesions;",
+      "predicted": "So, let's analyze this dermatological image step by step. First, I need to look at the lesion morphology. The image shows numerous small, red spots on the skin. Let's recall the definitions: macules are flat, non-palpable lesions; papules are small, solid, raised lesions;",
+      "status": "success"
+    },
+    {
+      "id": 3487,
+      "file_name": "3487.png",
+      "image_path": "SkinCAP\\skincap\\3487.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Starting with lesion morphology. The image has a small, flat,",
+      "predicted": "Starting with lesion morphology. The image has a small, flat,",
+      "status": "success"
+    },
+    {
+      "id": 3606,
+      "file_name": "3606.png",
+      "image_path": "SkinCAP\\skincap\\3606.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "*Lesion Morphology**: The lesion appears as a small, elevated bump. It's a papule because it's a",
+      "predicted": "*Lesion Morphology**: The lesion appears as a small, elevated bump. It's a papule because it's a",
+      "status": "success"
+    },
+    {
+      "id": 3614,
+      "file_name": "3614.png",
+      "image_path": "SkinCAP\\skincap\\3614.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "*Lesion Morphology**: The lesion appears to be a papule. Papules are small, solid, raised lesions (usually <5",
+      "predicted": "*Lesion Morphology**: The lesion appears to be a papule. Papules are small, solid, raised lesions (usually <5",
+      "status": "success"
+    },
+    {
+      "id": 3651,
+      "file_name": "3651.png",
+      "image_path": "SkinCAP\\skincap\\3651.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions are raised, with a rough surface. They look like pap",
+      "predicted": "*Lesion Morphology**: The lesions are raised, with a rough surface. They look like pap",
+      "status": "success"
+    },
+    {
+      "id": 3676,
+      "file_name": "3676.png",
+      "image_path": "SkinCAP\\skincap\\3676.png",
+      "ground_truth": "lupus erythematosus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, look at the lesions. The image shows numerous small, raised bumps on the skin. Let's identify the morphology: papules are small, solid, raised lesions. These look like papules. Now color: the lesions are brownish, maybe",
+      "predicted": "So, let's analyze this dermatological image step by step. First, look at the lesions. The image shows numerous small, raised bumps on the skin. Let's identify the morphology: papules are small, solid, raised lesions. These look like papules. Now color: the lesions are brownish, maybe",
+      "status": "success"
+    },
+    {
+      "id": 3707,
+      "file_name": "3707.png",
+      "image_path": "SkinCAP\\skincap\\3707.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions are small, discrete, and raised",
+      "predicted": "*Lesion Morphology**: The lesions are small, discrete, and raised",
+      "status": "success"
+    },
+    {
+      "id": 3735,
+      "file_name": "3735.png",
+      "image_path": "SkinCAP\\skincap\\3735.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "*Lesion Morphology**: The lesion looks like a raised, solid growth. It's not flat (so not a macule),",
+      "predicted": "*Lesion Morphology**: The lesion looks like a raised, solid growth. It's not flat (so not a macule),",
+      "status": "success"
+    },
+    {
+      "id": 3751,
+      "file_name": "3751.png",
+      "image_path": "SkinCAP\\skincap\\3751.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "*Lesion Morphology**: The lesion looks like a raised, rounded growth. It's a nodule because it's elevated",
+      "predicted": "*Lesion Morphology**: The lesion looks like a raised, rounded growth. It's a nodule because it's elevated",
+      "status": "success"
+    },
+    {
+      "id": 3789,
+      "file_name": "3789.png",
+      "image_path": "SkinCAP\\skincap\\3789.png",
+      "ground_truth": "psoriasis",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion morphology. The image shows a large area with multiple small, raised bumps. Papules are small, solid, raised lesions, and here we see numerous tiny papules clustered together. The color is a pinkish-red, which is typical",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion morphology. The image shows a large area with multiple small, raised bumps. Papules are small, solid, raised lesions, and here we see numerous tiny papules clustered together. The color is a pinkish-red, which is typical",
+      "status": "success"
+    },
+    {
+      "id": 3799,
+      "file_name": "3799.png",
+      "image_path": "SkinCAP\\skincap\\3799.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion Morphology**: The lesions look like small, raised bumps. They might be papules",
+      "predicted": "*Lesion Morphology**: The lesions look like small, raised bumps. They might be papules",
+      "status": "success"
+    },
+    {
+      "id": 3802,
+      "file_name": "3802.png",
+      "image_path": "SkinCAP\\skincap\\3802.png",
+      "ground_truth": "basal cell carcinoma",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion morphology: the image shows a small, raised, solid lesion. Papules are small, solid, elevated lesions, usually less than 0.5 cm. Plaques are larger, flat-topped, and more diffuse. Mac",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion morphology: the image shows a small, raised, solid lesion. Papules are small, solid, elevated lesions, usually less than 0.5 cm. Plaques are larger, flat-topped, and more diffuse. Mac",
+      "status": "success"
+    },
+    {
+      "id": 3836,
+      "file_name": "3836.png",
+      "image_path": "SkinCAP\\skincap\\3836.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "Got it, let's analyze this dermatological image step by step. First, the patient's nose is the focus. Let's look at the lesion morphology. The nose has a prominent red, raised area. It's a nodule or a papule? Wait, the redness is on the nasal skin. The",
+      "predicted": "Got it, let's analyze this dermatological image step by step. First, the patient's nose is the focus. Let's look at the lesion morphology. The nose has a prominent red, raised area. It's a nodule or a papule? Wait, the redness is on the nasal skin. The",
+      "status": "success"
+    },
+    {
+      "id": 3878,
+      "file_name": "3878.png",
+      "image_path": "SkinCAP\\skincap\\3878.png",
+      "ground_truth": "squamous cell carcinoma in situ",
+      "disease_group": "3. Malignant Skin Tumors",
+      "predicted_raw": "Morphology: The lesion appears to be a plaque or a nodule? Wait, plaques are raised,",
+      "predicted": "Morphology: The lesion appears to be a plaque or a nodule? Wait, plaques are raised,",
+      "status": "success"
+    },
+    {
+      "id": 3889,
+      "file_name": "3889.png",
+      "image_path": "SkinCAP\\skincap\\3889.png",
+      "ground_truth": "scleroderma",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, look at the lesion morphology. The image shows a large area on the thigh with multiple dark spots. The lesions appear to be flat or slightly elevated, but they're not raised like nodules. They look like macules or maybe plaques",
+      "predicted": "So, let's analyze this dermatological image step by step. First, look at the lesion morphology. The image shows a large area on the thigh with multiple dark spots. The lesions appear to be flat or slightly elevated, but they're not raised like nodules. They look like macules or maybe plaques",
+      "status": "success"
+    },
+    {
+      "id": 3966,
+      "file_name": "3966.png",
+      "image_path": "SkinCAP\\skincap\\3966.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "*Lesion morphology**: The lesion here appears to be a linear, slightly raised area. It's not a papule (small",
+      "predicted": "*Lesion morphology**: The lesion here appears to be a linear, slightly raised area. It's not a papule (small",
+      "status": "success"
+    },
+    {
+      "id": 3980,
+      "file_name": "3980.png",
+      "image_path": "SkinCAP\\skincap\\3980.png",
+      "ground_truth": "lichen planus",
+      "disease_group": "1. Inflammatory & Autoimmune Diseases",
+      "predicted_raw": "So, let's analyze this dermatological image step by step. First, the lesion is on the eyelid area. Let's look at the morphology: it's a raised, solid lesion. The size seems small, maybe a papule. Now color: the lesion is red, with some pinkish hues, so",
+      "predicted": "So, let's analyze this dermatological image step by step. First, the lesion is on the eyelid area. Let's look at the morphology: it's a raised, solid lesion. The size seems small, maybe a papule. Now color: the lesion is red, with some pinkish hues, so",
+      "status": "success"
+    }
+  ]
+}

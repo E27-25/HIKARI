@@ -7,7 +7,7 @@
 <br/>
 
 <!-- Typing animation -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=800&color=FF9EBC&center=true&vCenter=true&width=750&lines=HIKARI+%F0%9F%8C%B8;RAG-in-Training+%C3%97+Vision-Language+Model;85.86%25+Skin+Disease+Classification;Qwen3-VL-8B+%C3%97+SkinCAP+%C3%97+Hybrid+RAG;ITC-CSCC+2025" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=800&color=FF9EBC&center=true&vCenter=true&width=800&lines=HIKARI+%F0%9F%8C%B8;RAG-in-Training+Pipeline;Vision-Language+Model+Fine-Tuning;3-Stage+Training+Architecture;Hybrid+Retrieval-Augmented+Generation;Qwen3-VL-8B+%C3%97+SkinCAP+%C3%97+LoRA;ITC-CSCC+2025" alt="Typing SVG" />
 
 <br/><br/>
 
@@ -50,7 +50,7 @@ HIKARI introduces **RAG-in-Training** — instead of using retrieval only at inf
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=2500&pause=600&color=4ADE80&center=true&vCenter=true&width=600&lines=85.86%25+Overall+Accuracy;5+Diseases+at+100%25+Sensitivity;%2B6.06%25+over+previous+best+(79.80%25);MCC%3A+0.843+%C2%B7+Kappa%3A+0.842" alt="Results" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=2500&pause=600&color=4ADE80&center=true&vCenter=true&width=700&lines=FuzzyTopK+Label+Consolidation;Stratified+Train%2FVal+Split+%C2%B7+Sqrt+Oversampling;SigLIP-2+%2B+BGE-M3+%E2%86%92+RAG+Training+Index;CLIP+ViT-B%2F32+%E2%86%92+Inference+Retrieval;LoRA+rank%3D16+%C2%B7+4-bit+NF4+%C2%B7+AdamW+8-bit;Merged-Init+%E2%86%92+Stage+3+Caption+Training" alt="Techniques" />
 
 </div>
 
@@ -341,7 +341,7 @@ HIKARI/
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=13&duration=4000&pause=500&color=AAAAAA&center=true&vCenter=true&width=650&lines=Validated+on+99-sample+locked+val+set+%E2%80%94+0+OOM+errors;RTX+5070+Ti+%C2%B7+Qwen3-VL-8B-Thinking+%C2%B7+SkinCAP+4%2C000+images;ITC-CSCC+2025+%C2%B7+RAG-in-Training+%C2%B7+Merged-Init+%C2%B7+STS" alt="footer" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=13&duration=4000&pause=500&color=AAAAAA&center=true&vCenter=true&width=700&lines=Qwen3-VL-8B-Thinking+%C2%B7+Unsloth+%C2%B7+SkinCAP;SigLIP-2+%2B+BGE-M3+(train)+%C2%B7+CLIP+(inference);RAG-in-Training+%C2%B7+Merged-Init+%C2%B7+STS+%C2%B7+IBR;3-Stage+Pipeline+%C2%B7+LoRA+%C2%B7+4-bit+NF4+%C2%B7+RTX+5070+Ti;ITC-CSCC+2025" alt="footer" />
 
 <br/>
 

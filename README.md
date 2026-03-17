@@ -290,13 +290,15 @@ HIKARI/
 
 <br/>
 
-```
 ✿ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✿
-                     🌸 HIKARI Project 🌸
-         Healthcare-oriented Intelligent Knowledge-Augmented
-                  Retrieval and Inference system
+
+🌸 **HIKARI Project** 🌸
+
+**光 · ヒカリ**
+
+*Healthcare-oriented Intelligent Knowledge-Augmented Retrieval and Inference system*
+
 ✿ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✿
-```
 
 <sub>Made with 💗 and 🌸</sub>
 

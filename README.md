@@ -12,15 +12,17 @@
 ✿ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✿
 ```
 
-### 🌸 *A Three-Stage Vision-Language Model for Multilingual Oral Lesion Diagnosis with Retrieval-Augmented Visual Grounding and Evidence-Based Clinical Recommendations* 🌸
+### 🌸 *A RAG-in-Training Vision-Language Model for Fine-Grained Skin Lesion Diagnosis with Retrieval-Augmented Generation and Evidence-Based Clinical Recommendations* 🌸
 
 <br/>
 
 <!-- ✿ Badges ✿ -->
 ![Python](https://img.shields.io/badge/Python-3.10+-FFB7C5?style=for-the-badge&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-FADADD?style=for-the-badge&logo=pytorch&logoColor=white)
+[![Accuracy](https://img.shields.io/badge/Accuracy-85.86%25-brightgreen?style=for-the-badge)](Model/README.md)
+[![Model](https://img.shields.io/badge/Backbone-Qwen3--VL--8B-blue?style=for-the-badge)](https://huggingface.co/Qwen/Qwen3-VL-8B-Thinking)
 ![License](https://img.shields.io/badge/License-MIT-FFE4E9?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-In%20Development-F8C8DC?style=for-the-badge)
+[![Paper](https://img.shields.io/badge/Paper-ITC--CSCC_2025-red?style=for-the-badge)](Model/Conference_Paper.tex)
 
 <br/>
 
@@ -55,119 +57,153 @@
 
 <div align="center">
 
+## 🌸 Implementation Results 🌸
+
+</div>
+
+> The HIKARI model has been built and validated on the **SkinCAP** dermatology dataset.
+> See [`Model/README.md`](Model/README.md) for the full technical reference.
+
+<div align="center">
+
+| Model Variant | Accuracy |
+|:---|:---:|
+| 🥇 **HIKARI RAG-in-Training** (`fuzzytopk_s1cascade_ragR2_a09`) | **85.86%** |
+| 🥈 Cascaded FT + Inference RAG | 79.80% |
+| 🥉 Single-Image Fine-Tune | 74.00% |
+| Zero-Shot Frontier (best) | 50.51% |
+| Base Qwen3-VL-8B (no fine-tuning) | 33.33% |
+
+| Component | Detail |
+|:---|:---|
+| Backbone | Qwen3-VL-8B-Thinking |
+| Dataset | SkinCAP — 4,000 dermatology images, 10 disease classes |
+| RAG Encoder (training) | SigLIP-2 + BGE-M3 (R2), K=1 reference per sample |
+| RAG Encoder (inference) | CLIP ViT-B/32 (R0), K=3 references |
+| GPU | NVIDIA RTX 5070 Ti · 4-bit NF4 quantization |
+| Training time | ~1h 44min · LoRA rank 16 |
+
+</div>
+
+```
+✿ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✿
+```
+
+<div align="center">
+
 ## 🌸 Training Pipeline 🌸
 
 </div>
 
-### ✿ Data Preparation (Week 1-2)
+### ✿ Data Preparation
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────────┐
-│  🌸 DATA PREPARATION (Week 1-2)                                                      │
+│  🌸 DATA PREPARATION                                                                 │
 ├──────────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                      │
-│  Thai Oral Images (500-1000)          Claude API                                   │
-│  + Segmentation Masks        ────────►  Caption Generation                         │
-│  + Disease Labels                      (Thai + English)                            │
+│  SkinCAP Dataset (4,000 images)       Fuzzy Label Consolidation                   │
+│  Dermatology photos + captions ──────►  (thefuzz — merge near-duplicate labels)   │
+│  CSV: skincap_v240623.csv                            │                             │
+│                                                       ▼                             │
+│                                            Top-K Class Filtering                   │
+│                                            (Top 10 most frequent diseases)         │
+│                                                       │                             │
+│                                                       ▼                             │
+│  ┌────────────────────────────────────────────────────────────────────────┐       │
+│  │  10 Skin Disease Classes                                               │       │
+│  ├────────────────────────────────────────────────────────────────────────┤       │
+│  │  Psoriasis · Melanocytic Nevi · SCCIS · Basal Cell Carcinoma          │       │
+│  │  Acne Vulgaris · Lichen Planus · Scleroderma · Photodermatoses        │       │
+│  │  Lupus Erythematosus · Sarcoidosis                                     │       │
+│  └────────────────────────────────────────────────────────────────────────┘       │
+│                                                       │                             │
+│                                                       ▼                             │
+│                             Stratified 911 train / 99 val split (locked)           │
+│                             Sqrt oversampling for class imbalance (train only)     │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+<br/>
+
+### ✿ Stage 1: Group Classification
+
+```
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  🌸 STAGE 1: GROUP CLASSIFICATION                                                    │
+├──────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                      │
+│  Input Image ───────►  Qwen3-VL-8B  ──────────────────────────────► Group Label   │
+│  (Skin photo)          (4-bit NF4)                                   (4 classes)   │
+│                                                                                      │
+│  Prompt: "What disease group? Inflammatory / Benign / Malignant / Acne"            │
+│                                                                                      │
+│  Groups:                                                                            │
+│  ├── Inflammatory: Psoriasis, Lichen Planus, Lupus, Photodermatoses, Scleroderma  │
+│  ├── Benign:       Melanocytic Nevi, SCCIS                                         │
+│  ├── Malignant:    Basal Cell Carcinoma, Sarcoidosis                               │
+│  └── Acne:         Acne Vulgaris                                                   │
+│                                                                                      │
+│  Training: 5 epochs · LoRA r=16 · Accuracy: 88.68%                                │
+│  Weights saved → initialize Stage 2                                                 │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+<br/>
+
+### ✿ Stage 2: RAG-in-Training Disease Classification
+
+```
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  🌸 STAGE 2: RAG-IN-TRAINING DISEASE CLASSIFICATION (Key Contribution)              │
+├──────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                      │
+│  RAG Index (911 training images, encoded by SigLIP-2 + BGE-M3, R2, α=0.9)         │
 │                                              │                                      │
-│                                              ▼                                      │
-│                                     Complex Instructions                           │
-│                                     Generator (Claude)                             │
+│  For each training sample ───────────────► Retrieve K=1 most similar reference    │
 │                                              │                                      │
 │                                              ▼                                      │
 │  ┌──────────────────────────────────────────────────────────────────────┐        │
-│  │  5 Types of Complex Instructions (Thai + English)                    │        │
-│  ├──────────────────────────────────────────────────────────────────────┤        │
-│  │  1. Multi-granular:    "lesion" → "white patch" → "OLK on buccal"   │        │
-│  │  2. Multi-object:      "Segment all erosive areas"                   │        │
-│  │  3. Hallucination:     "Segment melanoma" → Model rejects            │        │
-│  │  4. Reasoning:         "Which lesions need biopsy?"                  │        │
-│  │  5. Part-level:        "Segment erythematous borders"                │        │
+│  │  Multi-image Prompt (per sample)                                     │        │
+│  │  [ref_img]   Reference: "psoriasis"                                  │        │
+│  │              Erythematous plaques with silver scaling...             │        │
+│  │  [query_img] What skin disease does this patient have?              │        │
 │  └──────────────────────────────────────────────────────────────────────┘        │
 │                                              │                                      │
 │                                              ▼                                      │
-│                                   Training Dataset Ready                           │
-│                                   (~10K instruction pairs)                         │
+│                               Qwen3-VL-8B → Disease Name                           │
+│                               Loss: Cross-Entropy on predicted label token          │
+│                                                                                      │
+│  Training: 3 epochs · Accuracy: 85.86% (best: CLIP R0 at inference)               │
 └──────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 <br/>
 
-### ✿ Stage 1: Classification Training (Week 3)
+### ✿ Stage 3: Clinical Caption Generation (Merged-Init)
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────────┐
-│  🌸 STAGE 1: CLASSIFICATION TRAINING (Week 3)                                       │
+│  🌸 STAGE 3: CLINICAL CAPTION GENERATION (Merged-Init)                              │
 ├──────────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                      │
-│  Input Image ───────►  Vision Encoder  ──────┐                                     │
-│  (Thai/Eng)           (CLIP-ViT)             │                                     │
-│                                               │                                     │
-│                                               ├─────► Aligner ───► LLM ───► Output │
-│  Simple Prompt ─────► Tokenizer &            │       Module      (Qwen)    Binary  │
-│  "Is this OLK?"       Embedding ─────────────┘                             (Yes/No)│
+│  Stage 2 LoRA adapters ────► merge_and_unload() ────► Merged base weights          │
+│  (classification weights)      (Merged-Init trick)      (fresh LoRA for captions)  │
+│                                              │                                      │
+│                                              ▼                                      │
+│  Input Image + Prompt ───► Qwen3-VL-8B (Merged-Init) ──────────► Caption Text     │
+│  "Describe the skin                                                                  │
+│   condition and                                                                      │
+│   recommend treatment"                                                               │
 │                                                                                      │
-│  Training: 10 epochs, Binary Classification                                        │
-│  Weights: Frozen Vision Encoder + LoRA on LLM                                     │
-└──────────────────────────────────────────────────────────────────────────────────────┘
-```
-
-<br/>
-
-### ✿ Stage 2: Complex Grounding Training (Week 3-4)
-
-```
-┌──────────────────────────────────────────────────────────────────────────────────────┐
-│  🌸 STAGE 2: COMPLEX GROUNDING TRAINING (Week 3-4)                                 │
-├──────────────────────────────────────────────────────────────────────────────────────┤
+│  Optional STS (Selective Token Supervision):                                        │
+│  • w_ans:    higher weight for diagnosis/recommendation sentences                   │
+│  • w_reason: higher weight for clinical terminology                                 │
+│  • w_surp:   higher weight for tokens the base model finds surprising               │
+│  • IBR:      L2 regularization on LoRA parameters                                  │
 │                                                                                      │
-│  Input Image ───────►  Vision Encoder  ──────┐                                     │
-│  (Thai/Eng)           (from Stage 1)         │                                     │
-│                                               │                                     │
-│                                               ├─────► Aligner ───► LLM             │
-│  Complex Prompt ───► Tokenizer &             │       Module      (from Stage 1)   │
-│  "Segment erosive     Embedding ─────────────┘                        │            │
-│   areas with high                                                     │            │
-│   malignancy risk"                                                    ▼            │
-│                                                               Segmentation Token   │
-│                                                                  <seg1>, <seg2>    │
-│                                                                        │            │
-│                                                                        ▼            │
-│                                                                  SAM Decoder        │
-│                                                                        │            │
-│                                                                        ▼            │
-│                                                               Segmentation Masks    │
-│                                                               (Polygon Coords)      │
-│                                                                                      │
-│  Training: 5 epochs, Ground-V style 5 challenges                                   │
-│  Loss: IoU Loss + Cross-Entropy                                                    │
-└──────────────────────────────────────────────────────────────────────────────────────┘
-```
-
-<br/>
-
-### ✿ Stage 3: Captioning Training (Week 4)
-
-```
-┌──────────────────────────────────────────────────────────────────────────────────────┐
-│  🌸 STAGE 3: CAPTIONING TRAINING (Week 4)                                          │
-├──────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                      │
-│  Input Image ───────►  Vision Encoder  ──────┐                                     │
-│  (Thai/Eng)           (from Stage 2)         │                                     │
-│                                               │                                     │
-│                                               ├─────► Aligner ───► LLM             │
-│  Caption Prompt ───► Tokenizer &             │       Module      (from Stage 2)   │
-│  "Please describe     Embedding ─────────────┘                        │            │
-│   the symptoms                                                        ▼            │
-│   shown in image"                                                LLM Decoder       │
-│                                                                        │            │
-│                                                                        ▼            │
-│                                                               Clinical Caption      │
-│                                                               (Thai/English text)   │
-│                                                                                      │
-│  Training: 5 epochs, Caption generation                                            │
-│  Loss: Cross-Entropy (next token prediction)                                       │
+│  Training: 3 epochs · BLEU-4: 29.33 (vs 9.82 checkpoint init — 3× gain)           │
+│  Loss: Cross-Entropy with STS token weighting                                      │
 └──────────────────────────────────────────────────────────────────────────────────────┘
 ```
 

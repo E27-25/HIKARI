@@ -68,11 +68,11 @@
 │   └──────────────┘                                         │        │
 │         │                                                   ▼       │
 │         ▼  Stage 2 — Disease Classifier (10 classes)               │
-│   ┌──────────────────────────────────────┐                         │
-│   │  [ref_img] Reference 1: psoriasis    │  ← RAG-in-Training      │
-│   │  Description: Erythematous plaques…  │    K=1 ref per sample   │
-│   │  [query_img] What skin disease?      │    R2 encoder (α=0.9)   │
-│   └──────────────────────────────────────┘                         │
+│   ┌──────────────────────────────────────────┐                     │
+│   │  [ref_img] Reference 1: psoriasis        │  ← RAG-in-Training  │
+│   │  Description: Erythematous plaques…      │    K=1 ref/sample   │
+│   │  [query_img] What skin disease?          │    R2 encoder (α=0.9)│
+│   └──────────────────────────────────────────┘                     │
 │         │                                                           │
 │         ▼  Stage 3 — Caption Generator (BLEU-4: 29.33)             │
 │   ┌──────────────┐  Merged-Init  ┌──────────────────────────┐      │
@@ -111,36 +111,157 @@
 HIKARI/Model/
 │
 ├── 🚀 Training
-│   ├── train_two_stage_FuzzyTopK.py   # Main training: Single-Image FT + RAG-in-Training
-│   ├── train_three_stage_hybrid_topk.py # M-series 3-stage pipeline
-│   ├── train_qwen3_caption.py          # Stage 3 caption training
-│   └── run_stage3_experiments.py       # Stage 3 ablation (Way1/2 × STS)
+│   ├── train_two_stage_FuzzyTopK.py      # Main training: Single-Image FT + RAG-in-Training
+│   ├── train_three_stage_hybrid_topk.py  # M-series 3-stage pipeline
+│   ├── train_qwen3_caption.py            # Stage 3 caption training (baseline SFT)
+│   ├── train_qwen3_thinking.py           # Qwen3 thinking-mode SFT variant
+│   ├── train_two_stage.py                # Original two-stage (pre-FuzzyTopK)
+│   └── train.py                          # Earliest prototype caption SFT
 │
 ├── 🔍 Inference & Evaluation
-│   ├── inference_disease_classification.py  # Main eval script (all models × RAG × prompts)
-│   ├── run_rag_benchmark.py                 # Full RAG benchmark runner
-│   └── rag_retrieval.py                     # HybridRAGRetriever (R0–R4 encoders)
+│   ├── inference_disease_classification.py   # Main eval (all models × RAG × prompts)
+│   ├── run_rag_benchmark.py                  # Full RAG benchmark runner
+│   ├── rag_retrieval.py                      # HybridRAGRetriever (R0–R4 encoders)
+│   ├── inference_classification.py           # Binary classification inference
+│   ├── inference_classification_FuzzyTopK.py # FuzzyTopK classification inference
+│   ├── inference_group_classification.py     # Stage 1 group classifier inference
+│   └── inference_qwen3.py                    # Raw Qwen3-VL caption inference
+│
+├── 🧠 Adapter & Token Methods
+│   ├── SIB.py                        # SIB-TinyLoRA adapter implementation
+│   ├── medical_token_importance.py   # Selective Token Supervision (STS) for medical captions
+│   └── merge_exp4.py                 # Merge Stage 3 Exp 4 LoRA adapters into base weights
+│
+├── 🧪 Experiments & Ablation
+│   ├── run_stage3_experiments.py     # Stage 3 ablation (Way1/2 × STS, 4 experiments)
+│   └── run_rag_benchmark.py          # Full RAG benchmark runner
 │
 ├── 📈 Analysis & Visualization
-│   ├── gradcam_visualization.py     # LM Prefill Attention maps
-│   ├── analyze_benchmark.py         # Result analysis
-│   ├── plot_confusion_matrix.py     # Confusion matrix plots
-│   └── gradcam_outputs/             # Attention comparison images
+│   ├── gradcam_visualization.py      # LM Prefill Attention maps
+│   ├── visualize_attention.py        # Token-level attention heatmaps
+│   ├── visualize.py                  # General result visualization
+│   ├── analyze_benchmark.py          # RAG benchmark result analysis
+│   ├── plot_confusion_matrix.py      # Confusion matrix plots
+│   ├── results_EDA.py                # Exploratory data analysis on results
+│   └── EDA.ipynb                     # Dataset EDA notebook
+│
+├── 🧪 Testing & Utilities
+│   ├── SIB_test.py                   # SIB-TinyLoRA unit tests (initial)
+│   ├── SIB_test2.py → SIB_test_final2.py  # Iterative SIB integration tests
+│   ├── test_callback.py              # Training callback tests
+│   ├── test_data_pipeline.py         # Dataset pipeline smoke tests
+│   ├── test_inference_1sample.py     # Single-sample inference smoke test
+│   ├── test_parallel_formatting.py   # Parallel prompt formatting tests
+│   ├── fix_emoji.py                  # Post-process to strip unwanted emoji from outputs
+│   └── check_cuda.py                 # CUDA/GPU environment check
 │
 ├── 📄 Paper & Docs
-│   ├── Conference_Paper.tex         # ITC-CSCC 2025 paper
-│   ├── summary.md                   # Full project summary (EN)
-│   ├── summary_Th.md                # Full project summary (TH) + experiment definitions
-│   └── plan.md                      # Development roadmap
+│   ├── Conference_Paper.tex          # ITC-CSCC 2025 paper (LaTeX)
+│   ├── SIB_idea.tex                  # SIB-TinyLoRA design document
+│   ├── summary.md                    # Full project summary (EN)
+│   ├── summary_Th.md                 # Full project summary (TH) + experiment definitions
+│   ├── paper_draft.md                # Draft paper notes
+│   ├── answer.md                     # Q&A for paper review
+│   └── plan.md                       # Development roadmap
 │
-├── 💾 Data Splits
-│   ├── split_info_3stage.json       # Locked 911/99 stratified split
-│   ├── split_info_fuzzytopk.json    # Standalone fuzzytopk split
-│   └── val_captions_for_symptoms.json  # 94 patient symptom descriptions
+├── 💾 Data Splits & Precomputed
+│   ├── split_info_3stage.json              # Locked 911/99 stratified split (3-stage)
+│   ├── split_info_fuzzytopk.json           # Standalone FuzzyTopK split
+│   ├── top10_precomputed.json              # Top-10 RAG retrievals (precomputed)
+│   ├── top10_precomputed_pure_vision.json  # Pure vision RAG retrievals
+│   ├── top10_stage3_precomputed.json       # Stage 3 RAG retrievals
+│   ├── rag_index*.npz                      # FAISS-compatible RAG embedding indices
+│   ├── stage1_train_predictions.json       # Stage 1 predictions on train set
+│   ├── val_captions_for_symptoms.json      # 94 patient symptom descriptions (val set)
+│   └── SkinCAP/                            # Raw dataset (CSV + XLSX)
 │
 └── ⚙️ Config
     └── requirements.txt
 ```
+
+---
+
+## 📖 Program Reference — All Scripts Defined
+
+### 🚀 Training Scripts
+
+| Script | Purpose |
+|--------|---------|
+| `train.py` | **Prototype** — earliest SFT caption trainer for Qwen2-VL. Loads SkinCAP CSV, builds image+caption pairs, trains with Unsloth SFTTrainer. Single stage only. |
+| `train_two_stage.py` | **Two-stage baseline** — Stage 1: classification, Stage 2: caption. Carries Stage 1 LoRA weights into Stage 2. No fuzzy matching, no top-K filtering. |
+| `train_two_stage_FuzzyTopK.py` | **Main training script.** Adds fuzzy disease-name consolidation (`thefuzz`), top-K class filtering, stratified splits, sqrt oversampling, and the RAG-in-Training loop. Controls `--rag_k_train`, `--rag_exp`, `--alpha`, `--stage3_init`, `--use_sts` flags. Produces the `fuzzytopk` and `fuzzytopk_s1cascade_ragR2_a09` model families. |
+| `train_three_stage_hybrid_topk.py` | **M-series 3-stage pipeline.** Stage 1: group classifier (4 or 3 groups). Stage 2: disease classifier per group. Stage 3: caption from Stage 2 checkpoint. Supports `GROUP_MODE` = `"4group"` / `"3group"` and `TOP_N` = 10/15. Produces `skincap_3stage_*` model families. |
+| `train_qwen3_caption.py` | **Baseline SFT caption** using Qwen3-VL-8B-Thinking directly. Loads raw SkinCAP `caption_zh_polish_en` column; no classification stage. Used to establish the caption-only baseline. |
+| `train_qwen3_thinking.py` | **Thinking-mode SFT variant.** Enables Qwen3's extended reasoning chain (`<think>…</think>`) during fine-tuning. Experimental; explores whether explicit reasoning improves diagnosis. |
+
+---
+
+### 🔍 Inference & Evaluation Scripts
+
+| Script | Purpose |
+|--------|---------|
+| `inference.py` | **Basic caption inference.** Loads a trained model and runs caption generation on a single image or small batch. Used for quick sanity-checks. |
+| `inference_classification.py` | **Binary/multi-class classification inference.** Given a model checkpoint, runs the classification prompt on a validation set and reports accuracy. |
+| `inference_classification_FuzzyTopK.py` | **FuzzyTopK classification inference.** Same as above but uses the fuzzy label mapping to align predicted text to canonical disease names before scoring. |
+| `inference_disease_classification.py` | **Main evaluation driver.** Evaluates any model variant (Stage 1 group → Stage 2 disease) across all RAG encoder configs (R0–R4) and prompt templates (P0–P2). Produces per-disease sensitivity, PPV, and overall accuracy. Writes `evaluation_results.json`. |
+| `inference_group_classification.py` | **Stage 1 group classifier evaluation.** Runs only the group-level (4-class) head, reports per-group accuracy and confusion. Used to diagnose cascade bottlenecks. |
+| `inference_qwen3.py` | **Raw Qwen3-VL caption inference.** Loads any Qwen3-VL checkpoint (merged or LoRA) and generates captions; computes BLEU-1/2/4 and ROUGE-L against ground-truth. |
+| `run_rag_benchmark.py` | **Full RAG benchmark runner.** Sweeps over `(model, rag_exp, prompt_style, k)` combinations, calls `inference_disease_classification.py` for each, and aggregates results into a benchmark table. Produces `*.log` files and `stage3_ablation_results.json`. |
+
+---
+
+### 🧠 Adapter & Token Methods
+
+| Script | Purpose |
+|--------|---------|
+| `SIB.py` | **SIB-TinyLoRA adapter.** Implements `SIBTinyLoRALinear` — a parameter-efficient linear layer that learns a low-rank update `U Σ V^T` via a tiny shared scalar vector `v` and fixed random projection `P`. Reduces trainable parameters vs standard LoRA. `inject_vlm_tiny_lora()` replaces `q_proj`/`v_proj` layers in-place. Written in PyTorch, compatible with Qwen2-VL. |
+| `medical_token_importance.py` | **Selective Token Supervision (STS) for medical captions.** Computes per-token loss weights from three signals: (1) answer-proximity weight `w_ans` — higher weight for diagnosis/recommendation sentences, (2) medical-token weight `w_reason` — detects clinical terminology via regex patterns, (3) surprise weight `w_surp` — tokens the base model finds unlikely. Combined as `w(t) = normalize(w_ans × w_reason × w_surp)`. Also implements IBR (Information Bottleneck Regularization) as L2 penalty on LoRA parameters. Adapted from SIB-TinyLoRA (arXiv:2410.10040). |
+| `merge_exp4.py` | **LoRA merge utility for Experiment 4.** Merges trained Stage 3 (Way 2 + STS) LoRA adapters into the base model weights using Unsloth's `merge_and_unload()`. Produces a standalone HuggingFace-compatible merged checkpoint (`*_merged/`). |
+
+---
+
+### 📡 RAG Retrieval
+
+| Script | Purpose |
+|--------|---------|
+| `rag_retrieval.py` | **HybridRAGRetriever — core retrieval engine.** Supports 5 encoder configurations: **R0** (CLIP image-only, used at inference), **R1** (CLIP + ClinicalBERT), **R2** (SigLIP-2 + BGE-M3, used during RAG-in-Training), **R3** (Jina-CLIP-v2 + MedCPT), **R4** (Nomic unified vision+text). Implements two retrieval strategies: **Strategy A** (cross-modal: image query vs text index in shared space) and **Strategy B** (separate image and text spaces, alpha-weighted fusion). Builds and saves `.npz` index files; supports `top_k` retrieval with similarity scores. |
+
+---
+
+### 🧪 Experiments & Ablation
+
+| Script | Purpose |
+|--------|---------|
+| `run_stage3_experiments.py` | **Stage 3 ablation orchestrator.** Runs 4 sequential experiments via subprocess: Exp 1 (checkpoint init, no STS), Exp 2 (merged init, no STS), Exp 3 (checkpoint init + STS+IBR), Exp 4 (merged init + STS+IBR). Each trains a Stage 3 caption model and evaluates BLEU/ROUGE. Supports `--skip N` and `--only N M` flags. |
+
+---
+
+### 📈 Analysis & Visualization
+
+| Script | Purpose |
+|--------|---------|
+| `gradcam_visualization.py` | **LM Prefill Attention maps.** Extracts last-token → image-patch attention weights from Qwen3-VL's attention layers during a forward pass. Overlays a heatmap onto the original image. Generates side-by-side comparison (base model vs HIKARI) saved to `gradcam_outputs/`. |
+| `visualize_attention.py` | **Token-level attention heatmaps.** Plots per-layer, per-head attention matrices for a given input. Used for qualitative inspection of which tokens the model attends to for disease-relevant features. |
+| `visualize.py` | **General result visualization.** Bar charts and line plots of accuracy/BLEU across model variants and RAG configs. Reads `evaluation_results.json`. |
+| `analyze_benchmark.py` | **RAG benchmark result analysis.** Parses benchmark log files and JSON outputs, computes rank tables, statistical summaries, and per-disease breakdowns. Outputs markdown-formatted tables. |
+| `plot_confusion_matrix.py` | **Confusion matrix plots.** Reads model predictions and ground-truth from `evaluation_results.json`, plots normalized confusion matrices (per-disease and aggregated) using matplotlib/seaborn. |
+| `results_EDA.py` | **Exploratory analysis of evaluation results.** Distribution of confidence scores, error analysis (which diseases are confused with which), sample-level inspection of high-error cases. |
+| `EDA.ipynb` | **SkinCAP dataset EDA notebook.** Class distribution, image quality statistics, caption length analysis, train/val split verification, and label noise investigation. |
+
+---
+
+### 🧪 Testing & Utilities
+
+| Script | Purpose |
+|--------|---------|
+| `SIB_test.py` | **SIB-TinyLoRA unit test (v1).** Tests that `SIBTinyLoRALinear` can be instantiated and produces finite output; checks SVD decomposition correctness. |
+| `SIB_test2.py` … `SIB_test_final2.py` | **Iterative SIB integration tests.** Progressive tests verifying: adapter injection into Qwen2-VL layers, gradient flow through `v` only, FP16 overflow clamp, and end-to-end training step convergence. `SIB_test_final2.py` is the last stable test suite. |
+| `test_callback.py` | **Training callback tests.** Verifies that custom `SFTTrainer` callbacks (checkpoint save, logging, RAG index refresh) fire at the correct training steps without errors. |
+| `test_data_pipeline.py` | **Dataset pipeline smoke tests.** Loads a small subset of SkinCAP, runs the full fuzzy-matching and formatting pipeline, and asserts expected output shapes and label distributions. |
+| `test_inference_1sample.py` | **Single-sample inference smoke test.** Loads a merged model checkpoint and runs inference on one image; verifies the output is a valid disease name string, not a crash. |
+| `test_parallel_formatting.py` | **Parallel prompt formatting tests.** Tests multi-image (query + reference) prompt construction for RAG inputs; verifies correct token ordering and image placeholder positions under Qwen3-VL's chat template. |
+| `fix_emoji.py` | **Post-processing utility.** Strips or replaces unwanted emoji characters from generated captions/outputs that interfere with BLEU scoring or downstream parsing. |
+| `check_cuda.py` | **CUDA/GPU environment check.** Prints CUDA version, available GPU count, VRAM per device, and PyTorch build info. Run before training to confirm the environment is correctly configured. |
 
 ---
 
@@ -184,8 +305,7 @@ huggingface-cli login
 ### 2. Train — RAG-in-Training (HIKARI)
 
 ```bash
-# Stage 1: Group classifier (run once, shared across models)
-# Stage 2: RAG-in-Training (main contribution)
+# Stage 1 + 2: RAG-in-Training (main contribution)
 python train_two_stage_FuzzyTopK.py \
     --start_from_stage1 \
     --rag_k_train 1 \
@@ -216,6 +336,12 @@ python inference_disease_classification.py \
 
 ```bash
 python gradcam_visualization.py  # Generates comparison images in gradcam_outputs/
+```
+
+### 5. Environment Check
+
+```bash
+python check_cuda.py  # Verify CUDA and GPU setup before training
 ```
 
 ---
@@ -311,6 +437,7 @@ If you use HIKARI in your research, please cite:
 - [SkinCAP Dataset](https://huggingface.co/datasets/joshuachou/SkinCAP) — 4,000 dermatology images
 - [BGE-M3](https://huggingface.co/BAAI/bge-m3) — Multilingual text embeddings
 - [SigLIP-2](https://huggingface.co/google/siglip-2-base-patch16-512) — Image encoder
+- [SIB-TinyLoRA](https://arxiv.org/abs/2410.10040) — Surprise-based token importance method
 
 ---
 

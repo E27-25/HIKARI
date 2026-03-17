@@ -4,7 +4,7 @@
 
 <img src="logo/HIKARI logo.png" alt="HIKARI Logo" width="100%"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=800&color=FF9EBC&center=true&vCenter=true&width=800&lines=HIKARI+%F0%9F%8C%B8;RAG-in-Training+Pipeline;Vision-Language+Model+Fine-Tuning;3-Stage+Training+Architecture;Hybrid+Retrieval-Augmented+Generation;Qwen3-VL-8B+%C3%97+SkinCAP+%C3%97+LoRA" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=800&color=FF9EBC&center=true&vCenter=true&width=800&lines=HIKARI+%F0%9F%8C%B8;RAG-in-Training+Pipeline;Vision-Language+Model+Fine-Tuning;3-Stage+Training+Architecture;Hybrid+Retrieval-Augmented+Generation;Qwen3-VL-8B+%C3%97+LoRA+%C3%97+SkinCAP" alt="Typing SVG" />
 
 <br/>
 

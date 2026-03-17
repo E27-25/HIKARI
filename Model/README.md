@@ -28,7 +28,7 @@
 │                                                                     │
 │   Qwen3-VL-8B (Base)                                                │
 │         │                                                           │
-│         ▼  Stage 1 — Group Classifier (4 groups, 88.68%)           │
+│         ▼  Stage 1 — Group Classifier (4 groups)                   │
 │   ┌──────────────┐      weights ──────────────────────────┐        │
 │   │ Group Clf.   │                                         │        │
 │   └──────────────┘                                         │        │
@@ -40,7 +40,7 @@
 │   │  [query_img] What skin disease?          │    R2 encoder (α=0.9)│
 │   └──────────────────────────────────────────┘                     │
 │         │                                                           │
-│         ▼  Stage 3 — Caption Generator (BLEU-4: 29.33)             │
+│         ▼  Stage 3 — Caption Generator (Merged-Init)               │
 │   ┌──────────────┐  Merged-Init  ┌──────────────────────────┐      │
 │   │ Disease Clf. │ ────────────▶ │ Caption Model            │      │
 │   │  (frozen)    │               │ (fresh LoRA adapters)    │      │
@@ -304,19 +304,19 @@ Training with K=1 reference image per sample teaches the model to use retrieval 
 <tr><td>
 
 **💡 Encoder-agnostic generalization**
-HIKARI trained with SigLIP+BGE-M3 (R2) but performs best with CLIP (R0) at inference (+3.03 pp) — the model learns the *concept* of reference-guided diagnosis, not encoder-specific features.
+HIKARI trained with SigLIP+BGE-M3 (R2) but switching to CLIP (R0) at inference still generalizes well — the model learns the *concept* of reference-guided diagnosis, not encoder-specific features.
 
 </td></tr>
 <tr><td>
 
 **💡 Merged-Init prevents catastrophic interference**
-Merging LoRA into base weights before Stage 3 → BLEU-4: 9.82 → **29.33 (3×)**. Never fine-tune existing adapters on a different task.
+Merging Stage 2 LoRA into base weights via `merge_and_unload()` before Stage 3 caption training prevents task interference between classification and generation objectives.
 
 </td></tr>
 <tr><td>
 
 **💡 Group cascade hurts more than it helps**
-3-stage M-series (M1 oracle: 66%) still underperforms simple 2-stage fuzzytopk (74%) — cascade penalty from mismatched weight initialization outweighs group context benefit.
+Stacking Stage 1 (group) → Stage 2 (disease) with weight transfer introduces initialization mismatch overhead that can outweigh the benefit of group-level context injection.
 
 </td></tr>
 </table>

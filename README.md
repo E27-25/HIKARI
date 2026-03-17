@@ -288,18 +288,12 @@ HIKARI/
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=13&duration=4000&pause=500&color=AAAAAA&center=true&vCenter=true&width=700&lines=Qwen3-VL-8B-Thinking+%C2%B7+Unsloth+%C2%B7+SkinCAP;SigLIP-2+%2B+BGE-M3+(train)+%C2%B7+CLIP+ViT-B%2F32+(inference);RAG-in-Training+%C2%B7+Merged-Init+%C2%B7+STS+%C2%B7+IBR;3-Stage+Pipeline+%C2%B7+LoRA+rank%3D16+%C2%B7+4-bit+NF4;FuzzyTopK+%C2%B7+HybridRAGRetriever+%C2%B7+RTX+5070+Ti" alt="footer" />
 
-<br/>
+<hr/>
 
-<p>✿ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✿</p>
-
-<p>🌸 <strong>HIKARI Project</strong> 🌸</p>
-
-<p><strong>光（ヒカリ）</strong></p>
-
-<p><em>Healthcare-oriented Intelligent Knowledge-Augmented Retrieval and Inference system</em></p>
-
-<p>✿ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✿</p>
-
+<p>🌸 <b>HIKARI Project &nbsp;·&nbsp; 光（ヒカリ）</b> 🌸</p>
+<p><i>Healthcare-oriented Intelligent Knowledge-Augmented Retrieval and Inference system</i></p>
 <sub>Made with 💗 and 🌸</sub>
+
+<hr/>
 
 </div>

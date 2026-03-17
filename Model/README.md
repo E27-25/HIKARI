@@ -260,8 +260,7 @@ python train_two_stage_FuzzyTopK.py \
 
 # Stage 3: Caption generation (Merged-Init)
 python train_two_stage_FuzzyTopK.py \
-    --stage3_init merged \
-    --use_sts False
+    --stage3_init merged
 ```
 
 ### 3. Evaluate
@@ -320,29 +319,6 @@ Stacking Stage 1 (group) → Stage 2 (disease) with weight transfer introduces i
 
 </td></tr>
 </table>
-
----
-
-## 📋 Per-Disease Results (HIKARI Best Config: R0-P0)
-
-<div align="center">
-
-| Disease | Sensitivity | n | PPV |
-|---------|:-----------:|:---:|:---:|
-| 🟢 Psoriasis | **100.0%** | 13 | 92.9% |
-| 🟢 Melanocytic Nevi | **100.0%** | 12 | 100.0% |
-| 🟢 SCCIS | **100.0%** | 12 | 100.0% |
-| 🟢 Basal Cell Carcinoma | **100.0%** | 13 | 100.0% |
-| 🟢 Acne Vulgaris | **100.0%** | 8 | 88.9% |
-| 🟡 Lichen Planus | 88.9% | 9 | 88.9% |
-| 🟡 Scleroderma | 87.5% | 8 | 77.8% |
-| 🟡 Photodermatoses | 75.0% | 8 | 66.7% |
-| 🔴 Lupus Erythematosus | 55.6% | 9 | 55.6% |
-| 🔴 Sarcoidosis | 14.3% | 7 | 33.3% |
-
-*🔴 Sarcoidosis collapse is a known limitation — over-reliance on reference agreement during training*
-
-</div>
 
 ---
 

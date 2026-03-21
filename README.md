@@ -334,6 +334,15 @@ HIKARI/
 
 ---
 
+## 📄 Documentation
+
+| Document | Description |
+|:---------|:------------|
+| [`Model/README.md`](Model/README.md) | Full technical reference — every script explained, all experiments documented |
+| [`Model/Deploy.md`](Model/Deploy.md) | Deployment guide — vLLM, SGLang, and production inference setup |
+
+---
+
 ## 📚 References
 
 | Library / Resource | Role in HIKARI |

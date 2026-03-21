@@ -1739,7 +1739,7 @@ Speed benchmark แสดงว่า SGLang FP8 เร็วกว่า Unslot
 
 | Collection | ลิงก์ | เนื้อหา |
 |:-----------|:------|:--------|
-| **HIKARI Skin Disease AI** | [collections/E27085921/hikari-skin-disease-ai](https://huggingface.co/collections/E27085921/hikari-skin-disease-ai-69be6cadbee2138aabfac175) | โมเดลทั้งหมด 14 ตัว (merged + LoRA) |
+| **HIKARI Skin Disease AI** | [collections/E27085921/hikari-skin-disease-ai](https://huggingface.co/collections/E27085921/hikari-skin-disease-ai-69be6cadbee2138aabfac175) | Merged models 8 ตัว (~17 GB ต่อตัว) |
 | **HIKARI - LoRA Adapters** | [collections/E27085921/hikari-lora-adapters](https://huggingface.co/collections/E27085921/hikari-lora-adapters-69be6f05f363f84d8ffbd82d) | LoRA adapter 6 ตัว (~1.1 GB ต่อตัว) |
 
 ### ตาราง Merged Models (~17 GB ต่อตัว)

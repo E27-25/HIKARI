@@ -1,0 +1,26 @@
+{
+  "stage2": {
+    "vLLM-BnB4-bs1": {
+      "mean_ms_per_img": 480.14,
+      "std_ms_per_img": 43.59,
+      "imgs_per_sec": 2.08
+    },
+    "vLLM-BnB4-bs4": {
+      "mean_ms_per_img": 179.41,
+      "std_ms_per_img": 23.54,
+      "imgs_per_sec": 5.57
+    }
+  },
+  "stage3": {
+    "vLLM-BnB4-bs1": {
+      "mean_ms_per_img": 2957.21,
+      "std_ms_per_img": 8.67,
+      "imgs_per_sec": 0.34
+    },
+    "vLLM-BnB4-bs4": {
+      "mean_ms_per_img": 1094.21,
+      "std_ms_per_img": 2.73,
+      "imgs_per_sec": 0.91
+    }
+  }
+}

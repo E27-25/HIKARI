@@ -7,6 +7,9 @@
 \usepackage{xcolor}
 \usepackage{booktabs}
 \usepackage{multirow}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%  ✓
+\newcommand{\xmark}{\ding{55}}%  ✗
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, shadows}
 
@@ -462,24 +465,44 @@ hard-negative training is identified as the primary mitigation.
 
 \subsection{Stage 3 Caption Generation Ablation}
 
-Table~\ref{tab:caption} validates the Merged-Init strategy.
-Way~2 achieves BLEU-4\,=\,29.33, three times higher than Way~1 (9.82),
-confirming that absorbing prior-stage adapters into the base model
-prevents catastrophic interference when switching tasks.
+Table~\ref{tab:caption} evaluates Stage~3 caption quality under two
+init strategies and two guidance conditions.
+\textbf{Guidance} refers to whether Stage~3 receives the Stage~2 predicted
+disease label as an additional context token (\cmark) or generates the
+caption from the image alone (\xmark).
+Four metrics are reported: BLEU-$n$ ($n\in\{1,2,4\}$) and ROUGE-1 measure
+$n$-gram overlap with reference captions; BERTScore~F$_1$ (BS-F)
+measures semantic similarity via contextual embeddings; and
+\textit{Correctness} (Corr.) measures whether the generated caption
+contains the correct disease name (exact or fuzzy match against the
+10 class labels).
 
-\begin{table}[!ht]
-\caption{Stage 3 Caption Ablation: Checkpoint vs.\ Merged Init}
+Merged-Init without guidance already achieves BLEU-4\,=\,29.33---three
+times higher than Checkpoint (9.82)---confirming that disease knowledge
+encoded in frozen base weights transfers to caption generation.
+Guided inference (\cmark) trades some $n$-gram overlap for a large boost
+in disease-name correctness, from 62.63\% to 78.79\% on Merged-Init.
+
+\begin{table}[t]
+\caption{Stage 3 Caption Ablation: Init strategy $\times$ Stage~2 label guidance.
+         \cmark\,=\,disease label injected; \xmark\,=\,image only.}
 \label{tab:caption}
 \begin{center}
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{lcccc}
+\small
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{l c c c c c c c}
 \toprule
-\textbf{Init} & \textbf{B-1} & \textbf{B-2} & \textbf{B-4} & \textbf{R-1} \\
+\textbf{Init} & \textbf{Guide} &
+  \textbf{B-1} & \textbf{B-2} & \textbf{B-4} &
+  \textbf{R-1} & \textbf{BS-F} & \textbf{Corr.} \\
 \midrule
-Checkpoint      & 29.22 & 18.65 & 9.82  & 38.9 \\
-\textbf{Merged} & \textbf{42.22} & \textbf{35.19} & \textbf{29.33} & \textbf{53.6} \\
+Checkpoint   & \xmark       & 29.22 & 18.65 & 9.82  & 38.90 & 88.12 & 47.47 \\
+Checkpoint   & \cmark       & 35.53 & 22.43 & 11.75 & 40.02 & 88.44 & 72.73 \\
+\midrule
+\textbf{Merged} & \xmark    & \textbf{42.22} & \textbf{35.19} & \textbf{29.33} & \textbf{53.55} & \textbf{91.12} & 62.63 \\
+\textbf{Merged} & \cmark    & 35.68 & 22.85 & 13.11 & 41.20 & 88.57 & \textbf{78.79} \\
 \bottomrule
-\multicolumn{5}{l}{\scriptsize B-$n$: BLEU-$n$; R-1: ROUGE-1}
+\multicolumn{8}{l}{\scriptsize B-$n$: BLEU-$n$; R-1: ROUGE-1; BS-F: BERTScore~F$_1$; Corr.: disease accuracy (\%)}
 \end{tabular}
 \end{center}
 \end{table}
@@ -507,6 +530,51 @@ network and border for nevi; the annotated nodular lesion for BCC---providing
 an interpretability signal consistent with clinical differential diagnosis.
 
 % -----------------------------------------------------------------------
+% IV-F. INFERENCE SPEED BENCHMARK
+% -----------------------------------------------------------------------
+\subsection{Inference Speed Benchmark}
+
+We compare four inference configurations on the same RTX~5070~Ti GPU
+(16~GB VRAM, Blackwell sm\_120): the fine-tuning baseline (Unsloth 4-bit
+BitsAndBytes, Windows), a production serving baseline (vLLM 0.9.1 with
+4-bit BitsAndBytes, WSL2), and SGLang~0.5.5 with FP8 online quantization
+(WSL2, RadixAttention).  LMDeploy is excluded because the 16.78~GB
+BF16 model cannot be loaded before INT4 quantization is applied on this
+GPU; TensorRT-LLM requires a CUDA~13 driver not yet available for the
+RTX~5070~Ti.
+
+\begin{table}[!ht]
+\centering
+\caption{Inference latency (ms/image) on RTX~5070~Ti.
+Speedup is relative to Unsloth single-image baseline.}
+\label{tab:speed}
+\begin{tabular}{lcccc}
+\hline
+\textbf{Engine (Quant.)} & \textbf{BS} &
+  \textbf{Stage 2} & \textbf{Stage 3} & \textbf{Speedup} \\
+\hline
+Unsloth 4-bit (baseline)  & 1 & 1095.7 & 6699.1 & 1.00$\times$ \\
+Unsloth 4-bit             & 4 &  499.7 & 3003.3 & 2.2$\times$ \\
+vLLM BnB-4bit             & 1 &  480.1 & 2957.2 & 2.3$\times$ \\
+vLLM BnB-4bit             & 4 &  179.4 & 1094.2 & 6.1$\times$ \\
+SGLang FP8                & 1 &  331.0 & 1695.4 & 3.3--4.0$\times$ \\
+SGLang FP8                & 4 &  109.8 &  583.5 & 10.0--11.5$\times$ \\
+\hline
+\end{tabular}
+\end{table}
+
+SGLang achieves the lowest latency owing to RadixAttention prefix
+reuse and continuous batching with FP8 weight quantization.  At
+batch~size~4, it reaches 9.1~images/s for Stage~2 classification and
+1.7~images/s for Stage~3 captioning, representing a \textbf{10--11.5$\times$
+speedup} over the Unsloth baseline.
+We additionally re-evaluated the best model (fuzzytopk-s1cascade-R2,
+$\alpha{=}0.9$) with SGLang~FP8 on the same 99-sample validation set.
+FP8 online quantization yields 77.78\% accuracy versus 82.83\% for the
+Unsloth BnB-4bit baseline, a modest 5~pp degradation in exchange for
+the 10$\times$ throughput gain.
+
+% -----------------------------------------------------------------------
 % V. DISCUSSION
 % -----------------------------------------------------------------------
 \section{Discussion}
@@ -521,6 +589,11 @@ The 3$\times$ BLEU-4 gain from Merged-Init follows the same principle:
 Way~2 locks disease knowledge in full-rank base weights before attaching
 fresh adapters for caption training, eliminating gradient interference---a
 guideline applicable to any multi-task LoRA pipeline.
+Injecting the Stage~2 label (\cmark) raises disease-name correctness
+substantially---Merged-Init improves from 62.63\% to \textbf{78.79\%}---while
+BERTScore F$_1$ remains stable ($\leq$2.6\,pp drop), indicating the guided
+prompt shifts generation toward diagnostic accuracy without sacrificing
+semantic fidelity.
 
 \textbf{Limitations.}
 The 1,010-image SkinCAP subset (80--130 samples per rare class) limits

@@ -1,0 +1,13 @@
+{
+  "method": "sglang_fp8",
+  "quantization": "fp8",
+  "engine": "sglang-0.5.5",
+  "rag_experiment": "R2",
+  "group_mode": "4group",
+  "top_n": 10,
+  "total_samples": 99,
+  "valid_predictions": 99,
+  "accuracy": 0.7777777777777778,
+  "num_correct": 77,
+  "stage1_source": "reused_from_unsloth_bnb4"
+}

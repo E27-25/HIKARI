@@ -1,0 +1,68 @@
+{
+  "description": "Inference speed benchmark on RTX 5070 Ti (16GB VRAM, sm_120, Blackwell consumer GPU)",
+  "note": "LMDeploy blocked: 16.78GB model > VRAM in bf16 without pre-quantized weights. TRT-LLM blocked: requires CUDA 13 driver. SGLang uses FP8 online quantization. vLLM uses 4-bit BitsAndBytes.",
+  "stage2": {
+    "Unsloth-4bit-bs1": {
+      "mean_ms_per_img": 1095.69,
+      "std_ms_per_img": 38.97,
+      "imgs_per_sec": 0.91
+    },
+    "Unsloth-4bit-bs4": {
+      "mean_ms_per_img": 499.69,
+      "std_ms_per_img": 9.9,
+      "imgs_per_sec": 2.0
+    },
+    "vLLM-BnB4-bs1": {
+      "mean_ms_per_img": 480.14,
+      "std_ms_per_img": 43.59,
+      "imgs_per_sec": 2.08
+    },
+    "vLLM-BnB4-bs4": {
+      "mean_ms_per_img": 179.41,
+      "std_ms_per_img": 23.54,
+      "imgs_per_sec": 5.57
+    },
+    "SGLang-FP8-bs1": {
+      "mean_ms_per_img": 331.0,
+      "std_ms_per_img": 2.91,
+      "imgs_per_sec": 3.02
+    },
+    "SGLang-FP8-bs4": {
+      "mean_ms_per_img": 109.8,
+      "std_ms_per_img": 1.81,
+      "imgs_per_sec": 9.11
+    }
+  },
+  "stage3": {
+    "Unsloth-4bit-bs1": {
+      "mean_ms_per_img": 6699.15,
+      "std_ms_per_img": 156.27,
+      "imgs_per_sec": 0.15
+    },
+    "Unsloth-4bit-bs4": {
+      "mean_ms_per_img": 3003.3,
+      "std_ms_per_img": 80.01,
+      "imgs_per_sec": 0.33
+    },
+    "vLLM-BnB4-bs1": {
+      "mean_ms_per_img": 2957.21,
+      "std_ms_per_img": 8.67,
+      "imgs_per_sec": 0.34
+    },
+    "vLLM-BnB4-bs4": {
+      "mean_ms_per_img": 1094.21,
+      "std_ms_per_img": 2.73,
+      "imgs_per_sec": 0.91
+    },
+    "SGLang-FP8-bs1": {
+      "mean_ms_per_img": 1695.4,
+      "std_ms_per_img": 3.75,
+      "imgs_per_sec": 0.59
+    },
+    "SGLang-FP8-bs4": {
+      "mean_ms_per_img": 583.51,
+      "std_ms_per_img": 0.75,
+      "imgs_per_sec": 1.71
+    }
+  }
+}

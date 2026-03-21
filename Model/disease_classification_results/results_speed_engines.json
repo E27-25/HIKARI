@@ -1,0 +1,26 @@
+{
+  "stage2": {
+    "sglang-bs1": {
+      "mean_ms_per_img": 331.0,
+      "std_ms_per_img": 2.91,
+      "imgs_per_sec": 3.02
+    },
+    "sglang-bs4": {
+      "mean_ms_per_img": 109.8,
+      "std_ms_per_img": 1.81,
+      "imgs_per_sec": 9.11
+    }
+  },
+  "stage3": {
+    "sglang-bs1": {
+      "mean_ms_per_img": 1695.4,
+      "std_ms_per_img": 3.75,
+      "imgs_per_sec": 0.59
+    },
+    "sglang-bs4": {
+      "mean_ms_per_img": 583.51,
+      "std_ms_per_img": 0.75,
+      "imgs_per_sec": 1.71
+    }
+  }
+}

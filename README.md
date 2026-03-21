@@ -8,12 +8,14 @@
 
 <br/>
 
-<!-- Badges — tech stack only -->
+<!-- Badges — tech stack -->
 [![Model](https://img.shields.io/badge/Backbone-Qwen3--VL--8B--Thinking-4B9EFF?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/Qwen/Qwen3-VL-8B-Thinking)
 [![Dataset](https://img.shields.io/badge/Dataset-SkinCAP_4K-FF8C00?style=for-the-badge&logo=databricks&logoColor=white)](https://huggingface.co/datasets/joshuachou/SkinCAP)
 [![GPU](https://img.shields.io/badge/GPU-RTX_5070_Ti-76B900?style=for-the-badge&logo=nvidia&logoColor=white)](.)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](.)
 [![Framework](https://img.shields.io/badge/Framework-Unsloth+LoRA-A855F7?style=for-the-badge&logo=pytorch&logoColor=white)](https://github.com/unslothai/unsloth)
+[![HuggingFace](https://img.shields.io/badge/🤗_Models-14_on_HuggingFace-FFD21E?style=for-the-badge)](https://huggingface.co/collections/E27085921/hikari-skin-disease-ai-69be6cadbee2138aabfac175)
+[![License](https://img.shields.io/badge/License-Apache_2.0-orange?style=for-the-badge)](LICENSE)
 
 <br/>
 
@@ -38,6 +40,40 @@
 | **I** | **I**nference system |
 
 HIKARI introduces **RAG-in-Training** — instead of using retrieval only at inference time, reference images are retrieved and injected into *every training sample*, so the model learns to reason about visual similarity evidence from the start. At inference, even switching to a different (simpler) retrieval encoder still generalizes well, demonstrating true encoder-agnostic behavior.
+
+---
+
+## 🤗 Pretrained Models
+
+All 14 trained models are publicly available on HuggingFace — ready to use with `transformers`, `vLLM`, or `SGLang`.
+
+<div align="center">
+
+**🗂️ [HIKARI Skin Disease AI — All 14 Models](https://huggingface.co/collections/E27085921/hikari-skin-disease-ai-69be6cadbee2138aabfac175) &nbsp;·&nbsp; 🔌 [LoRA Adapters Only](https://huggingface.co/collections/E27085921/hikari-lora-adapters-69be6f05f363f84d8ffbd82d)**
+
+</div>
+
+### ⭐ Best Models
+
+| Model | Stage | Task | Metric | Type |
+|:------|:-----:|:-----|:------:|:----:|
+| [**HIKARI-Sirius-8B-SkinDx-RAG**](https://huggingface.co/E27085921/HIKARI-Sirius-8B-SkinDx-RAG) | 2 | 10-class skin disease diagnosis | **85.86%** | Merged (~17 GB) |
+| [**HIKARI-Vega-8B-SkinCaption-Fused**](https://huggingface.co/E27085921/HIKARI-Vega-8B-SkinCaption-Fused) | 3 | Clinical skin lesion caption | **BLEU-4: 29.33** | Merged (~17 GB) |
+
+### 📦 Full Model Collection
+
+| Model | Stage | Task | Metric | Links |
+|:------|:-----:|:-----|:------:|:------|
+| [HIKARI-Subaru-8B-SkinGroup](https://huggingface.co/E27085921/HIKARI-Subaru-8B-SkinGroup) | 1 | 4-class group classifier | 88.68% | Merged |
+| [⭐ HIKARI-Sirius-8B-SkinDx-RAG](https://huggingface.co/E27085921/HIKARI-Sirius-8B-SkinDx-RAG) | 2 | Disease dx — RAG-in-Training | **85.86%** | [Merged](https://huggingface.co/E27085921/HIKARI-Sirius-8B-SkinDx-RAG) · [LoRA](https://huggingface.co/E27085921/HIKARI-Sirius-8B-SkinDx-RAG-LoRA) |
+| [HIKARI-Deneb-8B-SkinDx-Cascade](https://huggingface.co/E27085921/HIKARI-Deneb-8B-SkinDx-Cascade) | 2 | Disease dx — Cascade FT | 79.80% | [Merged](https://huggingface.co/E27085921/HIKARI-Deneb-8B-SkinDx-Cascade) · [LoRA](https://huggingface.co/E27085921/HIKARI-Deneb-8B-SkinDx-Cascade-LoRA) |
+| [HIKARI-Altair-8B-SkinDx](https://huggingface.co/E27085921/HIKARI-Altair-8B-SkinDx) | 2 | Disease dx — baseline | 74.00% | [Merged](https://huggingface.co/E27085921/HIKARI-Altair-8B-SkinDx) · [LoRA](https://huggingface.co/E27085921/HIKARI-Altair-8B-SkinDx-LoRA) |
+| [HIKARI-Polaris-8B-SkinDx-Oracle](https://huggingface.co/E27085921/HIKARI-Polaris-8B-SkinDx-Oracle) | 2 | Oracle upper bound (research) | 59.38%* | Merged |
+| [⭐ HIKARI-Vega-8B-SkinCaption-Fused](https://huggingface.co/E27085921/HIKARI-Vega-8B-SkinCaption-Fused) | 3 | Clinical caption — Merged-Init | **BLEU-4: 29.33** | [Merged](https://huggingface.co/E27085921/HIKARI-Vega-8B-SkinCaption-Fused) · [LoRA](https://huggingface.co/E27085921/HIKARI-Vega-8B-SkinCaption-Fused-LoRA) |
+| [HIKARI-Rigel-8B-SkinCaption](https://huggingface.co/E27085921/HIKARI-Rigel-8B-SkinCaption) | 3 | Clinical caption — checkpoint init | BLEU-4: 9.82 | [Merged](https://huggingface.co/E27085921/HIKARI-Rigel-8B-SkinCaption) · [LoRA](https://huggingface.co/E27085921/HIKARI-Rigel-8B-SkinCaption-LoRA) |
+| [HIKARI-Antares-8B-SkinCaption-STS](https://huggingface.co/E27085921/HIKARI-Antares-8B-SkinCaption-STS) | 3 | Caption + STS ablation (research) | BLEU-4: 0.61 | [Merged](https://huggingface.co/E27085921/HIKARI-Antares-8B-SkinCaption-STS) · [LoRA](https://huggingface.co/E27085921/HIKARI-Antares-8B-SkinCaption-STS-LoRA) |
+
+*\* Requires ground-truth group at inference — oracle reference only*
 
 ---
 
@@ -167,7 +203,44 @@ HIKARI introduces **RAG-in-Training** — instead of using retrieval only at inf
 
 ## 🚀 Quick Start
 
-### 1. Clone & Install
+### Option A — Use Pretrained Models (recommended)
+
+```python
+from transformers import Qwen3VLForConditionalGeneration, AutoProcessor
+import torch
+from PIL import Image
+
+# Stage 2: Disease Diagnosis (best model — 85.86%)
+model_id = "E27085921/HIKARI-Sirius-8B-SkinDx-RAG"
+processor = AutoProcessor.from_pretrained(model_id, trust_remote_code=True)
+model = Qwen3VLForConditionalGeneration.from_pretrained(
+    model_id, torch_dtype=torch.bfloat16, device_map="auto", trust_remote_code=True
+)
+
+image = Image.open("skin_lesion.jpg").convert("RGB")
+PROMPT = (
+    "This skin lesion belongs to the group '{group}'. "
+    "Examine the lesion morphology, color, scale/crust, border sharpness, "
+    "and distribution pattern. What is the specific skin disease?"
+)
+messages = [{"role": "user", "content": [
+    {"type": "image", "image": image},
+    {"type": "text", "text": PROMPT.format(group="inflammatory")},
+]}]
+text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+inputs = processor(text=[text], images=[image], return_tensors="pt").to(model.device)
+
+with torch.no_grad():
+    out = model.generate(**inputs, max_new_tokens=64, temperature=0.0, do_sample=False)
+print(processor.batch_decode(out[:, inputs["input_ids"].shape[1]:], skip_special_tokens=True)[0])
+# → "atopic_dermatitis"
+```
+
+→ See the [model card](https://huggingface.co/E27085921/HIKARI-Sirius-8B-SkinDx-RAG) for vLLM / SGLang production examples.
+
+### Option B — Train from Scratch
+
+#### 1. Clone & Install
 
 ```bash
 git clone https://github.com/E27-25/HIKARI.git
@@ -176,7 +249,7 @@ pip install -r requirements.txt
 huggingface-cli login  # Required for Qwen3-VL model access
 ```
 
-### 2. Train — RAG-in-Training
+#### 2. Train — RAG-in-Training
 
 ```bash
 # Stage 1 + 2: Group classification → RAG-in-Training disease classification
@@ -191,7 +264,7 @@ python train_two_stage_FuzzyTopK.py \
     --stage3_init merged
 ```
 
-### 3. Evaluate
+#### 3. Evaluate
 
 ```bash
 # Full RAG benchmark — all encoder configs × prompts
@@ -205,14 +278,14 @@ python inference_disease_classification.py \
     --rag_exp R0
 ```
 
-### 4. Visualize Attention Maps
+#### 4. Visualize Attention Maps
 
 ```bash
 python gradcam_visualization.py
 # Output → gradcam_outputs/*_comparison.png
 ```
 
-### 5. Environment Check
+#### 5. Environment Check
 
 ```bash
 python check_cuda.py  # Verify CUDA + GPU before training
@@ -276,13 +349,13 @@ HIKARI/
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=13&duration=4000&pause=500&color=AAAAAA&center=true&vCenter=true&width=700&lines=Qwen3-VL-8B-Thinking+%C2%B7+Unsloth+%C2%B7+SkinCAP;SigLIP-2+%2B+BGE-M3+(train)+%C2%B7+CLIP+ViT-B%2F32+(inference);RAG-in-Training+%C2%B7+Merged-Init+%C2%B7+3-Stage+Pipeline;LoRA+rank%3D16+%C2%B7+4-bit+NF4+%C2%B7+FuzzyTopK;HybridRAGRetriever+%C2%B7+RTX+5070+Ti" alt="footer" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=13&duration=4000&pause=500&color=AAAAAA&center=true&vCenter=true&width=700&lines=Qwen3-VL-8B-Thinking+%C2%B7+Unsloth+%C2%B7+SkinCAP;SigLIP-2+%2B+BGE-M3+(train)+%C2%B7+CLIP+ViT-B%2F32+(inference);RAG-in-Training+%C2%B7+Merged-Init+%C2%B7+3-Stage+Pipeline;LoRA+rank%3D16+%C2%B7+4-bit+NF4+%C2%B7+FuzzyTopK;HubertRAGRetriever+%C2%B7+RTX+5070+Ti" alt="footer" />
 
 <hr/>
 
 <p>🌸 <b>HIKARI Project &nbsp;·&nbsp; 光（ヒカリ）</b> 🌸</p>
 <p><i>Healthcare-oriented Intelligent Knowledge-Augmented Retrieval and Inference system</i></p>
-<sub>Made with 💗 and 🌸</sub>
+<sub>Made with 💗 and 🌸 at King Mongkut's Institute of Technology Ladkrabang (KMITL)</sub>
 
 <hr/>
 

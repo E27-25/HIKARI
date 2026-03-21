@@ -1708,4 +1708,47 @@ Speed benchmark แสดงว่า SGLang FP8 เร็วกว่า Unslot
 
 ---
 
-*อัปเดต: 2026-03-21 (เพิ่ม Section 13–16: BERTScore multi-model comparison, Speed Benchmark, SGLang FP8 Accuracy, Raw Output examples)*
+---
+
+## Section 17 — โมเดลบน HuggingFace
+
+โมเดลทั้งหมด 14 ตัวของ HIKARI ถูก publish บน HuggingFace Hub ภายใต้ username **E27085921**
+
+### Collection
+
+| Collection | ลิงก์ | เนื้อหา |
+|:-----------|:------|:--------|
+| **HIKARI Skin Disease AI** | [collections/E27085921/hikari-skin-disease-ai](https://huggingface.co/collections/E27085921/hikari-skin-disease-ai-69be6cadbee2138aabfac175) | โมเดลทั้งหมด 14 ตัว (merged + LoRA) |
+| **HIKARI - LoRA Adapters** | [collections/E27085921/hikari-lora-adapters](https://huggingface.co/collections/E27085921/hikari-lora-adapters-69be6f05f363f84d8ffbd82d) | LoRA adapter 6 ตัว (~1.1 GB ต่อตัว) |
+
+### ตาราง Merged Models (~17 GB ต่อตัว)
+
+| HuggingFace ID | Stage | Task | Metric | Internal Name |
+|:---------------|:-----:|:-----|:------:|:--------------|
+| [HIKARI-Subaru-8B-SkinGroup](https://huggingface.co/E27085921/HIKARI-Subaru-8B-SkinGroup) | 1 | 4-class group classifier | 88.68% | `skincap_3stage_group_classification_merged` |
+| ⭐ [HIKARI-Sirius-8B-SkinDx-RAG](https://huggingface.co/E27085921/HIKARI-Sirius-8B-SkinDx-RAG) | 2 | Disease dx — RAG-in-Training | **85.86%** | `skincap_fuzzytopk_s1cascade_ragR2_a09_classification_merged` |
+| [HIKARI-Deneb-8B-SkinDx-Cascade](https://huggingface.co/E27085921/HIKARI-Deneb-8B-SkinDx-Cascade) | 2 | Disease dx — Cascade FT | 79.80% | `skincap_fuzzytopk_s1cascade_classification_merged` |
+| [HIKARI-Altair-8B-SkinDx](https://huggingface.co/E27085921/HIKARI-Altair-8B-SkinDx) | 2 | Disease dx — baseline | 74.00% | `skincap_fuzzytopk_classification_merged` |
+| [HIKARI-Polaris-8B-SkinDx-Oracle](https://huggingface.co/E27085921/HIKARI-Polaris-8B-SkinDx-Oracle) | 2 | Oracle upper bound (research) | 59.38%* | `skincap_3stage_disease_M1_merged` |
+| ⭐ [HIKARI-Vega-8B-SkinCaption-Fused](https://huggingface.co/E27085921/HIKARI-Vega-8B-SkinCaption-Fused) | 3 | Clinical caption — Merged-Init | BLEU-4: **29.33** | `skincap_stage3_caption_fuzzytopk_s1cascade_merged_init_classification_merged` |
+| [HIKARI-Rigel-8B-SkinCaption](https://huggingface.co/E27085921/HIKARI-Rigel-8B-SkinCaption) | 3 | Clinical caption — checkpoint init | BLEU-4: 9.82 | `skincap_stage3_caption_fuzzytopk_s1cascade_classification_merged` |
+| [HIKARI-Antares-8B-SkinCaption-STS](https://huggingface.co/E27085921/HIKARI-Antares-8B-SkinCaption-STS) | 3 | Caption + STS ablation (research) | BLEU-4: 0.61 | `skincap_stage3_caption_fuzzytopk_s1cascade_merged_init_sts_classification_merged` |
+
+*\* ต้องการ ground-truth group ตอน inference — oracle reference เท่านั้น*
+
+### ตาราง LoRA Adapters (~1.1 GB ต่อตัว)
+
+| HuggingFace ID | โหลดบน base model | หมายเหตุ |
+|:---------------|:-----------------|:---------|
+| [HIKARI-Sirius-8B-SkinDx-RAG-LoRA](https://huggingface.co/E27085921/HIKARI-Sirius-8B-SkinDx-RAG-LoRA) | `Qwen/Qwen3-VL-8B-Thinking` | |
+| [HIKARI-Deneb-8B-SkinDx-Cascade-LoRA](https://huggingface.co/E27085921/HIKARI-Deneb-8B-SkinDx-Cascade-LoRA) | `Qwen/Qwen3-VL-8B-Thinking` | |
+| [HIKARI-Altair-8B-SkinDx-LoRA](https://huggingface.co/E27085921/HIKARI-Altair-8B-SkinDx-LoRA) | `Qwen/Qwen3-VL-8B-Thinking` | |
+| [HIKARI-Rigel-8B-SkinCaption-LoRA](https://huggingface.co/E27085921/HIKARI-Rigel-8B-SkinCaption-LoRA) | `Qwen/Qwen3-VL-8B-Thinking` | |
+| ⚠️ [HIKARI-Vega-8B-SkinCaption-Fused-LoRA](https://huggingface.co/E27085921/HIKARI-Vega-8B-SkinCaption-Fused-LoRA) | **`E27085921/HIKARI-Sirius-8B-SkinDx-RAG`** | ต้องโหลดบน merged Stage 2 เท่านั้น (ไม่ใช่ raw Qwen) — Merged-Init design |
+| [HIKARI-Antares-8B-SkinCaption-STS-LoRA](https://huggingface.co/E27085921/HIKARI-Antares-8B-SkinCaption-STS-LoRA) | `Qwen/Qwen3-VL-8B-Thinking` | |
+
+> **หมายเหตุสำคัญ Vega-LoRA:** เนื่องจาก Vega ใช้ Merged-Init strategy (Stage 3 เริ่มจาก merged Stage 2 weights) ดังนั้น LoRA adapter ของ Vega จึงต้องโหลดบน `HIKARI-Sirius-8B-SkinDx-RAG` (merged) ไม่ใช่ raw `Qwen/Qwen3-VL-8B-Thinking` — ถ้าโหลดผิด disease knowledge จะหายไปและผลลัพธ์จะไม่ถูกต้อง
+
+---
+
+*อัปเดต: 2026-03-21 (เพิ่ม Section 13–16: BERTScore multi-model comparison, Speed Benchmark, SGLang FP8 Accuracy, Raw Output examples; Section 17: HuggingFace model links)*

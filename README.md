@@ -49,7 +49,7 @@ All 14 trained models are publicly available on HuggingFace — ready to use wit
 
 <div align="center">
 
-**🗂️ [HIKARI Skin Disease AI — All 14 Models](https://huggingface.co/collections/E27085921/hikari-skin-disease-ai-69be6cadbee2138aabfac175) &nbsp;·&nbsp; 🔌 [LoRA Adapters Only](https://huggingface.co/collections/E27085921/hikari-lora-adapters-69be6f05f363f84d8ffbd82d)**
+**🗂️ [HIKARI Skin Disease AI — Merged Models](https://huggingface.co/collections/E27085921/hikari-skin-disease-ai-69be6cadbee2138aabfac175) &nbsp;·&nbsp; 🔌 [LoRA Adapters](https://huggingface.co/collections/E27085921/hikari-lora-adapters-69be6f05f363f84d8ffbd82d)**
 
 </div>
 

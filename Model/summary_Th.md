@@ -1574,6 +1574,49 @@ Ground truth caption ใช้ hedging language ("*may indicate*", "*further inv
 
 ---
 
+### 14.7 ทำไม Unsloth ใช้ 4-bit แต่ SGLang ใช้ FP8? — ทำ 4-bit ใน SGLang ไม่ได้หรือ?
+
+เป็นคำถามที่สมเหตุสมผล เพราะดูเหมือนขัดแย้งกัน — ต้องแยกให้ออกว่าทั้งสองอยู่คนละ context กันเลย
+
+#### Unsloth 4-bit (NF4) = สำหรับ Training
+
+- ใช้ format **NF4 (Normal Float 4-bit)** ของ library `bitsandbytes`
+- เป้าหมายคือ **ลด VRAM ตอนฝึก** ไม่ใช่เพื่อ inference เร็ว
+- NF4 ถูกออกแบบมาให้ gradient ไหลได้ดีตอน backprop (QLoRA) — ถ้าใช้ INT4 ธรรมดา gradient จะเสียหาย
+- เป็น format **เฉพาะของ bitsandbytes** — inference engine อื่นไม่รู้จัก
+
+#### SGLang FP8 = สำหรับ Inference
+
+- ใช้ **FP8 hardware tensor cores** ที่มีใน GPU รุ่นใหม่ (RTX 5070 Ti ขึ้นไป)
+- GPU คำนวณ FP8 ได้เร็วมากเพราะมี **native silicon support** — ไม่ต้อง dequantize
+- precision ยังสูงพอสำหรับ inference เพราะไม่มี backprop
+
+#### ทำไม SGLang ทำ 4-bit ได้ยาก
+
+| | Unsloth NF4 | SGLang FP8 | vLLM BnB-4bit | SGLang GPTQ-4bit |
+|:-|:-----------:|:----------:|:-------------:|:----------------:|
+| ใช้งาน | Training | Inference | Inference | Inference |
+| SGLang รองรับ | ❌ | ✅ native | ❌ | ✅ (ต้อง pre-quantize) |
+| ความเร็ว | — | ⚡⚡⚡ เร็วสุด | ⚡ ช้ากว่า FP8 | ⚡⚡ |
+
+**สาเหตุที่ SGLang ทำ 4-bit ตรง ๆ ไม่ได้:**
+
+1. **NF4 ≠ INT4** — SGLang ไม่รู้จัก NF4 format ของ bitsandbytes เลย
+2. **4-bit inference ที่ SGLang รองรับ** ต้องเป็น GPTQ หรือ AWQ ซึ่งต้องทำขั้นตอน re-quantize model แยกต่างหาก (ใช้เวลานาน + ต้องมี VRAM พอ)
+3. **vLLM ทำ BnB-4bit ได้** แต่ช้ากว่า FP8 เพราะต้อง dequantize ทุก layer ก่อนคำนวณ — ไม่มี hardware shortcut
+
+#### สรุป
+
+```
+NF4 (4-bit)  →  ออกแบบมาสำหรับ training  →  bitsandbytes เฉพาะ  →  SGLang ไม่รู้จัก
+FP8          →  ออกแบบมาสำหรับ inference  →  GPU hardware รองรับ native  →  เร็วที่สุด
+
+ถ้าจะทำ 4-bit inference ใน SGLang ต้อง convert model เป็น GPTQ/AWQ ก่อน
+ซึ่งยุ่งยากกว่า และ FP8 ก็เร็วกว่าอยู่ดี → จึงเลือกใช้ FP8 แทน
+```
+
+---
+
 ## 15. การประเมิน Accuracy ด้วย SGLang FP8
 
 ### 15.1 แรงจูงใจ

@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HIKARI — Phase 2 Roadmap</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  :root {
+    --pink:    #ff7eb3;
+    --blue:    #7eb8ff;
+    --gold:    #ffd700;
+    --purple:  #b07cff;
+    --green:   #5eead4;
+    --orange:  #fb923c;
+    --bg:      #050914;
+    --card:    #0d1829;
+    --border:  #1e3a5f;
+    --text:    #e2e8f0;
+    --muted:   #64748b;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── Stars background ── */
+  #stars-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(255,126,179,.15), rgba(126,184,255,.15));
+    border: 1px solid rgba(255,126,179,.3);
+    border-radius: 50px;
+    padding: .4rem 1.2rem;
+    font-size: .8rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: 1.5rem;
+    animation: fadeDown .8s ease both;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 800;
+    background: linear-gradient(135deg, #fff 0%, var(--pink) 40%, var(--blue) 70%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeDown .8s .15s ease both, gradientShift 6s 1s ease-in-out infinite alternate;
+    background-size: 200%;
+    line-height: 1.1;
+  }
+
+  @keyframes gradientShift {
+    from { background-position: 0% 50%; }
+    to   { background-position: 100% 50%; }
+  }
+
+  .hero-sub {
+    font-size: 1.15rem;
+    color: var(--muted);
+    margin-top: 1rem;
+    animation: fadeDown .8s .3s ease both;
+  }
+
+  .hero-sub span { color: var(--text); }
+
+  .hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeDown .8s .45s ease both;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold);
+  }
+
+  .stat-label {
+    font-size: .75rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem;
+    color: var(--muted);
+    font-size: .75rem;
+    animation: bounce 2s infinite;
+  }
+
+  .scroll-hint::after {
+    content: '';
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--muted), transparent);
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(6px); }
+  }
+
+  /* ── Section ── */
+  section {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+
+  .section-label {
+    font-size: .75rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: .5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: .75rem;
+  }
+
+  .section-desc {
+    color: var(--muted);
+    max-width: 600px;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+
+  /* ── Axis grid ── */
+  .axis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .axis-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s, border-color .2s;
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  .axis-card.visible {
+    animation: slideUp .5s ease forwards;
+  }
+
+  .axis-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(0,0,0,.4);
+  }
+
+  .axis-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color .2s;
+  }
+
+  .axis-card.open .axis-header { border-color: var(--border); }
+
+  .axis-icon {
+    font-size: 1.75rem;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+
+  .axis-info { flex: 1; }
+
+  .axis-name {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: .2rem;
+  }
+
+  .axis-tagline {
+    font-size: .8rem;
+    color: var(--muted);
+  }
+
+  .axis-arrow {
+    color: var(--muted);
+    transition: transform .3s;
+    font-size: 1.1rem;
+  }
+
+  .axis-card.open .axis-arrow { transform: rotate(180deg); }
+
+  .axis-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease, padding .3s;
+    padding: 0 1.5rem;
+  }
+
+  .axis-card.open .axis-body {
+    max-height: 800px;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .axis-body ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+  }
+
+  .axis-body li {
+    display: flex;
+    align-items: flex-start;
+    gap: .6rem;
+    font-size: .875rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+  }
+
+  .axis-body li::before {
+    content: '→';
+    flex-shrink: 0;
+    margin-top: .05rem;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: .2rem .6rem;
+    border-radius: 50px;
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    margin-left: .4rem;
+  }
+
+  .tag-ready    { background: rgba(94,234,212,.15); color: var(--green); }
+  .tag-choosing { background: rgba(251,146,60,.15);  color: var(--orange); }
+
+  /* ── Card color themes ── */
+  .c-pink   { --c: var(--pink);   }
+  .c-purple { --c: var(--purple); }
+  .c-blue   { --c: var(--blue);   }
+  .c-green  { --c: var(--green);  }
+  .c-gold   { --c: var(--gold);   }
+  .c-orange { --c: var(--orange); }
+
+  .axis-card { border-color: var(--border); }
+  .axis-card:hover { border-color: var(--c, var(--pink)); box-shadow: 0 0 32px rgba(255,126,179,.1); }
+  .axis-icon { background: color-mix(in srgb, var(--c, var(--pink)) 15%, transparent); }
+  .axis-name { color: var(--c, var(--text)); }
+  .axis-body li::before { color: var(--c, var(--pink)); }
+
+  /* ── Chart section ── */
+  .chart-wrap {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+  }
+
+  /* ── Pipeline ── */
+  .pipeline {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    overflow-x: auto;
+    padding: 1rem 0 1.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  .pipe-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    flex-shrink: 0;
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+
+  .pipe-step.visible {
+    animation: slideRight .5s ease forwards;
+  }
+
+  .pipe-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: .75rem 1rem;
+    font-size: .8rem;
+    font-weight: 600;
+    text-align: center;
+    min-width: 110px;
+    transition: border-color .2s, box-shadow .2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pipe-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 60%, rgba(255,255,255,.03));
+  }
+
+  .pipe-box:hover {
+    border-color: var(--pink);
+    box-shadow: 0 0 20px rgba(255,126,179,.15);
+    transform: translateY(-2px);
+    cursor: pointer;
+  }
+
+  .pipe-num {
+    font-size: .65rem;
+    color: var(--muted);
+    letter-spacing: .05em;
+  }
+
+  .pipe-arrow {
+    color: var(--muted);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    padding: 0 .25rem;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: .4; transform: translateX(0); }
+    50%       { opacity: 1;  transform: translateX(3px); }
+  }
+
+  /* ── Timeline ── */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: .5rem;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--pink), var(--blue), var(--gold), transparent);
+  }
+
+  .tl-item {
+    display: flex;
+    gap: 1.5rem;
+    padding-bottom: 2.5rem;
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+
+  .tl-item.visible {
+    animation: slideRight .5s ease forwards;
+  }
+
+  .tl-dot {
+    position: absolute;
+    left: .1rem;
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    border: 2px solid var(--pink);
+    background: var(--bg);
+    margin-top: .4rem;
+    flex-shrink: 0;
+  }
+
+  .tl-month {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--pink);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: .4rem;
+  }
+
+  .tl-tasks {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+  }
+
+  .tl-task {
+    font-size: .85rem;
+    color: #cbd5e1;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .tl-task::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--muted);
+    flex-shrink: 0;
+  }
+
+  /* ── Summary table ── */
+  .summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .875rem;
+  }
+
+  .summary-table th {
+    text-align: left;
+    padding: .75rem 1rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+    font-weight: 600;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  }
+
+  .summary-table td {
+    padding: .85rem 1rem;
+    border-bottom: 1px solid rgba(30,58,95,.4);
+  }
+
+  .summary-table tr:hover td { background: rgba(255,255,255,.02); }
+
+  .status-dot {
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    margin-right: .5rem;
+  }
+
+  /* ── Animations ── */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideRight {
+    from { opacity: 0; transform: translateX(-16px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  /* ── Divider ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border), transparent);
+    margin: 0 2rem;
+  }
+
+  /* ── Footer ── */
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 3rem 2rem 4rem;
+    color: var(--muted);
+    font-size: .85rem;
+  }
+
+  footer strong { color: var(--pink); }
+</style>
+</head>
+<body>
+
+<canvas id="stars-canvas"></canvas>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-badge">🌸 Phase 1 Complete · Phase 2 Planning</div>
+  <h1 class="hero-title">HIKARI Phase 2</h1>
+  <p class="hero-sub">
+    Building on <span>85.86% accuracy</span> · <span>14 published models</span> · <span>RAG-in-Training</span>
+  </p>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">6</div>
+      <div class="stat-label">Dev Axes</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">10+</div>
+      <div class="stat-label">Models to Test</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">~50</div>
+      <div class="stat-label">Training Runs</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">1</div>
+      <div class="stat-label">Command to Run All</div>
+    </div>
+  </div>
+  <div class="scroll-hint">scroll</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ── AXES ── -->
+<section>
+  <div class="section-label">Development Axes</div>
+  <h2 class="section-title">Six Directions to Explore</h2>
+  <p class="section-desc">Each axis is independent — pursue one or combine. All run through the same automated pipeline.</p>
+
+  <div class="axis-grid">
+
+    <!-- Model -->
+    <div class="axis-card c-pink" onclick="toggle(this)">
+      <div class="axis-header">
+        <div class="axis-icon">🔭</div>
+        <div class="axis-info">
+          <div class="axis-name">Model Comparison <span class="tag tag-ready">Ready</span></div>
+          <div class="axis-tagline">Does RAG-in-Training work across every VLM?</div>
+        </div>
+        <div class="axis-arrow">▾</div>
+      </div>
+      <div class="axis-body">
+        <ul>
+          <li>Qwen2.5-VL-3B — same family, easiest migration path</li>
+          <li>Gemma3-4B-vision — Google, strong baseline in research</li>
+          <li>InternVL2.5-4B — known strong medical vision encoder</li>
+          <li>Phi-4-multimodal (5B) — efficient, edge-deployment friendly</li>
+          <li>3 experiments per model: Baseline → Cascade → RAG-in-Training</li>
+          <li>Key question: can 4B + RAG beat 8B without RAG?</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Technique -->
+    <div class="axis-card c-purple" onclick="toggle(this)">
+      <div class="axis-header">
+        <div class="axis-icon">🔬</div>
+        <div class="axis-info">
+          <div class="axis-name">Technique <span class="tag tag-choosing">Choosing</span></div>
+          <div class="axis-tagline">Same model, smarter training methods</div>
+        </div>
+        <div class="axis-arrow">▾</div>
+      </div>
+      <div class="axis-body">
+        <ul>
+          <li><strong>Option A — Dynamic RAG-k</strong> ★ Recommended: model chooses k=0/1/3 based on uncertainty</li>
+          <li><strong>Option B — Hard Negative Mining:</strong> inject visually similar but different-disease images</li>
+          <li><strong>Option C — Multi-Reference Fusion:</strong> k=3 references, model attends to each differently</li>
+          <li><strong>Option D — Self-Training:</strong> pseudo-label unlabeled images, expand dataset without manual cost</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Pipeline -->
+    <div class="axis-card c-blue" onclick="toggle(this)">
+      <div class="axis-header">
+        <div class="axis-icon">🧩</div>
+        <div class="axis-info">
+          <div class="axis-name">Pipeline <span class="tag tag-choosing">Choosing</span></div>
+          <div class="axis-tagline">Add preprocessing steps around the model</div>
+        </div>
+        <div class="axis-arrow">▾</div>
+      </div>
+      <div class="axis-body">
+        <ul>
+          <li><strong>Option A — Segmentation-first</strong> ★ Recommended: SAM2 crops lesion → HIKARI classifies crop</li>
+          <li><strong>Option B — Multi-lesion Detection:</strong> detect all lesions, classify each independently</li>
+          <li><strong>Option C — Quality Filter:</strong> blur detection + skin crop + color normalization before inference</li>
+          <li><strong>Option D — 3-Level Cascade:</strong> Group → Subgroup → Disease (add intermediate layer)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- XAI -->
+    <div class="axis-card c-green" onclick="toggle(this)">
+      <div class="axis-header">
+        <div class="axis-icon">🔍</div>
+        <div class="axis-info">
+          <div class="axis-name">Explainability (XAI) <span class="tag tag-ready">Ready</span></div>
+          <div class="axis-tagline">Why did the model decide this? — clinically trustworthy</div>
+        </div>
+        <div class="axis-arrow">▾</div>
+      </div>
+      <div class="axis-body">
+        <ul>
+          <li>GradCAM++ and Attention Rollout — sharper localization than Phase 1</li>
+          <li>Uncertainty score: confidence % shown with every prediction</li>
+          <li>Low confidence → "recommend dermatologist review" flag</li>
+          <li>Counterfactual: "if this region were removed, model predicts X"</li>
+          <li>Per-class activation atlas: visual signature for each of 23 diseases</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Evaluation -->
+    <div class="axis-card c-gold" onclick="toggle(this)">
+      <div class="axis-header">
+        <div class="axis-icon">📊</div>
+        <div class="axis-info">
+          <div class="axis-name">Evaluation <span class="tag tag-ready">Ready</span></div>
+          <div class="axis-tagline">One accuracy number is not enough for medical AI</div>
+        </div>
+        <div class="axis-arrow">▾</div>
+      </div>
+      <div class="axis-body">
+        <ul>
+          <li>Per-subgroup accuracy: skin tone (Fitzpatrick I–VI), lesion size, body location</li>
+          <li>Calibration: reliability diagram + ECE — does 90% confidence = 90% accuracy?</li>
+          <li>OOD robustness: test on HAM10000, smartphone photos, noisy images</li>
+          <li>Clinical agreement: Cohen's Kappa vs real dermatologist diagnoses</li>
+          <li>Caption: add ROUGE-L, CIDEr, GPT-4o clinical relevance judge</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Application -->
+    <div class="axis-card c-orange" onclick="toggle(this)">
+      <div class="axis-header">
+        <div class="axis-icon">🏥</div>
+        <div class="axis-info">
+          <div class="axis-name">Application <span class="tag tag-choosing">After research</span></div>
+          <div class="axis-tagline">Make HIKARI usable without Python</div>
+        </div>
+        <div class="axis-arrow">▾</div>
+      </div>
+      <div class="axis-body">
+        <ul>
+          <li>REST API: POST /diagnose → disease + confidence + caption + heatmap</li>
+          <li>Web UI: upload image, see diagnosis + GradCAM overlay instantly</li>
+          <li>Confidence threshold: auto-flag low-confidence cases for human review</li>
+          <li>Multilingual output: English + Thai clinical captions</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── PIPELINE ── -->
+<section>
+  <div class="section-label">Automation</div>
+  <h2 class="section-title">One Command — Full Pipeline</h2>
+  <p class="section-desc">Every model runs through the same 10-step automated pipeline. Results logged to W&B. Best model auto-uploaded to HuggingFace.</p>
+
+  <div class="pipeline" id="pipeline">
+    <div class="pipe-step">
+      <div class="pipe-box">
+        <div class="pipe-num">01</div>
+        train_stage1
+        <div style="font-size:.65rem;color:var(--muted);margin-top:.2rem">Group Classifier</div>
+      </div>
+    </div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step">
+      <div class="pipe-box">
+        <div class="pipe-num">02</div>
+        train_stage2
+        <div style="font-size:.65rem;color:var(--muted);margin-top:.2rem">Baseline + RAG</div>
+      </div>
+    </div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step">
+      <div class="pipe-box">
+        <div class="pipe-num">03</div>
+        merge
+        <div style="font-size:.65rem;color:var(--muted);margin-top:.2rem">LoRA → Full</div>
+      </div>
+    </div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step">
+      <div class="pipe-box">
+        <div class="pipe-num">04</div>
+        train_stage3
+        <div style="font-size:.65rem;color:var(--muted);margin-top:.2rem">Caption Gen</div>
+      </div>
+    </div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step">
+      <div class="pipe-box">
+        <div class="pipe-num">05</div>
+        eval_all
+        <div style="font-size:.65rem;color:var(--muted);margin-top:.2rem">Full Benchmark</div>
+      </div>
+    </div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step">
+      <div class="pipe-box">
+        <div class="pipe-num">06</div>
+        xai_report
+        <div style="font-size:.65rem;color:var(--muted);margin-top:.2rem">GradCAM / XAI</div>
+      </div>
+    </div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step">
+      <div class="pipe-box">
+        <div class="pipe-num">07</div>
+        speed_bench
+        <div style="font-size:.65rem;color:var(--muted);margin-top:.2rem">3 Engines</div>
+      </div>
+    </div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step">
+      <div class="pipe-box">
+        <div class="pipe-num">08</div>
+        eval_report
+        <div style="font-size:.65rem;color:var(--muted);margin-top:.2rem">Calibration/OOD</div>
+      </div>
+    </div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step">
+      <div class="pipe-box">
+        <div class="pipe-num">09</div>
+        generate_report
+        <div style="font-size:.65rem;color:var(--muted);margin-top:.2rem">HTML + PDF</div>
+      </div>
+    </div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step">
+      <div class="pipe-box" style="border-color:var(--pink)">
+        <div class="pipe-num">10</div>
+        upload_hf
+        <div style="font-size:.65rem;color:var(--pink);margin-top:.2rem">If beats best ⭐</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── CHART ── -->
+<section>
+  <div class="section-label">Model Comparison</div>
+  <h2 class="section-title">Expected Performance Landscape</h2>
+  <p class="section-desc">Phase 1 result as baseline (★). Phase 2 will fill in the remaining bars.</p>
+
+  <div class="chart-wrap">
+    <canvas id="modelChart" height="380"></canvas>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── TIMELINE ── -->
+<section>
+  <div class="section-label">Execution Plan</div>
+  <h2 class="section-title">4-Month Roadmap</h2>
+  <p class="section-desc">Automation infrastructure first — then research can run overnight.</p>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div>
+        <div class="tl-month">Month 1 — Foundation</div>
+        <div class="tl-tasks">
+          <div class="tl-task">Build run_all.py + config system (models.yaml)</div>
+          <div class="tl-task">Integrate Weights & Biases logging</div>
+          <div class="tl-task">Smoke test with Qwen2.5-VL-3B (same family, easiest)</div>
+        </div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="border-color:var(--blue)"></div>
+      <div>
+        <div class="tl-month" style="color:var(--blue)">Month 2 — Model Axis</div>
+        <div class="tl-tasks">
+          <div class="tl-task">Run Gemma3-4B + InternVL2.5-4B through full pipeline</div>
+          <div class="tl-task">Technique Axis: implement Dynamic RAG-k</div>
+          <div class="tl-task">Compare results vs HIKARI-Sirius baseline</div>
+        </div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="border-color:var(--gold)"></div>
+      <div>
+        <div class="tl-month" style="color:var(--gold)">Month 3 — XAI + Pipeline</div>
+        <div class="tl-tasks">
+          <div class="tl-task">Pipeline Axis: SAM2 segmentation preprocessing</div>
+          <div class="tl-task">XAI: uncertainty score + GradCAM++ + attention maps</div>
+          <div class="tl-task">Per-class activation atlas for all 23 diseases</div>
+        </div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="border-color:var(--green)"></div>
+      <div>
+        <div class="tl-month" style="color:var(--green)">Month 4 — Evaluation + Application</div>
+        <div class="tl-tasks">
+          <div class="tl-task">Full evaluation: OOD robustness, subgroup, calibration</div>
+          <div class="tl-task">Clinical agreement study (vs dermatologist)</div>
+          <div class="tl-task">REST API + Web UI deployment</div>
+          <div class="tl-task">Final benchmark report — all models, all axes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── SUMMARY ── -->
+<section>
+  <div class="section-label">Summary</div>
+  <h2 class="section-title">Phase 2 at a Glance</h2>
+  <p class="section-desc">Status and key deliverable for each axis.</p>
+
+  <div class="chart-wrap">
+    <table class="summary-table">
+      <thead>
+        <tr>
+          <th>Axis</th>
+          <th>Status</th>
+          <th>Key Output</th>
+          <th>Paper?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🔭 Model Comparison</td>
+          <td><span class="status-dot" style="background:var(--green)"></span>Ready</td>
+          <td>Multi-architecture benchmark table</td>
+          <td>✅ Yes</td>
+        </tr>
+        <tr>
+          <td>🔬 Technique</td>
+          <td><span class="status-dot" style="background:var(--orange)"></span>Choosing option</td>
+          <td>Dynamic RAG-k algorithm + results</td>
+          <td>✅ Yes</td>
+        </tr>
+        <tr>
+          <td>🧩 Pipeline</td>
+          <td><span class="status-dot" style="background:var(--orange)"></span>Choosing option</td>
+          <td>Segmentation-first ablation study</td>
+          <td>✅ Yes</td>
+        </tr>
+        <tr>
+          <td>🔍 Explainability</td>
+          <td><span class="status-dot" style="background:var(--green)"></span>Ready</td>
+          <td>Confidence score + XAI dashboard</td>
+          <td>⚠️ Supporting</td>
+        </tr>
+        <tr>
+          <td>📊 Evaluation</td>
+          <td><span class="status-dot" style="background:var(--green)"></span>Ready</td>
+          <td>Clinical-grade evaluation report</td>
+          <td>⚠️ Supporting</td>
+        </tr>
+        <tr>
+          <td>🏥 Application</td>
+          <td><span class="status-dot" style="background:var(--muted)"></span>After research</td>
+          <td>REST API + Web UI</td>
+          <td>🔵 Demo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <strong>HIKARI</strong> · Phase 1 Complete 🌸 · Phase 2 In Planning ·
+  Qwen3-VL-8B-Thinking · KMITL · 2026
+</footer>
+
+<script>
+/* ── Stars ── */
+(function() {
+  const canvas = document.getElementById('stars-canvas');
+  const ctx = canvas.getContext('2d');
+  let stars = [];
+
+  function resize() {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  function init() {
+    resize();
+    stars = Array.from({length: 160}, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 1.4 + .2,
+      a: Math.random(),
+      speed: Math.random() * .004 + .001,
+      color: ['#ffffff','#ffb7c5','#7eb8ff','#ffd700'][Math.floor(Math.random()*4)]
+    }));
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stars.forEach(s => {
+      s.a += s.speed;
+      const alpha = (Math.sin(s.a) + 1) / 2 * .8 + .05;
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = s.color + Math.round(alpha * 255).toString(16).padStart(2,'0');
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', () => { resize(); init(); });
+  init();
+  draw();
+})();
+
+/* ── Scroll reveal ── */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: .1 });
+
+document.querySelectorAll('.axis-card, .pipe-step, .tl-item').forEach(el => {
+  observer.observe(el);
+});
+
+/* ── Accordion ── */
+function toggle(card) {
+  const isOpen = card.classList.contains('open');
+  document.querySelectorAll('.axis-card.open').forEach(c => c.classList.remove('open'));
+  if (!isOpen) card.classList.add('open');
+}
+
+/* ── Chart ── */
+const ctx2 = document.getElementById('modelChart').getContext('2d');
+
+const models = [
+  'SmolVLM\n2B','Gemma3\n4B','InternVL\n4B','Qwen2.5\n3B','Phi-4\n5B',
+  'Qwen2.5\n7B','InternVL\n8B','HIKARI\nSirius ⭐'
+];
+
+const baseline = [48, 60, 63, 58, 64, 67, 70, 79.80];
+const withRAG   = [null, null, null, null, null, null, null, 85.86];
+const expected  = [62, 76, 79, 74, 78, 82, 84, null];
+
+new Chart(ctx2, {
+  type: 'bar',
+  data: {
+    labels: models,
+    datasets: [
+      {
+        label: 'Baseline (no RAG)',
+        data: baseline,
+        backgroundColor: 'rgba(126,184,255,.35)',
+        borderColor: '#7eb8ff',
+        borderWidth: 1.5,
+        borderRadius: 6,
+      },
+      {
+        label: 'Expected + RAG-in-Training',
+        data: expected,
+        backgroundColor: 'rgba(176,124,255,.35)',
+        borderColor: '#b07cff',
+        borderWidth: 1.5,
+        borderRadius: 6,
+      },
+      {
+        label: 'Phase 1 Result (actual)',
+        data: withRAG,
+        backgroundColor: 'rgba(255,215,0,.5)',
+        borderColor: '#ffd700',
+        borderWidth: 2,
+        borderRadius: 6,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    animation: { duration: 1200, easing: 'easeOutQuart' },
+    plugins: {
+      legend: {
+        labels: { color: '#94a3b8', font: { size: 12 } }
+      },
+      tooltip: {
+        callbacks: {
+          label: ctx => ctx.parsed.y != null
+            ? ` ${ctx.dataset.label}: ${ctx.parsed.y}%`
+            : ' — to be measured'
+        },
+        backgroundColor: '#0d1829',
+        borderColor: '#1e3a5f',
+        borderWidth: 1,
+        titleColor: '#e2e8f0',
+        bodyColor: '#94a3b8',
+      }
+    },
+    scales: {
+      x: {
+        ticks: { color: '#64748b', font: { size: 11 } },
+        grid:  { color: 'rgba(30,58,95,.3)' }
+      },
+      y: {
+        min: 40, max: 100,
+        ticks: {
+          color: '#64748b',
+          callback: v => v + '%'
+        },
+        grid: { color: 'rgba(30,58,95,.3)' }
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>

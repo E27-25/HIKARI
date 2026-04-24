@@ -1,180 +1,204 @@
+<!-- ✿ HIKARI Phase 2 Roadmap ✿ -->
+
 <div align="center">
 
-# 🌸 HIKARI — Phase 2 Roadmap
+<img src="logo/HIKARI logo.png" alt="HIKARI Logo" width="100%"/>
 
-**Building on 85.86% accuracy · 14 published models · RAG-in-Training**
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=3000&pause=800&color=FF9EBC&center=true&vCenter=true&width=800&lines=HIKARI+Phase+2+%F0%9F%8C%B8;Multi-Architecture+Benchmark;Dynamic+RAG-k+%C3%97+Hard+Negative+Mining;Segmentation+%E2%86%92+Classify+Pipeline;Explainability+%2B+Uncertainty+Scores;Clinical-Grade+Evaluation" alt="Typing SVG" />
 
-*Phase 1 Complete · Phase 2 Planning Document*
+<br/>
 
----
+[![Phase](https://img.shields.io/badge/Phase_1-Complete_✓-4ADE80?style=for-the-badge&logo=checkmarx&logoColor=white)](.)
+[![Phase](https://img.shields.io/badge/Phase_2-In_Planning-FF9EBC?style=for-the-badge&logo=rocket&logoColor=white)](.)
+[![Models](https://img.shields.io/badge/Models_to_Test-10+-4B9EFF?style=for-the-badge&logo=huggingface&logoColor=white)](.)
+[![Runs](https://img.shields.io/badge/Training_Runs-~50_Automated-A855F7?style=for-the-badge&logo=pytorch&logoColor=white)](.)
+[![Tracking](https://img.shields.io/badge/Tracking-Weights_&_Biases-FFBE00?style=for-the-badge&logo=weightsandbiases&logoColor=white)](.)
+
+<br/>
+
+> **Phase 1** proved that **RAG-in-Training** and **Merged-Init** work — **85.86% accuracy**, 14 published models.
+>
+> **Phase 2** asks: *does it generalize? how far can we push it?*
 
 </div>
 
-## Overview
+---
 
-Phase 1 proved that **RAG-in-Training** and **Merged-Init** work.  
-Phase 2 asks: *how far can we push it?*
-
-Six development axes — each independent, each extendable.
+## 🗺️ Six Development Axes
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    HIKARI Phase 2                           │
-│                                                             │
-│  🔭 Model      🔬 Technique    🧩 Pipeline                  │
-│  🔍 XAI        📊 Evaluation   🏥 Application               │
-│                                                             │
-│  All axes share one automated pipeline:                     │
-│  train → eval → benchmark → report → upload                 │
-└─────────────────────────────────────────────────────────────┘
+╔══════════════════════════════════════════════════════════════════════╗
+║                        HIKARI  Phase 2                               ║
+╠══════════════════════════════════════════════════════════════════════╣
+║                                                                      ║
+║   🔭 Model Axis      ──  Does RAG-in-Training work on every VLM?    ║
+║   🔬 Technique Axis  ──  Smarter training: Dynamic-k, Hard Negative  ║
+║   🧩 Pipeline Axis   ──  Segmentation-first preprocessing           ║
+║   🔍 XAI Axis        ──  Confidence scores + Attention atlas         ║
+║   📊 Eval Axis       ──  Clinical-grade multi-dimension evaluation   ║
+║   🏥 App Axis        ──  REST API + Web UI for real-world use       ║
+║                                                                      ║
+║   All axes → one automated pipeline → train · eval · upload         ║
+╚══════════════════════════════════════════════════════════════════════╝
 ```
+
+| Axis | Status | Key Output | Paper? |
+|:-----|:------:|:-----------|:------:|
+| 🔭 Model Comparison | ✅ Ready | Multi-architecture benchmark table | ✅ Yes |
+| 🔬 Technique | 🟡 Choosing option | Dynamic RAG-k algorithm + results | ✅ Yes |
+| 🧩 Pipeline | 🟡 Choosing option | Segmentation-first ablation study | ✅ Yes |
+| 🔍 Explainability | ✅ Ready | Confidence score + XAI dashboard | ⚠️ Supporting |
+| 📊 Evaluation | ✅ Ready | Clinical-grade full eval report | ⚠️ Supporting |
+| 🏥 Application | 🔵 After research | REST API + Web UI | 🔵 Demo |
 
 ---
 
 ## 🔭 Axis 1 — Model Comparison
 
-> *"Does RAG-in-Training work across every VLM architecture?"*
+<div align="center">
 
-The core claim of Phase 1 is that the **training methodology** matters more than the model.  
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&duration=2500&pause=600&color=4B9EFF&center=true&vCenter=true&width=700&lines=Does+RAG-in-Training+work+on+every+VLM%3F;Qwen2.5-VL-3B+%C2%B7+Gemma3-4B+%C2%B7+InternVL2.5-4B;Can+4B+%2B+RAG+beat+8B+without+RAG%3F" alt="Model Axis" />
+
+</div>
+
+The core claim of Phase 1 is that **training methodology** matters more than model size.  
 Phase 2 verifies this by running the same pipeline across multiple model families.
 
-### Models
-
-**Priority 1 — Try First**
+### Priority 1 — Try First
 
 | Model | Params | Family | Why |
 |:------|:------:|:------:|:----|
-| `Qwen2.5-VL-3B-Instruct` | 3B | Qwen | Same family as Phase 1, easiest migration |
+| `Qwen2.5-VL-3B-Instruct` | 3B | Qwen | Same family as Phase 1 — easiest migration |
 | `Gemma3-4B-IT` (vision) | 4B | Google | Strong baseline, popular in research |
-| `InternVL2.5-4B` | 4B | InternVL | Known strong vision encoder for medical |
+| `InternVL2.5-4B` | 4B | InternVL | Known strong medical vision encoder |
 
-**Priority 2 — If Time Allows**
+### Priority 2 — If Time Allows
 
 | Model | Params | Family | Why |
 |:------|:------:|:------:|:----|
 | `Phi-4-multimodal` | 5B | Microsoft | Efficient, edge-friendly |
-| `Qwen2.5-VL-7B-Instruct` | 7B | Qwen | Direct comparison to Phase 1 |
+| `Qwen2.5-VL-7B-Instruct` | 7B | Qwen | Direct comparison to Phase 1 (8B) |
 | `InternVL2.5-8B` | 8B | InternVL | Size-matched comparison |
 
-### Experiments Per Model
-
-Only **3 runs per model** (M-series ablation already answered in Phase 1):
+### 3 Experiments Per Model
 
 ```
-1. Single-Image FT      ←  baseline (no cascade, no RAG)
+1. Single-Image FT      ←  baseline  (no cascade, no RAG)
 2. Cascaded FT          ←  intermediate
-3. RAG-in-Training      ←  key contribution — does it generalize?
+3. RAG-in-Training ⭐   ←  key claim — does it generalize?
 ```
 
-### Research Questions
-
-- Is RAG-in-Training architecture-agnostic?
-- Can a 4B model + RAG outperform an 8B model without RAG?
-- Which model family is most suited for medical image understanding?
-
-### Expected Output
+### Expected Benchmark Table
 
 ```
 Model                | Params | Baseline | +RAG    | BLEU-4 | ms/img
 ---------------------|--------|----------|---------|--------|--------
-SmolVLM-2-2B         |   2B   |  ~60%?   |  ~72%?  |  ~15?  |  ~200
 Gemma3-4B            |   4B   |  ~72%?   |  ~80%?  |  ~22?  |  ~350
 InternVL2.5-4B       |   4B   |  ~75%?   |  ~82%?  |  ~24?  |  ~400
+Qwen2.5-VL-3B        |   3B   |  ~68%?   |  ~77%?  |  ~20?  |  ~300
 Qwen2.5-VL-7B        |   7B   |  ~80%?   |  ~84%?  |  ~27?  |  ~500
-HIKARI-Sirius (8B) ⭐ |   8B   | 79.80%   | 85.86%  | 29.33  |   584  ← Phase 1
+HIKARI-Sirius (8B) ⭐ |   8B   | 79.80%   | 85.86%  | 29.33  |   584  ← Phase 1 baseline
 ```
 
 ---
 
 ## 🔬 Axis 2 — Technique
 
-> *"Same model, same pipeline — but smarter training."*
+<div align="center">
 
-**Status: Options under consideration — choose 1–2**
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&duration=2500&pause=600&color=B07CFF&center=true&vCenter=true&width=700&lines=Same+model%2C+same+pipeline+—+smarter+training;Dynamic+RAG-k+%C2%B7+Hard+Negative+Mining;Self-Training+%C2%B7+Multi-Reference+Fusion" alt="Technique Axis" />
 
-### Option A — Dynamic RAG-k ⭐ *Recommended*
+</div>
+
+> **Status: Options under consideration — choose 1–2**
+
+### ⭐ Option A — Dynamic RAG-k *(Recommended)*
 
 Phase 1 used fixed `k=1`. Phase 2 lets the model decide how many references it needs.
 
 ```
-Easy image  →  k=0  (model is confident, no reference needed)
+Easy image  →  k=0  (confident — no reference needed)
 Medium      →  k=1  (Phase 1 default)
-Hard image  →  k=3  (uncertain, needs more context)
+Hard image  →  k=3  (uncertain — needs more visual context)
 
-Decision basis: entropy of prediction distribution
+Decision: entropy of prediction distribution
 High entropy = uncertain = request more references
 ```
-
-**Why this matters:** Some diseases are visually distinct (k=0 is fine).  
-Others look identical to neighboring diseases (need k=3 for disambiguation).
 
 ### Option B — Hard Negative Mining
 
 ```
-Phase 1 RAG: retrieve closest image by visual similarity
+Phase 1 RAG: retrieve the closest image (same disease)
 Phase 2 add: also inject 1 "hard negative"
-             — image that looks similar but is a DIFFERENT disease
+             — visually similar, but a DIFFERENT disease
 
-Goal: teach the model to distinguish subtle visual differences
+Goal: teach subtle boundary discrimination between look-alike diseases
 ```
 
 ### Option C — Multi-Reference Fusion
 
 ```
-Phase 1: k=1 → 1 reference image in context
-Phase 2: k=3 → 3 reference images, model attends differently to each
+Phase 1: k=1 → 1 reference in context window
+Phase 2: k=3 → 3 references, model attends differently to each
 
-Research question: how much does k=3 improve over k=1?
+Research question: does k=3 meaningfully outperform k=1?
 Hypothesis: diminishing returns after k=2
 ```
 
 ### Option D — Self-Training / Pseudo-Label
 
 ```
-1. Use HIKARI-Sirius to predict unlabeled skin images
-2. Keep only high-confidence predictions (> 0.90)
+1. HIKARI-Sirius predicts unlabeled skin images
+2. Keep high-confidence predictions (conf > 0.90)
 3. Add as training data → retrain
-4. Expand dataset without manual labeling cost
+4. Expand dataset without manual annotation cost
 ```
 
 ---
 
 ## 🧩 Axis 3 — Pipeline
 
-> *"Add preprocessing steps before the model sees the image."*
+<div align="center">
 
-**Status: Options under consideration — choose 1**
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&duration=2500&pause=600&color=7EB8FF&center=true&vCenter=true&width=700&lines=Add+preprocessing+steps+around+the+model;SAM2+Segmentation+%E2%86%92+Lesion+Crop+%E2%86%92+HIKARI;Multi-lesion+Detection+%C2%B7+Quality+Filter" alt="Pipeline Axis" />
 
-### Option A — Segmentation → Classify ⭐ *Recommended*
+</div>
 
-```
-Current pipeline:
-[Full image] ──────────────────────→ HIKARI → diagnosis
+> **Status: Options under consideration — choose 1**
 
-New pipeline:
-[Full image] → SAM2 (segment) → [Lesion crop only] → HIKARI → diagnosis
-```
-
-**Research question:** Does isolating the lesion before classification help?  
-Or is HIKARI already attending to the right region (GradCAM suggests yes)?
-
-**Contribution:** First systematic study of segmentation preprocessing on SkinCAP.
-
-### Option B — Detection → Multi-lesion
+### ⭐ Option A — Segmentation → Classify *(Recommended)*
 
 ```
-Current: assumes 1 lesion per image → 1 diagnosis
-New:     detect ALL lesions in image first
-         → classify each lesion independently
-         → output: { "lesion_A": "SCCIS", "lesion_B": "Melanoma" }
+╔══════════════════════════════════════════════════════════╗
+║  CURRENT PIPELINE                                        ║
+╠══════════════════════════════════════════════════════════╣
+║  [Full Image] ──────────────────────► HIKARI ► Diagnosis ║
+╚══════════════════════════════════════════════════════════╝
+
+╔══════════════════════════════════════════════════════════╗
+║  PHASE 2 PIPELINE                                        ║
+╠══════════════════════════════════════════════════════════╣
+║  [Full Image] ► SAM2 ► [Lesion Crop] ► HIKARI ► Diagnosis║
+╚══════════════════════════════════════════════════════════╝
+```
+
+**Research question:** Does isolating the lesion before classification help —  
+or does HIKARI already attend to the right region? (GradCAM suggests it does.)
+
+### Option B — Multi-lesion Detection
+
+```
+Current: 1 image → 1 diagnosis  (assumes single lesion)
+Phase 2: detect all lesions → classify each independently
+Output:  { "lesion_A": "SCCIS", "lesion_B": "Melanoma" }
 ```
 
 ### Option C — Quality Filter + Preprocessing
 
 ```
-Before every inference:
-├── Blur detection     → reject image if not sharp enough
-├── Skin region crop   → remove non-skin background
+Before inference:
+├── Blur detection      → reject images below sharpness threshold
+├── Skin region crop    → remove non-skin background
 └── Color normalization → standardize lighting conditions
 ```
 
@@ -191,125 +215,58 @@ Add intermediate layer to reduce cross-group confusion
 
 ## 🔍 Axis 4 — Explainability (XAI)
 
-> *"Why did the model make this decision? — clinically trustworthy AI"*
+<div align="center">
 
-Phase 1 implemented GradCAM. Phase 2 goes deeper.
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&duration=2500&pause=600&color=5EEAD4&center=true&vCenter=true&width=700&lines=Why+did+the+model+decide+this%3F;GradCAM%2B%2B+%C2%B7+Attention+Rollout+%C2%B7+Uncertainty;Per-class+Activation+Atlas+for+23+diseases" alt="XAI Axis" />
 
-### Level 1 — Richer Visual Explanation
+</div>
 
-```
-Already done: GradCAM
-Add:
-├── GradCAM++          ← sharper, more precise localization
-├── Attention Rollout  ← trace attention flow through all transformer layers
-└── Token-level saliency ← which pixels contributed to which output tokens
-```
+Phase 1 implemented GradCAM. Phase 2 goes deeper toward clinical trustworthiness.
 
-### Level 2 — Uncertainty Score
+| Level | Method | Output |
+|:-----:|:-------|:-------|
+| 1 | GradCAM++ · Attention Rollout · Token saliency | Sharper heatmaps per prediction |
+| 2 | Temperature Scaling + MC Dropout | Confidence % with every prediction |
+| 3 | Patch masking → re-predict | Counterfactual critical region |
+| 4 | Average GradCAM across all samples per disease | Per-class activation atlas (23 diseases) |
 
-Every prediction gets a confidence score:
-
-```
-Output example:
-{
-  "disease":     "SCCIS",
-  "confidence":  0.87,
-  "status":      "HIGH — reliable prediction"
-}
-
-{
-  "disease":     "Melanoma",
-  "confidence":  0.51,
-  "status":      "LOW — recommend dermatologist review"
-}
-```
-
-Implementation: Temperature Scaling + MC Dropout (N forward passes, measure variance)
-
-### Level 3 — Counterfactual Explanation
+### Uncertainty Score Output
 
 ```
-"If this region were absent, what would the model predict?"
-
-Method: patch masking → re-predict → compare
-Output: highlight regions that are decision-critical
-```
-
-### Level 4 — Per-class Activation Atlas
-
-```
-Collect GradCAM from all SCCIS predictions
-→ Average → find consistent pattern
-→ "For SCCIS, the model always focuses on lesion borders"
-
-Repeat for all 23 disease classes
-→ Build a visual dictionary of what each disease "looks like" to the model
-```
-
-### Output — XAI Dashboard
-
-```
-┌──────────────────────────────────────────────────────┐
-│  Input Image  │  GradCAM  │  Attention Map           │
-│───────────────────────────────────────────────────────│
-│  Diagnosis: SCCIS         Confidence: 87%  ██████░░  │
-│  Caption: "Raised erythematous lesion..."             │
-│  Critical region: lesion border (top-right)           │
-│  If removed: prediction changes to BCC (51%)          │
-└──────────────────────────────────────────────────────┘
+╔══════════════════════════════════════════╗
+║  HIGH CONFIDENCE                         ║
+║  Diagnosis:   SCCIS                      ║
+║  Confidence:  0.87  ██████████░░░        ║
+║  Status:      Reliable prediction ✓      ║
+╠══════════════════════════════════════════╣
+║  LOW CONFIDENCE                          ║
+║  Diagnosis:   Melanoma                   ║
+║  Confidence:  0.51  █████░░░░░░░░        ║
+║  Status:      ⚠️ Recommend dermatologist  ║
+╚══════════════════════════════════════════╝
 ```
 
 ---
 
 ## 📊 Axis 5 — Evaluation
 
-> *"One accuracy number is not enough for medical AI."*
+<div align="center">
 
-Phase 1 measured: accuracy, BLEU-4, BERTScore, Disease Correctness, inference speed.  
-Phase 2 measures everything that matters clinically.
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&duration=2500&pause=600&color=FCD34D&center=true&vCenter=true&width=700&lines=One+accuracy+number+is+not+enough;Skin+tone+bias+%C2%B7+Calibration+%C2%B7+OOD+Robustness;Clinical+Agreement+vs+Dermatologist" alt="Eval Axis" />
 
-### Dimension 1 — Subgroup Analysis
+</div>
 
-```
-Break accuracy down by:
-├── Skin tone       (Fitzpatrick scale I–VI)  ← bias detection
-├── Image quality   (sharp / blurry / noisy)
-├── Lesion size     (small / medium / large)
-└── Body location   (face / hand / back / etc.)
+Phase 1 measured: accuracy, BLEU-4, BERTScore, Disease Correctness, speed.  
+Phase 2 measures everything that matters **clinically**.
 
-Goal: find where the model underperforms and why
-```
+| Dimension | What | Method |
+|:----------|:-----|:-------|
+| **Subgroup** | Accuracy by skin tone (Fitzpatrick I–VI), lesion size, body location | Disaggregated evaluation |
+| **Calibration** | Does 90% confidence = 90% accuracy? | Reliability diagram · ECE |
+| **OOD Robustness** | Performance on HAM10000, smartphone photos, artifact images | Distribution shift test |
+| **Clinical Agreement** | Accuracy vs real dermatologist | Cohen's Kappa · Sensitivity/Specificity |
 
-### Dimension 2 — Calibration
-
-```
-Question: when the model says 90% confident — is it right 90% of the time?
-
-Metrics:
-├── Reliability diagram (confidence vs actual accuracy curve)
-├── Expected Calibration Error (ECE)
-└── Fix if miscalibrated: Temperature Scaling
-```
-
-### Dimension 3 — Out-of-Distribution (OOD) Robustness
-
-```
-Test on images the model has never seen:
-├── HAM10000 dataset      ← different distribution, same diseases
-├── Smartphone photos      ← vs dermoscope images used in training
-└── Images with artifacts  ← hair, ruler, ink marks
-```
-
-### Dimension 4 — Clinical Agreement
-
-```
-Compare model predictions with real dermatologist diagnoses:
-├── Cohen's Kappa score
-├── Sensitivity / Specificity per disease
-└── "Model vs Doctor A vs Doctor B" agreement matrix
-```
-
-### Dimension 5 — Richer Caption Evaluation
+### Caption Evaluation — Phase 1 vs Phase 2
 
 | Metric | Phase 1 | Phase 2 |
 |:-------|:-------:|:-------:|
@@ -321,78 +278,78 @@ Compare model predictions with real dermatologist diagnoses:
 | Clinical Relevance (GPT-4o judge) | ❌ | ✅ |
 | Human Evaluation | ❌ | ✅ |
 
-### Output — Auto Evaluation Report
-
-Every training run automatically generates a full HTML/PDF report:
-accuracy breakdown · calibration curve · per-disease table · OOD results · caption scores
-
 ---
 
 ## 🏥 Axis 6 — Application
 
-> *"Make HIKARI usable without knowing Python."*
+<div align="center">
 
-### Phase 2A — REST API
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&duration=2500&pause=600&color=FB923C&center=true&vCenter=true&width=700&lines=Make+HIKARI+usable+without+Python;REST+API+%C2%B7+Web+UI+%C2%B7+Confidence+threshold;Upload+image+%E2%86%92+Diagnosis+%2B+Heatmap+instantly" alt="App Axis" />
+
+</div>
+
+### REST API
 
 ```python
 POST /api/diagnose
 Content-Type: multipart/form-data
 
-{
-  "image": <file>,
-  "mode": "disease" | "caption" | "full"
-}
+{ "image": <file>, "mode": "disease" | "caption" | "full" }
 
-Response:
+# Response:
 {
   "disease":    "SCCIS",
   "confidence": 0.87,
   "caption":    "Raised erythematous lesion with irregular border...",
-  "heatmap":    "<base64 image>",
+  "heatmap":    "<base64 png>",
   "latency_ms": 584
 }
 ```
 
-### Phase 2B — Web UI
+### Web UI Mockup
 
 ```
-┌─────────────────────────────────────────────────────┐
-│  🌸 HIKARI Skin Disease AI                          │
-│─────────────────────────────────────────────────────│
-│  [ Upload Image ]  or  [ Take Photo ]               │
-│                                                     │
-│  ┌─────────────┐  ┌─────────────┐                  │
-│  │  Input      │  │  GradCAM    │                  │
-│  │  Image      │  │  Heatmap    │                  │
-│  └─────────────┘  └─────────────┘                  │
-│                                                     │
-│  Diagnosis:  SCCIS             Confidence: 87%      │
-│  Caption:    Raised erythematous lesion...          │
-│                                                     │
-│  ⚠️ For clinical reference only.                    │
-└─────────────────────────────────────────────────────┘
+╔══════════════════════════════════════════════════════╗
+║  🌸 HIKARI Skin Disease AI                           ║
+╠══════════════════════════════════════════════════════╣
+║  [ Upload Image ]  or  [ Take Photo ]                ║
+║                                                      ║
+║  ┌────────────┐   ┌────────────┐                     ║
+║  │  Original  │   │  GradCAM   │                     ║
+║  │   Image    │   │  Heatmap   │                     ║
+║  └────────────┘   └────────────┘                     ║
+║                                                      ║
+║  Diagnosis:  SCCIS          Confidence: 87% ████░    ║
+║  Caption:    Raised erythematous lesion...            ║
+║                                                      ║
+║  ⚠️ For clinical reference only.                     ║
+╚══════════════════════════════════════════════════════╝
 ```
 
 ---
 
-## Automation Infrastructure
+## ⚙️ Automation Infrastructure
 
-> *All axes share one automated pipeline — train once, get everything.*
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&duration=2500&pause=600&color=4ADE80&center=true&vCenter=true&width=700&lines=One+command+—+full+pipeline;train+%E2%86%92+eval+%E2%86%92+benchmark+%E2%86%92+report+%E2%86%92+upload;W%26B+logging+%C2%B7+Auto-upload+if+beats+best" alt="Automation" />
+
+</div>
 
 ```bash
 python run_all.py --model google/gemma-3-4b-it --wandb --upload-if-best
 
 # Automatically runs:
-# 1. train_stage1.py      → group classifier
-# 2. train_stage2.py      → baseline, cascade, RAG-in-Training
-# 3. merge.py             → merge LoRA into base
-# 4. train_stage3.py      → Way 1 (checkpoint), Way 2 (merged-init)
-# 5. eval_all.py          → full benchmark (all RAG × prompt configs)
-# 6. xai_report.py        → GradCAM++, attention, uncertainty
-# 7. speed_bench.py       → Unsloth / vLLM / SGLang
-# 8. eval_report.py       → calibration, OOD, subgroup
-# 9. generate_report.py   → HTML + PDF summary
-# 10. upload_hf.py        → auto-upload if beats current best
+# 01. train_stage1.py      →  group classifier
+# 02. train_stage2.py      →  baseline · cascade · RAG-in-Training
+# 03. merge.py             →  LoRA → merged full weights
+# 04. train_stage3.py      →  Way 1 (checkpoint) · Way 2 (merged-init)
+# 05. eval_all.py          →  full benchmark (RAG × prompt matrix)
+# 06. xai_report.py        →  GradCAM++ · attention · uncertainty
+# 07. speed_bench.py       →  Unsloth · vLLM · SGLang
+# 08. eval_report.py       →  calibration · OOD · subgroup
+# 09. generate_report.py   →  HTML + PDF summary
+# 10. upload_hf.py         →  auto-upload if beats current best ⭐
 ```
 
 **Experiment tracking:** Weights & Biases — every run logged automatically.  
@@ -400,47 +357,54 @@ python run_all.py --model google/gemma-3-4b-it --wandb --upload-if-best
 
 ---
 
-## Execution Order
+## 📅 Execution Timeline
 
 ```
-Phase 2 recommended sequence:
-
-MONTH 1   ── Build automation infrastructure (run_all.py + W&B)
-          ── Model Axis: Qwen2.5-VL-3B (smoke test)
-
-MONTH 2   ── Model Axis: Gemma3-4B + InternVL2.5-4B
-          ── Technique Axis: Dynamic RAG-k experiment
-
-MONTH 3   ── Pipeline Axis: Segmentation → Classify
-          ── XAI Axis: uncertainty score + attention maps
-
-MONTH 4   ── Evaluation Axis: OOD + subgroup + calibration
-          ── Application Axis: REST API + Web UI
-
-ONGOING   ── W&B dashboard always live
-          ── Auto-upload best models to HuggingFace
+╔══════════════════════════════════════════════════════════════════════╗
+║  MONTH 1  ── Foundation                                              ║
+║            ── Build run_all.py + W&B + config system                ║
+║            ── Smoke test: Qwen2.5-VL-3B (same family, easiest)      ║
+╠══════════════════════════════════════════════════════════════════════╣
+║  MONTH 2  ── Model Axis                                              ║
+║            ── Gemma3-4B + InternVL2.5-4B full pipeline              ║
+║            ── Technique Axis: Dynamic RAG-k implementation           ║
+╠══════════════════════════════════════════════════════════════════════╣
+║  MONTH 3  ── XAI + Pipeline                                          ║
+║            ── SAM2 segmentation preprocessing                        ║
+║            ── Uncertainty score + GradCAM++ + attention atlas        ║
+╠══════════════════════════════════════════════════════════════════════╣
+║  MONTH 4  ── Evaluation + Application                                ║
+║            ── OOD robustness · subgroup · calibration                ║
+║            ── Clinical agreement study vs dermatologist              ║
+║            ── REST API + Web UI deployment                           ║
+╠══════════════════════════════════════════════════════════════════════╣
+║  ONGOING  ── W&B dashboard live · Auto-upload best to HuggingFace   ║
+╚══════════════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-## Summary
+## 📄 Documentation
 
-| Axis | Status | Key Output |
-|:-----|:------:|:-----------|
-| 🔭 Model Comparison | Ready | Multi-architecture benchmark table |
-| 🔬 Technique | Choosing option | Dynamic RAG-k recommended |
-| 🧩 Pipeline | Choosing option | Segmentation-first recommended |
-| 🔍 XAI | Ready | Confidence score + attention dashboard |
-| 📊 Evaluation | Ready | Full clinical-grade eval report |
-| 🏥 Application | After research | REST API + Web UI |
+| Document | Description |
+|:---------|:------------|
+| [`next_phase.md`](next_phase.md) | This document — Phase 2 full plan |
+| [`next_phase.html`](next_phase.html) | Interactive version with animations and charts |
+| [`Model/Total_Exp.md`](Model/Total_Exp.md) | Phase 1 complete experiment count (~330 runs) |
+| [`Model/README.md`](Model/README.md) | Full Phase 1 technical reference |
 
 ---
 
 <div align="center">
 
-*HIKARI Phase 1 — Complete 🌸*  
-*Phase 2 — In Planning*
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=13&duration=4000&pause=500&color=AAAAAA&center=true&vCenter=true&width=700&lines=Phase+1+Complete+%F0%9F%8C%B8+%C2%B7+85.86%25+accuracy+%C2%B7+14+models+on+HuggingFace;Phase+2+%E2%80%94+Multi-Architecture+%C2%B7+Dynamic+RAG-k+%C2%B7+SAM2+Pipeline;Weights+%26+Biases+%C2%B7+Fully+Automated+%C2%B7+One+Command" alt="footer" />
 
-**光 · Qwen3-VL-8B-Thinking · KMITL · 2026**
+<hr/>
+
+<p>🌸 <b>HIKARI Phase 2 Roadmap &nbsp;·&nbsp; 光（ヒカリ）</b> 🌸</p>
+<p><i>Healthcare-oriented Intelligent Knowledge-Augmented Retrieval and Inference system</i></p>
+<sub>Made with 💗 and 🌸 at King Mongkut's Institute of Technology Ladkrabang (KMITL)</sub>
+
+<hr/>
 
 </div>
